@@ -11,3 +11,5 @@
 3. Design
 
 4. styled compontents
+
+- use `import { styled } from "styled-components";`

@@ -1,4 +1,11 @@
-:root {
+/* reset.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Optional: Standardmäßig Box-Modell auf border-box setzen */
+}
+
+/* :root {
   --color-background-header: #3d3d3d;
   --color-background-dark: #383838;
   --color-background-footer: #3d3d3d;
@@ -26,17 +33,4 @@
   --color-background-light: #f3f3f3;
   --color-main: #f3f3f3;
   --color-second: #021e30;
-}
-
-body {
-  height: 100vh;
-  background-color: var(--color-background-dark);
-  color: var(--color-text);
-  font-family: var(--font);
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.2rem;
-  line-height: var(--line-height);
-  letter-spacing: 0.05rem;
-  scrollbar-gutter: stable !important;
-}
+} */

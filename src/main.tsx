@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Sytles
+// Styled-Component
+import StyledContent from "./styledContent.ts";
 import "./index.css";
 
-// Navigation components
-import NavWrapper from "./components/navigation/NavWrapper.tsx";
+// Components
+import App from "./App.tsx";
 import NotFoundPage from "./pages/errorPage/NotFoundPage.tsx";
 import HomePage from "./components/home/HomePage.tsx";
 import AboutMePage from "./components/aboutMe/AboutMePage.tsx";
@@ -17,7 +18,7 @@ import Footer from "./components/footer/footer.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <NavWrapper />,
+    element: <App />,
     errorElement: <NotFoundPage />,
     children: [
       { path: "/", element: <HomePage /> },
@@ -37,6 +38,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <StyledContent>
+      <RouterProvider router={router} />
+    </StyledContent>
   </React.StrictMode>
 );

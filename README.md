@@ -4,7 +4,9 @@ This repository contains my new homepage, which is being developed with TypeScri
 
 ## Packages used
 
-- [react-router-dom](https://reactrouter.com/web/guides/quick-start)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [react-router-dom](https://reactrouter.com/)
 - [styled-components](https://styled-components.com/)
 
 ## Status

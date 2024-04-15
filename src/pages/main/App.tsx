@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
-import Footer from "./components/footer/footer.tsx";
-import Header from "./components/header/Header.tsx";
+import Footer from "../../components/footer/footer.tsx";
+import Header from "../../components/header/Header.tsx";
 
 const App = () => {
   return (

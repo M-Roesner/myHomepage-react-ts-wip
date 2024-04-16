@@ -8,7 +8,8 @@ This repository contains my new homepage, which is being developed with TypeScri
 - [React](https://reactjs.org/)
 - [react-router-dom](https://reactrouter.com/)
 - [styled-components](https://styled-components.com/)
-  - [How do you use styled components with TypeScript?](#how-do-you-use-styled-components-with-typescript)
+  - [How do you use 'styled components' with TypeScript?](#how-do-you-use-styled-components-with-typescript)
+  - !!! ['emotion' an alternative to 'styled components'](https://emotion.sh/docs/typescript)
 
 ## Status
 

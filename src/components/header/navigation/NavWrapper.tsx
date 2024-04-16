@@ -1,20 +1,21 @@
-import { Link } from "react-router-dom";
+// custom components
+import NavItem from "./navItem/NavItem";
 
+// Styled-Component
+import { StyledNavWrapper, StyledNavUnorderedList } from "./styledNavWrapper";
+
+/**
+ * Functional component for routing to several pages.
+ */
 const NavWrapper = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to={"/"}>Home</Link>
-        </li>
-        <li>
-          <Link to={"/aboutMe"}>Über mich</Link>
-        </li>
-        <li>
-          <Link to={"/myPortfolio"}>Mein Portfolio</Link>
-        </li>
-      </ul>
-    </nav>
+    <StyledNavWrapper>
+      <StyledNavUnorderedList>
+        <NavItem to="/">Home</NavItem>
+        <NavItem to="/aboutMe">Über mich</NavItem>
+        <NavItem to="/myPortfolio">Mein Portfolio</NavItem>
+      </StyledNavUnorderedList>
+    </StyledNavWrapper>
   );
 };
 

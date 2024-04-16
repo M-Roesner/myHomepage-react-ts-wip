@@ -2,17 +2,19 @@ import "styled-components";
 interface IMode {
   backgroundColor: string;
   textColor: string;
+  backgroundHoverColor: string;
 }
 
 declare module "styled-components" {
   export interface DefaultTheme {
     fontFamily: string;
     palette: {
-      darkMode: IMode;
-      lightMode: IMode;
-      common?: {
-        dark: string;
-        light: string;
+      common: IMode;
+      footer: {
+        backgroundColor: string;
+      };
+      header: {
+        backgroundColor: string;
       };
     };
   }

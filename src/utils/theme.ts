@@ -2,13 +2,16 @@ import { DefaultTheme } from "styled-components";
 export const defaultTheme: DefaultTheme = {
   fontFamily: '"IBM", monospace',
   palette: {
-    darkMode: {
+    common: {
       backgroundColor: "#383838",
       textColor: "#f3f3f3",
+      backgroundHoverColor: "#474747",
     },
-    lightMode: {
-      backgroundColor: "#f3f3f3",
-      textColor: "#383838",
+    footer: {
+      backgroundColor: "#3d3d3d",
+    },
+    header: {
+      backgroundColor: "#3d3d3d",
     },
   },
 };

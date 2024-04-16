@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const StyledMain = styled.div`
   height: 100vh;
-  background-color: ${(props) => props.theme.palette.darkMode.backgroundColor};
-  color: ${(props) => props.theme.palette.darkMode.textColor};
+  background-color: ${(props) => props.theme.palette.common.backgroundColor};
+  color: ${(props) => props.theme.palette.common.textColor};
   font-family: ${(props) => props.theme.fontFamily};
   font-weight: 400;
   font-style: normal;

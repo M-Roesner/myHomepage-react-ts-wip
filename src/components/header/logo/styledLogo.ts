@@ -1,28 +1,23 @@
 import styled from "styled-components";
 
-// Resources
-import { COLORS } from "../constants";
-
-const StyledLogo = styled.div`
+export const StyledLogo = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  background-color: ${COLORS.BACKGROUND_HEADER};
+  gap: 10px;
   padding-left: 5px;
   padding-right: 5px;
-
-  & img {
-    height: 64px;
-  }
-
-  & p {
-    color: ${COLORS.TEXT};
-  }
 
   @media (min-width: 768px) {
   }
 `;
 
-export default StyledLogo;
+export const StyledLogoImg = styled.img`
+  height: 64px;
+`;
+
+export const StyledParagraph = styled.p`
+  width: max-content;
+  color: ${(props) => props.theme.palette.common.textColor};
+`;

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const StyledNavWrapper = styled.nav`
-  background-color: ${(props) => props.theme.palette.common.backgroundColor};
-`;
+export const StyledNavWrapper = styled.nav``;
 
 export const StyledNavUnorderedList = styled.ul`
   margin-left: 5px;

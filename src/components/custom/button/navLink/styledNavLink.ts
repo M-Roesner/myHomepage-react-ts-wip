@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 // Styled-Component
-import { slyledLinkButtonBasic } from "./styledLinkButtonBasic";
+import { slyledLinkButtonBasic } from "../styledLinkButtonBasic";
 
 /**
  * Styled component for customizing navigation links.

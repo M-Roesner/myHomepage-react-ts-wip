@@ -1,5 +1,5 @@
 // Component
-import IconLink from "../../../custom/button/IconLink";
+import IconLink from "../../../custom/button/iconLink/IconLink";
 import { StyledSozialNavWrapper } from "./styledSozialNavWrapper";
 
 // fortawesome

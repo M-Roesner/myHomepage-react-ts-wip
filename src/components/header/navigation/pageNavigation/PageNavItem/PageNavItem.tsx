@@ -1,5 +1,5 @@
 // Components
-import NavLink from "../../../../custom/button/NavLink";
+import NavLink from "../../../../custom/button/navLink/NavLink";
 
 // Styled-Component
 import { StyledNavList } from "./styledNavItem";

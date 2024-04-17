@@ -7,7 +7,7 @@ import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import { RotateProp, SizeProp } from "@fortawesome/fontawesome-svg-core";
 
 // Helper function
-import { isValidColor } from "../../../utils/colorValidators";
+import { isValidColor } from "../../../../utils/colorValidators";
 
 type IconLinkProps = {
   url: string;

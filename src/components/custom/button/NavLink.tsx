@@ -4,6 +4,7 @@ import { StyledNavLink } from "./styledNavLink";
 type NavLinkProps = {
   to: string;
   children: React.ReactNode;
+  style?: React.CSSProperties;
 };
 
 /**
@@ -13,10 +14,12 @@ type NavLinkProps = {
  * @param {string} to - The path to navigate to when the link is clicked.
  * @param {ReactNode} children - The content of the link.
  */
-const NavLink = ({ to, children }: NavLinkProps) => {
+const NavLink = ({ to, children, style }: NavLinkProps) => {
   return (
     <>
-      <StyledNavLink to={to}>{children}</StyledNavLink>
+      <StyledNavLink to={to} style={style}>
+        {children}
+      </StyledNavLink>
     </>
   );
 };

@@ -3,6 +3,7 @@ interface IMode {
   backgroundColor: string;
   textColor: string;
   backgroundHoverColor: string;
+  borderColor: string;
 }
 
 declare module "styled-components" {

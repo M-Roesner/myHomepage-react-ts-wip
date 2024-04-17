@@ -10,6 +10,7 @@ export const defaultTheme: DefaultTheme = {
       backgroundColor: "#383838",
       textColor: "#f3f3f3",
       backgroundHoverColor: "#474747",
+      borderColor: "#5c606d",
     },
     footer: {
       backgroundColor: "#3d3d3d",

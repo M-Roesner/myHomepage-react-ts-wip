@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: orange; // TODO: Adjust background color.
+  background-color: ${(props) => props.theme.palette.header.backgroundColor};
 
   padding-left: 5px;
   padding-right: 5px;

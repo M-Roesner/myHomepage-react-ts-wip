@@ -31,4 +31,8 @@ export const StyledNavLink = styled(slyledLinkButtonBasic)<StyledNavLinkProps>`
   width: min-content;
   height: 100%;
   padding: 10px clamp(var(--min-padding), 2vw, var(--max-padding));
+
+  &.active {
+    background-color: ${(props) => props.theme.palette.common.backgroundColor};
+  }
 `;

@@ -9,12 +9,15 @@ import { styled } from "styled-components";
  * @param {ReactNode} children - The content of the link.
  */
 export const StyledNavLink = styled(Link)`
+  --min-padding: 10px;
+  --max-padding: 20px;
+
   display: flex;
   align-items: center;
   text-align: center;
   width: min-content;
   height: 100%;
-  padding: 10px;
+  padding: 10px clamp(var(--min-padding), 2vw, var(--max-padding));
 
   text-decoration: none;
   color: ${(props) => props.theme.palette.common.textColor};

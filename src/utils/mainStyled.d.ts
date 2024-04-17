@@ -8,6 +8,9 @@ interface IMode {
 declare module "styled-components" {
   export interface DefaultTheme {
     fontFamily: string;
+    navBar: {
+      height: string;
+    };
     palette: {
       common: IMode;
       footer: {

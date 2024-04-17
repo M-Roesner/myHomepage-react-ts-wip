@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
-// Resources
-import { SIZES } from "./constants";
-
 const StyledHeader = styled.header`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-  height: ${SIZES.NAVBAR_HEIGHT};
+  background-color: orange;
 
+  padding-left: 5px;
+  padding-right: 5px;
+
+  height: ${(props) => props.theme.navBar.height};
+  margin-bottom: 2rem;
   @media (min-width: 768px) {
   }
 `;

@@ -1,6 +1,9 @@
 import { DefaultTheme } from "styled-components";
 export const defaultTheme: DefaultTheme = {
   fontFamily: '"IBM", monospace',
+  navBar: {
+    height: "80px",
+  },
   palette: {
     common: {
       backgroundColor: "#383838",

@@ -12,7 +12,9 @@ const PageNavWrapper = () => {
     <StyledPageNavWrapper>
       <StyledNavUnorderedList>
         <NavItem to="/">Home</NavItem>
-        <NavItem to="/aboutMe">Über mich</NavItem>
+        <NavItem to="/aboutMe" autoWrap={false}>
+          Über mich
+        </NavItem>
         <NavItem to="/myPortfolio">Mein Portfolio</NavItem>
       </StyledNavUnorderedList>
     </StyledPageNavWrapper>

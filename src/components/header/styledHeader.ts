@@ -12,6 +12,11 @@ export const StyledHeader = styled.header`
 
   height: ${(props) => props.theme.navBar.height};
   margin-bottom: 2rem;
+
+  /* '>' is used to select the first direct child of the StyledHeader. */
+  & > :first-child {
+    border-right: solid 5px ${(props) => props.theme.palette.common.backgroundColor};
+  }
   @media (min-width: 768px) {
   }
 `;

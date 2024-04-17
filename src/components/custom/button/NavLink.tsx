@@ -11,16 +11,15 @@ type NavLinkProps = {
  * Functional component for routing a styled navigation link.
  *
  * @component
- * @param {string} to - The path to navigate to when the link is clicked.
- * @param {ReactNode} children - The content of the link.
+ * @param {Object} props - The props object containing the following properties:
+ * @param {string} props.to - The path to navigate to when the link is clicked.
+ * @param {ReactNode} props.children - The content of the link.
  */
 const NavLink = ({ to, children, style }: NavLinkProps) => {
   return (
-    <>
-      <StyledNavLink to={to} style={style}>
-        {children}
-      </StyledNavLink>
-    </>
+    <StyledNavLink to={to} style={style}>
+      {children}
+    </StyledNavLink>
   );
 };
 

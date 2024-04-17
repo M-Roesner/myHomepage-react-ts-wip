@@ -3,6 +3,7 @@ export const defaultTheme: DefaultTheme = {
   fontFamily: '"IBM", monospace',
   navBar: {
     height: "80px",
+    gap: "5px",
   },
   palette: {
     common: {

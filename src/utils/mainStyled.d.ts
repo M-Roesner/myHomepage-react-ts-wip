@@ -10,6 +10,7 @@ declare module "styled-components" {
     fontFamily: string;
     navBar: {
       height: string;
+      gap: string;
     };
     palette: {
       common: IMode;

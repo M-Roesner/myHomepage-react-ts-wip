@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledHeader = styled.header`
+export const StyledHeader = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,11 +15,3 @@ const StyledHeader = styled.header`
   @media (min-width: 768px) {
   }
 `;
-
-export const StyledNavIconWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: ${(props) => props.theme.navBar.gap};
-`;
-
-export default StyledHeader;

@@ -1,19 +1,13 @@
 // Components
-import NavWrapper from "./navigation/NavWrapper";
 import Logo from "./logo/Logo";
-
-// Styled-Component
-import StyledHeader, { StyledNavIconWrapper } from "./styledHeader";
-import IconWrapper from "./icons/IconWrapper";
+import NavigationWrapper from "./navigation/NavigationWrapper";
+import { StyledHeader } from "./styledHeader";
 
 const Header = () => {
   return (
     <StyledHeader>
       <Logo />
-      <StyledNavIconWrapper>
-        <NavWrapper />
-        <IconWrapper />
-      </StyledNavIconWrapper>
+      <NavigationWrapper />
     </StyledHeader>
   );
 };

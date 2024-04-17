@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledNavWrapper = styled.nav``;
+export const StyledPageNavWrapper = styled.nav``;
 
 export const StyledNavUnorderedList = styled.ul`
   margin-left: 5px;

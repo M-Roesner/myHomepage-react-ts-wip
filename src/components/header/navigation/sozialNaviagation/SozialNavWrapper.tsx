@@ -1,6 +1,6 @@
 // Component
-import IconLink from "../../custom/button/IconLink";
-import { StyledIconWrapper } from "./styledIconWrapper";
+import IconLink from "../../../custom/button/IconLink";
+import { StyledSozialNavWrapper } from "./styledSozialNavWrapper";
 
 // fortawesome
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -11,15 +11,15 @@ import { faGithub, faLinkedinIn, faSquareXing } from "@fortawesome/free-brands-s
  *
  * Icons come from https://fontawesome.com/
  */
-const IconWrapper = () => {
+const SozialNavWrapper = () => {
   return (
-    <StyledIconWrapper>
+    <StyledSozialNavWrapper>
       <IconLink url="mailto:contact@markus-roesner.dev" icon={faEnvelope}></IconLink>
       <IconLink url="https://github.com/M-Roesner" icon={faGithub}></IconLink>
       <IconLink url="https://www.linkedin.com/in/markus-r%C3%B6sner-507354216/" icon={faLinkedinIn}></IconLink>
       <IconLink url="https://www.xing.com/profile/Markus_Roesner14" icon={faSquareXing}></IconLink>
-    </StyledIconWrapper>
+    </StyledSozialNavWrapper>
   );
 };
 
-export default IconWrapper;
+export default SozialNavWrapper;

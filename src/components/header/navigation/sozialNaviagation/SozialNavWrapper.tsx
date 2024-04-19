@@ -3,7 +3,7 @@ import IconLink from "../../../custom/button/iconLink/IconLink";
 import { StyledSozialNavWrapper } from "./styledSozialNavWrapper";
 
 // fortawesome
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedinIn, faSquareXing } from "@fortawesome/free-brands-svg-icons";
 
 /**

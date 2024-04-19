@@ -9,7 +9,16 @@ This repository contains my new homepage, which is being developed with TypeScri
 - [react-router-dom](https://reactrouter.com/)
 - [styled-components](https://styled-components.com/)
   - [How do you use 'styled components' with TypeScript?](#how-do-you-use-styled-components-with-typescript)
+  - [Guide: Theme with styled-components-and-typescript | medium.com](https://medium.com/rbi-tech/theme-with-styled-components-and-typescript-209244ec15a3)
   - !!! ['emotion' an alternative to 'styled components'](https://emotion.sh/docs/typescript)
+- [Icons: fontawesome](https://fontawesome.com/)
+  - [Install guide](https://docs.fontawesome.com/web/use-with/react/)
+  - [Icon search](https://fontawesome.com/search)
+  - [Use icons with react](https://docs.fontawesome.com/web/use-with/react/add-icons)
+
+## Possible packages for usage:
+
+- [React Select: for select Input control](https://react-select.com/home)
 
 ## Status
 

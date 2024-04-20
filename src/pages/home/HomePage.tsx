@@ -1,12 +1,20 @@
 import CardHeadline from "../../components/custom/card/cardHeadline/CardHeadline";
 import CardVerticalLine from "../../components/custom/card/cardVerticalLine/CardVerticalLine";
+import SectionIntroduction from "./sections/introduction/SectionIntroduction";
+import SectionMyFutureCareer from "./sections/myFutureCareer/SectionMyFutureCareer";
+import SectionWhyInIt from "./sections/whyInIt/SectionWhyInIt";
 import StyledHomePage from "./styledHomePage";
 
 const HomePage = () => {
   return (
     <StyledHomePage>
       <CardVerticalLine>
-        <CardHeadline level={1}>Home Page</CardHeadline>
+        <CardHeadline level={1}>Über mich</CardHeadline>
+        <CardVerticalLine>
+          <SectionIntroduction />
+          <SectionWhyInIt />
+          <SectionMyFutureCareer />
+        </CardVerticalLine>
       </CardVerticalLine>
     </StyledHomePage>
   );

@@ -31,10 +31,10 @@ export const StyledCardHeadline2 = styled.h2`
 export const StyledCardHeadline3 = styled.h3`
   ${defaultHeaderStyles};
   font-size: 1.6rem;
-  color: #06b300;
+  color: #059f00;
   &::before {
     content: "// ";
-    color: #06b300;
+    color: #059f00;
   }
 `;
 

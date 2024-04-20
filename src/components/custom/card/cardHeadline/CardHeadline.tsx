@@ -47,9 +47,9 @@ const getCardHeadlineComponent = (level: CardHeadlineProps["level"]) => {
 };
 
 /**
- * Functional component for rendering a card header with a specified level 1-6 and including any children content.
+ * Renders a styled headerline card with a specified level 1-6 and any children content.
  *
- * @param {CardHeadlineProps} props - The props object containing the header level 1-6 and children.
+ * @param {CardHeadlineProps} props - The props object contains the headerline level 1-6 and children.
  */
 const CardHeadline = ({ level, children }: CardHeadlineProps) => {
   const Header = getCardHeadlineComponent(level);

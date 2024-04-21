@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledSkillDescription = styled.div`
-  /* TODO: css - SkillDescription need more styles */
+  border: solid 1px ${(props) => props.theme.palette.common.borderColor};
   width: 50%;
-  background-color: orange;
+  padding: 10px;
 `;

@@ -8,6 +8,7 @@ export const StyledSectionSkillList = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-content: flex-start;
   gap: 5px;
   border: 1px solid ${(props) => props.theme.palette.common.borderColor};
 `;

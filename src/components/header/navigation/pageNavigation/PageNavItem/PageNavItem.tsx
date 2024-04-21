@@ -1,5 +1,5 @@
 // Components
-import NavLink from "../../../../custom/button/navLink/NavLink";
+import NavbarButton from "../../../../custom/button/navbarButton/NavbarButton";
 
 // Styled-Component
 import { StyledNavList } from "./styledNavItem";
@@ -22,9 +22,9 @@ type NavItemProps = {
 const NavItem = ({ to, autoWrap, children }: NavItemProps) => {
   return (
     <StyledNavList>
-      <NavLink to={to} autoWrap={autoWrap}>
+      <NavbarButton to={to} autoWrap={autoWrap}>
         {children}
-      </NavLink>
+      </NavbarButton>
     </StyledNavList>
   );
 };

@@ -1,5 +1,5 @@
 // Styled-Component
-import { StyledNavLink } from "./styledNavLink";
+import { StyledNavbarButton } from "./styledNavbarButton";
 
 type NavLinkProps = {
   to: string;
@@ -18,12 +18,12 @@ type NavLinkProps = {
  * @param {React.CSSProperties} props.style - Optional: To add fixed (important) styles.
  * @param {ReactNode} props.children - The content of the link.
  */
-const NavLink = ({ to, children, autoWrap = true, style }: NavLinkProps) => {
+const NavbarButton = ({ to, children, autoWrap = true, style }: NavLinkProps) => {
   return (
-    <StyledNavLink to={to} autoWrap={autoWrap} style={style}>
+    <StyledNavbarButton to={to} autoWrap={autoWrap} style={style}>
       {children}
-    </StyledNavLink>
+    </StyledNavbarButton>
   );
 };
 
-export default NavLink;
+export default NavbarButton;

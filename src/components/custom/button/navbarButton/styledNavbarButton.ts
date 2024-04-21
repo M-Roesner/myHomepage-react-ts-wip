@@ -19,13 +19,9 @@ interface StyledNavLinkProps {
  * @param {boolean} props.autoWrap - Enables automatic line break for content if true; otherwise, disables it.
  * @param {ReactNode} props.children - The content of the link.
  */
-export const StyledNavLink = styled(slyledLinkButtonBasic)<StyledNavLinkProps>`
+export const StyledNavbarButton = styled(slyledLinkButtonBasic)<StyledNavLinkProps>`
   --min-padding: 10px;
   --max-padding: 20px;
-
-  display: flex;
-  align-items: center;
-  text-align: center;
 
   white-space: ${(props) => (props.autoWrap ? "normal" : "nowrap")}; // "normal" - makes an automatic line break
   width: min-content;

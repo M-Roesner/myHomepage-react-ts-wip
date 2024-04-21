@@ -1,5 +1,5 @@
 // Components
-import NavLink from "../../custom/button/navLink/NavLink";
+import NavbarButton from "../../custom/button/navbarButton/NavbarButton";
 
 // Styled-Component
 import { StyledLogo, StyledLogoImg, StyledParagraph } from "./styledLogo";
@@ -12,12 +12,12 @@ import logo from "/logo_f3f3f3_70x64.png";
  */
 const Logo = () => {
   return (
-    <NavLink to={"/"}>
+    <NavbarButton to={"/"}>
       <StyledLogo>
         <StyledLogoImg src={logo} alt="Logo" />
         <StyledParagraph>markus-roesner.dev</StyledParagraph>
       </StyledLogo>
-    </NavLink>
+    </NavbarButton>
   );
 };
 

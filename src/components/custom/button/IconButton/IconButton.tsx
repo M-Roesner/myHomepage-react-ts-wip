@@ -1,5 +1,5 @@
 // Styled-Component
-import StyledIconLink from "./styledIconLink";
+import StyledIconButton from "./styledIconButton";
 
 // fortawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,17 +31,17 @@ type IconLinkProps = {
  *   @param {SizeProp} [props.size] - Optional size for the icon (e.g., "lg", "2x", "3x", "4x", "5x", "10x").
  * @returns {JSX.Element} - The rendered icon link component.
  */
-const IconLink = ({ url, icon, rotation, color, size }: IconLinkProps) => {
+const IconButton = ({ url, icon, rotation, color, size }: IconLinkProps) => {
   return (
-    <StyledIconLink to={url} target="_blank" rel="noopener noreferrer">
+    <StyledIconButton to={url} target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon
         icon={icon}
         rotation={rotation}
         size={size}
         style={color != undefined && isValidColor(color) ? { color: color } : undefined}
       />
-    </StyledIconLink>
+    </StyledIconButton>
   );
 };
 
-export default IconLink;
+export default IconButton;

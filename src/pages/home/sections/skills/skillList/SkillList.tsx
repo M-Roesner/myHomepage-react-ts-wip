@@ -1,5 +1,5 @@
 // components
-import Skill from "./skill/Skill";
+import Button from "../../../../../components/custom/button/defaultButton/Button";
 import { StyledSectionSkillList } from "./styledSkillList";
 
 // Types
@@ -21,9 +21,9 @@ const SkillList = ({ list, onClick }: SectionSkillListProps) => {
   return (
     <StyledSectionSkillList>
       {list.map((skill) => (
-        <Skill key={skill.id} onClick={() => onClick(skill)}>
+        <Button key={skill.id} onClick={() => onClick(skill)}>
           {skill.name}
-        </Skill>
+        </Button>
       ))}
     </StyledSectionSkillList>
   );

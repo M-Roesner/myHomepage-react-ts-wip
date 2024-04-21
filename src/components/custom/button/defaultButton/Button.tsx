@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledSkill } from "./styledSkill";
+import { StyledButton } from "./styledButton";
 
 type SkillProp = {
   onClick?: () => void;
@@ -13,8 +13,8 @@ type SkillProp = {
  * @param {Function} props.onClick - The function to be called when the skill item is clicked.
  * @param {ReactNode} props.children - The content of the skill item.
  */
-const Skill = ({ onClick, children }: SkillProp) => {
-  return <StyledSkill onClick={onClick}>{children}</StyledSkill>;
+const Button = ({ onClick, children }: SkillProp) => {
+  return <StyledButton onClick={onClick}>{children}</StyledButton>;
 };
 
-export default Skill;
+export default Button;

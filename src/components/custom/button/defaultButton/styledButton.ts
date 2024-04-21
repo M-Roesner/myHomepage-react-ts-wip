@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSkill = styled.div`
+export const StyledButton = styled.div`
   padding: 10px;
   border: 1px solid ${(props) => props.theme.palette.common.borderColor};
   cursor: pointer;

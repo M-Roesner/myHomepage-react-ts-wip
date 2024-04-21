@@ -2,16 +2,15 @@ import React from "react";
 import { StyledOnClickButton } from "./styledOnClickButton";
 
 type OnClickButtonProp = {
-  onClick?: () => void;
+  onClick: () => void;
   children: React.ReactNode;
 };
 
 /**
- * Renders a clickable skill item.
+ * Button component for triggering an onClick event.
  *
- * @param {Object} props - The props object containing onClick function and children.
- * @param {Function} props.onClick - The function to be called when the skill item is clicked.
- * @param {ReactNode} props.children - The content of the skill item.
+ * @param {Object} props - The props object containing the onClick function and children.
+ * @returns {JSX.Element} - The rendered button component.
  */
 const OnClickButton = ({ onClick, children }: OnClickButtonProp) => {
   return <StyledOnClickButton onClick={onClick}>{children}</StyledOnClickButton>;

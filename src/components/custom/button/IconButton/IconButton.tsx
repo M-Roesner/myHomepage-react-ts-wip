@@ -9,7 +9,7 @@ import { RotateProp, SizeProp } from "@fortawesome/fontawesome-svg-core";
 // Helper function
 import { isValidColor } from "../../../../utils/colorValidators";
 
-type IconLinkProps = {
+type IconButtonProps = {
   url: string;
   icon: IconDefinition;
   rotation?: RotateProp;
@@ -31,7 +31,7 @@ type IconLinkProps = {
  *   @param {SizeProp} [props.size] - Optional size for the icon (e.g., "lg", "2x", "3x", "4x", "5x", "10x").
  * @returns {JSX.Element} - The rendered icon link component.
  */
-const IconButton = ({ url, icon, rotation, color, size }: IconLinkProps) => {
+const IconButton = ({ url, icon, rotation, color, size }: IconButtonProps) => {
   return (
     <StyledIconButton to={url} target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon

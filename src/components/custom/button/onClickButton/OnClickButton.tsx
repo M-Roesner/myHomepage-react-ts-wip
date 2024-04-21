@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledOnClickButton } from "./styledOnClickButton";
 
-type SkillProp = {
+type OnClickButtonProp = {
   onClick?: () => void;
   children: React.ReactNode;
 };
@@ -13,7 +13,7 @@ type SkillProp = {
  * @param {Function} props.onClick - The function to be called when the skill item is clicked.
  * @param {ReactNode} props.children - The content of the skill item.
  */
-const OnClickButton = ({ onClick, children }: SkillProp) => {
+const OnClickButton = ({ onClick, children }: OnClickButtonProp) => {
   return <StyledOnClickButton onClick={onClick}>{children}</StyledOnClickButton>;
 };
 

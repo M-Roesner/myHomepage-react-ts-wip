@@ -1,7 +1,7 @@
 // Styled-Component
 import { StyledNavbarButton } from "./styledNavbarButton";
 
-type NavLinkProps = {
+type NavbarButtonProps = {
   to: string;
   children: React.ReactNode;
   autoWrap?: boolean;
@@ -18,7 +18,7 @@ type NavLinkProps = {
  * @param {React.CSSProperties} props.style - Optional: To add fixed (important) styles.
  * @param {ReactNode} props.children - The content of the link.
  */
-const NavbarButton = ({ to, children, autoWrap = true, style }: NavLinkProps) => {
+const NavbarButton = ({ to, children, autoWrap = true, style }: NavbarButtonProps) => {
   return (
     <StyledNavbarButton to={to} autoWrap={autoWrap} style={style}>
       {children}

@@ -4,6 +4,7 @@ const defaultHeaderStyles = `
 // font-weight: 200;
 // font-style: normal;
 line-height: 3ch;
+padding-left: 10px;
 `;
 
 // TODO: header styles ... content, color ...

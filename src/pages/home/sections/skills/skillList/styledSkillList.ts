@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { defaultSectionStyle } from "../../defaultSectionStyle";
 
-export const StyledSectionSkillList = styled(defaultSectionStyle)`
+export const StyledSectionSkillList = styled.ul`
   width: 50%;
   padding: 5px;
 

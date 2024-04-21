@@ -52,8 +52,8 @@ const getCardHeadlineComponent = (level: CardHeadlineProps["level"]) => {
  * @param {CardHeadlineProps} props - The props object contains the headerline level 1-6 and children.
  */
 const CardHeadline = ({ level, children }: CardHeadlineProps) => {
-  const Header = getCardHeadlineComponent(level);
-  return <Header>{children}</Header>;
+  const Headerline = getCardHeadlineComponent(level);
+  return <Headerline>{children}</Headerline>;
 };
 
 export default CardHeadline;

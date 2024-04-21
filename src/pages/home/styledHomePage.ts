@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledHomePage = styled.header`
+const StyledHomePage = styled.div`
   @media (min-width: 768px) {
   }
 `;

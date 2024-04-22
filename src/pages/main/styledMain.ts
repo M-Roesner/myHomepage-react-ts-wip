@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledMain = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   background-color: ${(props) => props.theme.palette.common.backgroundColor};
   color: ${(props) => props.theme.palette.common.textColor};
   font-family: ${(props) => props.theme.fontFamily};

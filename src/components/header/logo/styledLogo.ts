@@ -8,7 +8,7 @@ export const StyledLogo = styled.div`
   gap: 10px;
   padding-left: 5px;
   padding-right: 5px;
-  height: ${(props) => props.theme.navBar.height};
+  height: ${(props) => props.theme.sizes.navBar.height};
 
   @media (min-width: 768px) {
   }

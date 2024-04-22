@@ -9,7 +9,7 @@ export const slyledLinkButtonBasic = styled(NavLink)`
   align-items: center;
   text-align: center;
 
-  background-color: ${(props) => props.theme.palette.header.backgroundColor};
+  background-color: ${(props) => props.theme.palette.common.backgroundColorAccent};
   &:hover {
     background-color: ${(props) => props.theme.palette.common.backgroundHoverColor};
   }

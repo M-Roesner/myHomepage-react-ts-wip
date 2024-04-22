@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledOnClickButton = styled.div`
   padding: 10px;
   border: 1px solid ${(props) => props.theme.palette.common.borderColor};
-  background-color: ${(props) => props.theme.palette.header.backgroundColor};
+  background-color: ${(props) => props.theme.palette.common.backgroundColorAccent};
   cursor: pointer;
 
   &:hover {

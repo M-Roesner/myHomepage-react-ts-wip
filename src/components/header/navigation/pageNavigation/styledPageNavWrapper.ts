@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledPageNavWrapper = styled.nav`
-  height: ${(props) => props.theme.navBar.height};
+  height: ${(props) => props.theme.sizes.navBar.height};
 `;
 
 export const StyledNavUnorderedList = styled.ul`

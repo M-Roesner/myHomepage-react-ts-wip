@@ -5,12 +5,12 @@ export const StyledHeader = styled.header`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: ${(props) => props.theme.palette.header.backgroundColor};
+  background-color: ${(props) => props.theme.palette.common.backgroundColorAccent};
 
   padding-left: 5px;
   padding-right: 5px;
 
-  height: ${(props) => props.theme.navBar.height};
+  height: ${(props) => props.theme.sizes.navBar.height};
   margin-bottom: 2rem;
 
   /* '>' is used to select the first direct child of the StyledHeader. */

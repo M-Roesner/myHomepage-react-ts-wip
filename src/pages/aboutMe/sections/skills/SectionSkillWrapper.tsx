@@ -9,7 +9,7 @@ import SkillDescription from "./skillDescription/SkillDescription";
 import { SkillType } from "./skillTypes";
 
 // Resources
-import { mySkills } from "./mySkills";
+import { mySampleSkills } from "../../../../resources/samples/mySampleSkills";
 
 /**
  * Renders a list of skills and their description.
@@ -18,13 +18,10 @@ const SectionSkillWrapper = () => {
   const [selectedSkill, setSelectedSkill] = useState<SkillType | null>(null);
 
   const handleSkillClick = (skill: SkillType) => {
-    if (skill !== null) {
-      console.log(skill);
-      setSelectedSkill(skill);
-    }
+    if (skill !== null) setSelectedSkill(skill);
   };
 
-  const sortedSkills = mySkills.sort((a, b) => a.priority - b.priority);
+  const sortedSkills = mySampleSkills.sort((a, b) => a.priority - b.priority);
   return (
     <StyledSectionSkillWrapper>
       <SkillList list={sortedSkills} onClick={handleSkillClick} />

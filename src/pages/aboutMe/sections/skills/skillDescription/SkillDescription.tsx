@@ -5,20 +5,12 @@ import SkillProjectLinks from "./SkillProjectLinks/SkillProjectLinks";
 import SkillDesciptionHeader from "./skillDescriptionHeader/SkillDesciptionHeader";
 
 // Types
-import { LinkType, SkillType } from "../skillTypes";
+import { SkillType } from "../skillTypes";
 
 export type imgFontAwesomeType = {
   className: string;
   style: React.CSSProperties;
 };
-
-const sampleLinks: LinkType[] = [
-  { text: "Projekt 1", route: "/project1" },
-  { text: "Projekt 2", route: "/project2" },
-  { text: "Projekt 3", route: "/project3" },
-  { text: "Projekt 4", route: "/project4" },
-  { text: "Projekt 5", route: "/project5" },
-];
 
 type SkillDescriptionProps = {
   skill: SkillType | null;
@@ -36,7 +28,7 @@ const SkillDescription = ({ skill }: SkillDescriptionProps) => {
         <>
           <SkillDesciptionHeader name={skill.name} />
           <SkilledDescriptionText text={skill.description} />
-          <SkillProjectLinks links={sampleLinks} />
+          {skill.links && <SkillProjectLinks links={skill.links} />}
         </>
       ) : (
         "Wählen Sie eine Fähigkeit aus, um die entsprechende Beschreibung zu sehen!"

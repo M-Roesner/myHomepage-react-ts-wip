@@ -1,6 +1,6 @@
-import { SkillType } from "./skillTypes";
+import { SkillType } from "../../pages/aboutMe/sections/skills/skillTypes";
 
-export const mySkills: SkillType[] = [
+export const mySampleSkills: SkillType[] = [
   {
     id: 1,
     name: "Java",
@@ -16,6 +16,11 @@ export const mySkills: SkillType[] = [
     category: "Programming Language",
     description:
       "JavaScript ist eine vielseitige Programmiersprache, die häufig für die Webentwicklung verwendet wird.",
+    links: [
+      { text: "Projekt JavaScript 1", route: "/projectJavaScript1" },
+      { text: "Projekt JavaScript 2", route: "/projectJavaScript2" },
+      { text: "Projekt JavaScript 3", route: "/projectJavaScript3" },
+    ],
   },
   {
     id: 3,
@@ -23,6 +28,10 @@ export const mySkills: SkillType[] = [
     priority: 1,
     category: "Frontend Framework",
     description: "React.js ist eine beliebte JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen.",
+    links: [
+      { text: "Projekt React 1", route: "/projectReact1" },
+      { text: "Projekt React 2", route: "/projectReact2" },
+    ],
   },
   {
     id: 4,
@@ -61,6 +70,11 @@ export const mySkills: SkillType[] = [
     category: "Stylesheet Language",
     description:
       "SCSS (Sassy CSS) ist eine Erweiterung von CSS, die Funktionen wie Variablen, Verschachtelungen und Mixins bietet.",
+    links: [
+      { text: "Projekt SCSS 1", route: "/projectSCSS1" },
+      { text: "Projekt SCSS 2", route: "/projectSCSS2" },
+      { text: "Projekt SCSS 3", route: "/projectSCSS3" },
+    ],
   },
   {
     id: 9,
@@ -84,6 +98,11 @@ export const mySkills: SkillType[] = [
     category: "Frontend Framework",
     description:
       "Styled Components ist eine CSS-in-JS-Bibliothek, mit der CSS direkt in JavaScript-Dateien geschrieben werden kann.",
+    links: [
+      { text: "Projekt Styled Components 1", route: "/projectStyledComponents1" },
+      { text: "Projekt Styled Components 2", route: "/projectStyledComponents2" },
+      { text: "Projekt Styled Components 3", route: "/projectStyledComponents3" },
+    ],
   },
   {
     id: 12,

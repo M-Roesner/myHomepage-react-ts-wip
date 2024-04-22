@@ -6,7 +6,7 @@ import SkillList from "./skillList/SkillList";
 import SkillDescription from "./skillDescription/SkillDescription";
 
 // Types
-import { skillType } from "./skillTypes";
+import { SkillType } from "./skillTypes";
 
 // Resources
 import { mySkills } from "./mySkills";
@@ -15,9 +15,9 @@ import { mySkills } from "./mySkills";
  * Renders a list of skills and their description.
  */
 const SectionSkillWrapper = () => {
-  const [selectedSkill, setSelectedSkill] = useState<skillType | null>(null);
+  const [selectedSkill, setSelectedSkill] = useState<SkillType | null>(null);
 
-  const handleSkillClick = (skill: skillType) => {
+  const handleSkillClick = (skill: SkillType) => {
     if (skill !== null) {
       console.log(skill);
       setSelectedSkill(skill);

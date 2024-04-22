@@ -1,6 +1,6 @@
-import { skillType } from "./skillTypes";
+import { SkillType } from "./skillTypes";
 
-export const mySkills: skillType[] = [
+export const mySkills: SkillType[] = [
   {
     id: 1,
     name: "Java",

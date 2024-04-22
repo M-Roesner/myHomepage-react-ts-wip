@@ -1,12 +1,10 @@
 // Components
 import NavbarButton from "../../../../custom/button/navbarButton/NavbarButton";
+import { StyledNavList } from "../styledPageNavWrapper";
 
-// Styled-Component
-import { StyledNavList } from "./styledNavItem";
-
-type NavItemProps = {
+type NavListItemProps = {
   to: string;
-  autoWrap?: boolean;
+  wrap?: boolean;
   children: React.ReactNode;
 };
 
@@ -15,18 +13,18 @@ type NavItemProps = {
  *
  * @param {Object} props - The props object containing the following properties:
  * @param {string} props.to - The path to navigate to when the link is clicked.
- * @param {boolean} props.autoWrap - Optional: Enables automatic line break for content if true; otherwise, disables it.
+ * @param {boolean} props.wrap - Optional: Specifies whether the link should wrap its content.
  * @param {ReactNode} props.children - Optional: The content of the navigation item.
  * @returns
  */
-const NavItem = ({ to, autoWrap, children }: NavItemProps) => {
+const NavListItem = ({ to, wrap, children }: NavListItemProps) => {
   return (
     <StyledNavList>
-      <NavbarButton to={to} autoWrap={autoWrap}>
+      <NavbarButton to={to} wrap={wrap}>
         {children}
       </NavbarButton>
     </StyledNavList>
   );
 };
 
-export default NavItem;
+export default NavListItem;

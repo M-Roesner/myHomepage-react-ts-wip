@@ -1,5 +1,5 @@
 // custom components
-import NavItem from "./PageNavItem/PageNavItem";
+import NavListItem from "./PageNavItem/PageNavItem";
 
 // Styled-Component
 import { StyledPageNavWrapper, StyledNavUnorderedList } from "./styledPageNavWrapper";
@@ -11,11 +11,11 @@ const PageNavWrapper = () => {
   return (
     <StyledPageNavWrapper>
       <StyledNavUnorderedList>
-        <NavItem to="/">Home</NavItem>
-        <NavItem to="/aboutMe" autoWrap={false}>
-          Über mich
-        </NavItem>
-        <NavItem to="/myPortfolio">Mein Portfolio</NavItem>
+        <NavListItem to="/">Home</NavListItem>
+        <NavListItem to="/aboutMe">Über mich</NavListItem>
+        <NavListItem to="/myPortfolio" wrap>
+          Mein Portfolio
+        </NavListItem>
       </StyledNavUnorderedList>
     </StyledPageNavWrapper>
   );

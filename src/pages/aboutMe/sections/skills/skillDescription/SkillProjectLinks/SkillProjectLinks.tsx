@@ -1,20 +1,24 @@
-import { LinkType } from "../../skillTypes";
+// components
 import { StyledSkillProjectItem, StyledSkillProjectList } from "./styledSkillProjectLinks";
 import LinkButton from "../../../../../../components/custom/button/linkButton/LinkButton";
 
-const sampleLinks: LinkType[] = [
-  { text: "Projekt 1", route: "/project1" },
-  { text: "Projekt 2", route: "/project2" },
-  { text: "Projekt 3", route: "/project3" },
-  { text: "Projekt 4", route: "/project4" },
-  { text: "Projekt 5", route: "/project5" },
-];
+// Types
+import { LinkType } from "../../skillTypes";
 
-const SkillProjectLinks = () => {
+type SkillProjectListProps = {
+  links: LinkType[];
+};
+
+/**
+ * Returns a styled component with a list of links.
+ *
+ * @param {LinkType[]} links - Each link contains the text and the route.
+ */
+const SkillProjectLinks = ({ links }: SkillProjectListProps) => {
   return (
     <StyledSkillProjectList>
-      {sampleLinks.map((link, index) => (
-        <StyledSkillProjectItem style={{ textDecoration: "none" }}>
+      {links.map((link, index) => (
+        <StyledSkillProjectItem>
           <LinkButton key={index} to={link.route}>
             {link.text}
           </LinkButton>

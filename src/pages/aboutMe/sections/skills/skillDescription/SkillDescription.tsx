@@ -1,37 +1,42 @@
-// import { faJs } from "@fortawesome/free-brands-svg-icons";6
-import { skillType } from "../skillTypes";
+// components
 import { StyledSkillDescription } from "./styledSkillDescription";
-import SkillImage from "./skillImage/SkillImage";
-import CardHeadline from "../../../../../components/custom/card/cardHeadline/CardHeadline";
 import SkilledDescriptionText from "./skillDescriptionText/SkillDescriptionText";
 import SkillProjectLinks from "./SkillProjectLinks/SkillProjectLinks";
+import SkillDesciptionHeader from "./skillDescriptionHeader/SkillDesciptionHeader";
+
+// Types
+import { LinkType, SkillType } from "../skillTypes";
 
 export type imgFontAwesomeType = {
   className: string;
   style: React.CSSProperties;
 };
+
+const sampleLinks: LinkType[] = [
+  { text: "Projekt 1", route: "/project1" },
+  { text: "Projekt 2", route: "/project2" },
+  { text: "Projekt 3", route: "/project3" },
+  { text: "Projekt 4", route: "/project4" },
+  { text: "Projekt 5", route: "/project5" },
+];
+
 type SkillDescriptionProps = {
-  skill: skillType | null;
+  skill: SkillType | null;
 };
 
 /**
  * Returns a styled description text with the passed skill.
  *
- * @param {skillType} skill - The skill object contains the description text, among other things.
+ * @param {SkillType} skill - The skill object contains the description text, among other things.
  */
 const SkillDescription = ({ skill }: SkillDescriptionProps) => {
-  // TODO: Image - Adding images to the description does not currently work with fontawesome.
-  // The following import is required to get icons from fontawesome. (in index.html)
-  // <script src="https://kit.fontawesome.com/418764a8f1.js" crossorigin="anonymous"></script>
-  const imgStyle: imgFontAwesomeType = { className: "fa-brands fa-vuejs fa-lg", style: {} };
   return (
     <StyledSkillDescription>
       {skill ? (
         <>
-          {imgStyle && <SkillImage imgStyle={imgStyle} />}
-          <CardHeadline level={3}>{skill.name}</CardHeadline>
+          <SkillDesciptionHeader name={skill.name} />
           <SkilledDescriptionText text={skill.description} />
-          <SkillProjectLinks />
+          <SkillProjectLinks links={sampleLinks} />
         </>
       ) : (
         "Wählen Sie eine Fähigkeit aus, um die entsprechende Beschreibung zu sehen!"

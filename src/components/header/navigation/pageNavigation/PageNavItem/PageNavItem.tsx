@@ -1,6 +1,6 @@
 // Components
 import NavbarButton from "../../../../custom/button/navbarButton/NavbarButton";
-import { StyledNavList } from "../styledPageNavWrapper";
+import { StyledNavListItem } from "../styledPageNavWrapper";
 
 type NavListItemProps = {
   to: string;
@@ -19,11 +19,11 @@ type NavListItemProps = {
  */
 const NavListItem = ({ to, wrap, children }: NavListItemProps) => {
   return (
-    <StyledNavList>
+    <StyledNavListItem>
       <NavbarButton to={to} wrap={wrap}>
         {children}
       </NavbarButton>
-    </StyledNavList>
+    </StyledNavListItem>
   );
 };
 

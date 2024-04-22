@@ -15,4 +15,4 @@ export const StyledNavUnorderedList = styled.ul`
   }
 `;
 
-export const StyledNavList = styled.li``;
+export const StyledNavListItem = styled.li``;

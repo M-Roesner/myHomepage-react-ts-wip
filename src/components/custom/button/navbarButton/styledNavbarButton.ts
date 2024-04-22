@@ -21,6 +21,9 @@ export const StyledNavbarButton = styled(slyledLinkButtonBasic)`
 
   &.active {
     background-color: ${(props) => props.theme.palette.common.backgroundColor};
+    &:hover {
+      background-color: ${(props) => props.theme.palette.common.backgroundHoverColor};
+    }
   }
 `;
 

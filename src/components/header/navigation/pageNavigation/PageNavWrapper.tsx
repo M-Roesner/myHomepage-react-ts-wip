@@ -11,7 +11,6 @@ const PageNavWrapper = () => {
   return (
     <StyledPageNavWrapper>
       <StyledNavUnorderedList>
-        <NavListItem to="/">Home</NavListItem>
         <NavListItem to="/aboutMe">Über mich</NavListItem>
         <NavListItem to="/myPortfolio" wrap>
           Mein Portfolio

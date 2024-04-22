@@ -17,10 +17,11 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFoundPage />,
     children: [
-      { path: "/", element: <HomePage /> },
+      // TODO: Moved folder for testing purposes. correct order: "/" & <HomePage /> | "/aboutMe" & <AboutMePage /> | "/myPortfolio" & <MyPortfolio />
+      { path: "/", element: <AboutMePage /> },
       {
         path: "/aboutMe",
-        element: <AboutMePage />,
+        element: <HomePage />,
       },
       {
         path: "/myPortfolio",

@@ -2,7 +2,13 @@
 
 This repository contains my new homepage, which is being developed with TypeScript and React.
 
-## Packages used
+## Status
+
+This project is currently a work in progress. Changes and updates will be made regularly.
+
+[Project todo's](todo.md)
+
+## Packages used:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org/)
@@ -16,15 +22,11 @@ This repository contains my new homepage, which is being developed with TypeScri
   - [Icon search](https://fontawesome.com/search)
   - [Use icons with react](https://docs.fontawesome.com/web/use-with/react/add-icons)
 
-## Possible packages for usage:
+### Possible packages for usage:
 
 - [React Select: for select Input control](https://react-select.com/home)
 
-## Status
-
-This project is currently a work in progress. It is under active development and may not be fully completed. Changes and updates will be made regularly.
-
-## How do you use 'styled components' with TypeScript?
+### How do you use 'styled components' with TypeScript?
 
 1.  install types: `npm i @types/styled-components -D`
 2.  Create a declaration file (example):

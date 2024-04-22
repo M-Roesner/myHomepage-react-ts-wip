@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const StyledHomePage = styled.div`
+const StyledAboutMePage = styled.div`
   @media (min-width: 768px) {
   }
 `;
 
-export default StyledHomePage;
+export default StyledAboutMePage;

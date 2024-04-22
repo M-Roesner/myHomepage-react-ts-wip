@@ -18,6 +18,8 @@ type SectionSkillListProps = {
  * @param {Function} props.onClick - The function to be called when a skill is clicked.
  */
 const SkillList = ({ list, onClick }: SectionSkillListProps) => {
+  console.log(list);
+
   return (
     <StyledSectionSkillList>
       {list.map((skill) => (

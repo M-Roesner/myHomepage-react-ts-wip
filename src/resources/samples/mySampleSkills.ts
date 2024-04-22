@@ -45,14 +45,14 @@ export const mySampleSkills: SkillType[] = [
     id: 5,
     name: "PHP",
     priority: 2,
-    category: "Backend Language",
+    category: "Backend Development",
     description: "PHP ist eine serverseitige Skriptsprache, die häufig für die Webentwicklung verwendet wird.",
   },
   {
     id: 6,
     name: "SQL",
     priority: 2,
-    category: "Database",
+    category: "Backend Development",
     description:
       "SQL (Structured Query Language) ist eine domänenspezifische Sprache, die für das Programmieren entwickelt wurde und zur Verwaltung von Daten in einem relationalen Datenbankmanagementsystem dient.",
   },
@@ -67,7 +67,7 @@ export const mySampleSkills: SkillType[] = [
     id: 8,
     name: "SCSS",
     priority: 2,
-    category: "Stylesheet Language",
+    category: "Frontend Framework",
     description:
       "SCSS (Sassy CSS) ist eine Erweiterung von CSS, die Funktionen wie Variablen, Verschachtelungen und Mixins bietet.",
     links: [
@@ -123,14 +123,14 @@ export const mySampleSkills: SkillType[] = [
     id: 14,
     name: "MySQL",
     priority: 3,
-    category: "Database",
+    category: "Backend Development",
     description: "MySQL ist ein Open-Source-Relationales Datenbankmanagementsystem.",
   },
   {
     id: 15,
     name: "SQLite",
     priority: 2,
-    category: "Database",
+    category: "Backend Development",
     description:
       "SQLite ist eine C-Bibliothek, die eine kleine, schnelle, eigenständige, zuverlässige, voll ausgestattete SQL-Datenbank-Engine implementiert.",
   },
@@ -138,7 +138,7 @@ export const mySampleSkills: SkillType[] = [
     id: 16,
     name: "Express.js",
     priority: 3,
-    category: "Server Framework",
+    category: "Backend Development",
     description:
       "Express.js ist ein Webanwendungs-Framework für Node.js, das zur Erstellung von Webanwendungen und APIs verwendet wird.",
   },

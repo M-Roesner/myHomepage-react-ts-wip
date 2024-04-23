@@ -18,10 +18,8 @@ const SkillProjectLinks = ({ links }: SkillProjectListProps) => {
   return (
     <StyledSkillProjectList>
       {links.map((link, index) => (
-        <StyledSkillProjectItem>
-          <LinkButton key={index} to={link.route}>
-            {link.text}
-          </LinkButton>
+        <StyledSkillProjectItem key={index}>
+          <LinkButton to={link.route}>{link.text}</LinkButton>
         </StyledSkillProjectItem>
       ))}
     </StyledSkillProjectList>

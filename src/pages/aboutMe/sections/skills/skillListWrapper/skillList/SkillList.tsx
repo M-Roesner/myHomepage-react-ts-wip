@@ -1,11 +1,11 @@
 // components
-import OnClickButton from "../../../../../components/custom/button/onClickButton/OnClickButton";
+import OnClickButton from "../../../../../../components/custom/button/onClickButton/OnClickButton";
 import { StyledSectionSkillList } from "./styledSkillList";
 
 // Types
-import { SkillType } from "../skillTypes";
+import { SkillType } from "../../skillTypes";
 
-type SectionSkillListProps = {
+type SkillListProps = {
   list: SkillType[];
   onClick: (skill: SkillType) => void;
 };
@@ -17,7 +17,7 @@ type SectionSkillListProps = {
  * @param {SkillType[]} props.list - The array of skills.
  * @param {Function} props.onClick - The function to be called when a skill is clicked.
  */
-const SkillList = ({ list, onClick }: SectionSkillListProps) => {
+const SkillList = ({ list, onClick }: SkillListProps) => {
   console.log(list);
 
   return (

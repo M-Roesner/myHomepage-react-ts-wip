@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledSectionSkillList = styled.ul`
-  width: 50%;
   padding: 5px;
 
   display: flex;

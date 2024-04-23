@@ -59,4 +59,5 @@
 5.  Additional Features
 
     - [] Responsive design
-    - [] dark / light mode
+    - [] Dark / Light mode
+    - [] Fetch data with Express.js from a MySQL database

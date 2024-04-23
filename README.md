@@ -15,6 +15,7 @@ This project is currently a work in progress. Changes and updates will be made r
 - [react-router-dom](https://reactrouter.com/)
 - [styled-components](https://styled-components.com/)
   - [How do you use 'styled components' with TypeScript?](#how-do-you-use-styled-components-with-typescript)
+  - [Working with props in 'styled components'](https://styled-components.com/docs/basics#attaching-additional-props)
   - [Guide: Theme with styled-components-and-typescript | medium.com](https://medium.com/rbi-tech/theme-with-styled-components-and-typescript-209244ec15a3)
   - !!! ['emotion' an alternative to 'styled components'](https://emotion.sh/docs/typescript)
 - [Icons: fontawesome](https://fontawesome.com/)

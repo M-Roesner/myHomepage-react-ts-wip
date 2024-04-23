@@ -5,6 +5,7 @@ const defaultHeaderStyles = `
 // font-style: normal;
 line-height: 3ch;
 padding-left: 10px;
+margin: 1ch 0;
 `;
 
 // TODO: header styles ... content, color ...
@@ -12,7 +13,6 @@ export const StyledCardHeadline1 = styled.h1`
   ${defaultHeaderStyles};
   color: #5893c4;
   font-size: 2rem;
-  margin-top: 0.6ch;
   &::after {
     content: "{}";
     color: #f5f4f396;

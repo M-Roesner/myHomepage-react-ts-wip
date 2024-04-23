@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { defaultSectionStyle } from "../defaultSectionStyle";
 
-export const StyledSectionSkillWrapper = styled(defaultSectionStyle)`
+export const StyledSectionSkillWrapper = styled.section`
+  padding-left: 1vw;
+
   display: flex;
   flex-direction: row;
-  gap: 5px;
-  padding-left: 1vw;
+  gap: 10px;
 `;

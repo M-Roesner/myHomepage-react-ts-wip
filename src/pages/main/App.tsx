@@ -8,12 +8,12 @@ const App = () => {
   return (
     <>
       <Header />
-      <div>
-        {/* TODO: CONTENT DIV!!! */}
+      <main>
+        {/* TODO: Style content DIV!!! */}
         <Suspense fallback={<h2>Loading...</h2>}>
           <Outlet />
         </Suspense>
-      </div>
+      </main>
       <Footer />
     </>
   );

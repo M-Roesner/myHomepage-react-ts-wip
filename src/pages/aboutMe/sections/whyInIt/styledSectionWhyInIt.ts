@@ -1,4 +1,3 @@
 import styled from "styled-components";
-import { defaultSectionStyle } from "../defaultSectionStyle";
 
-export const StyledSectionWhyInIt = styled(defaultSectionStyle)``;
+export const StyledSectionWhyInIt = styled.section``;

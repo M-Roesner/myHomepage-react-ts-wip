@@ -1,13 +1,14 @@
+// components
 import CardHeadline from "../../../../components/custom/card/cardHeadline/CardHeadline";
 import CardParagraph from "../../../../components/custom/card/cardParagraph/CardParagraph";
-import CardVerticalLine from "../../../../components/custom/card/cardVerticalLine/CardVerticalLine";
+import { CardVerticalLineStyleForContent } from "../../../../components/custom/card/cardVerticalLine/styledCardVerticalLine";
 import { StyledSectionIntroduction } from "./styledSectionIntroduction";
 
 const SectionIntroduction = () => {
   return (
     <StyledSectionIntroduction>
       <CardHeadline level={3}>Wer bin ich?</CardHeadline>
-      <CardVerticalLine>
+      <CardVerticalLineStyleForContent>
         <CardParagraph>Hallo,</CardParagraph>
         <CardParagraph>mein Name ist Markus.</CardParagraph>
         <CardParagraph>
@@ -29,7 +30,7 @@ const SectionIntroduction = () => {
           Die Schließung der Firma habe ich als Chance genutzt, mich beruflich neu zu orientieren. Meine Überlegungen
           haben mich in die faszinierende Welt der IT geführt.
         </CardParagraph>
-      </CardVerticalLine>
+      </CardVerticalLineStyleForContent>
     </StyledSectionIntroduction>
   );
 };

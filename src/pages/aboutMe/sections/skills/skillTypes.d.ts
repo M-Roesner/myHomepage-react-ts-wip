@@ -10,6 +10,7 @@ export type SkillType = {
   category: SkillCategoryType;
   description: string;
   links?: LinkType[];
+  personalKnowledgeLevel?: number;
 };
 
 export type GroupedSkills = {

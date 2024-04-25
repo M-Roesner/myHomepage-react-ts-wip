@@ -3,6 +3,7 @@ interface IMode {
   backgroundColor: string;
   backgroundColorAccent: string;
   textColor: string;
+  textColorSecond: string;
   backgroundHoverColor: string;
   borderColor: string;
 }

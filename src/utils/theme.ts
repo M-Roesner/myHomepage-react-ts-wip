@@ -13,6 +13,7 @@ export const defaultTheme: DefaultTheme = {
       backgroundColor: "#383838",
       backgroundColorAccent: "#3d3d3d",
       textColor: "#f3f3f3",
+      textColorSecond: "#b8610f",
       backgroundHoverColor: "#474747",
       borderColor: "#5c606d",
     },

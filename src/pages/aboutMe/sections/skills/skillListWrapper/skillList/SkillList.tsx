@@ -1,6 +1,9 @@
+import { useState } from "react";
+
 // components
 import OnClickButton from "../../../../../../components/custom/button/onClickButton/OnClickButton";
-import { StyledSectionSkillList } from "./styledSkillList";
+import { StyledSectionSkillItem, StyledSectionSkillList } from "./styledSkillList";
+import { StyledButtonOnlyText } from "../../../../../../components/custom/button/styledButtonDefault";
 
 // Types
 import { SkillType } from "../../skillTypes";
@@ -18,15 +21,31 @@ type SkillListProps = {
  * @param {Function} props.onClick - The function to be called when a skill is clicked.
  */
 const SkillList = ({ list, onClick }: SkillListProps) => {
-  console.log(list);
+  const [showAll, setShowAll] = useState(false);
+
+  const maxVisableSkills = 10;
+  const remainingSkills = list.length - maxVisableSkills;
+
+  const handleClick = () => {
+    setShowAll(true);
+  };
+
+  const renderSkillItem = (skill: SkillType) => (
+    <StyledSectionSkillItem key={skill.id}>
+      <OnClickButton onClick={() => onClick(skill)}>{skill.name}</OnClickButton>
+    </StyledSectionSkillItem>
+  );
 
   return (
     <StyledSectionSkillList>
-      {list.map((skill) => (
-        <OnClickButton key={skill.id} onClick={() => onClick(skill)}>
-          {skill.name}
-        </OnClickButton>
-      ))}
+      {showAll
+        ? list.map((skill) => renderSkillItem(skill))
+        : list.slice(0, maxVisableSkills).map((skill) => renderSkillItem(skill))}
+      {!showAll && list.length > maxVisableSkills ? (
+        <StyledButtonOnlyText onClick={handleClick}>{`+${remainingSkills} weitere Skills`}</StyledButtonOnlyText>
+      ) : (
+        ""
+      )}
     </StyledSectionSkillList>
   );
 };

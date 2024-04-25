@@ -11,3 +11,8 @@ export const StyledSectionSkillList = styled.ul`
   gap: 5px;
   border: 1px solid ${(props) => props.theme.palette.common.borderColor};
 `;
+
+export const StyledSectionSkillItem = styled.li`
+  text-decoration: none;
+  list-style: none;
+`;

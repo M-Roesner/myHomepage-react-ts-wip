@@ -1,52 +1,29 @@
-import { useState } from "react";
-
-// components
-import OnClickButton from "../../../../../../components/custom/button/onClickButton/OnClickButton";
-import { StyledSectionSkillItem, StyledSectionSkillList } from "./styledSkillList";
-import { StyledButtonOnlyText } from "../../../../../../components/custom/button/styledButtonDefault";
+// Components
+import SkillItem from "./SkillItem/SkillItem";
+import { StyledSkillList, StyledSkillListParagraph } from "./styledskillList";
 
 // Types
 import { SkillType } from "../../skillTypes";
 
 type SkillListProps = {
-  list: SkillType[];
+  skillList: SkillType[];
+  title: string;
   onClick: (skill: SkillType) => void;
 };
 
 /**
- * Renders a list of skills with the given list.
- *
- * @param {Object} props - The props object containing the list of skills and onClick function.
- * @param {SkillType[]} props.list - The array of skills.
- * @param {Function} props.onClick - The function to be called when a skill is clicked.
+ * Retrun a list of skills
+ * @param {Object} props - The component props.
+ * @param {SkillType[]} props.skillListCollection - Array contains a list of skills.
+ * @param {string} props.title - The title of the list.
+ * @param {Function} props.onClick
  */
-const SkillList = ({ list, onClick }: SkillListProps) => {
-  const [showAll, setShowAll] = useState(false);
-
-  const maxVisableSkills = 10;
-  const remainingSkills = list.length - maxVisableSkills;
-
-  const handleClick = () => {
-    setShowAll(true);
-  };
-
-  const renderSkillItem = (skill: SkillType) => (
-    <StyledSectionSkillItem key={skill.id}>
-      <OnClickButton onClick={() => onClick(skill)}>{skill.name}</OnClickButton>
-    </StyledSectionSkillItem>
-  );
-
+const SkillList = ({ skillList, title, onClick }: SkillListProps) => {
   return (
-    <StyledSectionSkillList>
-      {showAll
-        ? list.map((skill) => renderSkillItem(skill))
-        : list.slice(0, maxVisableSkills).map((skill) => renderSkillItem(skill))}
-      {!showAll && list.length > maxVisableSkills ? (
-        <StyledButtonOnlyText onClick={handleClick}>{`+${remainingSkills} weitere Skills`}</StyledButtonOnlyText>
-      ) : (
-        ""
-      )}
-    </StyledSectionSkillList>
+    <StyledSkillList>
+      <StyledSkillListParagraph>{title}:</StyledSkillListParagraph>
+      <SkillItem list={skillList} onClick={onClick} />
+    </StyledSkillList>
   );
 };
 

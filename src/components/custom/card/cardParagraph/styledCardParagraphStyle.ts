@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
-export const StyledCardParagraph = styled.p`
-  padding: 10px 0;
+/**
+ * Renders a styled p tag.
+ */
+export const CardParagraphStyle = styled.p`
+  padding-inline: 10px;
 
   &:first-child {
     padding-top: 0;

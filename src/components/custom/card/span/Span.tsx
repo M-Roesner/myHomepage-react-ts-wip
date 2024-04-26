@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledSpan } from "./styledSpan";
+import { styledSpan as StyledSpan } from "./styledSpan";
 
 type SpanProps = {
   title: string;

@@ -8,7 +8,7 @@ margin-block: 1ch;
 `;
 
 // TODO: header styles ... content, color ...
-export const StyledCardHeadline1 = styled.h1`
+export const styledCardHeadline1 = styled.h1`
   ${defaultHeaderStyles};
   color: #5893c4;
   font-size: 2rem;
@@ -18,7 +18,7 @@ export const StyledCardHeadline1 = styled.h1`
   }
 `;
 
-export const StyledCardHeadline2 = styled.h2`
+export const styledCardHeadline2 = styled.h2`
   ${defaultHeaderStyles};
   font-size: 1.6rem;
   color: #d5d36c;
@@ -28,7 +28,7 @@ export const StyledCardHeadline2 = styled.h2`
   }
 `;
 
-export const StyledCardHeadline3 = styled.h3`
+export const styledCardHeadline3 = styled.h3`
   ${defaultHeaderStyles};
   font-size: 1.6rem;
   color: #059f00;
@@ -38,19 +38,19 @@ export const StyledCardHeadline3 = styled.h3`
   }
 `;
 
-export const StyledCardHeadline4 = styled.h4`
+export const styledCardHeadline4 = styled.h4`
   ${defaultHeaderStyles};
   font-size: 1.4rem;
   color: #f5f4f396;
 `;
 
-export const StyledCardHeadline5 = styled.h5`
+export const styledCardHeadline5 = styled.h5`
   ${defaultHeaderStyles};
   font-size: 1.2rem;
   color: #f5f4f396;
 `;
 
-export const StyledCardHeadline6 = styled.h6`
+export const styledCardHeadline6 = styled.h6`
   ${defaultHeaderStyles};
   font-size: 1rem;
 `;

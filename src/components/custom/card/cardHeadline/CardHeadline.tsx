@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  StyledCardHeadline1,
-  StyledCardHeadline2,
-  StyledCardHeadline3,
-  StyledCardHeadline4,
-  StyledCardHeadline5,
-  StyledCardHeadline6,
+  styledCardHeadline1,
+  styledCardHeadline2,
+  styledCardHeadline3,
+  styledCardHeadline4,
+  styledCardHeadline5,
+  styledCardHeadline6,
 } from "./styledCardHeadline";
 
 type CardHeadlineProps = {
@@ -27,22 +27,19 @@ type CardHeadlineProps = {
 const getCardHeadlineComponent = (level: CardHeadlineProps["level"]) => {
   switch (level) {
     case 1:
-      // return <StyledCardHeadline1 />;
-      // Diese Syntax würde eine Instanz der StyledCardHeadline1-Komponente erstellen und sie sofort rendern.
-      // Es soll aber nur eine Referenz zur Komponente zurückgeben werden, um sie später zu rendern.
-      return StyledCardHeadline1;
+      return styledCardHeadline1;
     case 2:
-      return StyledCardHeadline2;
+      return styledCardHeadline2;
     case 3:
-      return StyledCardHeadline3;
+      return styledCardHeadline3;
     case 4:
-      return StyledCardHeadline4;
+      return styledCardHeadline4;
     case 5:
-      return StyledCardHeadline5;
+      return styledCardHeadline5;
     case 6:
-      return StyledCardHeadline6;
+      return styledCardHeadline6;
     default:
-      return StyledCardHeadline1;
+      return styledCardHeadline1;
   }
 };
 

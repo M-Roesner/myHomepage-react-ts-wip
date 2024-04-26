@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { CardVerticalLineStyle } from "../../components/custom/card/cardVerticalLine/styledCardVerticalLine";
+import { CardVerticalLineStyle } from "../../components/custom/card/cardVerticalLine/styledCardVerticalLineStyle";
 
 const StyledAboutMePage = styled(CardVerticalLineStyle)`
-  margin-right: 1vw;
   @media (min-width: 768px) {
   }
 `;

@@ -1,6 +1,6 @@
 // components
 import CardHeadline from "../../components/custom/card/cardHeadline/CardHeadline";
-import { CardVerticalLineStyle } from "../../components/custom/card/cardVerticalLine/styledCardVerticalLine";
+import { CardVerticalLineStyle } from "../../components/custom/card/cardVerticalLine/styledCardVerticalLineStyle";
 import SectionIntroduction from "./sections/introduction/SectionIntroduction";
 import SectionMyFutureCareer from "./sections/myFutureCareer/SectionMyFutureCareer";
 import SectionSkillWrapper from "./sections/skills/SectionSkillWrapper";

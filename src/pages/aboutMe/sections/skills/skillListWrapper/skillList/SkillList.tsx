@@ -8,7 +8,6 @@ import { SkillType } from "../../skillTypes";
 type SkillListProps = {
   skillList: SkillType[];
   title: string;
-  onClick: (skill: SkillType) => void;
 };
 
 /**
@@ -18,11 +17,11 @@ type SkillListProps = {
  * @param {string} props.title - The title of the list.
  * @param {Function} props.onClick
  */
-const SkillList = ({ skillList, title, onClick }: SkillListProps) => {
+const SkillList = ({ skillList, title }: SkillListProps) => {
   return (
     <StyledSkillList>
       <StyledSkillListParagraph>{title}:</StyledSkillListParagraph>
-      <SkillItem list={skillList} onClick={onClick} />
+      <SkillItem list={skillList} />
     </StyledSkillList>
   );
 };

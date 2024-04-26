@@ -18,7 +18,16 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
     children: [
       // TODO: Moved folder for testing purposes. correct order: "/" & <HomePage /> | "/aboutMe" & <AboutMePage /> | "/myPortfolio" & <MyPortfolio />
-      { path: "/", element: <AboutMePage /> },
+      {
+        path: "/",
+        element: <AboutMePage />,
+        children: [
+          {
+            path: "/:skillId/:skillCategory",
+            element: <AboutMePage />,
+          },
+        ],
+      },
       {
         path: "/aboutMe",
         element: <HomePage />,

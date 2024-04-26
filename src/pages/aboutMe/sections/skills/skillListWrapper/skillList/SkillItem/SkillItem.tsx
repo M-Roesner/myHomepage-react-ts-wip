@@ -7,6 +7,7 @@ import { StyledButtonOnlyText } from "../../../../../../../components/custom/but
 
 // Types
 import { SkillType } from "../../../skillTypes";
+import { StyledNormalButton } from "../../../../../../../components/custom/button/normalButton/styledNormalButton";
 
 type SkillListProps = {
   list: SkillType[];
@@ -33,6 +34,7 @@ const SkillItem = ({ list, onClick }: SkillListProps) => {
   const renderSkillItem = (skill: SkillType) => (
     <StyledSectionSkillItem key={skill.id}>
       <OnClickButton onClick={() => onClick(skill)}>{skill.name}</OnClickButton>
+      {/* <StyledNormalButton to={`/${skill.id}/${skill.category}`}>{skill.name}</StyledNormalButton> */}
     </StyledSectionSkillItem>
   );
 

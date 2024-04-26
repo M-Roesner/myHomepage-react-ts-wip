@@ -23,7 +23,7 @@ const SectionSkillWrapper = () => {
   return (
     <StyledSectionSkillWrapper>
       <SkillListWrapper onClick={handleSkillClick} />
-      <SkillDescription skill={selectedSkill} />
+      <SkillDescription oldskill={selectedSkill} />
     </StyledSectionSkillWrapper>
   );
 };

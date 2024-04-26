@@ -15,4 +15,7 @@ export const StyledSectionSkillList = styled.ul`
 export const StyledSectionSkillItem = styled.li`
   text-decoration: none;
   list-style: none;
+
+  // padding-block is used because the StyledNormalButton has a padding of 10px
+  padding-block: 10px;
 `;

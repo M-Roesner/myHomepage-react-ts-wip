@@ -5,14 +5,20 @@ import { StyledCardImage } from "./styledCardImage";
 import { StyledCardProject } from "./styledCardProject";
 
 type CardProjectProps = {
+  url: string;
   content: ProjectType;
 };
 
-const CardProject = ({ content }: CardProjectProps) => {
-  const previewImageSrc = content.imgSrc?.find((img) => img.isPreviewImage);
+const CardProject = ({ url, content }: CardProjectProps) => {
+  const previewImage = content.imgSrc?.find((img) => img.isPreviewImage);
   return (
-    <StyledCardProject>
-      {previewImageSrc && <StyledCardImage src={previewImageSrc.imgSrc} alt={previewImageSrc.imgAlt} />}
+    <StyledCardProject to={url}>
+      {previewImage && (
+        <StyledCardImage
+          src={previewImage.imgSrc}
+          alt={previewImage.imgAlt ? previewImage.imgAlt : previewImage.imgTitle}
+        />
+      )}
       <CardHeadline level={4}>{content.title}</CardHeadline>
       <CardParagraphStyle>{content.cardIntroduction}</CardParagraphStyle>
     </StyledCardProject>

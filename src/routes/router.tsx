@@ -3,7 +3,19 @@ import { createBrowserRouter } from "react-router-dom";
 import { App, NotFoundPage, HomePage, AboutMePage, MyPortfolio, ImprintPage, Footer } from "./index.ts";
 
 /**
+ * Enum representing different route types in the application, to navigate correctly.
+ */
+export enum ERouteType {
+  ABOUT_ME = "aboutMe",
+  HOME = "",
+  MY_PORTFOLIO = "myPortfolio",
+  IMPRINT = "imprint",
+}
+
+/**
  * Provides routes for navigation.
+ * Use {@link ERouteType} for correct routing.
+ * @enum {ERouteType}
  */
 export const router = createBrowserRouter([
   {
@@ -13,25 +25,31 @@ export const router = createBrowserRouter([
     children: [
       // TODO: Moved folder for testing purposes. correct order: "/" & <HomePage /> | "/aboutMe" & <AboutMePage /> | "/myPortfolio" & <MyPortfolio />
       {
-        path: "/",
+        path: `/${ERouteType.HOME}`,
+        element: <HomePage />,
+      },
+      {
+        path: `/${ERouteType.ABOUT_ME}`,
         element: <AboutMePage />,
         children: [
           {
-            path: "/:skillId/:skillCategory",
+            path: `/${ERouteType.ABOUT_ME}/:skillId/:skillCategory`,
             element: <AboutMePage />,
           },
         ],
       },
       {
-        path: "/aboutMe",
-        element: <HomePage />,
-      },
-      {
-        path: "/myPortfolio",
+        path: `/${ERouteType.MY_PORTFOLIO}`,
         element: <MyPortfolio />,
+        children: [
+          {
+            path: `/${ERouteType.MY_PORTFOLIO}/:portfolioId`,
+            element: <MyPortfolio />,
+          },
+        ],
       },
       { path: "/", element: <Footer /> },
-      { path: "/imprint", element: <ImprintPage /> },
+      { path: `/${ERouteType.IMPRINT}`, element: <ImprintPage /> },
     ],
   },
 ]);

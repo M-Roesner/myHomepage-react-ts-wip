@@ -7,6 +7,7 @@ import { StyledNormalButton } from "../../../../../../../components/custom/butto
 
 // Types
 import { SkillType } from "../../../skillTypes";
+import { ERouteType } from "../../../../../../../routes/router";
 
 type SkillListProps = {
   list: SkillType[];
@@ -29,7 +30,7 @@ const SkillItem = ({ list }: SkillListProps) => {
 
   const renderSkillItem = (skill: SkillType) => (
     <StyledSectionSkillItem key={skill.id}>
-      <StyledNormalButton to={`/${skill.id}/${skill.category}`}>{skill.name}</StyledNormalButton>
+      <StyledNormalButton to={`/${ERouteType.ABOUT_ME}/${skill.id}/${skill.category}`}>{skill.name}</StyledNormalButton>
     </StyledSectionSkillItem>
   );
 

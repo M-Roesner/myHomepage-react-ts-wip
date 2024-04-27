@@ -3,8 +3,9 @@ interface IMode {
   backgroundColor: string;
   backgroundColorAccent: string;
   backgroundColorHighlight: string;
-  textColor: string;
+  textColorMain: string;
   textColorSecond: string;
+  textColorThird: string;
   backgroundColor_Hover: string;
   backgroundColorHighlight_Hover: string;
   borderColor: string;
@@ -13,6 +14,8 @@ interface IMode {
 interface ISizes {
   gap: string;
   padding: string;
+  lineHeight: string;
+  borderRadius: string;
 }
 
 declare module "styled-components" {

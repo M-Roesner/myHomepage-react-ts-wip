@@ -1,9 +1,10 @@
 // Components
 import SkillItem from "./SkillItem/SkillItem";
-import { StyledSkillList, StyledSkillListParagraph } from "./styledskillList";
+import { StyledSkillList } from "./styledskillList";
 
 // Types
 import { SkillType } from "../../skillTypes";
+import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
 
 type SkillListProps = {
   skillList: SkillType[];
@@ -20,7 +21,7 @@ type SkillListProps = {
 const SkillList = ({ skillList, title }: SkillListProps) => {
   return (
     <StyledSkillList>
-      <StyledSkillListParagraph>{title}:</StyledSkillListParagraph>
+      <CardHeadline level={4}>{title}:</CardHeadline>
       <SkillItem list={skillList} />
     </StyledSkillList>
   );

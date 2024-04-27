@@ -11,6 +11,7 @@ import { getSingleSkill } from "./helper";
 
 // Types
 import { SkillCategoryType } from "../skillTypes";
+import { CardParagraphStyle } from "../../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
 
 export type imgFontAwesomeType = {
   className: string;
@@ -34,7 +35,11 @@ const SkillDescription = () => {
           {skill.links !== undefined && <SkillProjectLinks links={skill.links} />}
         </>
       ) : (
-        "Wählen Sie eine Fähigkeit aus, um die entsprechende Beschreibung zu sehen!"
+        <>
+          <CardParagraphStyle style={{ display: "flex", textAlign: "center", alignItems: "center", height: "100%" }}>
+            Wählen Sie eine Fähigkeit aus, um die entsprechende Beschreibung zu sehen!
+          </CardParagraphStyle>
+        </>
       )}
     </StyledSkillDescription>
   );

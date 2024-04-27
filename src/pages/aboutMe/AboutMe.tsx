@@ -12,9 +12,9 @@ const AboutMePage = () => {
     <StyledAboutMePage>
       <CardHeadline level={1}>Über mich</CardHeadline>
       <CardVerticalLineStyle>
-        <SectionSkillWrapper />
         <SectionIntroduction />
         <SectionWhyInIt />
+        <SectionSkillWrapper />
         <SectionMyFutureCareer />
       </CardVerticalLineStyle>
     </StyledAboutMePage>

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // components
 import { StyledSectionSkillItem, StyledSectionSkillList } from "./styledSkillItem";
-import { StyledButtonOnlyText } from "../../../../../../../components/custom/button/styledButtonDefault";
+import { StyledNormalButton_OnlyText } from "../../../../../../../components/custom/button/styledButtonDefault";
 import { StyledNormalButton } from "../../../../../../../components/custom/button/normalButton/styledNormalButton";
 
 // Types
@@ -40,7 +40,9 @@ const SkillItem = ({ list }: SkillListProps) => {
         ? list.map((skill) => renderSkillItem(skill))
         : list.slice(0, maxVisableSkills).map((skill) => renderSkillItem(skill))}
       {!showAll && list.length > maxVisableSkills ? (
-        <StyledButtonOnlyText onClick={handleClick}>{`+${remainingSkills} weitere Skills`}</StyledButtonOnlyText>
+        <StyledNormalButton_OnlyText
+          onClick={handleClick}
+        >{`+${remainingSkills} weitere Skills`}</StyledNormalButton_OnlyText>
       ) : (
         ""
       )}

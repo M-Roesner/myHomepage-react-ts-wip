@@ -4,6 +4,7 @@ import { StyledLinkButton } from "../../../../../../components/custom/button/lin
 
 // Types
 import { LinkType } from "../../skillTypes";
+import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
 
 type SkillProjectListProps = {
   links: LinkType[];
@@ -16,13 +17,16 @@ type SkillProjectListProps = {
  */
 const SkillProjectLinks = ({ links }: SkillProjectListProps) => {
   return (
-    <StyledSkillProjectList>
-      {links.map((link, index) => (
-        <StyledSkillProjectItem key={index}>
-          <StyledLinkButton to={link.route}>{link.text}</StyledLinkButton>
-        </StyledSkillProjectItem>
-      ))}
-    </StyledSkillProjectList>
+    <>
+      <CardHeadline level={4}>Projekt links:</CardHeadline>
+      <StyledSkillProjectList>
+        {links.map((link, index) => (
+          <StyledSkillProjectItem key={index}>
+            <StyledLinkButton to={link.route}>{link.text}</StyledLinkButton>
+          </StyledSkillProjectItem>
+        ))}
+      </StyledSkillProjectList>
+    </>
   );
 };
 

@@ -13,8 +13,10 @@ export const StyledNormalButton = styled(linkButtonWrapper_Default)`
 
   &.active {
     background-color: ${(props) => props.theme.palette.common.backgroundColorHighlight};
+    color: ${(props) => props.theme.palette.common.textColorSecond};
   }
   &.active:hover {
     background-color: ${(props) => props.theme.palette.common.backgroundColorHighlight_Hover};
+    color: ${(props) => props.theme.palette.common.textColorSecond};
   }
 `;

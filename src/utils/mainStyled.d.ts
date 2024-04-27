@@ -2,9 +2,11 @@ import "styled-components";
 interface IMode {
   backgroundColor: string;
   backgroundColorAccent: string;
+  backgroundColorHighlight: string;
   textColor: string;
   textColorSecond: string;
-  backgroundHoverColor: string;
+  backgroundColor_Hover: string;
+  backgroundColorHighlight_Hover: string;
   borderColor: string;
 }
 

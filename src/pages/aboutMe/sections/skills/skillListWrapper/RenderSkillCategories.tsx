@@ -1,11 +1,10 @@
 import React from "react";
-import { GroupedSkills, SkillType } from "../skillTypes";
+import { GroupedSkills } from "../skillTypes";
 import { extractSkillCategories, getCategoryName } from "./helper";
 import SkillList from "./skillList/skillList";
 
 type RenderSkillCategoriesProps = {
   skillListCollection: GroupedSkills;
-  onClick: (skill: SkillType) => void;
 };
 /**
  * Renders each skill category along with its respective skill list.
@@ -13,7 +12,7 @@ type RenderSkillCategoriesProps = {
  * @param {Object} props - The component props.
  * @param {SkillCategoryType[]} props.skillListCollection - Object containing skill lists grouped by categories.
  */
-export const RenderSkillCategories = ({ skillListCollection, onClick }: RenderSkillCategoriesProps) => {
+export const RenderSkillCategories = ({ skillListCollection }: RenderSkillCategoriesProps) => {
   // Extract category names from the skills list collection
   const skillCategories = extractSkillCategories(skillListCollection);
 
@@ -29,7 +28,7 @@ export const RenderSkillCategories = ({ skillListCollection, onClick }: RenderSk
       skillList &&
       skillList.length > 0 && (
         <React.Fragment key={category}>
-          <SkillList skillList={skillList} title={titleCategory} onClick={onClick}></SkillList>
+          <SkillList skillList={skillList} title={titleCategory}></SkillList>
         </React.Fragment>
       )
     );

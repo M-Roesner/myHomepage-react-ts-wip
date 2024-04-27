@@ -1,17 +1,13 @@
-import CardHeadline from "../../../../components/custom/card/cardHeadline/CardHeadline";
-import { CardVerticalLineStyle } from "../../../../components/custom/card/cardVerticalLine/styledCardVerticalLineStyle";
-import PersonalProjectList from "./personalProject/PersonalProjectList";
+// Components
 import { StyledPersonalProjectWrapper } from "./styledPersonalProjectWrapper";
+import CardHeadline from "../../../../components/custom/card/cardHeadline/CardHeadline";
+import PersonalProjectList from "./personalProject/PersonalProjectList";
 
 const PersonalProjectsWrapper = () => {
   return (
     <StyledPersonalProjectWrapper>
-      <CardVerticalLineStyle>
-        <CardHeadline level={2}>Private Projekte</CardHeadline>
-        <CardVerticalLineStyle>
-          <PersonalProjectList></PersonalProjectList>
-        </CardVerticalLineStyle>
-      </CardVerticalLineStyle>
+      <CardHeadline level={2}>Private Projekte</CardHeadline>
+      <PersonalProjectList />
     </StyledPersonalProjectWrapper>
   );
 };

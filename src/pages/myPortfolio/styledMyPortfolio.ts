@@ -1,7 +1,4 @@
 import styled from "styled-components";
+import { CardVerticalLineStyle } from "../../components/custom/card/cardVerticalLine/styledCardVerticalLineStyle";
 
-export const StyledMyPortfolio = styled.div`
-  margin-right: 1vw;
-  @media (min-width: 768px) {
-  }
-`;
+export const StyledMyPortfolio = styled(CardVerticalLineStyle)``;

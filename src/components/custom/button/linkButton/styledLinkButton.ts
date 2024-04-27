@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { slyledLinkButtonBasic } from "../styledLinkButtonBasic";
+import { linkButtonWrapper_FlexCenter } from "../styledLinkButtonBasic";
 
-export const StyledLinkButton = styled(slyledLinkButtonBasic)`
+export const StyledLinkButton = styled(linkButtonWrapper_FlexCenter)`
   padding: 10px;
   width: 100%;
   justify-content: center;

@@ -1,11 +1,13 @@
 // Styled-Component
-import { StyledNavbarButton, StyledNavbarButtonWrap } from "./styledNavbarButton";
+import {
+  styledNavbarButton as StyledNavbarButton,
+  styledNavbarButtonWrap as StyledNavbarButtonWrap,
+} from "./styledNavbarButton";
 
 type NavbarButtonProps = {
   to: string;
   children: React.ReactNode;
   wrap?: boolean;
-  style?: React.CSSProperties;
 };
 
 /**
@@ -15,20 +17,15 @@ type NavbarButtonProps = {
  * @param {Object} props - The props object containing the following properties:
  * @param {string} props.to - The path to navigate to when the link is clicked.
  * @param {boolean} props.wrap - Optional: Specifies whether the link should wrap its content.
- * @param {React.CSSProperties} props.style - Optional: To add additional styles.
  * @param {ReactNode} props.children - The content of the link.
  */
-const NavbarButton = ({ to, children, wrap, style }: NavbarButtonProps) => {
+const NavbarButton = ({ to, children, wrap }: NavbarButtonProps) => {
   return (
     <>
       {wrap ? (
-        <StyledNavbarButtonWrap to={to} style={style}>
-          {children}
-        </StyledNavbarButtonWrap>
+        <StyledNavbarButtonWrap to={to}>{children}</StyledNavbarButtonWrap>
       ) : (
-        <StyledNavbarButton to={to} style={style}>
-          {children}
-        </StyledNavbarButton>
+        <StyledNavbarButton to={to}>{children}</StyledNavbarButton>
       )}
     </>
   );

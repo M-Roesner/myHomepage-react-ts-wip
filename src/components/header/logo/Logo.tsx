@@ -1,5 +1,5 @@
 // Components
-import NavbarButton from "../../custom/button/navbarButton/NavbarButton";
+import NavbarButton from "../utils/navbarButton/NavbarButton";
 
 // Styled-Component
 import { StyledLogo, StyledLogoImg, StyledParagraph } from "./styledLogo";

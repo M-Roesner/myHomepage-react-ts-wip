@@ -11,10 +11,12 @@ export const defaultTheme: DefaultTheme = {
   palette: {
     common: {
       backgroundColor: "#383838",
+      backgroundColor_Hover: "#474747",
       backgroundColorAccent: "#3d3d3d",
+      backgroundColorHighlight: "#b8610f",
+      backgroundColorHighlight_Hover: "#ff9100",
       textColor: "#f3f3f3",
       textColorSecond: "#b8610f",
-      backgroundHoverColor: "#474747",
       borderColor: "#5c606d",
     },
   },

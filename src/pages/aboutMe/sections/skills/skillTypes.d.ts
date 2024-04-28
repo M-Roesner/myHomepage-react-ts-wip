@@ -11,6 +11,8 @@ export type SkillType = {
   description: string;
   links?: LinkType[];
   personalKnowledgeLevel?: number;
+  addedDate?: Date;
+  updatedDate?: Date;
 };
 
 export type GroupedSkills = {

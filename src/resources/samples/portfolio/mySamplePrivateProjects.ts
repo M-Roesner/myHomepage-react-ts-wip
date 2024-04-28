@@ -23,6 +23,8 @@ export const mySamplePrivateProjects: ProjectType[] = [
         isPreviewImage: true,
       },
     ],
+    addedDate: new Date("2024-04-28"),
+    updatedDate: new Date("2024-04-28"),
   },
   {
     id: 2,
@@ -45,5 +47,7 @@ export const mySamplePrivateProjects: ProjectType[] = [
         isPreviewImage: true,
       },
     ],
+    addedDate: new Date("2024-04-28"),
+    updatedDate: new Date("2024-04-28"),
   },
 ];

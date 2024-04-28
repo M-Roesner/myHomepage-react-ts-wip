@@ -3,6 +3,8 @@ import { GroupedSkills } from "../skillTypes";
 import { extractSkillCategories, getCategoryName } from "./helper";
 import SkillList from "./skillList/skillList";
 
+// XXX: This is an old version of handling the skill list, remove after receiving data with the database.
+
 type RenderSkillCategoriesProps = {
   skillListCollection: GroupedSkills;
 };

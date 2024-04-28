@@ -2,16 +2,16 @@ import { useParams } from "react-router";
 
 // Components
 import { StyledPortfolio } from "./styledPortfolio";
-import CardHeadline from "../../components/custom/card/cardHeadline/CardHeadline";
-import { CardVerticalLineStyle } from "../../components/custom/card/cardVerticalLine/styledCardVerticalLineStyle";
-import ErrorPage_InclProps from "../errorPage/ErrorPage_InclProps";
+import CardHeadline from "../../../components/custom/card/cardHeadline/CardHeadline";
+import { CardVerticalLineStyle } from "../../../components/custom/card/cardVerticalLine/styledCardVerticalLineStyle";
+import ErrorPage_InclProps from "../../errorPage/ErrorPage_InclProps";
 
 // Rosources and Helpers
 import { getPortfolioContent } from "./helper";
 
 // Types and Enums
-import { ProjectCategory } from "../myPortfolio/types/projectTypes";
-import { ERouteType } from "../../routes/router";
+import { ProjectCategory } from "../types/projectTypes";
+import { ERouteType } from "../../../routes/router";
 
 const Portfolio = () => {
   const { portfolioCategory, portfolioId } = useParams<{ portfolioCategory: ProjectCategory; portfolioId: string }>();

@@ -1,9 +1,9 @@
 // Resources and Helpers
-import { mySamplePrivateProjects } from "../../resources/samples/portfolio/mySamplePrivateProjects";
-import { checkNumber } from "../../utils/CheckNumber";
+import { mySamplePrivateProjects } from "../../../resources/samples/portfolio/mySamplePrivateProjects";
+import { checkNumber } from "../../../utils/CheckNumber";
 
 // Types
-import { ProjectCategory, ProjectType } from "../myPortfolio/types/projectTypes";
+import { ProjectCategory, ProjectType } from "../types/projectTypes";
 
 /**
  * Returns a array of projects for the given category otherwise returns undefined

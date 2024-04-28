@@ -11,6 +11,8 @@ export type ProjectType = {
   links?: ProjectLinkType[];
   usedSkills?: string[];
   acquiredNewSkills?: string[];
+  addedDate?: Date;
+  updatedDate?: Date;
 };
 
 export type ProjectImageType = {

@@ -7,6 +7,7 @@ export const defaultTheme: DefaultTheme = {
       padding: "10px",
       lineHeight: "2.5ch",
       borderRadius: "5px",
+      fontSize: "1.2rem",
     },
     navBar: {
       height: "80px",

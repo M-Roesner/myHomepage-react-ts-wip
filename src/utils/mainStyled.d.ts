@@ -16,6 +16,7 @@ interface ISizes {
   padding: string;
   lineHeight: string;
   borderRadius: string;
+  fontSize: string;
 }
 
 declare module "styled-components" {

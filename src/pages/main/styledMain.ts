@@ -7,7 +7,7 @@ const StyledMain = styled.div`
   font-family: ${(props) => props.theme.fontFamily};
   font-weight: 400;
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: ${(props) => props.theme.sizes.common.fontSize};
   letter-spacing: 0.05rem;
 `;
 

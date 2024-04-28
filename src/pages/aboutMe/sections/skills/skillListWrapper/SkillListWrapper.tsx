@@ -54,6 +54,7 @@ export const SkillListWrapper = () => {
   return (
     <StyledSkillListWrapper>
       <CardHeadline level={2}>Meine Fähigkeiten</CardHeadline>
+      <CardParagraphStyle>Ein Überblick über meine Fühigkeiten und verwendet Tools.</CardParagraphStyle>
       {frontendSkillList && frontendSkillList.length > 0 && (
         <SkillList skillList={frontendSkillList} title={"Frontend"}></SkillList>
       )}
@@ -66,7 +67,7 @@ export const SkillListWrapper = () => {
       {otherSkillList && otherSkillList.length > 0 && (
         <SkillList skillList={otherSkillList} title={"Sonstige"}></SkillList>
       )}
-      <CardParagraphStyle>{`letztes update am: ${lastDate}`}</CardParagraphStyle>
+      <CardParagraphStyle $size="0.8rem">{`letztes update am: ${lastDate}`}</CardParagraphStyle>
     </StyledSkillListWrapper>
   );
 };

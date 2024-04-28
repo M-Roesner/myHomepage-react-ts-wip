@@ -1,6 +1,6 @@
 // Resources & Helpers
 import { mySampleSkills } from "../../../../../resources/samples/mySampleSkills";
-import { isNumber } from "../../../../../utils/isNumber";
+import { checkNumber } from "../../../../../utils/CheckNumber";
 
 // Types
 import { SkillCategoryType, SkillType } from "../skillTypes";
@@ -18,7 +18,7 @@ export const getSingleSkill = (
 ): SkillType | undefined => {
   if (skillCategory === undefined || skillId === undefined) return undefined;
 
-  const skillIdNumber = typeof skillId === "string" && isNumber(skillId) ? Number(skillId) : (skillId as number);
+  const skillIdNumber = checkNumber(skillId);
   const skillList = mySampleSkills[skillCategory];
   const skill = skillList?.find((skill) => skill.id === skillIdNumber);
   return skill ?? undefined;

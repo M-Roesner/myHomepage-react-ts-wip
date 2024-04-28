@@ -1,14 +1,16 @@
+export type ProjectCategory = "personal" | "retraining" | "internship";
+
 export type ProjectType = {
   id: number;
+  category: ProjectCategory;
   title: string;
   cardIntroduction: string;
   introduction: string;
   description: string;
-  imgSrc?: ProjectImageType[];
+  images?: ProjectImageType[];
   links?: ProjectLinkType[];
   usedSkills?: string[];
-  categories?: string[];
-  acquiredSkills?: string[];
+  acquiredNewSkills?: string[];
 };
 
 export type ProjectImageType = {

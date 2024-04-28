@@ -1,6 +1,6 @@
 // Components
 import { createBrowserRouter } from "react-router-dom";
-import { App, NotFoundPage, HomePage, AboutMePage, MyPortfolio, ImprintPage, Footer } from "./index.ts";
+import { App, NotFoundPage, HomePage, AboutMePage, MyPortfolio, Portfolio, ImprintPage, Footer } from "./index.ts";
 
 /**
  * Enum representing different route types in the application, to navigate correctly.
@@ -41,12 +41,10 @@ export const router = createBrowserRouter([
       {
         path: `/${ERouteType.MY_PORTFOLIO}`,
         element: <MyPortfolio />,
-        children: [
-          {
-            path: `/${ERouteType.MY_PORTFOLIO}/:portfolioId`,
-            element: <MyPortfolio />,
-          },
-        ],
+      },
+      {
+        path: `/${ERouteType.MY_PORTFOLIO}/:portfolioCategory/:portfolioId`,
+        element: <Portfolio />,
       },
       { path: "/", element: <Footer /> },
       { path: `/${ERouteType.IMPRINT}`, element: <ImprintPage /> },

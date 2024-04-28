@@ -10,7 +10,7 @@ type CardProjectProps = {
 };
 
 const CardProject = ({ url, content }: CardProjectProps) => {
-  const previewImage = content.imgSrc?.find((img) => img.isPreviewImage);
+  const previewImage = content.images?.find((img) => img.isPreviewImage);
   return (
     <StyledCardProject to={url}>
       {previewImage && (

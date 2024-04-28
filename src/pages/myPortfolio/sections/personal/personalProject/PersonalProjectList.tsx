@@ -4,14 +4,30 @@ import { ERouteType } from "../../../../../routes/router";
 import { DefaultProjectGridStyle } from "../../defaultProjectGridStyle";
 
 const PersonalProjectList = () => {
-  const privateProjectList = mySamplePrivateProjects;
+  const privateList = mySamplePrivateProjects;
+
   return (
     <DefaultProjectGridStyle>
-      <CardProject url={`/${ERouteType.MY_PORTFOLIO}/1`} content={privateProjectList[0]}></CardProject>
-      <CardProject url={`/${ERouteType.MY_PORTFOLIO}/2`} content={privateProjectList[1]}></CardProject>
-      <CardProject url={`/${ERouteType.MY_PORTFOLIO}/3`} content={privateProjectList[1]}></CardProject>
-      <CardProject url={`/${ERouteType.MY_PORTFOLIO}/4`} content={privateProjectList[0]}></CardProject>
-      <CardProject url={`/${ERouteType.MY_PORTFOLIO}/5`} content={privateProjectList[1]}></CardProject>
+      <CardProject
+        url={`/${ERouteType.MY_PORTFOLIO}/${privateList[0].category}/blub`}
+        content={privateList[0]}
+      ></CardProject>
+      <CardProject
+        url={`/${ERouteType.MY_PORTFOLIO}/${privateList[1].category}/${privateList[1].id}`}
+        content={privateList[1]}
+      ></CardProject>
+      <CardProject
+        url={`/${ERouteType.MY_PORTFOLIO}/${privateList[1].category}/${privateList[1].id}`}
+        content={privateList[1]}
+      ></CardProject>
+      <CardProject
+        url={`/${ERouteType.MY_PORTFOLIO}/${privateList[0].category}/${privateList[0].id}`}
+        content={privateList[0]}
+      ></CardProject>
+      <CardProject
+        url={`/${ERouteType.MY_PORTFOLIO}/${privateList[1].category}/${privateList[1].id}`}
+        content={privateList[1]}
+      ></CardProject>
     </DefaultProjectGridStyle>
   );
 };

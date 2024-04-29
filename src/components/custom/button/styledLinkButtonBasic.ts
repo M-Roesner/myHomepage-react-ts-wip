@@ -12,11 +12,19 @@ import styled from "styled-components";
  */
 export const linkButtonWrapper_Default = styled(NavLink)`
   text-decoration: none;
-  color: ${(props) => props.theme.colors.common.textColorMain};
 
   background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
+  color: ${(props) => props.theme.colors.common.textColorMain};
   &:hover {
     background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
+  }
+  &.active {
+    background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight};
+    color: ${(props) => props.theme.colors.common.textColorSecond};
+  }
+  &.active:hover {
+    background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight_Hover};
+    color: ${(props) => props.theme.colors.common.textColorSecond};
   }
 `;
 

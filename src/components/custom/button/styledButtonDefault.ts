@@ -15,17 +15,18 @@ const buttonWrapper_Default = styled.button`
  *
  * Contains:
  * - padding, border, background-color, color, text-decoration, cursor
- * - hover style: background-color
+ * - hover style: background-color, color
  */
 export const StyledNormalButton = styled(buttonWrapper_Default)`
   padding: 10px;
 
   border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+
   background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
   color: ${(props) => props.theme.colors.common.textColorMain};
-
   &:hover {
     background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
+    color: ${(props) => props.theme.colors.common.textColorThird};
   }
 `;
 
@@ -37,6 +38,8 @@ export const StyledNormalButton_OnlyText = styled(buttonWrapper_Default)`
   border: none;
   outline: none;
   padding: 0;
+  margin-block: auto;
+  height: min-content;
 
   color: ${(props) => props.theme.colors.common.textColorMain};
   &:hover {

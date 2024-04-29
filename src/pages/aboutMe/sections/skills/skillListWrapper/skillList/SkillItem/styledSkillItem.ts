@@ -9,7 +9,4 @@ export const StyledSectionSkillList = styled(unorderedListWrapper_Default)`
   align-content: flex-start;
 `;
 
-export const StyledSectionSkillItem = styled(listItemWrapper_Default)`
-  // padding-block is used because the StyledNormalButton has a padding of 10px
-  padding-block: 10px;
-`;
+export const StyledSectionSkillItem = styled(listItemWrapper_Default)``;

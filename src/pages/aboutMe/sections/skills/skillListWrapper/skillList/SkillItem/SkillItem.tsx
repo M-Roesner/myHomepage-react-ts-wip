@@ -3,11 +3,11 @@ import { useState } from "react";
 // components
 import { StyledSectionSkillItem, StyledSectionSkillList } from "./styledSkillItem";
 import { StyledNormalButton_OnlyText } from "../../../../../../../components/custom/button/styledButtonDefault";
-import { StyledNormalButton } from "../../../../../../../components/custom/button/normalButton/styledNormalButton";
 
 // Types
 import { SkillType } from "../../../skillTypes";
 import { ERouteType } from "../../../../../../../routes/router";
+import { StyledLinkButton } from "../../../../../../../components/custom/button/linkButton/styledLinkButton";
 
 type SkillListProps = {
   list: SkillType[];
@@ -30,7 +30,7 @@ const SkillItem = ({ list }: SkillListProps) => {
 
   const renderSkillItem = (skill: SkillType) => (
     <StyledSectionSkillItem key={skill.id}>
-      <StyledNormalButton to={`/${ERouteType.ABOUT_ME}/${skill.id}/${skill.category}`}>{skill.name}</StyledNormalButton>
+      <StyledLinkButton to={`/${ERouteType.ABOUT_ME}/${skill.id}/${skill.category}`}>{skill.name}</StyledLinkButton>
     </StyledSectionSkillItem>
   );
 

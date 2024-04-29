@@ -67,7 +67,7 @@ export const SkillListWrapper = () => {
       {otherSkillList && otherSkillList.length > 0 && (
         <SkillList skillList={otherSkillList} title={"Sonstige"}></SkillList>
       )}
-      <CardParagraphStyle $size="0.8rem">{`letztes update am: ${lastDate}`}</CardParagraphStyle>
+      <CardParagraphStyle $isFootnote>{`letztes update am: ${lastDate}`}</CardParagraphStyle>
     </StyledSkillListWrapper>
   );
 };

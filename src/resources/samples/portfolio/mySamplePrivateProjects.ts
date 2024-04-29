@@ -25,6 +25,8 @@ export const mySamplePrivateProjects: ProjectType[] = [
     ],
     addedDate: new Date("2024-04-28"),
     updatedDate: new Date("2024-04-28"),
+    usedSkills: ["testSkill 1 nicht der 2.", "testSkills2LongTestForTestingOfTheDesignWithFlexBox"],
+    // acquiredNewSkills: ["my new skill", "test new learned skill"],
   },
   {
     id: 2,

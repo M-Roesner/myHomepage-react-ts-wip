@@ -2,9 +2,12 @@ import { useParams } from "react-router";
 
 // Components
 import { StyledPortfolio } from "./styledPortfolio";
-import CardHeadline from "../../../components/custom/card/cardHeadline/CardHeadline";
 import { CardVerticalLineStyle } from "../../../components/custom/card/cardVerticalLine/styledCardVerticalLineStyle";
+import { CardParagraphStyle } from "../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import CardHeadline from "../../../components/custom/card/cardHeadline/CardHeadline";
 import ErrorPage_InclProps from "../../errorPage/ErrorPage_InclProps";
+import PortfolioDescription from "./portfolioDescription/PortfolioDescription";
+import PortfolioSkills from "./portfolioSkills/PortfolioSkills";
 
 // Rosources and Helpers
 import { getPortfolioContent } from "./helper";
@@ -25,35 +28,16 @@ const Portfolio = () => {
     <StyledPortfolio>
       {content ? (
         <>
-          <CardHeadline level={1}>{content.title}</CardHeadline>
           <CardVerticalLineStyle>
-            <p>{content.introduction}</p>
-            <p>Warum:</p>
-            {/* TODO: Der Inhalt muss nicht nur text sein, es können auch tags verwendet werden! */}
-            <p>{content.description}</p>
-            {content.usedSkills && (
-              <>
-                <p>Verwendete Fähigkeiten:</p>
-                <ul>
-                  {content.usedSkills.map((skill, index) => (
-                    <li key={index}>{skill}</li>
-                  ))}
-                </ul>
-              </>
-            )}
-            {content.acquiredNewSkills && (
-              <>
-                <p>Neu erlernte Fähigkeiten:</p>
-                <ul>
-                  {content.acquiredNewSkills.map((skill, index) => (
-                    <li key={index}>{skill}</li>
-                  ))}
-                </ul>
-              </>
-            )}
+            <CardHeadline level={1}>{content.title}</CardHeadline>
+            <CardParagraphStyle>{content.introduction}</CardParagraphStyle>
+            <PortfolioDescription title="Warum:">{content.description}</PortfolioDescription>
+            <PortfolioSkills title="Verwendete Fähigkeiten:" skills={content.usedSkills} />
+            <PortfolioSkills title="Neu erlernte Fähigkeiten:" skills={content.acquiredNewSkills} />
+
             {content.links && (
               <>
-                <p>Links:</p>
+                <CardHeadline level={2}>Links:</CardHeadline>
                 <ul>
                   {content.links.map((link, index) => (
                     <li key={index}>
@@ -65,11 +49,11 @@ const Portfolio = () => {
             )}
             {content.images && (
               <>
-                <p>Bilder:</p>
+                <CardHeadline level={2}>Bilder:</CardHeadline>
                 <ul>
                   {content.images.map((img, index) => (
                     <li key={index}>
-                      <p>{img.imgTitle}</p>
+                      <CardHeadline level={4}>{img.imgTitle}</CardHeadline>
                       <img src={img.imgSrc} alt={img.imgAlt} />
                     </li>
                   ))}

@@ -5,6 +5,6 @@ export const StyledLinkButton = styled(linkButtonWrapper_FlexCenter)`
   padding: 10px;
   width: 100%;
   justify-content: center;
-  border: 1px solid ${(props) => props.theme.palette.common.borderColor};
-  color: ${(props) => props.theme.palette.common.textColorSecond};
+  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+  color: ${(props) => props.theme.colors.common.textColorSecond};
 `;

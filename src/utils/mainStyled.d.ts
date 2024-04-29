@@ -17,6 +17,7 @@ interface ISizes {
   lineHeight: string;
   borderRadius: string;
   fontSize: string;
+  fontSizeAsFootnote: string;
 }
 
 declare module "styled-components" {
@@ -29,7 +30,7 @@ declare module "styled-components" {
         gap: string;
       };
     };
-    palette: {
+    colors: {
       common: IMode;
     };
   }

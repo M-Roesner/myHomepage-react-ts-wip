@@ -18,9 +18,9 @@ export const styledNavbarButton = styled(linkButtonWrapper_FlexCenter)`
   padding: 10px clamp(var(--min-padding), 2vw, var(--max-padding));
 
   &.active {
-    background-color: ${(props) => props.theme.palette.common.backgroundColor};
+    background-color: ${(props) => props.theme.colors.common.backgroundColor};
     &:hover {
-      background-color: ${(props) => props.theme.palette.common.backgroundColor_Hover};
+      background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
     }
   }
 `;

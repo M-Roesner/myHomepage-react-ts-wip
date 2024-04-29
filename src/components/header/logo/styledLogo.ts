@@ -20,5 +20,5 @@ export const StyledLogoImg = styled.img`
 
 export const StyledParagraph = styled.p`
   width: max-content;
-  color: ${(props) => props.theme.palette.common.textColorMain};
+  color: ${(props) => props.theme.colors.common.textColorMain};
 `;

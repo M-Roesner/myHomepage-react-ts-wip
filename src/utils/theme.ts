@@ -8,13 +8,14 @@ export const defaultTheme: DefaultTheme = {
       lineHeight: "2.5ch",
       borderRadius: "5px",
       fontSize: "1.2rem",
+      fontSizeAsFootnote: "0.8rem",
     },
     navBar: {
       height: "80px",
       gap: "5px",
     },
   },
-  palette: {
+  colors: {
     common: {
       backgroundColor: "#383838",
       backgroundColor_Hover: "#474747",

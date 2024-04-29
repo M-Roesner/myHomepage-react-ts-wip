@@ -11,5 +11,5 @@ import { linkButtonWrapper_FlexCenter } from "../styledLinkButtonBasic";
 export const iconButtonWrapper = styled(linkButtonWrapper_FlexCenter)`
   border-radius: 50%;
   padding: 10px;
-  border: solid 2px ${(props) => props.theme.palette.common.borderColor};
+  border: solid 2px ${(props) => props.theme.colors.common.borderColor};
 `;

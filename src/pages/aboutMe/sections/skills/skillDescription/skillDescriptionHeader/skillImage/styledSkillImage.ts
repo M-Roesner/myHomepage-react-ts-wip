@@ -6,6 +6,6 @@ export const StyledSkillImage = styled.div`
   align-items: center;
   width: 64px;
   height: 64px;
-  /* border: 1px solid ${(props) => props.theme.palette.common.borderColor}; */
+  /* border: 1px solid ${(props) => props.theme.colors.common.borderColor}; */
   border-radius: 50%;
 `;

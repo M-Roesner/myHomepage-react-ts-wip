@@ -9,14 +9,14 @@ import { linkButtonWrapper_Default } from "../styledLinkButtonBasic";
  */
 export const StyledNormalButton = styled(linkButtonWrapper_Default)`
   padding: 10px;
-  border: 1px solid ${(props) => props.theme.palette.common.borderColor};
+  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
 
   &.active {
-    background-color: ${(props) => props.theme.palette.common.backgroundColorHighlight};
-    color: ${(props) => props.theme.palette.common.textColorSecond};
+    background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight};
+    color: ${(props) => props.theme.colors.common.textColorSecond};
   }
   &.active:hover {
-    background-color: ${(props) => props.theme.palette.common.backgroundColorHighlight_Hover};
-    color: ${(props) => props.theme.palette.common.textColorSecond};
+    background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight_Hover};
+    color: ${(props) => props.theme.colors.common.textColorSecond};
   }
 `;

@@ -14,7 +14,7 @@ export const styledCardHeadline1 = styled.h1`
   font-size: 2rem;
   &::after {
     content: "{}";
-    color: ${(props) => props.theme.palette.common.textColorMain};
+    color: ${(props) => props.theme.colors.common.textColorMain};
   }
 `;
 
@@ -30,20 +30,20 @@ export const styledCardHeadline2 = styled.h2`
 export const styledCardHeadline3 = styled.h3`
   ${defaultHeaderStyles};
   font-size: 1.6rem;
-  color: ${(props) => props.theme.palette.common.textColorThird};
+  color: ${(props) => props.theme.colors.common.textColorThird};
 `;
 
 export const styledCardHeadline4 = styled.h4`
   ${defaultHeaderStyles};
   margin-block: 0;
   font-size: 1.4rem;
-  color: ${(props) => props.theme.palette.common.textColorSecond};
+  color: ${(props) => props.theme.colors.common.textColorSecond};
 `;
 
 export const styledCardHeadline5 = styled.h5`
   ${defaultHeaderStyles};
   font-size: 1.2rem;
-  color: ${(props) => props.theme.palette.common.textColorSecond};
+  color: ${(props) => props.theme.colors.common.textColorSecond};
 `;
 
 export const styledCardHeadline6 = styled.h6`

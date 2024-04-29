@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: ${(props) => props.theme.palette.common.backgroundColorAccent};
+  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
 
   padding-left: 5px;
   padding-right: 5px;
@@ -15,7 +15,7 @@ export const StyledHeader = styled.header`
 
   /* '>' is used to select the first direct child of the StyledHeader. */
   & > :first-child {
-    border-right: solid 5px ${(props) => props.theme.palette.common.backgroundColor};
+    border-right: solid 5px ${(props) => props.theme.colors.common.backgroundColor};
   }
   @media (min-width: 768px) {
   }

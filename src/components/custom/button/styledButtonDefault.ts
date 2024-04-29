@@ -20,12 +20,12 @@ const buttonWrapper_Default = styled.button`
 export const StyledNormalButton = styled(buttonWrapper_Default)`
   padding: 10px;
 
-  border: 1px solid ${(props) => props.theme.palette.common.borderColor};
-  background-color: ${(props) => props.theme.palette.common.backgroundColorAccent};
-  color: ${(props) => props.theme.palette.common.textColorMain};
+  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
+  color: ${(props) => props.theme.colors.common.textColorMain};
 
   &:hover {
-    background-color: ${(props) => props.theme.palette.common.backgroundColor_Hover};
+    background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
   }
 `;
 
@@ -38,8 +38,8 @@ export const StyledNormalButton_OnlyText = styled(buttonWrapper_Default)`
   outline: none;
   padding: 0;
 
-  color: ${(props) => props.theme.palette.common.textColorMain};
+  color: ${(props) => props.theme.colors.common.textColorMain};
   &:hover {
-    color: ${(props) => props.theme.palette.common.textColorThird};
+    color: ${(props) => props.theme.colors.common.textColorThird};
   }
 `;

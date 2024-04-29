@@ -14,7 +14,9 @@ This project is currently a work in progress. Changes and updates will be made r
 
 - [React](https://reactjs.org/)
 
-- [react-router-dom](https://reactrouter.com/)
+- [react-router](https://reactrouter.com/)
+
+  - [tutorial by 'reactrouter.com'](https://reactrouter.com/en/main/start/tutorial)
 
 - [styled-components](https://styled-components.com/)
 

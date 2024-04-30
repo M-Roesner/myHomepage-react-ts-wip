@@ -1,16 +1,14 @@
 // Components
-import { StyledPortfolioDescription } from "./styledPortfolioDescription";
-import CardHeadline from "../../../../components/custom/card/cardHeadline/CardHeadline";
 import { CardParagraphStyle } from "../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import SectionLayout from "../../../../components/custom/layout/sectionLayout/SectionLayout";
 
 type PortfolioDescriptionProps = { title: string; children: React.ReactNode };
 
 const PortfolioDescription = ({ title, children }: PortfolioDescriptionProps) => {
   return (
-    <StyledPortfolioDescription>
-      <CardHeadline level={2}>{title}</CardHeadline>
+    <SectionLayout headlineText={title}>
       <CardParagraphStyle>{children}</CardParagraphStyle>
-    </StyledPortfolioDescription>
+    </SectionLayout>
   );
 };
 

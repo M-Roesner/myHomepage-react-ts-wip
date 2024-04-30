@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// Components
+import { StyledNormalButton } from "../../components/custom/button/normalButton/styledNormalButton";
 
 // Enums
 import { ERouteType } from "../../routes/router";
@@ -25,9 +26,7 @@ const ErrorPage_InclProps = ({ url, titleButton, descriptionText }: ErrorPagePro
       {descriptionText}
       <br />
       <br />
-      <Link style={{ color: "red" }} to={`/${url}`}>
-        {titleButton}
-      </Link>
+      <StyledNormalButton to={`/${url}`}>{titleButton}</StyledNormalButton>
     </p>
   );
 };

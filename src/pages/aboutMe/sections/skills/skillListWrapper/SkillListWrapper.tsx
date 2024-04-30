@@ -1,6 +1,5 @@
 // components
 import { StyledSkillListWrapper } from "./styledSkillListWrapper";
-import CardHeadline from "../../../../../components/custom/card/cardHeadline/CardHeadline";
 import { CardParagraphStyle } from "../../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
 import SkillList from "./skillList/skillList";
 
@@ -53,8 +52,6 @@ export const SkillListWrapper = () => {
 
   return (
     <StyledSkillListWrapper>
-      <CardHeadline level={2}>Meine Fähigkeiten</CardHeadline>
-      <CardParagraphStyle>Ein Überblick über meine Fühigkeiten und verwendet Tools.</CardParagraphStyle>
       {frontendSkillList && frontendSkillList.length > 0 && (
         <SkillList skillList={frontendSkillList} title={"Frontend"}></SkillList>
       )}

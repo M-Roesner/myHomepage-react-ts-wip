@@ -1,13 +1,14 @@
-import CardHeadline from "../../components/custom/card/cardHeadline/CardHeadline";
+// Components
+import PageLayout from "../../components/custom/layout/pageLayout/PageLayout";
 import PersonalProjectWrapper from "./sections/personal/PersonalProjectWrapper";
-import { StyledMyPortfolio } from "./styledMyPortfolio";
 
 const MyPortfolio = () => {
   return (
-    <StyledMyPortfolio>
-      <CardHeadline level={1}>MyPortfolio page</CardHeadline>
+    <PageLayout headlineText="MyPortfolio page">
       <PersonalProjectWrapper />
-    </StyledMyPortfolio>
+      {/* duplicate for testing */}
+      <PersonalProjectWrapper />
+    </PageLayout>
   );
 };
 

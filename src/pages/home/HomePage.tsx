@@ -1,9 +1,8 @@
+// Components
+import PageLayout from "../../components/custom/layout/pageLayout/PageLayout";
+
 const HomePage = () => {
-  return (
-    <>
-      <h1>Home Page</h1>
-    </>
-  );
+  return <PageLayout headlineText="Home Page">some content - wip !</PageLayout>;
 };
 
 export default HomePage;

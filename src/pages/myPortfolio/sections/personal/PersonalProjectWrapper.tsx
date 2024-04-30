@@ -1,14 +1,12 @@
 // Components
-import { StyledPersonalProjectWrapper } from "./styledPersonalProjectWrapper";
-import CardHeadline from "../../../../components/custom/card/cardHeadline/CardHeadline";
+import SectionLayout_NoStyle from "../../../../components/custom/layout/sectionLayout/SectionLayout_NoStyle";
 import PersonalProjectList from "./personalProject/PersonalProjectList";
 
 const PersonalProjectsWrapper = () => {
   return (
-    <StyledPersonalProjectWrapper>
-      <CardHeadline level={2}>Private Projekte</CardHeadline>
+    <SectionLayout_NoStyle headlineText="Private Projekte">
       <PersonalProjectList />
-    </StyledPersonalProjectWrapper>
+    </SectionLayout_NoStyle>
   );
 };
 

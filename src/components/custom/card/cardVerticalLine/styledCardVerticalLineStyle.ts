@@ -9,14 +9,6 @@ export const CardVerticalLineStyle = styled.div`
 `;
 
 /**
- * Renders a styled section tag with a vertical line as a border on the left side and padding on the left side.
- */
-export const CardVerticalLineStyleAsSection = styled.section`
-  border-left: solid 1px ${(props) => props.theme.colors.common.borderColor};
-  padding-left: 1vw;
-`;
-
-/**
  * Renders a styled span tag with a vertical line as a border on the left side.
  */
 export const CardVerticalLineStyleAsSpan = styled.span`

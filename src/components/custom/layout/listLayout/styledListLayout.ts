@@ -52,3 +52,4 @@ export const StyledListLayoutItem = styled(listItemWrapper_Default)`
   color: ${(props) => props.theme.colors.common.textColorMain};
   border: 1px solid ${(props) => props.theme.colors.common.borderColor};
 `;
+export const StyledListLayoutItemForButton = styled(listItemWrapper_Default)``;

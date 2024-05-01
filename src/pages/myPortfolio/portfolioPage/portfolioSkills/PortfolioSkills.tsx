@@ -13,7 +13,11 @@ const PortfolioSkills = ({ title, skills }: PortfolioSkillsProps): JSX.Element =
   if (!skills) return <></>;
   return (
     <SectionLayout headlineText={title}>
-      <ListLayout list={skills} personalButtonText={{ singular: "Fähigkeit", plural: "Fähigkeiten" }}></ListLayout>
+      <ListLayout
+        list={skills}
+        personalButtonText={{ singular: "Fähigkeit", plural: "Fähigkeiten" }}
+        isLinkButton
+      ></ListLayout>
     </SectionLayout>
   );
 };

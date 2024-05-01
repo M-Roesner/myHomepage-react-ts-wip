@@ -3,7 +3,8 @@ import { mySamplePrivateProjects } from "../../../resources/samples/portfolio/my
 import { checkNumber } from "../../../utils/CheckNumber";
 
 // Types
-import { ProjectCategory, ProjectType } from "../types/projectTypes";
+import { ProjectCategoryType, ProjectType } from "../types/projectTypes";
+import { ListItemType } from "../../../components/custom/layout/listLayout/ListLayout";
 
 /**
  * Returns a array of projects for the given category otherwise returns undefined
@@ -11,7 +12,7 @@ import { ProjectCategory, ProjectType } from "../types/projectTypes";
  * @param category
  * @returns {ProjectType[] | undefined} The array of projects or undefined.
  */
-const checkCategoryName = (category: ProjectCategory): ProjectType[] | undefined => {
+const checkCategoryName = (category: ProjectCategoryType): ProjectType[] | undefined => {
   switch (category) {
     case "personal":
       return mySamplePrivateProjects;
@@ -27,7 +28,7 @@ const checkCategoryName = (category: ProjectCategory): ProjectType[] | undefined
  * @param id
  * @returns {ProjectType | undefined} The single project or undefined.
  */
-export const getPortfolioContent = (category: ProjectCategory, id: number | string): ProjectType | undefined => {
+export const getPortfolioContent = (category: ProjectCategoryType, id: number | string): ProjectType | undefined => {
   const samplefile = checkCategoryName(category);
   if (samplefile === undefined) {
     console.error(`Given category '${category}' is not supported!`);
@@ -43,4 +44,15 @@ export const getPortfolioContent = (category: ProjectCategory, id: number | stri
   const content = samplefile.find((project) => project.id === checkedId);
 
   return content;
+};
+
+export const middlewareProjectTypeToListItemType = (content: ProjectType): ListItemType[] | undefined => {
+  if (!content.links) return undefined;
+  if (content.links.length === 0) return undefined;
+  return content.links?.map((link) => {
+    return {
+      text: link.text,
+      url: link.route,
+    };
+  });
 };

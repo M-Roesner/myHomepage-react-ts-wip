@@ -1,4 +1,6 @@
-export type ProjectCategory = "personal" | "retraining" | "internship";
+import { ERouteType } from "../../../routes/router";
+
+export type ProjectCategoryType = "personal" | "retraining" | "internship";
 
 export type ProjectImageType = {
   imgSrc: string;
@@ -9,12 +11,13 @@ export type ProjectImageType = {
 
 export type ProjectLinkType = {
   text: string;
-  route: string;
+  route: string | ERouteType;
+  icon?: string;
 };
 
 export type ProjectType = {
   id: number;
-  category: ProjectCategory;
+  category: ProjectCategoryType;
   title: string;
   cardIntroduction: string;
   introduction: string;
@@ -48,7 +51,7 @@ type imgSrcType = {
 
 export type newProjectType = {
   id: number;
-  category: ProjectCategory;
+  category: ProjectCategoryType;
   title: string;
   cardIntroduction: string;
   introduction: string;

@@ -1,28 +1,30 @@
 import { useParams } from "react-router";
 
 // Components
+import PageLayout from "../../../components/custom/layout/pageLayout/PageLayout";
 import { CardParagraphStyle } from "../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
 import CardHeadline from "../../../components/custom/card/cardHeadline/CardHeadline";
 import PortfolioDescription from "./portfolioDescription/PortfolioDescription";
 import PortfolioSkills from "./portfolioSkills/PortfolioSkills";
+import ErrorPage_InclProps from "../../errorPage/ErrorPage_InclProps";
 
 // Rosources and Helpers
-import { getPortfolioContent } from "./helper";
-
-// Types and Enums
-import { ProjectCategory } from "../types/projectTypes";
-import PageLayout from "../../../components/custom/layout/pageLayout/PageLayout";
-import ErrorPage_InclProps from "../../errorPage/ErrorPage_InclProps";
-import { ERouteType } from "../../../routes/router";
+import { getPortfolioContent, middlewareProjectTypeToListItemType } from "./helper";
 import { stringArrayToListItems } from "../../../components/custom/layout/listLayout/helper";
 
+// Types and Enums
+import { ProjectCategoryType } from "../types/projectTypes";
+import { ERouteType } from "../../../routes/router";
+
 const Portfolio = () => {
-  const { portfolioCategory, portfolioId } = useParams<{ portfolioCategory: ProjectCategory; portfolioId: string }>();
+  const { portfolioCategory, portfolioId } = useParams<{
+    portfolioCategory: ProjectCategoryType;
+    portfolioId: string;
+  }>();
   if (portfolioCategory === undefined || portfolioId === undefined) return;
 
   const content = getPortfolioContent(portfolioCategory, portfolioId);
 
-  console.log(`content log in Portfolio: `, content);
   if (!content)
     return (
       <ErrorPage_InclProps
@@ -31,6 +33,8 @@ const Portfolio = () => {
         descriptionText={"Portfolio nicht gefunden!"}
       ></ErrorPage_InclProps>
     );
+
+  const projectLinks = middlewareProjectTypeToListItemType(content);
 
   return (
     <PageLayout headlineText={content.title}>
@@ -42,18 +46,8 @@ const Portfolio = () => {
       {content.acquiredNewSkills && (
         <PortfolioSkills title="Neu erlernte Fähigkeiten:" skills={stringArrayToListItems(content.acquiredNewSkills)} />
       )}
-      {content.links && (
-        <>
-          <CardHeadline level={2}>Links:</CardHeadline>
-          <ul>
-            {content.links.map((link, index) => (
-              <li key={index}>
-                <a href={link.route}>{link.text}</a>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
+      {projectLinks && <PortfolioSkills title="Links:" skills={projectLinks} />}
+      {/* TODO: Add images! */}
       {content.images && (
         <>
           <CardHeadline level={2}>Bilder:</CardHeadline>

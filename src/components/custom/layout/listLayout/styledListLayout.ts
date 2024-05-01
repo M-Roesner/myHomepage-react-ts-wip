@@ -34,3 +34,21 @@ export const listItemWrapper_Default = styled.li`
   text-decoration: none;
   list-style: none;
 `;
+
+export const StyledListLayout = styled(unorderedListWrapper_Default)`
+  justify-content: flex-start;
+  align-content: flex-start;
+`;
+
+export const StyledListLayoutItem = styled(listItemWrapper_Default)`
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
+  color: ${(props) => props.theme.colors.common.textColorMain};
+  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+`;

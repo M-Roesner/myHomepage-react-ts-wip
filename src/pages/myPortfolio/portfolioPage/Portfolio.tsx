@@ -14,6 +14,7 @@ import { ProjectCategory } from "../types/projectTypes";
 import PageLayout from "../../../components/custom/layout/pageLayout/PageLayout";
 import ErrorPage_InclProps from "../../errorPage/ErrorPage_InclProps";
 import { ERouteType } from "../../../routes/router";
+import { stringArrayToListItems } from "../../../components/custom/layout/listLayout/helper";
 
 const Portfolio = () => {
   const { portfolioCategory, portfolioId } = useParams<{ portfolioCategory: ProjectCategory; portfolioId: string }>();
@@ -35,8 +36,12 @@ const Portfolio = () => {
     <PageLayout headlineText={content.title}>
       <CardParagraphStyle>{content.introduction}</CardParagraphStyle>
       <PortfolioDescription title="Warum:">{content.description}</PortfolioDescription>
-      <PortfolioSkills title="Verwendete Fähigkeiten:" skills={content.usedSkills} />
-      <PortfolioSkills title="Neu erlernte Fähigkeiten:" skills={content.acquiredNewSkills} />
+      {content.usedSkills && (
+        <PortfolioSkills title="Verwendete Fähigkeiten:" skills={stringArrayToListItems(content.usedSkills)} />
+      )}
+      {content.acquiredNewSkills && (
+        <PortfolioSkills title="Neu erlernte Fähigkeiten:" skills={stringArrayToListItems(content.acquiredNewSkills)} />
+      )}
       {content.links && (
         <>
           <CardHeadline level={2}>Links:</CardHeadline>

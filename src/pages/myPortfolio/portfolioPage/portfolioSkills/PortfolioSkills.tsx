@@ -2,7 +2,8 @@
 import SectionLayout from "../../../../components/custom/layout/sectionLayout/SectionLayout";
 // import { StyledSkillItem, StyledSkillList } from "./styledPortfolioSkills";
 // import { StyledLinkButton } from "../../../../components/custom/button/linkButton/styledLinkButton";
-import ListLayout, { ListItemType } from "../../../../components/custom/layout/listLayout/ListLayout";
+import ListLayout from "../../../../components/custom/layout/listLayout/ListLayout";
+import { ListItemType } from "../../../../components/custom/layout/listLayout/listLayoutTypes";
 
 type PortfolioSkillsProps = {
   title: string;

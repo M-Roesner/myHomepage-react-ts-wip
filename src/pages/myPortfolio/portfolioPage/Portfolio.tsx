@@ -9,8 +9,11 @@ import PortfolioSkills from "./portfolioSkills/PortfolioSkills";
 import ErrorPage_InclProps from "../../errorPage/ErrorPage_InclProps";
 
 // Rosources and Helpers
-import { getPortfolioContent, middlewareProjectTypeToListItemType } from "./helper";
-import { stringArrayToListItems } from "../../../components/custom/layout/listLayout/helper";
+import {
+  getPortfolioContent,
+  middlewareLinksFromProjectTypeToListItemType,
+  middlewareprojectSkillTypeToListItems,
+} from "./helper";
 
 // Types and Enums
 import { ProjectCategoryType } from "../types/projectTypes";
@@ -34,18 +37,17 @@ const Portfolio = () => {
       ></ErrorPage_InclProps>
     );
 
-  const projectLinks = middlewareProjectTypeToListItemType(content);
+  const projectLinks = middlewareLinksFromProjectTypeToListItemType(content);
+  const skills = content.skills ? middlewareprojectSkillTypeToListItems(content.skills) : undefined;
 
   return (
     <PageLayout headlineText={content.title}>
       <CardParagraphStyle>{content.introduction}</CardParagraphStyle>
       <PortfolioDescription title="Warum:">{content.description}</PortfolioDescription>
-      {content.usedSkills && (
-        <PortfolioSkills title="Verwendete Fähigkeiten:" skills={stringArrayToListItems(content.usedSkills)} />
-      )}
-      {content.acquiredNewSkills && (
+      {skills && <PortfolioSkills title="Verwendete Fähigkeiten:" skills={skills} />}
+      {/* {content.acquiredNewSkills && (
         <PortfolioSkills title="Neu erlernte Fähigkeiten:" skills={stringArrayToListItems(content.acquiredNewSkills)} />
-      )}
+      )} */}
       {projectLinks && <PortfolioSkills title="Links:" skills={projectLinks} />}
       {/* TODO: Add images! */}
       {content.images && (
@@ -55,7 +57,7 @@ const Portfolio = () => {
             {content.images.map((img, index) => (
               <li key={index}>
                 <CardHeadline level={4}>{img.imgTitle}</CardHeadline>
-                <img src={img.imgSrc} alt={img.imgAlt} />
+                <img src={img.imgSrcs.mobile} alt={img.imgAlt} />
               </li>
             ))}
           </ul>

@@ -42,6 +42,15 @@ export const StyledListLayout = styled(unorderedListWrapper_Default)`
 
 export const StyledListLayoutItem = styled(listItemWrapper_Default)`
   padding: 10px;
+  gap: 5px;
+
+  /* 
+   Calculate the height of the list item to ensure consistency:
+   - 30px for the image icon
+   - 2 * 10px for padding
+   - 2 * 1px for border
+*/
+  height: calc(30px + 2 * 10px + 2 * 1px);
 
   display: flex;
   align-items: center;
@@ -53,3 +62,7 @@ export const StyledListLayoutItem = styled(listItemWrapper_Default)`
   border: 1px solid ${(props) => props.theme.colors.common.borderColor};
 `;
 export const StyledListLayoutItemForButton = styled(listItemWrapper_Default)``;
+
+export const ListLayoutItemImage = styled.img`
+  height: 30px;
+`;

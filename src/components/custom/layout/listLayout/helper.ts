@@ -1,4 +1,4 @@
-import { ListItemType } from "./ListLayout";
+import { ListItemType } from "./listLayoutTypes";
 
 /**
  * Converts an array of strings to an array of ListItemType objects.

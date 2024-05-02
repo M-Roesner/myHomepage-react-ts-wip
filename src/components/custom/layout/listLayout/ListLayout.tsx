@@ -25,7 +25,7 @@ import { ListItemType, ListLayoutProps, PersonalNumerusType } from "./listLayout
  * @param {ListItemType} item - The list item to render.
  * @returns {JSX.Element} - Returns the JSX for the rendered list item with a button.
  */
-const renderListItemWithButton = (index: number, item: ListItemType): JSX.Element => {
+const RenderListItemWithButton = (index: number, item: ListItemType): JSX.Element => {
   const url =
     typeof item.buttonUrl === "string"
       ? item.buttonUrl
@@ -54,13 +54,13 @@ const renderListItemWithButton = (index: number, item: ListItemType): JSX.Elemen
  * @param {boolean} isLinkButton - Indicates whether the list item should be rendered as a clickable button.
  * @returns {JSX.Element} - Returns the JSX for the rendered list item.
  */
-const renderListItem = (index: number, item: ListItemType, isLinkButton: boolean): JSX.Element => {
+const RenderListItem = (index: number, item: ListItemType, isLinkButton: boolean): JSX.Element => {
   if (
     isLinkButton &&
     item.buttonUrl &&
     (typeof item.buttonUrl === "string" || Object.values(ERouteType).includes(item.buttonUrl.route))
   )
-    return renderListItemWithButton(index, item);
+    return RenderListItemWithButton(index, item);
   return (
     <StyledListLayoutItem key={index}>
       {item.text}
@@ -81,7 +81,6 @@ const ShowPersonalButton = ({
   remainingItems: number;
   onClick: () => void;
 }) => {
-  //
   const personalText = personalButtonText
     ? `${remainingItems > 1 ? personalButtonText.plural : personalButtonText.singular}`
     : "";
@@ -90,6 +89,26 @@ const ShowPersonalButton = ({
     // TODO: Should the text on the button have an individual text? example '+{remainingItems}} weitere Skills'
     <StyledNormalButton_OnlyText onClick={onClick}>{buttonText}</StyledNormalButton_OnlyText>
   );
+};
+
+/**
+ * Displays the list elements, depending on the length of the elements to be displayed.
+ */
+const ShowItems = ({
+  list,
+  showAll,
+  maxVisableItems,
+  isLinkButton,
+}: {
+  list: ListItemType[];
+  showAll: boolean;
+  maxVisableItems: number;
+  isLinkButton: boolean;
+}) => {
+  const slicedList = list.slice(0, maxVisableItems);
+  return showAll
+    ? list.map((listItem, index) => RenderListItem(index, listItem, isLinkButton))
+    : slicedList.map((listItem, index) => RenderListItem(index, listItem, isLinkButton));
 };
 
 /**
@@ -118,18 +137,12 @@ const ListLayout = ({
 
   const handleClick = () => setShowAll(true);
 
-  /**
-   * Displays the list elements, depending on the length of the elements to be displayed.
-   */
-  const ShowItems = () => {
-    return showAll
-      ? list.map((listItem, index) => renderListItem(index, listItem, isLinkButton))
-      : list.slice(0, maxVisableItems).map((listItem, index) => renderListItem(index, listItem, isLinkButton));
-  };
+  // FIXME: NEW structure for the functionalities of this component!!!! This does not look good.
 
+  // 1. Render list item ....
   return (
     <StyledListLayout>
-      <ShowItems />
+      <ShowItems list={list} showAll={showAll} maxVisableItems={maxVisableItems} isLinkButton={isLinkButton} />
       {!showAll && list.length > maxVisableItems ? (
         <ShowPersonalButton
           personalButtonText={personalButtonText}

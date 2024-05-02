@@ -1,7 +1,7 @@
 import { ProjectType } from "../../../../pages/myPortfolio/types/projectTypes";
 import CardHeadline from "../cardHeadline/CardHeadline";
 import { CardParagraphStyle } from "../cardParagraph/styledCardParagraphStyle";
-import { StyledCardImage } from "./styledCardImage";
+import { StyledCardImage } from "../cardImage/styledCardImage";
 import { StyledCardProject } from "./styledCardProject";
 
 type CardProjectProps = {

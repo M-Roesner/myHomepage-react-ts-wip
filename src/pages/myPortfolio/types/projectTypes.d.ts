@@ -23,7 +23,7 @@ export type ProjectImageType = {
 export type ProjectLinkType = {
   text: string;
   route: string | ERouteType;
-  icon?: string;
+  iconSrc?: string;
 };
 
 export type ProjectType = {

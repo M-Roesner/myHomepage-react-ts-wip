@@ -72,7 +72,10 @@ export const mySamplePrivateProjects: ProjectType[] = [
       { skillTitle: "4 GewinntLongTestForTestingOfTheDesignWithFlexBox" },
       { skillTitle: "4 Gewinnt new learned skill", isNewSkill: true },
     ],
-    links: [{ text: "GitHub", route: "https://github.com/M-Roesner" }],
+    links: [
+      { text: "GitHub", route: "https://github.com/M-Roesner", iconSrc: "/src/assets/fontawesome-free-svg/github.svg" },
+      { text: "GitHub", route: "https://github.com/M-Roesner", iconSrc: "/src/assets/fontawesome-free-svg/github.svg" },
+    ],
     addedDate: new Date("2024-04-28"),
     updatedDate: new Date("2024-04-28"),
   },

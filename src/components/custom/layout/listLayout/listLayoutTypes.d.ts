@@ -1,7 +1,7 @@
 import { ERouteType } from "../../../../routes/router";
 
 // Types
-export type UrlType = {
+export type RouteType = {
   route: ERouteType;
 };
 /**
@@ -12,7 +12,7 @@ export type UrlType = {
 export type ListItemType = {
   text: string;
   iconSrc?: string;
-  buttonUrl?: string | UrlType;
+  buttonUrl?: string | RouteType;
 };
 
 /**

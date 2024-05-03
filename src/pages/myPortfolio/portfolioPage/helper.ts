@@ -53,7 +53,8 @@ export const middlewareLinksFromProjectTypeToListItemType = (content: ProjectTyp
   return content.links?.map((link) => {
     return {
       text: link.text,
-      url: link.route,
+      iconSrc: link.iconSrc,
+      buttonUrl: link.route,
     };
   });
 };

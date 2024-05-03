@@ -42,7 +42,7 @@ export const StyledListLayout = styled(unorderedListWrapper_Default)`
 
 export const StyledListLayoutItem = styled(listItemWrapper_Default)`
   padding: 10px;
-  gap: 5px;
+  gap: ${(props) => props.theme.sizes.common.gap};
 
   /* 
    Calculate the height of the list item to ensure consistency:

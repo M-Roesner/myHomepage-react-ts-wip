@@ -37,17 +37,14 @@ const Portfolio = () => {
       ></ErrorPage_InclProps>
     );
 
-  const projectLinks = middlewareLinksFromProjectTypeToListItemType(content);
   const skills = content.skills ? middlewareprojectSkillTypeToListItems(content.skills) : undefined;
+  const projectLinks = middlewareLinksFromProjectTypeToListItemType(content);
 
   return (
     <PageLayout headlineText={content.title}>
       <CardParagraphStyle>{content.introduction}</CardParagraphStyle>
       <PortfolioDescription title="Warum:">{content.description}</PortfolioDescription>
       {skills && <PortfolioSkills title="Verwendete Fähigkeiten:" skills={skills} />}
-      {/* {content.acquiredNewSkills && (
-        <PortfolioSkills title="Neu erlernte Fähigkeiten:" skills={stringArrayToListItems(content.acquiredNewSkills)} />
-      )} */}
       {projectLinks && <PortfolioSkills title="Links:" skills={projectLinks} />}
       {/* TODO: Add images! */}
       {content.images && (

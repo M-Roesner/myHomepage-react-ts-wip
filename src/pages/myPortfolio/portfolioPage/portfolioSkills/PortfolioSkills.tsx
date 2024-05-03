@@ -10,7 +10,7 @@ type PortfolioSkillsProps = {
   skills: ListItemType[];
 };
 
-const PortfolioSkills = ({ title, skills }: PortfolioSkillsProps): JSX.Element => {
+const PortfolioList = ({ title, skills }: PortfolioSkillsProps): JSX.Element => {
   if (!skills) return <></>;
   return (
     <SectionLayout headlineText={title}>
@@ -41,4 +41,4 @@ const PortfolioSkills = ({ title, skills }: PortfolioSkillsProps): JSX.Element =
 {
   /* FIXME: Fix text: If the text is too long and contains no white spaces. This will be a general problem! */
 }
-export default PortfolioSkills;
+export default PortfolioList;

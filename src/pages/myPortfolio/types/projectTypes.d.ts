@@ -24,6 +24,7 @@ export type ProjectLinkType = {
   text: string;
   route: string | ERouteType;
   iconSrc?: string;
+  iconAltText?: string;
 };
 
 export type ProjectType = {

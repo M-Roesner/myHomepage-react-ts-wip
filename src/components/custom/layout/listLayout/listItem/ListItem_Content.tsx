@@ -11,7 +11,7 @@ import { ListLayoutItemImage } from "../styledListLayout";
 const ListItem_Content = ({ item }: { item: ListItemType }) => {
   return (
     <>
-      {item.text}
+      {item.text ? item.text : ""}
       {item.iconSrc ? <ListLayoutItemImage src={item.iconSrc} /> : ""}
     </>
   );

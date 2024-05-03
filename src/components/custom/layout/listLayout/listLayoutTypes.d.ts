@@ -10,7 +10,7 @@ export type RouteType = {
  * - buttonUrl (optional): Navigates to the given address or page route.
  */
 export type ListItemType = {
-  text: string;
+  text?: string;
   iconSrc?: string;
   buttonUrl?: string | RouteType;
 };

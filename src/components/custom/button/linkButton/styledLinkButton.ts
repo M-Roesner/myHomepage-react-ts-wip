@@ -14,4 +14,7 @@ export const StyledLinkButton = styled(linkButtonWrapper_FlexCenter)`
   justify-content: center;
   border: 1px solid ${(props) => props.theme.colors.common.borderColor};
   color: ${(props) => props.theme.colors.common.textColorSecond};
+
+  // Hight: Ensures that the button has the same height as the other child elements within a list.
+  height: 100%;
 `;

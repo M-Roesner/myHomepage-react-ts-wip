@@ -77,7 +77,7 @@ export const mySamplePrivateProjects: ProjectType[] = [
     ],
     links: [
       { text: "GitHub", route: "https://github.com/M-Roesner", iconSrc: "/src/assets/fontawesome-free-svg/github.svg" },
-      { text: "GitHub", route: "https://github.com/M-Roesner", iconSrc: "/src/assets/fontawesome-free-svg/github.svg" },
+      { text: "GitHub", route: "https://github.com/M-Roesner" },
       { text: "GitHub", route: "https://github.com/M-Roesner", iconSrc: "/src/assets/fontawesome-free-svg/github.svg" },
       { text: "GitHub", route: "https://github.com/M-Roesner", iconSrc: "/src/assets/fontawesome-free-svg/github.svg" },
       { text: "GitHub", route: "https://github.com/M-Roesner", iconSrc: "/src/assets/fontawesome-free-svg/github.svg" },

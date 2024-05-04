@@ -9,7 +9,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Frontend",
       description:
         "JavaScript ist eine vielseitige Programmiersprache, die häufig für die Webentwicklung verwendet wird.",
-      links: [
+      projectLinks: [
         { text: "Projekt JavaScript 1", route: "/projectJavaScript1" },
         { text: "Projekt JavaScript 2", route: "/projectJavaScript2" },
         { text: "Projekt JavaScript 3", route: "/projectJavaScript3" },
@@ -23,7 +23,7 @@ export const mySampleSkills: GroupedSkills = {
       order: 2,
       category: "Frontend",
       description: "React.js ist eine beliebte JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen.",
-      links: [
+      projectLinks: [
         { text: "Projekt React 1", route: "/projectReact1" },
         { text: "Projekt React 2", route: "/projectReact2" },
       ],
@@ -47,7 +47,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Frontend",
       description:
         "HTML (Hypertext Markup Language) ist die Standardauszeichnungssprache zur Strukturierung von Webseiten und Webanwendungen.",
-      links: [
+      projectLinks: [
         { text: "HTML Tutorial", route: "https://www.w3schools.com/html/" },
         { text: "MDN Web Docs - HTML", route: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
       ],
@@ -61,7 +61,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Frontend",
       description:
         "SCSS (Sassy CSS) ist eine Erweiterung von CSS, die Funktionen wie Variablen, Verschachtelungen und Mixins bietet.",
-      links: [
+      projectLinks: [
         { text: "Projekt SCSS 1", route: "/projectSCSS1" },
         { text: "Projekt SCSS 2", route: "/projectSCSS2" },
         { text: "Projekt SCSS 3", route: "/projectSCSS3" },
@@ -76,7 +76,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Frontend",
       description:
         "Styled Components ist eine CSS-in-JS-Bibliothek, mit der CSS direkt in JavaScript-Dateien geschrieben werden kann.",
-      links: [
+      projectLinks: [
         { text: "Projekt Styled Components 1", route: "/projectStyledComponents1" },
         { text: "Projekt Styled Components 2", route: "/projectStyledComponents2" },
         { text: "Projekt Styled Components 3", route: "/projectStyledComponents3" },

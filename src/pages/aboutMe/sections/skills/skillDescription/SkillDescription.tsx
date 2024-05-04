@@ -32,7 +32,7 @@ const SkillDescription = () => {
           {/* TODO: Icon: Find a matching icon for the respective skill! */}
           <SkillDesciptionHeader name={skill.name} />
           <SkilledDescriptionText text={skill.description} />
-          {skill.links !== undefined && <SkillProjectLinks links={skill.links} />}
+          {skill.projectLinks !== undefined && <SkillProjectLinks links={skill.projectLinks} />}
         </>
       ) : (
         <>

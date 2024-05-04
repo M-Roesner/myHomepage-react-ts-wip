@@ -9,7 +9,11 @@ import ErrorPage_InclProps from "../../errorPage/ErrorPage_InclProps";
 
 // Rosources and Helpers
 import { getPortfolioContent } from "./helper";
-import { mwSkillsToListItems, mwLinksToListItemType, mwImageToListItemType } from "./middleware.helper";
+import {
+  mwPortfolio_SkillsToListItems,
+  mwPortfolio_LinksToListItemType,
+  mwPortfolio_ImageToListItemType,
+} from "./middleware.helper";
 
 // Types and Enums
 import { ProjectCategoryType } from "../types/projectTypes";
@@ -33,9 +37,9 @@ const Portfolio = () => {
       ></ErrorPage_InclProps>
     );
 
-  const skills = content.skills ? mwSkillsToListItems(content.skills) : undefined;
-  const projectLinks = content.links ? mwLinksToListItemType(content.links) : undefined;
-  const images = content.images ? mwImageToListItemType(content.images) : undefined;
+  const skills = content.skills ? mwPortfolio_SkillsToListItems(content.skills) : undefined;
+  const projectLinks = content.links ? mwPortfolio_LinksToListItemType(content.links) : undefined;
+  const images = content.images ? mwPortfolio_ImageToListItemType(content.images) : undefined;
 
   return (
     <PageLayout headlineText={content.title}>

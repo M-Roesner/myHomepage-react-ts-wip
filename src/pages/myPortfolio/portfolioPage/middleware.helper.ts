@@ -3,7 +3,7 @@ import { ProjectImageType, ProjectLinkType, ProjectSkillType } from "../types/pr
 
 import svgNewLabel from "/src/assets/iconscout-free/new.svg";
 
-export const mwLinksToListItemType = (links: ProjectLinkType[]): ListItemType[] | undefined => {
+export const mwPortfolio_LinksToListItemType = (links: ProjectLinkType[]): ListItemType[] | undefined => {
   if (links.length === 0) return undefined;
   return links?.map((link) => {
     return {
@@ -21,7 +21,7 @@ export const mwLinksToListItemType = (links: ProjectLinkType[]): ListItemType[] 
  * @param {ProjectSkillType[]} list - The array of ProjectSkillType to be converted.
  * @returns {ListItemType[]} - An array of ListItemType objects.
  */
-export const mwSkillsToListItems = (list: ProjectSkillType[]): ListItemType[] | undefined => {
+export const mwPortfolio_SkillsToListItems = (list: ProjectSkillType[]): ListItemType[] | undefined => {
   if (list.length === 0) return undefined;
   const newlist = list.map((string) => {
     const iconSrc = string.isNewSkill ? svgNewLabel : undefined;
@@ -44,7 +44,7 @@ export const mwSkillsToListItems = (list: ProjectSkillType[]): ListItemType[] | 
   return newlist;
 };
 
-export const mwImageToListItemType = (images: ProjectImageType[]): ListItemType[] | undefined => {
+export const mwPortfolio_ImageToListItemType = (images: ProjectImageType[]): ListItemType[] | undefined => {
   if (images.length === 0) return undefined;
   return images?.map((image) => {
     return {

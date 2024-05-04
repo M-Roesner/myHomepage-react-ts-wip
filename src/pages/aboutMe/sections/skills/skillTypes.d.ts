@@ -9,7 +9,7 @@ export type SkillType = {
   order: number;
   category: SkillCategoryType;
   description: string;
-  links?: LinkType[];
+  projectLinks?: LinkType[];
   personalKnowledgeLevel?: number;
   addedDate?: Date;
   updatedDate?: Date;

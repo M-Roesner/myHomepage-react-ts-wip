@@ -1,10 +1,13 @@
 // Components
-import SkillItem from "./SkillItem/SkillItem";
 import { StyledSkillList } from "./styledskillList";
+import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
+import ListLayout from "../../../../../../components/custom/layout/listLayout/ListLayout";
+
+// Helpers
+import { mwAbout_SkillToListItemType } from "./middleware.helper";
 
 // Types
 import { SkillType } from "../../skillTypes";
-import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
 
 type SkillListProps = {
   skillList: SkillType[];
@@ -19,10 +22,17 @@ type SkillListProps = {
  * @param {Function} props.onClick
  */
 const SkillList = ({ skillList, title }: SkillListProps) => {
+  const newList = mwAbout_SkillToListItemType(skillList);
+
+  if (!newList) return <></>;
+
   return (
     <StyledSkillList>
       <CardHeadline level={4}>{title}:</CardHeadline>
-      <SkillItem list={skillList} />
+      <ListLayout
+        list={newList}
+        numerusText={{ singular: "weitere Fähigkeit", plural: "weitere Fähigkeiten" }}
+      ></ListLayout>
     </StyledSkillList>
   );
 };

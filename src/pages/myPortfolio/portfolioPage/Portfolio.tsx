@@ -41,10 +41,28 @@ const Portfolio = () => {
     <PageLayout headlineText={content.title}>
       <CardParagraphStyle>{content.introduction}</CardParagraphStyle>
       <PortfolioDescription title="Warum:">{content.description}</PortfolioDescription>
-      {skills && <PortfolioList title="Verwendete Fähigkeiten:" skills={skills} />}
-      {projectLinks && <PortfolioList title="Links:" skills={projectLinks} />}
+      {skills && (
+        <PortfolioList
+          title="Verwendete Fähigkeiten:"
+          lists={skills}
+          numerusText={{ singular: "weitere Fähigkeit", plural: "weitere Fähigkeiten" }}
+        />
+      )}
+      {projectLinks && (
+        <PortfolioList
+          title="Links:"
+          lists={projectLinks}
+          numerusText={{ singular: "weiterer Link", plural: "weitere Links" }}
+        />
+      )}
       {/* TODO: Adjust the size of the images, maybe with a custom component! */}
-      {images && <PortfolioList title={"Bilder:"} skills={images} />}
+      {images && (
+        <PortfolioList
+          title={"Bilder:"}
+          lists={images}
+          numerusText={{ singular: "weiteres Bild", plural: "weitere Bilder" }}
+        />
+      )}
     </PageLayout>
   );
 };

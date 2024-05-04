@@ -3,7 +3,7 @@ import React from "react";
 // Components
 import CardHeadline from "../../card/cardHeadline/CardHeadline";
 
-type SectionLayout_NoVLProps = {
+type SectionLayout_NoStyleProps = {
   headlineText: React.ReactNode;
   children: React.ReactNode;
 };
@@ -18,7 +18,7 @@ type SectionLayout_NoVLProps = {
  * @param {React.ReactNode} props.children - The children components to be rendered inside the layout.
  * @returns {JSX.Element} - Returns the JSX for the PageLayout component.
  */
-const SectionLayout_NoStyle = ({ headlineText, children }: SectionLayout_NoVLProps): JSX.Element => {
+const SectionLayout_NoStyle = ({ headlineText, children }: SectionLayout_NoStyleProps): JSX.Element => {
   return (
     <section>
       <CardHeadline level={2}>{headlineText}</CardHeadline>

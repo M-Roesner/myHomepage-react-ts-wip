@@ -1,43 +1,24 @@
 // Components
-import SectionLayout from "../../../../components/custom/layout/sectionLayout/SectionLayout";
 // import { StyledSkillItem, StyledSkillList } from "./styledPortfolioSkills";
 // import { StyledLinkButton } from "../../../../components/custom/button/linkButton/styledLinkButton";
 import ListLayout from "../../../../components/custom/layout/listLayout/ListLayout";
-import { ListItemType } from "../../../../components/custom/layout/listLayout/listLayoutTypes";
+import { ListItemType, NumerusType } from "../../../../components/custom/layout/listLayout/listLayoutTypes";
+import SectionLayout_NoStyle from "../../../../components/custom/layout/sectionLayout/SectionLayout_NoStyle";
 
-type PortfolioSkillsProps = {
+type PortfolioListProps = {
   title: string;
-  skills: ListItemType[];
+  lists: ListItemType[];
+  numerusText?: NumerusType;
 };
 
-const PortfolioList = ({ title, skills }: PortfolioSkillsProps): JSX.Element => {
-  if (!skills) return <></>;
+const PortfolioList = ({ title, lists, numerusText }: PortfolioListProps): JSX.Element => {
+  if (!lists) return <></>;
   return (
-    <SectionLayout headlineText={title}>
-      <ListLayout
-        list={skills}
-        personalButtonText={{ singular: "Fähigkeit", plural: "Fähigkeiten" }}
-        isLinkButton
-      ></ListLayout>
-    </SectionLayout>
+    <SectionLayout_NoStyle headlineText={title}>
+      <ListLayout list={lists} numerusText={numerusText}></ListLayout>
+    </SectionLayout_NoStyle>
   );
 };
-
-// const PortfolioSkillsOLD = ({ title, skills }: PortfolioSkillsProps): JSX.Element => {
-//   if (!skills) return;
-//   return (
-//     <SectionLayout headlineText={title}>
-//       <StyledSkillList>
-//         {skills.map((skill, index) => (
-//           <StyledSkillItem key={index}>
-//             <StyledLinkButton to={"/"}>{skill}</StyledLinkButton>
-//           </StyledSkillItem>
-//         ))}
-//       </StyledSkillList>
-//     </SectionLayout>
-//   );
-// };
-
 {
   /* FIXME: Fix text: If the text is too long and contains no white spaces. This will be a general problem! */
 }

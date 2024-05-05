@@ -22,6 +22,7 @@ const ListItem = ({ item }: { item: ListItemType }): JSX.Element => {
   const isButton =
     item.buttonUrl && (typeof item.buttonUrl === "string" || Object.values(ERouteType).includes(item.buttonUrl.route));
 
+  /* FIXME: Fix text: If the text is too long and contains no white spaces. This will be a general problem! */
   return isButton ? <ListItem_Button item={item} /> : <ListItem_Normal item={item} />;
 };
 

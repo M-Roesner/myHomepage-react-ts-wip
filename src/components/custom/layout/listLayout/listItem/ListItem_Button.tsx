@@ -24,7 +24,7 @@ const ListItem_Button = ({ item }: { item: ListItemType }): JSX.Element => {
   return (
     <StyledListLayoutItemForButton>
       <LinkButton to={url}>
-        <ListItem_Content item={item} />
+        <ListItem_Content content={item} />
       </LinkButton>
     </StyledListLayoutItemForButton>
   );

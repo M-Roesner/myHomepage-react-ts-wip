@@ -57,7 +57,7 @@ const ShowItems = ({
  *
  * @param {ListLayoutProps} props - The props containing the list items.
  * @param {ListItemType[]} props.list - An array of ListItemType objects.
- * @param {string} props.numerusText  - The text to be displayed when there are more items present than currently shown in the list.
+ * @param {string} props.numerusText - The text to be displayed when there are more items present than currently shown in the list.
  * @param {number} props.maxVisableItems (Optional - default = 5) - Number of elements to be displayed in the first rendering. If more, a button will be displayed.
  * @returns {JSX.Element} - Returns the JSX for the rendered list component.
  */

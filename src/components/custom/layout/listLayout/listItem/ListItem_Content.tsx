@@ -6,13 +6,13 @@ import { ListLayoutItemImage } from "../styledListLayout";
  *
  * It contains the text and the optional icon of the element.
  *
- * If the item's URL is specified as a string or matches a route defined in the ERouteType enum,
+ * Hint: Uses only the text and the icon src from the ListItemType.
  */
-const ListItem_Content = ({ item }: { item: ListItemType }) => {
+const ListItem_Content = ({ content }: { content: ListItemType }) => {
   return (
     <>
-      {item.text ? item.text : ""}
-      {item.iconSrc ? <ListLayoutItemImage src={item.iconSrc} /> : ""}
+      {content.text ? content.text : ""}
+      {content.iconSrc ? <ListLayoutItemImage src={content.iconSrc} /> : ""}
     </>
   );
 };

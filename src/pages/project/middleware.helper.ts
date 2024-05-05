@@ -1,10 +1,17 @@
+import { ImageType } from "../../components/custom/layout/imageWrapperLayout/ImageWrapperLayout";
 import { ListItemType } from "../../components/custom/layout/listLayout/listLayoutTypes";
 import { ProjectLinkType, ProjectSkillType, ProjectImageType } from "../myPortfolio/types/projectTypes";
 import svgNewLabel from "/src/assets/iconscout-free/new.svg";
 
-export const mwProject_LinksToListItemType = (links: ProjectLinkType[]): ListItemType[] | undefined => {
-  if (links.length === 0) return undefined;
-  return links?.map((link) => {
+/**
+ * Converts a list of ProjectLinkType to an array of ListItemType objects.
+ *
+ * @param {ProjectLinkType[]} list - The array of ProjectLinkType to be converted.
+ * @returns {ListItemType[]} - An array of ListItemType objects.
+ */
+export const mwProject_LinksToListItemType = (list: ProjectLinkType[]): ListItemType[] | undefined => {
+  if (list.length === 0) return undefined;
+  return list?.map((link) => {
     return {
       text: link.text,
       iconSrc: link.iconSrc,
@@ -43,11 +50,20 @@ export const mwProject_SkillsToListItems = (list: ProjectSkillType[]): ListItemT
   return newlist;
 };
 
-export const mwProject_ImageToListItemType = (images: ProjectImageType[]): ListItemType[] | undefined => {
+/**
+ * Converts a list of ProjectImageType to an array of ImageType objects.
+ *
+ * @param {ProjectImageType[]} images - The array of ProjectImageType to be converted.
+ * @returns {ImageType[]} - An array of ImageType objects.
+ */
+export const mwProject_ImageToImageType = (images: ProjectImageType[]): ImageType[] | undefined => {
   if (images.length === 0) return undefined;
   return images?.map((image) => {
     return {
-      iconSrc: image.imgSrcs.preview,
+      src: image.imgSrcs.mobile,
+      srcFullSize: image.imgSrcs.full,
+      title: image.imgTitle,
+      alt: image.imgAlt,
     };
   });
 };

@@ -5,7 +5,7 @@ import SectionLayout_NoStyle from "../../../components/custom/layout/sectionLayo
 
 type ProjectListProps = {
   title: string;
-  lists: ListItemType[];
+  list: ListItemType[];
   numerusText?: NumerusType;
 };
 
@@ -17,11 +17,11 @@ type ProjectListProps = {
  * @param {string} props.numerusText - The text to be displayed when there are more items present than currently shown in the list.
  * @returns
  */
-const ProjectList = ({ title, lists, numerusText }: ProjectListProps): JSX.Element => {
-  if (!lists) return <></>;
+const ProjectList = ({ title, list, numerusText }: ProjectListProps): JSX.Element => {
+  if (!list) return <></>;
   return (
     <SectionLayout_NoStyle headlineText={title}>
-      <ListLayout list={lists} numerusText={numerusText}></ListLayout>
+      <ListLayout list={list} numerusText={numerusText}></ListLayout>
     </SectionLayout_NoStyle>
   );
 };

@@ -12,12 +12,13 @@ import { getProjectContent } from "./helper";
 import {
   mwProject_SkillsToListItems,
   mwProject_LinksToListItemType,
-  mwProject_ImageToListItemType,
+  mwProject_ImageToImageType,
 } from "./middleware.helper";
 
 // Types and Enums
 import { ProjectCategoryType } from "../myPortfolio/types/projectTypes";
 import { ERouteType } from "../../routes/router";
+import ProjectImages from "./projectImages/ProjectImages";
 
 const Project = () => {
   const { portfolioCategory, portfolioId } = useParams<{
@@ -39,7 +40,7 @@ const Project = () => {
 
   const skills = content.skills ? mwProject_SkillsToListItems(content.skills) : undefined;
   const projectLinks = content.links ? mwProject_LinksToListItemType(content.links) : undefined;
-  const images = content.images ? mwProject_ImageToListItemType(content.images) : undefined;
+  const images = content.images ? mwProject_ImageToImageType(content.images) : undefined;
 
   return (
     <PageLayout headlineText={content.title}>
@@ -48,25 +49,18 @@ const Project = () => {
       {skills && (
         <ProjectList
           title="Verwendete Fähigkeiten:"
-          lists={skills}
+          list={skills}
           numerusText={{ singular: "weitere Fähigkeit", plural: "weitere Fähigkeiten" }}
         />
       )}
       {projectLinks && (
         <ProjectList
           title="Links:"
-          lists={projectLinks}
+          list={projectLinks}
           numerusText={{ singular: "weiterer Link", plural: "weitere Links" }}
         />
       )}
-      {/* TODO: Adjust the size of the images, maybe with a custom component! */}
-      {images && (
-        <ProjectList
-          title={"Bilder:"}
-          lists={images}
-          numerusText={{ singular: "weiteres Bild", plural: "weitere Bilder" }}
-        />
-      )}
+      {images && <ProjectImages title={"Bilder:"} images={images} />}
     </PageLayout>
   );
 };

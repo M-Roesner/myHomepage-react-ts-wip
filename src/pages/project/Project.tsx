@@ -1,32 +1,32 @@
 import { useParams } from "react-router";
 
 // Components
-import PageLayout from "../../../components/custom/layout/pageLayout/PageLayout";
-import { CardParagraphStyle } from "../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
-import PortfolioDescription from "./portfolioDescription/PortfolioDescription";
-import PortfolioList from "./portfolioSkills/PortfolioSkills";
-import ErrorPage_InclProps from "../../errorPage/ErrorPage_InclProps";
+import PageLayout from "../../components/custom/layout/pageLayout/PageLayout";
+import { CardParagraphStyle } from "../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import ProjectDescription from "./projectDescription/ProjectDescription";
+import ProjectList from "./projectList/ProjectList";
+import ErrorPage_InclProps from "../errorPage/ErrorPage_InclProps";
 
 // Rosources and Helpers
-import { getPortfolioContent } from "./helper";
+import { getProjectContent } from "./helper";
 import {
-  mwPortfolio_SkillsToListItems,
-  mwPortfolio_LinksToListItemType,
-  mwPortfolio_ImageToListItemType,
+  mwProject_SkillsToListItems,
+  mwProject_LinksToListItemType,
+  mwProject_ImageToListItemType,
 } from "./middleware.helper";
 
 // Types and Enums
-import { ProjectCategoryType } from "../types/projectTypes";
-import { ERouteType } from "../../../routes/router";
+import { ProjectCategoryType } from "../myPortfolio/types/projectTypes";
+import { ERouteType } from "../../routes/router";
 
-const Portfolio = () => {
+const Project = () => {
   const { portfolioCategory, portfolioId } = useParams<{
     portfolioCategory: ProjectCategoryType;
     portfolioId: string;
   }>();
   if (portfolioCategory === undefined || portfolioId === undefined) return;
 
-  const content = getPortfolioContent(portfolioCategory, portfolioId);
+  const content = getProjectContent(portfolioCategory, portfolioId);
 
   if (!content)
     return (
@@ -37,23 +37,23 @@ const Portfolio = () => {
       ></ErrorPage_InclProps>
     );
 
-  const skills = content.skills ? mwPortfolio_SkillsToListItems(content.skills) : undefined;
-  const projectLinks = content.links ? mwPortfolio_LinksToListItemType(content.links) : undefined;
-  const images = content.images ? mwPortfolio_ImageToListItemType(content.images) : undefined;
+  const skills = content.skills ? mwProject_SkillsToListItems(content.skills) : undefined;
+  const projectLinks = content.links ? mwProject_LinksToListItemType(content.links) : undefined;
+  const images = content.images ? mwProject_ImageToListItemType(content.images) : undefined;
 
   return (
     <PageLayout headlineText={content.title}>
       <CardParagraphStyle>{content.introduction}</CardParagraphStyle>
-      <PortfolioDescription title="Warum:">{content.description}</PortfolioDescription>
+      <ProjectDescription title="Warum:">{content.description}</ProjectDescription>
       {skills && (
-        <PortfolioList
+        <ProjectList
           title="Verwendete Fähigkeiten:"
           lists={skills}
           numerusText={{ singular: "weitere Fähigkeit", plural: "weitere Fähigkeiten" }}
         />
       )}
       {projectLinks && (
-        <PortfolioList
+        <ProjectList
           title="Links:"
           lists={projectLinks}
           numerusText={{ singular: "weiterer Link", plural: "weitere Links" }}
@@ -61,7 +61,7 @@ const Portfolio = () => {
       )}
       {/* TODO: Adjust the size of the images, maybe with a custom component! */}
       {images && (
-        <PortfolioList
+        <ProjectList
           title={"Bilder:"}
           lists={images}
           numerusText={{ singular: "weiteres Bild", plural: "weitere Bilder" }}
@@ -71,4 +71,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Project;

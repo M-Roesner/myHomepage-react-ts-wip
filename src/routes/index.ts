@@ -3,8 +3,8 @@ import NotFoundPage from "../pages/errorPage/NotFoundPage.tsx";
 import AboutMePage from "../pages//aboutMe/AboutMe.tsx";
 import HomePage from "../pages//home/HomePage.tsx";
 import MyPortfolio from "../pages//myPortfolio/MyPortfolio.tsx";
-import Portfolio from "../pages/myPortfolio/portfolioPage/Portfolio.tsx";
+import Project from "../pages/project/Project.tsx";
 import ImprintPage from "../pages//Imprint/ImprintPage.tsx";
 import Footer from "../components/footer/footer.tsx";
 
-export { App, NotFoundPage, AboutMePage, HomePage, MyPortfolio, Portfolio, ImprintPage, Footer };
+export { App, NotFoundPage, AboutMePage, HomePage, MyPortfolio, Project, ImprintPage, Footer };

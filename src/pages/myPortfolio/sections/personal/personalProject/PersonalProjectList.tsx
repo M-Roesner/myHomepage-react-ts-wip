@@ -9,23 +9,23 @@ const PersonalProjectList = () => {
   return (
     <DefaultProjectGridStyle>
       <CardProject
-        url={`/${ERouteType.MY_PORTFOLIO}/${privateList[0].category}/blub`}
+        url={`/${ERouteType.PROJECT}/${privateList[0].category}/blub`}
         content={privateList[0]}
       ></CardProject>
       <CardProject
-        url={`/${ERouteType.MY_PORTFOLIO}/${privateList[1].category}/${privateList[1].id}`}
+        url={`/${ERouteType.PROJECT}/${privateList[1].category}/${privateList[1].id}`}
         content={privateList[1]}
       ></CardProject>
       <CardProject
-        url={`/${ERouteType.MY_PORTFOLIO}/${privateList[1].category}/${privateList[1].id}`}
+        url={`/${ERouteType.PROJECT}/${privateList[1].category}/${privateList[1].id}`}
         content={privateList[1]}
       ></CardProject>
       <CardProject
-        url={`/${ERouteType.MY_PORTFOLIO}/${privateList[0].category}/${privateList[0].id}`}
+        url={`/${ERouteType.PROJECT}/${privateList[0].category}/${privateList[0].id}`}
         content={privateList[0]}
       ></CardProject>
       <CardProject
-        url={`/${ERouteType.MY_PORTFOLIO}/${privateList[1].category}/${privateList[1].id}`}
+        url={`/${ERouteType.PROJECT}/${privateList[1].category}/${privateList[1].id}`}
         content={privateList[1]}
       ></CardProject>
     </DefaultProjectGridStyle>

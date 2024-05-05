@@ -1,9 +1,8 @@
-import { ListItemType } from "../../../components/custom/layout/listLayout/listLayoutTypes";
-import { ProjectImageType, ProjectLinkType, ProjectSkillType } from "../types/projectTypes";
-
+import { ListItemType } from "../../components/custom/layout/listLayout/listLayoutTypes";
+import { ProjectLinkType, ProjectSkillType, ProjectImageType } from "../myPortfolio/types/projectTypes";
 import svgNewLabel from "/src/assets/iconscout-free/new.svg";
 
-export const mwPortfolio_LinksToListItemType = (links: ProjectLinkType[]): ListItemType[] | undefined => {
+export const mwProject_LinksToListItemType = (links: ProjectLinkType[]): ListItemType[] | undefined => {
   if (links.length === 0) return undefined;
   return links?.map((link) => {
     return {
@@ -21,7 +20,7 @@ export const mwPortfolio_LinksToListItemType = (links: ProjectLinkType[]): ListI
  * @param {ProjectSkillType[]} list - The array of ProjectSkillType to be converted.
  * @returns {ListItemType[]} - An array of ListItemType objects.
  */
-export const mwPortfolio_SkillsToListItems = (list: ProjectSkillType[]): ListItemType[] | undefined => {
+export const mwProject_SkillsToListItems = (list: ProjectSkillType[]): ListItemType[] | undefined => {
   if (list.length === 0) return undefined;
   const newlist = list.map((string) => {
     const iconSrc = string.isNewSkill ? svgNewLabel : undefined;
@@ -44,7 +43,7 @@ export const mwPortfolio_SkillsToListItems = (list: ProjectSkillType[]): ListIte
   return newlist;
 };
 
-export const mwPortfolio_ImageToListItemType = (images: ProjectImageType[]): ListItemType[] | undefined => {
+export const mwProject_ImageToListItemType = (images: ProjectImageType[]): ListItemType[] | undefined => {
   if (images.length === 0) return undefined;
   return images?.map((image) => {
     return {

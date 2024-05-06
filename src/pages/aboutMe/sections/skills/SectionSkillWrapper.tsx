@@ -11,7 +11,7 @@ import SkillDescription from "./skillDescription/SkillDescription";
  */
 const SectionSkillWrapper = () => {
   return (
-    <SectionLayout headlineText="Meine Fähigkeiten">
+    <SectionLayout tagId="skills" headlineText="Meine Fähigkeiten">
       <CardParagraphStyle>Ein Überblick über meine Fühigkeiten und verwendet Tools.</CardParagraphStyle>
       <SectionSkillWrapperStyle>
         <SkillListWrapper />

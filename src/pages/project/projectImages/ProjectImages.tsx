@@ -4,6 +4,7 @@ import ImageWrapperLayout, { ImageType } from "../../../components/custom/layout
 
 type ProjectImagesType = {
   title: string;
+  tagId: string;
   images: ImageType[];
 };
 
@@ -11,11 +12,12 @@ type ProjectImagesType = {
  * Returns a section with a list of images.
  *
  * @param {string} props.title - Title of the section
+ * @param {string} props.tagId - props.tagId - Unique identifier for direct navigation via the URL to the corresponding "#tagId" section.
  * @param {ImageType[]} props.list - An array of ImageType objects.
  */
-const ProjectImages = ({ title, images }: ProjectImagesType) => {
+const ProjectImages = ({ title, tagId, images }: ProjectImagesType) => {
   return (
-    <SectionLayout_NoStyle headlineText={title}>
+    <SectionLayout_NoStyle tagId={tagId} headlineText={title}>
       <ImageWrapperLayout images={images} />
     </SectionLayout_NoStyle>
   );

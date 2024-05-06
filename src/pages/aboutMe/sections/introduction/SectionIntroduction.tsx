@@ -4,7 +4,7 @@ import { CardParagraphStyle } from "../../../../components/custom/card/cardParag
 
 const SectionIntroduction = () => {
   return (
-    <SectionLayout headlineText="Wer bin ich?">
+    <SectionLayout tagId="whoAmI" headlineText="Wer bin ich?">
       <CardParagraphStyle>Hallo,</CardParagraphStyle>
       <CardParagraphStyle>mein Name ist Markus.</CardParagraphStyle>
       <CardParagraphStyle>

@@ -5,7 +5,7 @@ import Span from "../../../../components/custom/card/span/Span";
 
 const SectionWhyInIt = () => {
   return (
-    <SectionLayout headlineText="Warum ein Beruf in der Informatik?">
+    <SectionLayout tagId="whyIt" headlineText="Warum ein Beruf in der Informatik?">
       <CardParagraphStyle>
         Während meines letzten Jobs habe ich anfangs für meine Kollegen kleine automatisierte Tabellen in Excel
         erstellt, um die Arbeitsabläufe zu optimieren und Zeit zu sparen. Diese habe ich auch später zum Teil mit

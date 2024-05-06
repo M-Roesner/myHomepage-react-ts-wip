@@ -45,10 +45,13 @@ const Project = () => {
   return (
     <PageLayout headlineText={content.title}>
       <CardParagraphStyle>{content.introduction}</CardParagraphStyle>
-      <ProjectDescription title="Warum:">{content.description}</ProjectDescription>
+      <ProjectDescription title="Warum:" tagId="why">
+        {content.description}
+      </ProjectDescription>
       {skills && (
         <ProjectList
           title="Verwendete Fähigkeiten:"
+          tagId="skills"
           list={skills}
           numerusText={{ singular: "weitere Fähigkeit", plural: "weitere Fähigkeiten" }}
         />
@@ -56,11 +59,12 @@ const Project = () => {
       {projectLinks && (
         <ProjectList
           title="Links:"
+          tagId="links"
           list={projectLinks}
           numerusText={{ singular: "weiterer Link", plural: "weitere Links" }}
         />
       )}
-      {images && <ProjectImages title={"Bilder:"} images={images} />}
+      {images && <ProjectImages title={"Bilder:"} tagId="images" images={images} />}
     </PageLayout>
   );
 };

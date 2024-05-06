@@ -4,7 +4,7 @@ import { CardParagraphStyle } from "../../../../components/custom/card/cardParag
 
 const SectionMyFutureCareer = () => {
   return (
-    <SectionLayout headlineText="Wie ich mich in der Zukunft entwickeln möchte.">
+    <SectionLayout tagId="future" headlineText="Wie ich mich in der Zukunft entwickeln möchte.">
       <CardParagraphStyle>
         Mein Hauptfokus liegt mittelfristig auf der Weiterentwicklung im Bereich Frontend, den ich während meines
         Praktikums intensiv erleben durfte. Hier werde ich meine Anstrengungen verstärken, um mein Wissen und meine

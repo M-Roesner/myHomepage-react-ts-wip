@@ -6,6 +6,7 @@ import { CardVerticalLineStyle } from "../../card/cardVerticalLine/styledCardVer
 
 type SectionLayoutProps = {
   headlineText: React.ReactNode;
+  tagId?: string;
   children: React.ReactNode;
 };
 
@@ -16,12 +17,13 @@ type SectionLayoutProps = {
  *
  * @param {object} props - The props for the PageLayout component.
  * @param {string} props.headlineText - The text for the headline.
+ * @param {string} props.tagId - (Optional) Unique identifier for direct navigation via the URL to the corresponding "#tagId" section.
  * @param {React.ReactNode} props.children - The children components to be rendered inside the layout with a specific style.
  * @returns {JSX.Element} - Returns the JSX for the PageLayout component.
  */
-const SectionLayout = ({ headlineText, children }: SectionLayoutProps): JSX.Element => {
+const SectionLayout = ({ headlineText, tagId, children }: SectionLayoutProps): JSX.Element => {
   return (
-    <section>
+    <section id={tagId}>
       <CardHeadline level={2}>{headlineText}</CardHeadline>
       <CardVerticalLineStyle>{children}</CardVerticalLineStyle>
     </section>

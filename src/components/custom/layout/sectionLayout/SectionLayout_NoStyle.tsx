@@ -5,6 +5,7 @@ import CardHeadline from "../../card/cardHeadline/CardHeadline";
 
 type SectionLayout_NoStyleProps = {
   headlineText: React.ReactNode;
+  tagId?: string;
   children: React.ReactNode;
 };
 
@@ -15,12 +16,13 @@ type SectionLayout_NoStyleProps = {
  *
  * @param {object} props - The props for the PageLayout component.
  * @param {string} props.headlineText - The text for the headline.
+ * @param {string} props.tagId - (Optional) Unique identifier for direct navigation via the URL to the corresponding "#tagId" section.
  * @param {React.ReactNode} props.children - The children components to be rendered inside the layout.
  * @returns {JSX.Element} - Returns the JSX for the PageLayout component.
  */
-const SectionLayout_NoStyle = ({ headlineText, children }: SectionLayout_NoStyleProps): JSX.Element => {
+const SectionLayout_NoStyle = ({ headlineText, tagId, children }: SectionLayout_NoStyleProps): JSX.Element => {
   return (
-    <section>
+    <section id={tagId}>
       <CardHeadline level={2}>{headlineText}</CardHeadline>
       {children}
     </section>

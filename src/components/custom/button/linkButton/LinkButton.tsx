@@ -6,8 +6,17 @@ import { StyledLinkButton } from "./styledLinkButton";
 // Helpers
 import { isExternalLink } from "../../../../utils/checkLinkAddress";
 
+// Types
+import { ERouteType } from "../../../../routes/router";
+
+export type LinkButtonRouteType = {
+  route: ERouteType;
+  params?: string[];
+  tagId?: string;
+};
+
 type StyledLinkButtonProps = {
-  to: string;
+  to: string | LinkButtonRouteType;
   children: React.ReactNode;
 };
 
@@ -22,14 +31,27 @@ type StyledLinkButtonProps = {
  * @param {React.ReactNode} props.children - The content to be displayed inside the link button.
  */
 const LinkButton = ({ to, children }: StyledLinkButtonProps) => {
-  if (isExternalLink(to))
+  let url = "";
+  if (typeof to === "string") url = to;
+
+  // TODO: Handling with a given route and the given parameters.
+  if (typeof to === "object") {
+    const { route, params, tagId } = to;
+    const extractedParams = params && params.length > 0 ? `/${params.join("/")}` : "";
+    const extractedTagId = tagId !== undefined ? `#${tagId}` : "";
+    url = `/${route}${extractedParams}${extractedTagId}`;
+    console.log("url", url);
+  }
+  console.log("log url", typeof url, `url="${url}"`);
+
+  if (isExternalLink(url))
     return (
-      <StyledLinkButton to={to} target="_blank" rel="noopener noreferrer">
+      <StyledLinkButton to={url} target="_blank" rel="noopener noreferrer">
         {children}
       </StyledLinkButton>
     );
 
-  return <StyledLinkButton to={to}>{children}</StyledLinkButton>;
+  return <StyledLinkButton to={url}>{children}</StyledLinkButton>;
 };
 
 export default LinkButton;

@@ -1,9 +1,12 @@
 import { ERouteType } from "../../../../routes/router";
 
 // Types
-export type RouteType = {
+// TODO: routing with route and params
+export type ListItemRouteType = {
   route: ERouteType;
+  params?: string[];
 };
+
 /**
  * - text (optional): Displays only the given text.
  * - iconSrc (optional): Displays a icon according to the given icon string.
@@ -12,7 +15,7 @@ export type RouteType = {
 export type ListItemType = {
   text?: string;
   iconSrc?: string;
-  buttonUrl?: string | RouteType;
+  buttonUrl?: string | ListItemRouteType;
 };
 
 /**

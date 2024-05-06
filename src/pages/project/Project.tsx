@@ -6,6 +6,7 @@ import { CardParagraphStyle } from "../../components/custom/card/cardParagraph/s
 import ProjectDescription from "./projectDescription/ProjectDescription";
 import ProjectList from "./projectList/ProjectList";
 import ErrorPage_InclProps from "../errorPage/ErrorPage_InclProps";
+import ProjectNavigation, { ProjectNavigationButtonProps } from "./projectNavigation/ProjectNavigation";
 
 // Rosources and Helpers
 import { getProjectContent } from "./helper";
@@ -38,12 +39,36 @@ const Project = () => {
       ></ErrorPage_InclProps>
     );
 
+  // This represents the navigation of this internal project page. It will be displayed with <ProjectNavigation> component.
+  // TODO: Clicking on the button in the <ProjectNavigation> component does not lead to navigation to the ID!
+  // Currently ignores whether a valid ID is available for navigation.
+  // Maybe I need to work with queries from React-Router.
+  const navigation: ProjectNavigationButtonProps[] = [
+    {
+      to: { route: ERouteType.PROJECT, params: [portfolioCategory, portfolioId], tagId: "why" },
+      buttonText: "Warum",
+    },
+    {
+      to: { route: ERouteType.PROJECT, params: [portfolioCategory, portfolioId], tagId: "skills" },
+      buttonText: "Verwendete Fähigkeiten",
+    },
+    {
+      to: { route: ERouteType.PROJECT, params: [portfolioCategory, portfolioId], tagId: "links" },
+      buttonText: "Links",
+    },
+    {
+      to: { route: ERouteType.PROJECT, params: [portfolioCategory, portfolioId], tagId: "images" },
+      buttonText: "Bilder",
+    },
+  ];
+
   const skills = content.skills ? mwProject_SkillsToListItems(content.skills) : undefined;
   const projectLinks = content.links ? mwProject_LinksToListItemType(content.links) : undefined;
   const images = content.images ? mwProject_ImageToImageType(content.images) : undefined;
 
   return (
     <PageLayout headlineText={content.title}>
+      <ProjectNavigation navButtonList={navigation}></ProjectNavigation>
       <CardParagraphStyle>{content.introduction}</CardParagraphStyle>
       <ProjectDescription title="Warum:" tagId="why">
         {content.description}

@@ -44,22 +44,10 @@ const Project = () => {
   // Currently ignores whether a valid ID is available for navigation.
   // Maybe I need to work with queries from React-Router.
   const navigation: ProjectNavigationButtonProps[] = [
-    {
-      to: { route: ERouteType.PROJECT, params: [portfolioCategory, portfolioId], tagId: "why" },
-      buttonText: "Warum",
-    },
-    {
-      to: { route: ERouteType.PROJECT, params: [portfolioCategory, portfolioId], tagId: "skills" },
-      buttonText: "Verwendete Fähigkeiten",
-    },
-    {
-      to: { route: ERouteType.PROJECT, params: [portfolioCategory, portfolioId], tagId: "links" },
-      buttonText: "Links",
-    },
-    {
-      to: { route: ERouteType.PROJECT, params: [portfolioCategory, portfolioId], tagId: "images" },
-      buttonText: "Bilder",
-    },
+    { tagId: "why", buttonText: "Warum" },
+    { tagId: "skills", buttonText: "Verwendete Fähigkeiten" },
+    { tagId: "links", buttonText: "Links" },
+    { tagId: "images", buttonText: "Bilder" },
   ];
 
   const skills = content.skills ? mwProject_SkillsToListItems(content.skills) : undefined;

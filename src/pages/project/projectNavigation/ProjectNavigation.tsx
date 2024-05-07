@@ -1,13 +1,15 @@
+// import { useLocation } from "react-router-dom";
+
 import {
   StyledProjectNavigation,
   StyledProjectNavigationList,
   StyledProjectNavigationListItem,
 } from "./styledProjectNavigation";
-import LinkButton, { LinkButtonRouteType } from "../../../components/custom/button/linkButton/LinkButton";
+// import LinkButton from "../../../components/custom/button/linkButton/LinkButton";
 import CardHeadline from "../../../components/custom/card/cardHeadline/CardHeadline";
 
 export type ProjectNavigationButtonProps = {
-  to: LinkButtonRouteType;
+  tagId?: string;
   buttonText: string;
 };
 
@@ -15,16 +17,19 @@ export type ProjectNavigationProps = { navButtonList: ProjectNavigationButtonPro
 
 // TODO: Get information on how to navigate to a specific ID on the page.
 const ProjectNavigation = ({ navButtonList }: ProjectNavigationProps) => {
+  // const location = useLocation();
+  // const currentPath = location.pathname;
+
   return (
     <StyledProjectNavigation>
-      <CardHeadline level={4}>Projekt Navigation</CardHeadline>
+      <CardHeadline level={4}>Projekt Inhalte</CardHeadline>
       <StyledProjectNavigationList>
         {navButtonList.map((navItem, index) => {
-          console.log(navItem.to);
-
+          // const newTagID = navItem.tagId !== undefined ? navItem.tagId : "";
           return (
             <StyledProjectNavigationListItem key={index}>
-              <LinkButton to={navItem.to}>{navItem.buttonText}</LinkButton>
+              {/* <LinkButton to={currentPath + `#${newTagID}`}>{navItem.buttonText}</LinkButton> */}
+              <p>{navItem.buttonText}</p>
             </StyledProjectNavigationListItem>
           );
         })}

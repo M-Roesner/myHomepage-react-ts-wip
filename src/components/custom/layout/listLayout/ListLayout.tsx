@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // Components
 import { StyledListLayout } from "./styledListLayout";
-import { StyledNormalButton_OnlyText } from "../../button/styledButtonDefault";
+import { StyledNormalButton_OnlyText } from "../../button/normalButton/styledNormalButton";
 
 // Types
 import { ListItemType, ListLayoutProps, NumerusType } from "./listLayoutTypes";

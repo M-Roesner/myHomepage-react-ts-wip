@@ -1,22 +1,52 @@
-import styled from "styled-components";
-import { linkButtonWrapper_Default } from "../styledLinkButtonBasic";
+import { styled } from "styled-components";
 
 /**
- * Renders a normal styled NavLink button.
+ * Default style for a normal buttom.
  *
- * Use {@link ERouteType} for correct routing. Enum comes from the router component.
- * @enum {ERouteType}
+ * Cnatains:
+ * - text-decoration: none;
+ * - cursor: pointer;
+ *
+ * **This styled component should not be directly used and requires an alias when imported.**
  */
-export const StyledNormalButton = styled(linkButtonWrapper_Default)`
+const buttonWrapper_Default = styled.button`
+  text-decoration: none;
+  cursor: pointer;
+`;
+
+/**
+ * Displays a normal button with styles.
+ *
+ * Contains:
+ * - padding, border, background-color, color, text-decoration, cursor
+ * - hover style: background-color, color
+ */
+export const StyledNormalButton = styled(buttonWrapper_Default)`
   padding: 10px;
+
   border: 1px solid ${(props) => props.theme.colors.common.borderColor};
 
-  &.active {
-    background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight};
-    color: ${(props) => props.theme.colors.common.textColorSecond};
+  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
+  color: ${(props) => props.theme.colors.common.textColorMain};
+  &:hover {
+    background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
+    color: ${(props) => props.theme.colors.common.textColorThird};
   }
-  &.active:hover {
-    background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight_Hover};
-    color: ${(props) => props.theme.colors.common.textColorSecond};
+`;
+
+/**
+ * Displays a button without any styles, only the color &:hover will be displayed.
+ */
+export const StyledNormalButton_OnlyText = styled(buttonWrapper_Default)`
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin-block: auto;
+  height: min-content;
+
+  color: ${(props) => props.theme.colors.common.textColorMain};
+  &:hover {
+    color: ${(props) => props.theme.colors.common.textColorThird};
   }
 `;

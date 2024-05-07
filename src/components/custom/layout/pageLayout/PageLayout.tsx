@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // Components
 import CardHeadline from "../../card/cardHeadline/CardHeadline";
 import { CardVerticalLineStyle } from "../../card/cardVerticalLine/styledCardVerticalLineStyle";
-import { StyledNormalButton } from "../../button/styledButtonDefault";
+import { StyledNormalButton } from "../../button/normalButton/styledNormalButton";
 
 type PageLayoutProps = {
   headlineText: React.ReactNode;

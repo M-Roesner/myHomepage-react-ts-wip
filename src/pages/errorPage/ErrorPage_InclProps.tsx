@@ -1,5 +1,5 @@
 // Components
-import { StyledNormalButton } from "../../components/custom/button/normalButton/styledNormalButton";
+import { StyledLinkButton } from "../../components/custom/button/linkButton/styledLinkButton";
 
 // Enums
 import { ERouteType } from "../../routes/router";
@@ -26,7 +26,7 @@ const ErrorPage_InclProps = ({ url, titleButton, descriptionText }: ErrorPagePro
       {descriptionText}
       <br />
       <br />
-      <StyledNormalButton to={`/${url}`}>{titleButton}</StyledNormalButton>
+      <StyledLinkButton to={`/${url}`}>{titleButton}</StyledLinkButton>
     </p>
   );
 };

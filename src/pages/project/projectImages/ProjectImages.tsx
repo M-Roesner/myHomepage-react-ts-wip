@@ -2,9 +2,12 @@
 import SectionLayout_NoStyle from "../../../components/custom/layout/sectionLayout/SectionLayout_NoStyle";
 import ImageWrapperLayout, { ImageType } from "../../../components/custom/layout/imageWrapperLayout/ImageWrapperLayout";
 
+// Types & Enums
+import { EProjectTagId } from "../projectEnums";
+
 type ProjectImagesType = {
   title: string;
-  tagId: string;
+  tagId: EProjectTagId;
   images: ImageType[];
 };
 
@@ -12,7 +15,7 @@ type ProjectImagesType = {
  * Returns a section with a list of images.
  *
  * @param {string} props.title - Title of the section
- * @param {string} props.tagId - props.tagId - Unique identifier for direct navigation via the URL to the corresponding "#tagId" section.
+ * @param {EProjectTagId} props.tagId - props.tagId - Unique identifier for direct navigation via the URL to the corresponding "#tagId" section.
  * @param {ImageType[]} props.list - An array of ImageType objects.
  */
 const ProjectImages = ({ title, tagId, images }: ProjectImagesType) => {

@@ -1,6 +1,11 @@
+// Types
 import { ImageType } from "../../components/custom/layout/imageWrapperLayout/ImageWrapperLayout";
 import { ListItemType } from "../../components/custom/layout/listLayout/listLayoutTypes";
-import { ProjectLinkType, ProjectSkillType, ProjectImageType } from "../myPortfolio/types/projectTypes";
+import { ProjectLinkType, ProjectSkillType, ProjectImageType, ProjectType } from "../myPortfolio/types/projectTypes";
+import { EProjectTagId } from "./projectEnums";
+import { ProjectAsideNavigationButtonProps } from "./projectNavigation/ProjectNavigation";
+
+// Sources
 import svgNewLabel from "/src/assets/iconscout-free/new.svg";
 
 /**
@@ -66,4 +71,34 @@ export const mwProject_ImageToImageType = (images: ProjectImageType[]): ImageTyp
       alt: image.imgAlt,
     };
   });
+};
+
+/**
+ * Converts the content of ProjectType to an array of ProjectNavigationButtonProps objects.
+ *
+ * Checks whether a specific key exists and is not empty.
+ * Currently types will be checked: skills, links and images.
+ *
+ * Ensure that the tagId must match the id of the tag being viewed.
+ *
+ * @param {ProjectType[]} content - The project content
+ * @returns {ProjectAsideNavigationButtonProps[]} - An array of ProjectNavigationButtonProps objects.
+ */
+export const mwProject_AsideNavigation = (content: ProjectType): ProjectAsideNavigationButtonProps[] | undefined => {
+  const listOfAsideNavigation: ProjectAsideNavigationButtonProps[] = [
+    { tagId: EProjectTagId.WHY, buttonText: "Warum" }, // "why" is always set
+  ];
+  // Check if "skills" is set in the content
+  if (content.skills && content.skills.length > 0)
+    listOfAsideNavigation.push({ tagId: EProjectTagId.SKILLS, buttonText: "Fähigkeiten" });
+
+  // Check if "links" is set in the content
+  if (content.links && content.links.length > 0)
+    listOfAsideNavigation.push({ tagId: EProjectTagId.LINKS, buttonText: "Links" });
+
+  // Check if "images" is set in the content
+  if (content.images && content.images.length > 0)
+    listOfAsideNavigation.push({ tagId: EProjectTagId.IMAGES, buttonText: "Bilder" });
+
+  return listOfAsideNavigation;
 };

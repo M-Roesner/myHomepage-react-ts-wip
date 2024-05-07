@@ -2,9 +2,12 @@
 import { CardParagraphStyle } from "../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
 import SectionLayout from "../../../components/custom/layout/sectionLayout/SectionLayout";
 
+// Types & Enums
+import { EProjectTagId } from "../projectEnums";
+
 type PortfolioDescriptionProps = {
   title: string;
-  tagId: string;
+  tagId: EProjectTagId;
   children: React.ReactNode;
 };
 
@@ -12,7 +15,7 @@ type PortfolioDescriptionProps = {
  * Returns a section with a description.
  *
  * @param {string} props.title - Title of the section
- * @param {string} props.tagId - Unique identifier for direct navigation via the URL to the corresponding "#tagId" section.
+ * @param {EProjectTagId} props.tagId - Unique identifier for direct navigation via the URL to the corresponding "#tagId" section.
  * @param {React.ReactNode} props.children
  */
 const ProjectDescription = ({ title, tagId, children }: PortfolioDescriptionProps) => {

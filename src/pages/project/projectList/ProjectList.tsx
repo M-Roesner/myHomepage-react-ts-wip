@@ -3,9 +3,12 @@ import ListLayout from "../../../components/custom/layout/listLayout/ListLayout"
 import { ListItemType, NumerusType } from "../../../components/custom/layout/listLayout/listLayoutTypes";
 import SectionLayout_NoStyle from "../../../components/custom/layout/sectionLayout/SectionLayout_NoStyle";
 
+// Types & Enums
+import { EProjectTagId } from "../projectEnums";
+
 type ProjectListProps = {
   title: string;
-  tagId: string;
+  tagId: EProjectTagId;
   list: ListItemType[];
   numerusText?: NumerusType;
 };
@@ -14,7 +17,7 @@ type ProjectListProps = {
  * Currently returns a section with a list of skills or links from a project for a single project.
  *
  * @param {string} props.title - Title of the section
- * @param {string} props.tagId - props.tagId - Unique identifier for direct navigation via the URL to the corresponding "#tagId" section.
+ * @param {EProjectTagId} props.tagId - props.tagId - Unique identifier for direct navigation via the URL to the corresponding "#tagId" section.
  * @param {ListItemType[]} props.list - An array of ListItemType objects.
  * @param {string} props.numerusText - The text to be displayed when there are more items present than currently shown in the list.
  * @returns

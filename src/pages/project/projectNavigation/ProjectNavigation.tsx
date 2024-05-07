@@ -1,41 +1,42 @@
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import {
   StyledProjectNavigation,
   StyledProjectNavigationList,
   StyledProjectNavigationListItem,
 } from "./styledProjectNavigation";
-// import LinkButton from "../../../components/custom/button/linkButton/LinkButton";
 import CardHeadline from "../../../components/custom/card/cardHeadline/CardHeadline";
+import { StyledLinkButton } from "../../../components/custom/button/linkButton/styledLinkButton";
+import { EProjectTagId } from "../projectEnums";
 
-export type ProjectNavigationButtonProps = {
-  tagId?: string;
+export type ProjectAsideNavigationButtonProps = {
+  tagId: EProjectTagId;
   buttonText: string;
 };
 
-export type ProjectNavigationProps = { navButtonList: ProjectNavigationButtonProps[] };
+export type ProjectAsideNavigationProps = { ancorList: ProjectAsideNavigationButtonProps[] };
 
 // TODO: Get information on how to navigate to a specific ID on the page.
-const ProjectNavigation = ({ navButtonList }: ProjectNavigationProps) => {
-  // const location = useLocation();
-  // const currentPath = location.pathname;
+const ProjectAsideNavigation = ({ ancorList }: ProjectAsideNavigationProps) => {
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   return (
     <StyledProjectNavigation>
-      <CardHeadline level={4}>Projekt Inhalte</CardHeadline>
+      <CardHeadline level={4}>
+        Projekt
+        <br />
+        Navigation
+      </CardHeadline>
       <StyledProjectNavigationList>
-        {navButtonList.map((navItem, index) => {
-          // const newTagID = navItem.tagId !== undefined ? navItem.tagId : "";
-          return (
-            <StyledProjectNavigationListItem key={index}>
-              {/* <LinkButton to={currentPath + `#${newTagID}`}>{navItem.buttonText}</LinkButton> */}
-              <p>{navItem.buttonText}</p>
-            </StyledProjectNavigationListItem>
-          );
-        })}
+        {ancorList.map((navItem, index) => (
+          <StyledProjectNavigationListItem key={index}>
+            <StyledLinkButton to={`${currentPath}#${navItem.tagId}`}>{navItem.buttonText}</StyledLinkButton>
+          </StyledProjectNavigationListItem>
+        ))}
       </StyledProjectNavigationList>
     </StyledProjectNavigation>
   );
 };
 
-export default ProjectNavigation;
+export default ProjectAsideNavigation;

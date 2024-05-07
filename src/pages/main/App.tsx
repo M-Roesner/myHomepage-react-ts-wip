@@ -4,8 +4,10 @@ import { Outlet } from "react-router-dom";
 import Footer from "../../components/footer/footer.tsx";
 import Header from "../../components/header/Header.tsx";
 import { StyledApp } from "./styledApp.ts";
+import ScrollToAnchor from "../../routes/ScrollToAnchor.tsx";
 
 const App = () => {
+  ScrollToAnchor(); // Handles scroll position to an anchor tag.
   return (
     <>
       <Header />

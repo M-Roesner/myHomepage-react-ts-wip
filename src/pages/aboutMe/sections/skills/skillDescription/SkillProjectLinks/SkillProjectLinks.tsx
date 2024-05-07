@@ -1,6 +1,6 @@
 // components
 import { StyledSkillProjectItem, StyledSkillProjectList } from "./styledSkillProjectLinks";
-import { StyledLinkButton } from "../../../../../../components/custom/button/linkButton/styledLinkButton";
+import { StyledNavLinkButton } from "../../../../../../components/custom/button/navLinkButton/styledNavLinkButton";
 
 // Types
 import { LinkType } from "../../skillTypes";
@@ -22,7 +22,7 @@ const SkillProjectLinks = ({ links }: SkillProjectListProps) => {
       <StyledSkillProjectList>
         {links.map((link, index) => (
           <StyledSkillProjectItem key={index}>
-            <StyledLinkButton to={link.route}>{link.text}</StyledLinkButton>
+            <StyledNavLinkButton to={link.route}>{link.text}</StyledNavLinkButton>
           </StyledSkillProjectItem>
         ))}
       </StyledSkillProjectList>

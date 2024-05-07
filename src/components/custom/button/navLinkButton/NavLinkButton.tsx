@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import { StyledLinkButton } from "./styledLinkButton";
+import { StyledNavLinkButton } from "./styledNavLinkButton";
 
 // Helpers
 import { isExternalLink } from "../../../../utils/checkLinkAddress";
@@ -30,7 +30,7 @@ type StyledLinkButtonProps = {
  * @param {string} props.to - The path to navigate when the link is clicked.
  * @param {React.ReactNode} props.children - The content to be displayed inside the link button.
  */
-const LinkButton = ({ to, children }: StyledLinkButtonProps) => {
+const NavLinkButton = ({ to, children }: StyledLinkButtonProps) => {
   let url = "";
   if (typeof to === "string") url = to;
 
@@ -46,12 +46,12 @@ const LinkButton = ({ to, children }: StyledLinkButtonProps) => {
 
   if (isExternalLink(url))
     return (
-      <StyledLinkButton to={url} target="_blank" rel="noopener noreferrer">
+      <StyledNavLinkButton to={url} target="_blank" rel="noopener noreferrer">
         {children}
-      </StyledLinkButton>
+      </StyledNavLinkButton>
     );
 
-  return <StyledLinkButton to={url}>{children}</StyledLinkButton>;
+  return <StyledNavLinkButton to={url}>{children}</StyledNavLinkButton>;
 };
 
-export default LinkButton;
+export default NavLinkButton;

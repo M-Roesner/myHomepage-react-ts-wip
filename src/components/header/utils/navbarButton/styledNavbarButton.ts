@@ -1,14 +1,14 @@
 import { styled } from "styled-components";
 
 // Styled-Component
-import { linkButtonWrapper_FlexCenter } from "../../../custom/button/styledLinkButtonBasic";
+import { navLinkButtonWrapper_FlexCenter } from "../../../custom/button/navLinkButton/styledNavLinkButton";
 
 /**
  * Navbar button component without content line break.
  *
  * **This styled component should not be directly used and requires an alias when imported.**
  */
-export const styledNavbarButton = styled(linkButtonWrapper_FlexCenter)`
+export const styledNavbarButton = styled(navLinkButtonWrapper_FlexCenter)`
   --min-padding: 10px;
   --max-padding: 20px;
 

@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 /**
  * Default style for a NavLink buttom.
@@ -42,4 +42,22 @@ export const navLinkButtonWrapper_FlexCenter = styled(navLinkButtonWrapper_Defau
   display: flex;
   align-items: center;
   text-align: center;
+`;
+
+/**
+ * Renders a styled NavLink button.
+ *
+ * Use {@link ERouteType} for correct routing. Enum comes from the router component.
+ * @enum {ERouteType}
+ */
+export const StyledNavLinkButton = styled(navLinkButtonWrapper_FlexCenter)`
+  padding: 10px;
+  width: 100%;
+  gap: ${(props) => props.theme.sizes.common.gap};
+  justify-content: center;
+  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+  color: ${(props) => props.theme.colors.common.textColorSecond};
+
+  // Hight: Ensures that the button has the same height as the other child elements within a list.
+  height: 100%;
 `;

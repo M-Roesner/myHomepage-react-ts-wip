@@ -1,6 +1,6 @@
 // Components
 import { StyledListLayoutItemForButton } from "../styledListLayout";
-import LinkButton from "../../../button/linkButton/LinkButton";
+import NavLinkButton from "../../../button/navLinkButton/NavLinkButton";
 import ListItem_Content from "./ListItem_Content";
 
 // Types
@@ -23,9 +23,9 @@ const ListItem_Button = ({ item }: { item: ListItemType }): JSX.Element => {
       : "";
   return (
     <StyledListLayoutItemForButton>
-      <LinkButton to={url}>
+      <NavLinkButton to={url}>
         <ListItem_Content content={item} />
-      </LinkButton>
+      </NavLinkButton>
     </StyledListLayoutItemForButton>
   );
 };

@@ -16,7 +16,6 @@ export type ProjectAsideNavigationButtonProps = {
 
 export type ProjectAsideNavigationProps = { ancorList: ProjectAsideNavigationButtonProps[] };
 
-// TODO: Get information on how to navigate to a specific ID on the page.
 const ProjectAsideNavigation = ({ ancorList }: ProjectAsideNavigationProps) => {
   const location = useLocation();
   const currentPath = location.pathname;

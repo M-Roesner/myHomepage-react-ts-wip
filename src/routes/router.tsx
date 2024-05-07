@@ -24,7 +24,6 @@ export const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFoundPage />,
     children: [
-      // TODO: Moved folder for testing purposes. correct order: "/" & <HomePage /> | "/aboutMe" & <AboutMePage /> | "/myPortfolio" & <MyPortfolio />
       {
         path: `/${ERouteType.HOME}`,
         element: <HomePage />,

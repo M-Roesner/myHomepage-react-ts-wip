@@ -16,7 +16,7 @@ export const mySamplePrivateProjects: ProjectType[] = [
         imgSrcs: {
           preview: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
           mobile: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
-          full: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
+          full: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
         },
         imgAlt: "Krähen schießen Spiel",
         isMainPreview: true,

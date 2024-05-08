@@ -1,21 +1,12 @@
+import { useState } from "react";
+
 // Components
 import { StyledImageWrapperLayout } from "./styledImageWrapperLayout";
 import { StyledImage } from "./styledImage";
+import ImageFullscreen from "./imageFullscreen/ImageFullscreen";
 
-export type ImageType = {
-  src: string;
-  srcFullSize: string;
-  title?: string;
-  alt?: string;
-  // className?: string;
-  // onClick?: () => void;
-  // style?: React.CSSProperties;
-  // loading?: "auto" | "eager" | "lazy";
-  // onLoad?: () => void;
-  // onError?: () => void;
-  // ariaLabel?: string;
-  // draggable?: boolean;
-};
+// Types
+import { ImageType } from "./imageType";
 
 /**
  * Renders a layout structure for a list of images.
@@ -23,13 +14,26 @@ export type ImageType = {
  * @param images - An array of image objects containing the source (`src`), alt text (`alt`).
  */
 const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
-  // TODO: Add functions for onClick handling to make the image cover the entire page.
+  const [fullscreenImage, setFullscreenImage] = useState<ImageType | null>(null);
+
+  const handleOpenFullscreen = (images: ImageType) => setFullscreenImage(images);
+  const handleCloseFullscreen = () => setFullscreenImage(null);
+
   return (
-    <StyledImageWrapperLayout>
-      {images.map((image, index) => (
-        <StyledImage key={index} src={image.src} alt={image.alt} title={image.title ? image.title : image.alt} />
-      ))}
-    </StyledImageWrapperLayout>
+    <>
+      <StyledImageWrapperLayout>
+        {images.map((image, index) => (
+          <StyledImage
+            key={index}
+            src={image.src}
+            alt={image.alt}
+            title={image.title ? image.title : image.alt}
+            onClick={() => handleOpenFullscreen(image)}
+          />
+        ))}
+      </StyledImageWrapperLayout>
+      {fullscreenImage && <ImageFullscreen image={fullscreenImage} onClick={handleCloseFullscreen} />}
+    </>
   );
 };
 

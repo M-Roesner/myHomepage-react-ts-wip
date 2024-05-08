@@ -4,7 +4,7 @@ import { CardParagraphStyle } from "../../../../../components/custom/card/cardPa
 import SkillList from "./skillList/skillList";
 
 // Resources, helpers and types
-import { mySampleSkills } from "../../../../../resources/samples/mySampleSkills";
+import { mySampleSkills } from "../../../../../resources/samples/skills/mySampleSkills";
 import { SkillType } from "../skillTypes";
 import { ELanguage, formatDate } from "../../../../../utils/dateHelper";
 

@@ -1,4 +1,4 @@
-import { GroupedSkills } from "../../pages/aboutMe/sections/skills/skillTypes";
+import { GroupedSkills } from "../../../pages/aboutMe/sections/skills/skillTypes";
 
 export const mySampleSkills: GroupedSkills = {
   Frontend: [

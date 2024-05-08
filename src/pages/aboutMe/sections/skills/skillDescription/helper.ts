@@ -1,5 +1,5 @@
 // Resources & Helpers
-import { mySampleSkills } from "../../../../../resources/samples/mySampleSkills";
+import { mySampleSkills } from "../../../../../resources/samples/skills/mySampleSkills";
 import { checkNumber } from "../../../../../utils/CheckNumber";
 
 // Types

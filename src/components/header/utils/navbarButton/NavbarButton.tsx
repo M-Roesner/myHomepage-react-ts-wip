@@ -20,12 +20,19 @@ type NavbarButtonProps = {
  * @param {ReactNode} props.children - The content of the link.
  */
 const NavbarButton = ({ to, children, wrap }: NavbarButtonProps) => {
+  {
+    /* Span-tag is important for the style, it ensures that the text is always displayed. */
+  }
   return (
     <>
       {wrap ? (
-        <StyledNavbarButtonWrap to={to}>{children}</StyledNavbarButtonWrap>
+        <StyledNavbarButtonWrap to={to}>
+          <span>{children}</span>
+        </StyledNavbarButtonWrap>
       ) : (
-        <StyledNavbarButton to={to}>{children}</StyledNavbarButton>
+        <StyledNavbarButton to={to}>
+          <span>{children}</span>
+        </StyledNavbarButton>
       )}
     </>
   );

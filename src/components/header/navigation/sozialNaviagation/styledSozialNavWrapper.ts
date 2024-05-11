@@ -5,5 +5,6 @@ export const StyledSozialNavWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   gap: ${(props) => props.theme.sizes.navBar.gap};
+  background-color: ${(props) => props.theme.colors.common.backgroundColor};
   padding: 10px;
 `;

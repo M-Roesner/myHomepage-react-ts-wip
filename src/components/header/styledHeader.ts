@@ -5,7 +5,8 @@ export const StyledHeader = styled.header`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
+
+  background-color: ${(props) => props.theme.colors.navBar.backgroundColorNavigation};
 
   padding-left: 5px;
   padding-right: 5px;

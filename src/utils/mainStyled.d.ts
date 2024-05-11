@@ -1,5 +1,5 @@
 import "styled-components";
-interface IMode {
+interface IColorCommon {
   backgroundColor: string;
   backgroundColorAccent: string;
   backgroundColorHighlight: string;
@@ -9,6 +9,10 @@ interface IMode {
   backgroundColor_Hover: string;
   backgroundColorHighlight_Hover: string;
   borderColor: string;
+}
+interface IColorNavBar {
+  backgroundColorNavigation: string;
+  backgroundColor_ActiveHover: string;
 }
 
 interface ISizes {
@@ -31,7 +35,8 @@ declare module "styled-components" {
       };
     };
     colors: {
-      common: IMode;
+      navBar: IColorNavBar;
+      common: IColorCommon;
     };
   }
 }

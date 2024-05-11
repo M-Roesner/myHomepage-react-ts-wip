@@ -16,12 +16,16 @@ export const defaultTheme: DefaultTheme = {
     },
   },
   colors: {
+    navBar: {
+      backgroundColor_ActiveHover: "#474747",
+      backgroundColorNavigation: "#3d3d3d",
+    },
     common: {
-      backgroundColor: "#383838",
-      backgroundColor_Hover: "#474747",
+      backgroundColor: "#383838", // dark gray
+      backgroundColor_Hover: "#4c4c4c",
       backgroundColorAccent: "#3d3d3d",
-      backgroundColorHighlight: "#b8610f",
-      backgroundColorHighlight_Hover: "#ff9100",
+      backgroundColorHighlight: "#b8610f", // orange
+      backgroundColorHighlight_Hover: "#ff9100", // orange
       textColorMain: "#cecece",
       textColorSecond: "#e7e7e7",
       textColorThird: "#b8610f",

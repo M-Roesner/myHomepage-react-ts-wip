@@ -21,7 +21,8 @@ const NavListItem = ({ to, wrap, children }: NavListItemProps) => {
   return (
     <StyledNavListItem>
       <NavbarButton to={to} wrap={wrap}>
-        {children}
+        {/* Span-tag is important for the style, it ensures that the text is always displayed. */}
+        <span>{children}</span>
       </NavbarButton>
     </StyledNavListItem>
   );

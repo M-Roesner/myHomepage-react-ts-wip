@@ -15,4 +15,6 @@ export const StyledNavUnorderedList = styled.ul`
   }
 `;
 
-export const StyledNavListItem = styled.li``;
+export const StyledNavListItem = styled.li`
+  background-color: ${(props) => props.theme.colors.navBar.backgroundColorNavigation};
+`;

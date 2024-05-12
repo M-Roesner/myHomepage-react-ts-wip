@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const defaultHeaderStyles = `
-// font-weight: 200;
-// font-style: normal;
-line-height: 3ch;
-margin-block: 1ch;
+const defaultHeaderStyles = css`
+  // font-weight: 200;
+  // font-style: normal;
+  line-height: 3ch;
+  margin-block: 1ch;
 `;
 
 // TODO: header styles ... content, color ...

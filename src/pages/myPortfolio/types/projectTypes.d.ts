@@ -17,6 +17,7 @@ export type ProjectImageType = {
   imgSrcs: imgSrcType;
   imgTitle: string;
   imgAlt?: string;
+  imgDescription?: string;
   isMainPreview?: boolean;
 };
 

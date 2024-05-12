@@ -1,9 +1,10 @@
 // Components
 import SectionLayout_NoStyle from "../../../components/custom/layout/sectionLayout/SectionLayout_NoStyle";
-import ImageWrapperLayout, { ImageType } from "../../../components/custom/layout/imageWrapperLayout/ImageWrapperLayout";
+import ImageWrapperLayout from "../../../components/custom/layout/imageWrapperLayout/ImageWrapperLayout";
 
 // Types & Enums
 import { EProjectTagId } from "../projectEnums";
+import { ImageType } from "../../../components/custom/layout/imageWrapperLayout/imageType";
 
 type ProjectImagesType = {
   title: string;

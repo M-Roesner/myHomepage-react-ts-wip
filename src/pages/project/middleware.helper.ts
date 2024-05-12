@@ -1,5 +1,5 @@
 // Types
-import { ImageType } from "../../components/custom/layout/imageWrapperLayout/ImageWrapperLayout";
+import { ImageType } from "../../components/custom/layout/imageWrapperLayout/imageType";
 import { ListItemType } from "../../components/custom/layout/listLayout/listLayoutTypes";
 import { ProjectLinkType, ProjectSkillType, ProjectImageType, ProjectType } from "../myPortfolio/types/projectTypes";
 import { EProjectTagId } from "./projectEnums";
@@ -63,12 +63,15 @@ export const mwProject_SkillsToListItems = (list: ProjectSkillType[]): ListItemT
  */
 export const mwProject_ImageToImageType = (images: ProjectImageType[]): ImageType[] | undefined => {
   if (images.length === 0) return undefined;
-  return images?.map((image) => {
+  return images?.map((image, index) => {
     return {
+      id: index + 1, // + 1 to index because IDs must start from 1 (0 is not allowed to avoid ambiguity with falsy values).
       src: image.imgSrcs.mobile,
       srcFullSize: image.imgSrcs.full,
+      srcPreviewSize: image.imgSrcs.preview === "" ? image.imgSrcs.preview : image.imgSrcs.mobile,
       title: image.imgTitle,
       alt: image.imgAlt,
+      description: image.imgDescription,
     };
   });
 };

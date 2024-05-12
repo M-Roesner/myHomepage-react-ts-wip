@@ -14,25 +14,25 @@ import { ImageType } from "./imageType";
  * @param images - An array of image objects containing the source (`src`), alt text (`alt`).
  */
 const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
-  const [fullscreenImage, setFullscreenImage] = useState<ImageType | null>(null);
+  const [imageId, setImageId] = useState<number | null>(null);
 
-  const handleOpenFullscreen = (images: ImageType) => setFullscreenImage(images);
-  const handleCloseFullscreen = () => setFullscreenImage(null);
+  const handleOpenFullscreen = (imageId: number) => setImageId(imageId);
+  const handleCloseFullscreen = () => setImageId(null);
 
   return (
     <>
       <StyledImageWrapperLayout>
-        {images.map((image, index) => (
+        {images.map((image) => (
           <StyledImage
-            key={index}
+            key={image.id}
             src={image.src}
             alt={image.alt}
             title={image.title ? image.title : image.alt}
-            onClick={() => handleOpenFullscreen(image)}
+            onClick={() => handleOpenFullscreen(image.id)}
           />
         ))}
       </StyledImageWrapperLayout>
-      {fullscreenImage && <ImageFullscreen image={fullscreenImage} onClick={handleCloseFullscreen} />}
+      {imageId && <ImageFullscreen initialImageId={imageId} onClick={handleCloseFullscreen} imageList={images} />}
     </>
   );
 };

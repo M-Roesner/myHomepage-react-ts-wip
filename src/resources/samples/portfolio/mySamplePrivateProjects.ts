@@ -19,6 +19,8 @@ export const mySamplePrivateProjects: ProjectType[] = [
           full: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
         },
         imgAlt: "Krähen schießen Spiel",
+        imgDescription:
+          "Mit den Krähen schießen Spiel wurde getestet, wie man mit Mausevents umgeht und die kollision mit einen Objectes.",
         isMainPreview: true,
       },
       {

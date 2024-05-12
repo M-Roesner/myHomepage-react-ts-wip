@@ -17,15 +17,20 @@
     - [] Card layout:
       - [x] Vertical line on the left side
       - [x] Headline h1 - h6
+      - [x] preview card for a single project
     - [] Button layout:
       - [x] Navigation
+        - [x] special Navigation animation
       - [x] Sozial Icon
       - [x] Button general (Link)
-      - [x] Button onClick
+      - [x] Button general (NavLink)
+      - [x] Normal Button design
 
 4.  [] Content
 
-    - [] Home page
+    - [] Home page content
+      - [] short description
+      - [] List of implemented and not yet implemented features.
     - [] About me page
       - [] Introduction
         - [x] Styles
@@ -37,27 +42,33 @@
         - [x] Styles
         - [] content
       - [] Skills
-        - [] Skill list (style different categories)
+        - [x] Skill list (style different categories)
         - [] Skill description (style)
           - [] Icon (fontawesome? - There aren't all icons available.)
           - [x] name
           - [x] description
-          - [x] project links
-      - [] kontact ?
-    - [] My projects page
+          - [] project links
+    - [] Project page
       - [] general design
-        - [] Title
-        - [] Description
-          - [] Why this project
+        - [x] Aside navigation with links to the contained headlines.
+        - [x] Title
+        - [x] Description
+          - [x] Why this project ...
         - [] Image
-        - [] used skills
-        - [] Links
-        - [] category
-        - [] What I've learned
+          - [x] Display the selected image in full screen mode.
+          - [] Display of the selected image in full-screen mode and a list of images to scroll through.
+        - [x] used skills
+        - [x] Links
+        - [x] category
+        - [x] What I've learned
     - [] Imprint page
 
 5.  Additional Features
 
     - [] Responsive design
+
+6.  Features after the first release
+
+    - [] Multilingual support for English and German (i18next).
     - [] Dark / Light mode
     - [] Fetch data with Express.js from a MySQL database

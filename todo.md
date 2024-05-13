@@ -1,3 +1,9 @@
+# Todos for the first release with the following dependencies:
+
+React, TypeScript, React-Router, Styled-Component
+
+## Todos:
+
 1.  [x] create a file structure
 
 2.  Creating the route with react-router-dom
@@ -66,9 +72,24 @@
 5.  Additional Features
 
     - [] Responsive design
+    - [] Add font
 
-6.  Features after the first release
+## Final steps for publication:
 
-    - [] Multilingual support for English and German (i18next).
-    - [] Dark / Light mode
-    - [] Fetch data with Express.js from a MySQL database
+- Complete image slider for full screen mode.
+- Add all personal information.
+- Add all project details.
+- Customizing skills links to the projects on the about page.
+- Add home page content.
+- Responsive styles.
+- Clean up code.
+- Add / Adjust documentation if it is necessary.
+- Inform how to get my new page online.
+
+# Planned functionality after first release.
+
+## Todos:
+
+- [] Multilingual support for English and German (i18next).
+- [] Dark / Light mode
+- [] Fetch data with Express.js from a MySQL database

@@ -82,9 +82,14 @@ React, TypeScript, React-Router, Styled-Component
 - Customizing skills links to the projects on the about page.
 - Add home page content.
 - Responsive styles.
+- Add correct font, lineheight.
 - Clean up code.
 - Add / Adjust documentation if it is necessary.
 - Inform how to get my new page online.
+
+### Better design
+
+- Project Card: Slight zoom of preview image.
 
 # Planned functionality after first release.
 

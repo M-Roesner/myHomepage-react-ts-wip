@@ -5,6 +5,7 @@ export const StyledImageFullscreenButton = styled(StyledNormalButton).attrs<{
   $isInverted?: boolean;
   $isEnd?: boolean;
 }>(() => ({}))`
+  /* https://www.webdesign-journal.de/css3-animationen-erstellen/ */
   ${(props) =>
     props.$isInverted &&
     css`

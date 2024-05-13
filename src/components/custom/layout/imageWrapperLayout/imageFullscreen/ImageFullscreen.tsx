@@ -5,6 +5,7 @@ import ImageFullscreenbutton from "./imageFullscreenbutton/ImageFullscreenbutton
 // Types and Helpers
 import { ImageType } from "../imageType";
 import useScreenSize from "../../../../../utils/hooks/screenSize/useScreenSize";
+import { useEffect, useState } from "react";
 
 type ImageFullscreenProps = { initialImageId: number; onClick: () => void; imageList: ImageType[] };
 
@@ -19,6 +20,11 @@ type ImageFullscreenProps = { initialImageId: number; onClick: () => void; image
  */
 const ImageFullscreen = ({ initialImageId, onClick, imageList }: ImageFullscreenProps): JSX.Element => {
   const screenSize = useScreenSize();
+  const [currentImageId, setCurrentImageId] = useState<number>(initialImageId);
+
+  useEffect(() => {
+    console.log(`currentImageId: ${currentImageId}`);
+  }, [currentImageId]);
 
   const intialImage = imageList.find((image) => image.id === initialImageId);
   if (!intialImage) return <></>; // TODO: Error handling
@@ -28,13 +34,11 @@ const ImageFullscreen = ({ initialImageId, onClick, imageList }: ImageFullscreen
       ? intialImage.src
       : intialImage.srcFullSize;
 
-  const ImagesAmount = imageList.length;
-  console.log(`ImagesAmount ${ImagesAmount}`);
-
   /**
    * TODO: Create a new ImageFullscreen where you can click through a list of images.
    * [] - Set the correct position of each element.
    * [] - buttons left and right - better style with animation
+   * [] - Add onClick functionality to change the displayed images with the buttons.
    * [x] - chosen image first
    * [] - decription text of the image
    * [] Image slider
@@ -44,14 +48,14 @@ const ImageFullscreen = ({ initialImageId, onClick, imageList }: ImageFullscreen
    */
   return (
     <ImageFullScreenWrapper>
-      <ImageFullscreenbutton isInverted />
+      <ImageFullscreenbutton isInverted isEnd={currentImageId === 1 ? true : false} />
       <StyledImageFullScreen
         src={src}
         alt={intialImage.alt}
         title={intialImage.title ? intialImage.title : intialImage.alt}
         onClick={onClick}
       />
-      <ImageFullscreenbutton />
+      <ImageFullscreenbutton isEnd={currentImageId === imageList.length ? true : false} />
       <StyledParagraphFullScreen>
         {intialImage.description}
         Beschreibungstext für das Bild, dies kann auch ein sehr lange Text sein. Dann soll dieser weiter nach oben

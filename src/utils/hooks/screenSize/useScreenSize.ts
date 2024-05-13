@@ -13,6 +13,11 @@ import { determineDeviceType } from "./helper";
  * - else "desktop"
  *
  * source: https://medium.com/@josephat94/building-a-simple-react-hook-to-detect-screen-size-404a867fa2d2
+ *
+ * more about window screen information: https://www.mediaevent.de/javascript/window-screen.html
+ * - window.orientation
+ *
+ * - viewport sizes: https://www.mediaevent.de/css/viewport-mobile.html
  */
 const useScreenSize = () => {
   const [screenSize, setScreenSize] = useState({

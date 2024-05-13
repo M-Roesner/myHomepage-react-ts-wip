@@ -11,34 +11,47 @@ type ImageFullscreenProps = { initialImageId: number; onClick: () => void; image
 
 /**
  * Displays a specific image in full screen depending on the screen size and has an onClick event.
+ * Allows users to navigate through available images.
  *
- * @param {ImageFullscreenProps} props
- * @param {number} props.initialImageId - Id is a number that indicates which image should be displayed first-
- * @param {void} props.onClick - Called when the image is clicked or clicked off of the full screen.
- * @param {ImageType[]} props.imageList - Contains a array of .ImageType
+ * @param {ImageFullscreenProps} props - The props object containing the following properties:
+ * @param {number} props.initialImageId - The ID of the image to be displayed initially.
+ * @param {void} props.onClick - Function called when the image is clicked or clicked off of the full screen.
+ * @param {ImageType[]} props.imageList - An array of ImageType objects containing image data.
  * @returns
  */
-const ImageFullscreen = ({ initialImageId, onClick, imageList }: ImageFullscreenProps): JSX.Element => {
+const ImageFullscreen = ({ initialImageId, onClick: onClickImage, imageList }: ImageFullscreenProps): JSX.Element => {
   const screenSize = useScreenSize();
   const [currentImageId, setCurrentImageId] = useState<number>(initialImageId);
+  const [currentImage, setCurrentImage] = useState<ImageType>(imageList[0]);
 
   useEffect(() => {
-    console.log(`currentImageId: ${currentImageId}`);
-  }, [currentImageId]);
+    const image = imageList.find((image) => image.id === currentImageId);
+    if (image) {
+      setCurrentImage(image);
+    }
+  }, [currentImageId, imageList]);
 
-  const intialImage = imageList.find((image) => image.id === initialImageId);
-  if (!intialImage) return <></>; // TODO: Error handling
+  const getImageSrc = (image: ImageType): string => {
+    return screenSize.deviceType === "tablet" || screenSize.deviceType === "mobile" ? image.src : image.srcFullSize;
+  };
 
-  const src =
-    screenSize.deviceType === "tablet" || screenSize.deviceType === "mobile"
-      ? intialImage.src
-      : intialImage.srcFullSize;
+  const handleBack = () => {
+    if (currentImageId > 1) {
+      setCurrentImageId((prev) => prev - 1);
+    }
+  };
+
+  const handleForward = () => {
+    if (currentImageId < imageList.length) {
+      setCurrentImageId((prev) => prev + 1);
+    }
+  };
 
   /**
    * TODO: Create a new ImageFullscreen where you can click through a list of images.
    * [] - Set the correct position of each element.
    * [] - buttons left and right - better style with animation
-   * [] - Add onClick functionality to change the displayed images with the buttons.
+   * [x] - Add onClick functionality to change the displayed images with the buttons.
    * [x] - chosen image first
    * [] - decription text of the image
    * [] Image slider
@@ -48,16 +61,16 @@ const ImageFullscreen = ({ initialImageId, onClick, imageList }: ImageFullscreen
    */
   return (
     <ImageFullScreenWrapper>
-      <ImageFullscreenbutton isInverted isEnd={currentImageId === 1 ? true : false} />
+      <ImageFullscreenbutton isInverted isEnd={currentImageId === 1 ? true : false} onClick={handleBack} />
       <StyledImageFullScreen
-        src={src}
-        alt={intialImage.alt}
-        title={intialImage.title ? intialImage.title : intialImage.alt}
-        onClick={onClick}
+        src={getImageSrc(currentImage)}
+        alt={currentImage.alt}
+        title={currentImage.title ? currentImage.title : currentImage.alt}
+        onClick={onClickImage}
       />
-      <ImageFullscreenbutton isEnd={currentImageId === imageList.length ? true : false} />
+      <ImageFullscreenbutton isEnd={currentImageId === imageList.length ? true : false} onClick={handleForward} />
       <StyledParagraphFullScreen>
-        {intialImage.description}
+        {currentImage.description}
         Beschreibungstext für das Bild, dies kann auch ein sehr lange Text sein. Dann soll dieser weiter nach oben
         dargestellt werden und nicht nach unten!!!
       </StyledParagraphFullScreen>

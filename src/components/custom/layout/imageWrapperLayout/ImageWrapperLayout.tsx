@@ -3,7 +3,7 @@ import { useState } from "react";
 // Components
 import { StyledImageWrapperLayout } from "./styledImageWrapperLayout";
 import { StyledImage } from "./styledImage";
-import ImageFullscreen from "./imageFullscreen/ImageFullscreen";
+import FullscreenSlider from "./fullscreenSlider/FullscreenSlider";
 
 // Types
 import { ImageType } from "./imageType";
@@ -32,7 +32,7 @@ const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
           />
         ))}
       </StyledImageWrapperLayout>
-      {imageId && <ImageFullscreen initialImageId={imageId} onClick={handleCloseFullscreen} imageList={images} />}
+      {imageId && <FullscreenSlider initialImageId={imageId} onClick={handleCloseFullscreen} imageList={images} />}
     </>
   );
 };

@@ -1,6 +1,6 @@
 // Component
 import { ImageFullScreenWrapper, StyledImageFullScreen, StyledParagraphFullScreen } from "./styledImageFullScreen";
-import ImageFullscreenbutton from "./imageFullscreenbutton/ImageFullscreenbutton";
+import FullscreenSliderbutton from "./fullscreenSliderButton/FullscreenSliderButton";
 
 // Types and Helpers
 import { ImageType } from "../imageType";
@@ -50,30 +50,26 @@ const ImageFullscreen = ({ initialImageId, onClick: onClickImage, imageList }: I
   /**
    * TODO: Create a new ImageFullscreen where you can click through a list of images.
    * [] - Set the correct position of each element.
-   * [] - buttons left and right - better style with animation
+   * [x] - buttons left and right
+   * - [] optional - A better style with animation for buttons.
    * [x] - Add onClick functionality to change the displayed images with the buttons.
    * [x] - chosen image first
    * [] - decription text of the image
    * [] Image slider
-   * - via points (depending on the number of images)
-   * - or
-   * - a small display preview of what comes next or before.
+   * - [] via points (depending on the number of images) - for mobile devices
+   * - [] a small display preview of what comes next or before.
    */
   return (
     <ImageFullScreenWrapper>
-      <ImageFullscreenbutton isInverted isEnd={currentImageId === 1 ? true : false} onClick={handleBack} />
+      <FullscreenSliderbutton isInverted isEnd={currentImageId === 1 ? true : false} onClick={handleBack} />
       <StyledImageFullScreen
         src={getImageSrc(currentImage)}
         alt={currentImage.alt}
         title={currentImage.title ? currentImage.title : currentImage.alt}
         onClick={onClickImage}
       />
-      <ImageFullscreenbutton isEnd={currentImageId === imageList.length ? true : false} onClick={handleForward} />
-      <StyledParagraphFullScreen>
-        {currentImage.description}
-        Beschreibungstext für das Bild, dies kann auch ein sehr lange Text sein. Dann soll dieser weiter nach oben
-        dargestellt werden und nicht nach unten!!!
-      </StyledParagraphFullScreen>
+      <FullscreenSliderbutton isEnd={currentImageId === imageList.length ? true : false} onClick={handleForward} />
+      <StyledParagraphFullScreen>{currentImage.description}</StyledParagraphFullScreen>
     </ImageFullScreenWrapper>
   );
 };

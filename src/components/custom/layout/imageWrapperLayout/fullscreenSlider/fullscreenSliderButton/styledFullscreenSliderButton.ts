@@ -1,16 +1,22 @@
 import styled, { css } from "styled-components";
 import { StyledNormalButton } from "../../../../button/normalButton/styledNormalButton";
 
-export const StyledImageFullscreenButton = styled(StyledNormalButton).attrs<{
+export const StyledFullscreenSliderButton = styled(StyledNormalButton).attrs<{
   $isInverted?: boolean;
   $isEnd?: boolean;
 }>(() => ({}))`
   /* https://www.webdesign-journal.de/css3-animationen-erstellen/ */
+  --width: 50px;
+  --width-half: calc(var(--width) / 2);
   ${(props) =>
-    props.$isInverted &&
-    css`
-      transform: scaleX(-1);
-    `}
+    props.$isInverted
+      ? css`
+          transform: scaleX(-1);
+          left: var(--width-half);
+        `
+      : css`
+          right: var(--width-half);
+        `}
   ${(props) =>
     props.$isEnd &&
     css`
@@ -19,10 +25,11 @@ export const StyledImageFullscreenButton = styled(StyledNormalButton).attrs<{
         cursor: default;
       }
     `}
+    
 
 
   position: relative;
-  width: 50px;
+  width: var(--width);
   height: 60px;
 
   /* General values for all child elements. */

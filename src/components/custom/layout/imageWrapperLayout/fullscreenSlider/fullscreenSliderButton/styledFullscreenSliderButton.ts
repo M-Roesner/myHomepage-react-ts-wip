@@ -8,6 +8,12 @@ export const StyledFullscreenSliderButton = styled(StyledNormalButton).attrs<{
   /* https://www.webdesign-journal.de/css3-animationen-erstellen/ */
   --width: 50px;
   --width-half: calc(var(--width) / 2);
+  --height: 60px;
+
+  /* General values for all child elements. */
+  --span-deg: 54deg;
+  --padding: 10px;
+
   ${(props) =>
     props.$isInverted
       ? css`
@@ -21,20 +27,18 @@ export const StyledFullscreenSliderButton = styled(StyledNormalButton).attrs<{
     props.$isEnd &&
     css`
       &:hover {
-        background-color: red;
+        background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight_Hover};
         cursor: default;
+        transition: all 0.5s ease-in;
       }
     `}
     
-
-
   position: relative;
-  width: var(--width);
-  height: 60px;
+  z-index: 101; // the parent element has a z-index of 100
 
-  /* General values for all child elements. */
-  --span-deg: 54deg;
-  --padding: 10px;
+  width: var(--width);
+  height: var(--height);
+
   :nth-child(n) {
     position: absolute;
     width: 5px;
@@ -61,6 +65,6 @@ export const StyledFullscreenSliderButton = styled(StyledNormalButton).attrs<{
   :nth-child(3) {
     top: calc(var(--padding));
     right: calc(var(--padding));
-    height: calc(60px - (var(--padding) * 2));
+    height: calc(var(--height) - (var(--padding) * 2));
   }
 `;

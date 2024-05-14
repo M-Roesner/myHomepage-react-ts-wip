@@ -15,6 +15,11 @@ interface IColorNavBar {
   backgroundColor_ActiveHover: string;
 }
 
+interface IColorHeadline {
+  textColor_level1: string;
+  textColor_level2: string;
+}
+
 interface ISizes {
   gap: string;
   padding: string;
@@ -35,8 +40,9 @@ declare module "styled-components" {
       };
     };
     colors: {
-      navBar: IColorNavBar;
       common: IColorCommon;
+      headline: IColorHeadline;
+      navBar: IColorNavBar;
     };
   }
 }

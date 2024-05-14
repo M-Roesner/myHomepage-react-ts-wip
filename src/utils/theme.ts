@@ -16,10 +16,6 @@ export const defaultTheme: DefaultTheme = {
     },
   },
   colors: {
-    navBar: {
-      backgroundColor_ActiveHover: "#474747",
-      backgroundColorNavigation: "#3d3d3d",
-    },
     common: {
       backgroundColor: "#383838", // dark gray
       backgroundColor_Hover: "#4c4c4c",
@@ -30,6 +26,14 @@ export const defaultTheme: DefaultTheme = {
       textColorSecond: "#e7e7e7",
       textColorThird: "#b8610f",
       borderColor: "#5c606d",
+    },
+    headline: {
+      textColor_level1: "#5893c4", // blue
+      textColor_level2: "#91a187", // green
+    },
+    navBar: {
+      backgroundColor_ActiveHover: "#474747",
+      backgroundColorNavigation: "#3d3d3d",
     },
   },
 };

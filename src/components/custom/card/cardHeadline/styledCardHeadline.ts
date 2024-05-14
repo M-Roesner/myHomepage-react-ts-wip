@@ -10,7 +10,7 @@ const defaultHeaderStyles = css`
 // TODO: header styles ... content, color ...
 export const styledCardHeadline1 = styled.h1`
   ${defaultHeaderStyles};
-  color: #5893c4;
+  color: ${(props) => props.theme.colors.headline.textColor_level1};
   font-size: 2rem;
   &::after {
     content: "{}";
@@ -21,7 +21,7 @@ export const styledCardHeadline1 = styled.h1`
 export const styledCardHeadline2 = styled.h2`
   ${defaultHeaderStyles};
   font-size: 1.6rem;
-  color: #91a187;
+  color: ${(props) => props.theme.colors.headline.textColor_level2};
   &::before {
     content: "// ";
   }

@@ -58,9 +58,13 @@ const FullscreenSlider = ({ initialImageId, onClick: onClickImage, imageList }: 
    */
   return (
     <StyledFullscreenSlider>
-      <FullscreenSliderbutton isInverted isEnd={currentImageId === 1 ? true : false} onClick={handleBack} />
+      {imageList.length !== 1 && (
+        <FullscreenSliderbutton isInverted isEnd={currentImageId === 1 ? true : false} onClick={handleBack} />
+      )}
       <FullscreenSliderImage image={currentImage} onClick={onClickImage} />
-      <FullscreenSliderbutton isEnd={currentImageId === imageList.length ? true : false} onClick={handleForward} />
+      {imageList.length !== 1 && (
+        <FullscreenSliderbutton isEnd={currentImageId === imageList.length ? true : false} onClick={handleForward} />
+      )}
     </StyledFullscreenSlider>
   );
 };

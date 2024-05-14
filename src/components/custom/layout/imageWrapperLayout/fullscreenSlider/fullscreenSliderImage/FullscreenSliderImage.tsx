@@ -23,15 +23,17 @@ const FullscreenSliderImage = ({ image, onClick }: FullscreenSliderImageProps) =
     return screenSize.deviceType === "tablet" || screenSize.deviceType === "mobile" ? image.src : image.srcFullSize;
   };
 
-  // TODO: Responsive image and description - image size and description does fit
+  // TODO: Responsive image and description - image size and description does fit -wip-
 
   return (
-    <FullscreenSliderImageWrapper>
+    <FullscreenSliderImageWrapper
+      $isMobile={screenSize.deviceType === "mobile" || screenSize.deviceType === "tablet"}
+      onClick={onClick}
+    >
       <StyledFullscreenSliderImage
         src={getImageSrc(image)}
         alt={image.alt}
         title={image.title ? image.title : image.alt}
-        onClick={onClick}
       />
       {image.description && <StyledFullscreenSliderCaption>{image.description}</StyledFullscreenSliderCaption>}
     </FullscreenSliderImageWrapper>

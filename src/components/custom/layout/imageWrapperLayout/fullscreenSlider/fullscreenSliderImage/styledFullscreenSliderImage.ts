@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
-export const FullscreenSliderImageWrapper = styled.figure`
-  width: 80%;
+export const FullscreenSliderImageWrapper = styled.figure.attrs<{
+  $isMobile: boolean;
+}>(() => ({}))`
+  width: ${(props) => (props.$isMobile ? "90%" : "80%")};
 
   position: relative;
 

@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 
 // Component
-import { StyledFullscreenSlider } from "./styledFullscreenSlider";
+import { FullscreenSliderWrapper, StyledFullscreenSlider } from "./styledFullscreenSlider";
 import FullscreenSliderbutton from "./fullscreenSliderButton/FullscreenSliderButton";
 import FullscreenSliderImage from "./fullscreenSliderImage/FullscreenSliderImage";
 
 // Types and Helpers
 import { ImageType } from "../imageType";
+import useScreenSize from "../../../../../utils/hooks/screenSize/useScreenSize";
+import DotSlider from "../dotSlider/DotSlider";
 
 type FullscreenSliderProps = { initialImageId: number; onClick: () => void; imageList: ImageType[] };
 
@@ -21,6 +23,7 @@ type FullscreenSliderProps = { initialImageId: number; onClick: () => void; imag
  * @returns
  */
 const FullscreenSlider = ({ initialImageId, onClick: onClickImage, imageList }: FullscreenSliderProps): JSX.Element => {
+  const screenSize = useScreenSize();
   const [currentImageId, setCurrentImageId] = useState<number>(initialImageId);
   const [currentImage, setCurrentImage] = useState<ImageType>(imageList[0]);
 
@@ -43,6 +46,10 @@ const FullscreenSlider = ({ initialImageId, onClick: onClickImage, imageList }: 
     }
   };
 
+  const handleDotSlider = (id: number) => {
+    setCurrentImageId(id);
+  };
+
   /**
    * TODO: Create a new ImageFullscreen where you can click through a list of images.
    * [x] - Set the correct position of each element.
@@ -57,15 +64,21 @@ const FullscreenSlider = ({ initialImageId, onClick: onClickImage, imageList }: 
    * [] - add close button as an additional option
    */
   return (
-    <StyledFullscreenSlider>
-      {imageList.length !== 1 && (
-        <FullscreenSliderbutton isInverted isEnd={currentImageId === 1 ? true : false} onClick={handleBack} />
-      )}
-      <FullscreenSliderImage image={currentImage} onClick={onClickImage} />
-      {imageList.length !== 1 && (
-        <FullscreenSliderbutton isEnd={currentImageId === imageList.length ? true : false} onClick={handleForward} />
-      )}
-    </StyledFullscreenSlider>
+    <FullscreenSliderWrapper>
+      <StyledFullscreenSlider $isMobile={screenSize.deviceType === "mobile" || screenSize.deviceType === "tablet"}>
+        <FullscreenSliderImage image={currentImage} onClick={onClickImage} />
+        {imageList.length !== 1 && (
+          <>
+            <FullscreenSliderbutton isInverted isEnd={currentImageId === 1 ? true : false} onClick={handleBack} />
+            <FullscreenSliderbutton
+              isEnd={currentImageId === imageList.length ? true : false}
+              onClick={handleForward}
+            />
+          </>
+        )}
+      </StyledFullscreenSlider>
+      <DotSlider imageList={imageList} currentId={currentImageId} onClick={handleDotSlider}></DotSlider>
+    </FullscreenSliderWrapper>
   );
 };
 

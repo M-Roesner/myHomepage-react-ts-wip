@@ -9,15 +9,19 @@ import FullscreenSlider from "./fullscreenSlider/FullscreenSlider";
 import { ImageType } from "./imageType";
 
 /**
- * Renders a layout structure for a list of images.
+ * Reders a list of images or displays them in full screen mode.
  *
- * @param images - An array of image objects containing the source (`src`), alt text (`alt`).
+ * @param {ImageType} images - An array of ImageType objects containing image data.
  */
 const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
   const [imageId, setImageId] = useState<number | null>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const handleOpenFullscreen = (imageId: number) => setImageId(imageId);
-  const handleCloseFullscreen = () => setImageId(null);
+  const handleOpenFullscreen = (imageId: number) => {
+    setImageId(imageId);
+    setIsFullscreen(true);
+  };
+  const handleCloseFullscreen = () => setIsFullscreen(false);
 
   return (
     <>
@@ -32,7 +36,9 @@ const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
           />
         ))}
       </StyledImageWrapperLayout>
-      {imageId && <FullscreenSlider initialImageId={imageId} onClick={handleCloseFullscreen} imageList={images} />}
+      {isFullscreen && imageId && (
+        <FullscreenSlider initialImageId={imageId} onClick={handleCloseFullscreen} imageList={images} />
+      )}
     </>
   );
 };

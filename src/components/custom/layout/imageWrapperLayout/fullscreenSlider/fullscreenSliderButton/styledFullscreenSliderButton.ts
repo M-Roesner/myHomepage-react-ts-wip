@@ -4,38 +4,43 @@ import { StyledNormalButton } from "../../../../button/normalButton/styledNormal
 export const StyledFullscreenSliderButton = styled(StyledNormalButton).attrs<{
   $isInverted?: boolean;
   $isEnd?: boolean;
+  $isMobile?: boolean;
 }>(() => ({}))`
   /* https://www.webdesign-journal.de/css3-animationen-erstellen/ */
   --width: 50px;
-  --width-half: calc(var(--width) / 2);
+  --normalPositionX: calc((var(--width) / 2) * -1);
+  --positionX: ${(props) => (props.$isMobile ? 0 : "var(--normalPositionX)")};
   --height: 60px;
+  --positionY: calc(50% - (var(--height) / 2));
 
   /* General values for all child elements. */
   --span-deg: 54deg;
   --padding: 10px;
 
+  position: absolute;
+  top: var(--positionY);
+
   ${(props) =>
     props.$isInverted
       ? css`
           transform: scaleX(-1);
-          left: var(--width-half);
+          left: var(--positionX);
         `
       : css`
-          right: var(--width-half);
+          right: var(--positionX);
         `}
   ${(props) =>
     props.$isEnd &&
     css`
+      background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight};
+      cursor: default;
+      transition: background-color 0.5s ease-in;
       &:hover {
         background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight_Hover};
-        cursor: default;
-        transition: all 0.5s ease-in;
       }
     `}
-    
-  position: relative;
-  z-index: 101; // the parent element has a z-index of 100
 
+  // self designed button content
   width: var(--width);
   height: var(--height);
 

@@ -4,8 +4,10 @@ const svgDefault = styled.svg`
   cursor: pointer;
 
   border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+  border-radius: 10px;
 
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
+  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent_Transparent};
+
   color: ${(props) => props.theme.colors.common.textColorMain};
   &:hover {
     background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
@@ -43,7 +45,7 @@ export const StyledSliderSvg = styled(svgDefault).attrs<{
   ${(props) =>
     props.$isEnd &&
     css`
-      background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight};
+      background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight_Transparent};
       cursor: default;
       transition: background-color 0.5s ease-in;
       &:hover {
@@ -65,7 +67,6 @@ export const StyledSliderSvg = styled(svgDefault).attrs<{
   }
 
   #lineTop {
-    /* stroke: red; */
     position: absolute;
   }
   #linebottom {

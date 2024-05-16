@@ -2,12 +2,14 @@ import "styled-components";
 interface IColorCommon {
   backgroundColor: string;
   backgroundColorAccent: string;
+  backgroundColorAccent_Transparent: string;
   backgroundColorHighlight: string;
   textColorMain: string;
   textColorSecond: string;
   textColorThird: string;
   backgroundColor_Hover: string;
   backgroundColorHighlight_Hover: string;
+  backgroundColorHighlight_Transparent: string;
   borderColor: string;
 }
 interface IColorNavBar {

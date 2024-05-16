@@ -19,12 +19,14 @@ export const defaultTheme: DefaultTheme = {
     common: {
       backgroundColor: "#383838", // dark gray
       backgroundColor_Hover: "#4c4c4c",
-      backgroundColorAccent: "#3d3d3d",
-      backgroundColorHighlight: "#b8610f", // orange
+      backgroundColorAccent: "rgb(61 61 61)",
+      backgroundColorAccent_Transparent: "rgb(61 61 61 / 70%)",
+      backgroundColorHighlight: "rgb(184 97 15)", // orange
       backgroundColorHighlight_Hover: "#ff9100", // orange
+      backgroundColorHighlight_Transparent: "rgb(184 97 15 / 70%)", // orange
       textColorMain: "#cecece",
       textColorSecond: "#e7e7e7",
-      textColorThird: "#b8610f",
+      textColorThird: "rgb(184 97 15)",
       borderColor: "#5c606d",
     },
     headline: {
@@ -33,7 +35,7 @@ export const defaultTheme: DefaultTheme = {
     },
     navBar: {
       backgroundColor_ActiveHover: "#474747",
-      backgroundColorNavigation: "#3d3d3d",
+      backgroundColorNavigation: "rgb(61 61 61)",
     },
   },
 };

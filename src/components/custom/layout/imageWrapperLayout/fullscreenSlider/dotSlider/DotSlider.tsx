@@ -23,6 +23,7 @@ const DotSlider = ({ imageList, currentId, onClick }: DotSliderProps): JSX.Eleme
           className={`${image.id === currentId ? "active" : ""}`}
           key={image.id}
           onClick={() => onClick(image.id)}
+          title={image.title}
         />
       ))}
     </DotSliderWrapper>

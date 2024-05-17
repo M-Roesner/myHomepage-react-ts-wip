@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { StyledCloseButton } from "./styledCloseButton";
 
 type CloseButtonProps = { onClick: () => void };
@@ -10,7 +11,25 @@ type CloseButtonProps = { onClick: () => void };
  * @returns {JSX.Element} The rendered close button.
  */
 const CloseButton = ({ onClick }: CloseButtonProps): JSX.Element => {
-  return <StyledCloseButton onClick={onClick}>&times;</StyledCloseButton>;
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClick();
+    };
+
+    // Add event listener on mount.
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Remove event listener on unmount to prevent memory leaks.
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClick]);
+
+  return (
+    <StyledCloseButton onClick={() => onClick()} title="schließen oder ESC">
+      &times;
+    </StyledCloseButton>
+  );
 };
 
 export default CloseButton;

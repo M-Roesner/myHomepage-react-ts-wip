@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 // Components
 import {
   ImageSlider_ImageWrapper,
@@ -23,24 +25,32 @@ type FullscreenSliderImageProps = { image: ImageType; onClick: () => void };
  */
 const ImageSlider_Image = ({ image, onClick }: FullscreenSliderImageProps) => {
   const screenSize = useScreenSize();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [title, setTitle] = useState("Text minimieren.");
+
+  useEffect(() => {
+    setTitle(isExpanded ? "Text minimieren." : "Text maximieren.");
+  }, [isExpanded]);
 
   const getImageSrc = (image: ImageType): string => {
     return screenSize.deviceType === "tablet" || screenSize.deviceType === "mobile" ? image.src : image.srcFullSize;
   };
 
-  // TODO: Responsive image and description - image size and description does fit -wip-
+  const toggleExpanded = () => setIsExpanded((prev) => !prev);
 
   return (
-    <ImageSlider_ImageWrapper
-      $isMobile={screenSize.deviceType === "mobile" || screenSize.deviceType === "tablet"}
-      onClick={onClick}
-    >
+    <ImageSlider_ImageWrapper $isMobile={screenSize.deviceType === "mobile" || screenSize.deviceType === "tablet"}>
       <StyledFullscreenSliderImage
         src={getImageSrc(image)}
         alt={image.alt}
         title={image.title ? image.title : image.alt}
+        onClick={onClick}
       />
-      {image.description && <StyledFullscreenSliderCaption>{image.description}</StyledFullscreenSliderCaption>}
+      {image.description && (
+        <StyledFullscreenSliderCaption $isExpanded={isExpanded} onClick={toggleExpanded} title={title}>
+          {image.description}
+        </StyledFullscreenSliderCaption>
+      )}
     </ImageSlider_ImageWrapper>
   );
 };

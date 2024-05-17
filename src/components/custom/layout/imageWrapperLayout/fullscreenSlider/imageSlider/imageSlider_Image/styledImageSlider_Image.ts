@@ -16,7 +16,14 @@ export const StyledFullscreenSliderImage = styled.img`
   max-height: 80vh;
 `;
 
-export const StyledFullscreenSliderCaption = styled.figcaption`
+export const StyledFullscreenSliderCaption = styled.figcaption.attrs<{
+  $isExpanded: boolean;
+}>(() => ({}))`
+  ${(props) =>
+    props.$isExpanded
+      ? { cursor: "zoom-out" }
+      : { overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", cursor: "zoom-in" }}
+
   position: absolute;
   bottom: 5%;
   left: 10%;
@@ -28,5 +35,5 @@ export const StyledFullscreenSliderCaption = styled.figcaption`
   font-size: inherit;
   line-height: normal;
 
-  background-color: #5893c48c;
+  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent_Transparent};
 `;

@@ -16,13 +16,14 @@ type FullscreenSliderProps = { initialImageId: number; onClose: () => void; imag
  *
  * @param {FullscreenSliderProps} props - The props object containing the following properties:
  * @param {number} props.initialImageId - The ID of the image to be displayed initially.
- * @param {() => void} props.onClose - Function to close the full screen mode.
+ * @param {void} props.onClose - Function to close the full screen mode.
  * @param {ImageType[]} props.imageList - An array of ImageType objects containing image data.
  * @returns
  */
 const FullscreenSlider = ({ initialImageId, onClose, imageList }: FullscreenSliderProps): JSX.Element => {
   const [currentImageId, setCurrentImageId] = useState<number>(initialImageId);
-  const [currentImage, setCurrentImage] = useState<ImageType>(imageList[0]);
+  const initialImage = imageList.find((image) => image.id === currentImageId) || imageList[0];
+  const [currentImage, setCurrentImage] = useState<ImageType>(initialImage);
 
   useEffect(() => {
     const image = imageList.find((image) => image.id === currentImageId);

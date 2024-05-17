@@ -25,7 +25,7 @@ export const StyledFullscreenSliderCaption = styled.figcaption`
   width: 80%;
   text-align: center;
 
-  font-size: ${(props) => props.theme.sizes.common.fontSizeMobile};
+  font-size: inherit;
   line-height: normal;
 
   background-color: #5893c48c;

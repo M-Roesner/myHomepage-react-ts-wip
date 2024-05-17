@@ -9,6 +9,7 @@ import useScreenSize from "../../../../../../utils/hooks/screenSize/useScreenSiz
 
 // Type
 import { ImageType } from "../../imageType";
+import ImageSlider_Counter from "./imageSlider_Counter/ImageSlider_Counter";
 
 type ImageSliderProps = {
   image: ImageType;
@@ -49,6 +50,7 @@ const ImageSlider = ({ image, sliderLength, setImageId, onClose }: ImageSliderPr
       <ImageSlider_Image image={image} onClick={onClose} />
       {sliderLength !== 1 && (
         <>
+          <ImageSlider_Counter currentImageIndex={imageId} totalImages={sliderLength}></ImageSlider_Counter>
           <CloseButton onClick={onClose} />
           <ImageSlider_Button isInverted isEnd={imageId === 1 ? true : false} onClick={handleBack} />
           <ImageSlider_Button isEnd={imageId === sliderLength ? true : false} onClick={handleForward} />

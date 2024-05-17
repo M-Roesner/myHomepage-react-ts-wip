@@ -8,7 +8,7 @@ const StyledMain = styled.div`
   font-weight: 400;
   font-style: normal;
   font-size: ${(props) => props.theme.sizes.common.fontSize};
-  letter-spacing: 0.05rem;
+  letter-spacing: ${(props) => props.theme.sizes.common.letterSpacing};
 `;
 
 export default StyledMain;

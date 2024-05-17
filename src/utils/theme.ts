@@ -6,8 +6,10 @@ export const defaultTheme: DefaultTheme = {
       gap: "5px",
       padding: "10px",
       lineHeight: "2.5ch",
+      letterSpacing: "0.05rem",
       borderRadius: "5px",
       fontSize: "1.2rem",
+      fontSizeMobile: "1rem",
       fontSizeAsFootnote: "0.8rem",
     },
     navBar: {
@@ -28,6 +30,9 @@ export const defaultTheme: DefaultTheme = {
       textColorSecond: "#e7e7e7",
       textColorThird: "rgb(184 97 15)",
       borderColor: "#5c606d",
+    },
+    fullScreen: {
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
     },
     headline: {
       textColor_level1: "#5893c4", // blue

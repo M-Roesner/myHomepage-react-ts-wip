@@ -12,6 +12,10 @@ interface IColorCommon {
   backgroundColorHighlight_Transparent: string;
   borderColor: string;
 }
+
+interface IFullScreen {
+  backgroundColor: string;
+}
 interface IColorNavBar {
   backgroundColorNavigation: string;
   backgroundColor_ActiveHover: string;
@@ -26,8 +30,10 @@ interface ISizes {
   gap: string;
   padding: string;
   lineHeight: string;
+  letterSpacing: string;
   borderRadius: string;
   fontSize: string;
+  fontSizeMobile: string;
   fontSizeAsFootnote: string;
 }
 
@@ -43,6 +49,7 @@ declare module "styled-components" {
     };
     colors: {
       common: IColorCommon;
+      fullScreen: IFullScreen;
       headline: IColorHeadline;
       navBar: IColorNavBar;
     };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FullscreenSliderImageWrapper = styled.figure.attrs<{
+export const ImageSlider_ImageWrapper = styled.figure.attrs<{
   $isMobile: boolean;
 }>(() => ({}))`
   width: 100%;
@@ -26,6 +26,7 @@ export const StyledFullscreenSliderCaption = styled.figcaption`
   text-align: center;
 
   font-size: ${(props) => props.theme.sizes.common.fontSizeMobile};
+  line-height: normal;
 
   background-color: #5893c48c;
 `;

@@ -1,30 +1,26 @@
 import { useEffect, useState } from "react";
 
 // Component
-import { FullscreenSliderWrapper, StyledFullscreenSlider } from "./styledFullscreenSlider";
-import CloseButton from "../../../button/closeButton/CloseButton";
-import FullscreenSliderbutton from "./fullscreenSliderButton/FullscreenSliderButton";
-import FullscreenSliderImage from "./fullscreenSliderImage/FullscreenSliderImage";
+import { FullscreenSliderWrapper } from "./styledFullscreenSlider";
+import ImageSlider from "./imageSlider/ImageSlider";
+import DotSlider from "./dotSlider/DotSlider";
 
 // Types and Helpers
 import { ImageType } from "../imageType";
-import useScreenSize from "../../../../../utils/hooks/screenSize/useScreenSize";
-import DotSlider from "../dotSlider/DotSlider";
 
-type FullscreenSliderProps = { initialImageId: number; onClick: () => void; imageList: ImageType[] };
+type FullscreenSliderProps = { initialImageId: number; onClose: () => void; imageList: ImageType[] };
 
 /**
- * Displays a specific image in full screen depending on the screen size and has an onClick event.
- * Allows users to navigate through available images.
+ * Displays a specific image in full screen depending on the screen size and allows users to navigate through available images.
+ * Includes a close function to exit full screen mode.
  *
  * @param {FullscreenSliderProps} props - The props object containing the following properties:
  * @param {number} props.initialImageId - The ID of the image to be displayed initially.
- * @param {void} props.onClick - Function called when the image is clicked or clicked off of the full screen.
+ * @param {() => void} props.onClose - Function to close the full screen mode.
  * @param {ImageType[]} props.imageList - An array of ImageType objects containing image data.
  * @returns
  */
-const FullscreenSlider = ({ initialImageId, onClick: onClose, imageList }: FullscreenSliderProps): JSX.Element => {
-  const screenSize = useScreenSize();
+const FullscreenSlider = ({ initialImageId, onClose, imageList }: FullscreenSliderProps): JSX.Element => {
   const [currentImageId, setCurrentImageId] = useState<number>(initialImageId);
   const [currentImage, setCurrentImage] = useState<ImageType>(imageList[0]);
 
@@ -35,19 +31,7 @@ const FullscreenSlider = ({ initialImageId, onClick: onClose, imageList }: Fulls
     }
   }, [currentImageId, imageList]);
 
-  const handleBack = () => {
-    if (currentImageId > 1) {
-      setCurrentImageId((prev) => prev - 1);
-    }
-  };
-
-  const handleForward = () => {
-    if (currentImageId < imageList.length) {
-      setCurrentImageId((prev) => prev + 1);
-    }
-  };
-
-  const handleDotSlider = (id: number) => {
+  const handleSliderId = (id: number) => {
     setCurrentImageId(id);
   };
 
@@ -62,24 +46,12 @@ const FullscreenSlider = ({ initialImageId, onClick: onClose, imageList }: Fulls
    * [] Image slider
    * - [] via points (depending on the number of images) - for mobile devices
    * - [] a small display preview of what comes next or before.
-   * [] - add close button as an additional option
+   * [x] - add close button as an additional option
    */
   return (
     <FullscreenSliderWrapper>
-      <StyledFullscreenSlider $isMobile={screenSize.deviceType === "mobile" || screenSize.deviceType === "tablet"}>
-        <FullscreenSliderImage image={currentImage} onClick={onClose} />
-        {imageList.length !== 1 && (
-          <>
-            <CloseButton onClick={onClose} />
-            <FullscreenSliderbutton isInverted isEnd={currentImageId === 1 ? true : false} onClick={handleBack} />
-            <FullscreenSliderbutton
-              isEnd={currentImageId === imageList.length ? true : false}
-              onClick={handleForward}
-            />
-          </>
-        )}
-      </StyledFullscreenSlider>
-      <DotSlider imageList={imageList} currentId={currentImageId} onClick={handleDotSlider}></DotSlider>
+      <ImageSlider image={currentImage} sliderLength={imageList.length} setImageId={handleSliderId} onClose={onClose} />
+      <DotSlider imageList={imageList} currentId={currentImageId} onClick={handleSliderId}></DotSlider>
     </FullscreenSliderWrapper>
   );
 };

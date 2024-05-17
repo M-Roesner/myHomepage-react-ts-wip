@@ -1,10 +1,15 @@
-import useScreenSize from "../../../../../../utils/hooks/screenSize/useScreenSize";
-import { ImageType } from "../../imageType";
+// Components
 import {
-  FullscreenSliderImageWrapper,
+  ImageSlider_ImageWrapper,
   StyledFullscreenSliderCaption,
   StyledFullscreenSliderImage,
-} from "./styledFullscreenSliderImage";
+} from "./styledImageSlider_Image";
+
+// Helpers
+import useScreenSize from "../../../../../../../utils/hooks/screenSize/useScreenSize";
+
+// Type
+import { ImageType } from "../../../imageType";
 
 type FullscreenSliderImageProps = { image: ImageType; onClick: () => void };
 
@@ -16,7 +21,7 @@ type FullscreenSliderImageProps = { image: ImageType; onClick: () => void };
  * @param {void} props.onClick - Function called when the image is clicked or clicked off of the full screen.
  * @returns
  */
-const FullscreenSliderImage = ({ image, onClick }: FullscreenSliderImageProps) => {
+const ImageSlider_Image = ({ image, onClick }: FullscreenSliderImageProps) => {
   const screenSize = useScreenSize();
 
   const getImageSrc = (image: ImageType): string => {
@@ -26,7 +31,7 @@ const FullscreenSliderImage = ({ image, onClick }: FullscreenSliderImageProps) =
   // TODO: Responsive image and description - image size and description does fit -wip-
 
   return (
-    <FullscreenSliderImageWrapper
+    <ImageSlider_ImageWrapper
       $isMobile={screenSize.deviceType === "mobile" || screenSize.deviceType === "tablet"}
       onClick={onClick}
     >
@@ -36,8 +41,8 @@ const FullscreenSliderImage = ({ image, onClick }: FullscreenSliderImageProps) =
         title={image.title ? image.title : image.alt}
       />
       {image.description && <StyledFullscreenSliderCaption>{image.description}</StyledFullscreenSliderCaption>}
-    </FullscreenSliderImageWrapper>
+    </ImageSlider_ImageWrapper>
   );
 };
 
-export default FullscreenSliderImage;
+export default ImageSlider_Image;

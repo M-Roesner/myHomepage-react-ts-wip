@@ -1,5 +1,8 @@
-import { ImageType } from "../imageType";
+// Components
 import { DotSliderWrapper, StyledDot } from "./styledDotSlider";
+
+// Type
+import { ImageType } from "../../imageType";
 
 type DotSliderProps = { imageList: ImageType[]; currentId: number; onClick: (id: number) => void };
 

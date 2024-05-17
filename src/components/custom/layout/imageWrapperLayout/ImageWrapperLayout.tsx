@@ -37,7 +37,7 @@ const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
         ))}
       </StyledImageWrapperLayout>
       {isFullscreen && imageId && (
-        <FullscreenSlider initialImageId={imageId} onClick={handleCloseFullscreen} imageList={images} />
+        <FullscreenSlider initialImageId={imageId} onClose={handleCloseFullscreen} imageList={images} />
       )}
     </>
   );

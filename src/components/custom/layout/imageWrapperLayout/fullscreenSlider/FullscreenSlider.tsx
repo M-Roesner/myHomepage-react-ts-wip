@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 // Component
 import { FullscreenSliderWrapper, StyledFullscreenSlider } from "./styledFullscreenSlider";
+import CloseButton from "../../../button/closeButton/CloseButton";
 import FullscreenSliderbutton from "./fullscreenSliderButton/FullscreenSliderButton";
 import FullscreenSliderImage from "./fullscreenSliderImage/FullscreenSliderImage";
 
@@ -22,7 +23,7 @@ type FullscreenSliderProps = { initialImageId: number; onClick: () => void; imag
  * @param {ImageType[]} props.imageList - An array of ImageType objects containing image data.
  * @returns
  */
-const FullscreenSlider = ({ initialImageId, onClick: onClickImage, imageList }: FullscreenSliderProps): JSX.Element => {
+const FullscreenSlider = ({ initialImageId, onClick: onClose, imageList }: FullscreenSliderProps): JSX.Element => {
   const screenSize = useScreenSize();
   const [currentImageId, setCurrentImageId] = useState<number>(initialImageId);
   const [currentImage, setCurrentImage] = useState<ImageType>(imageList[0]);
@@ -66,9 +67,10 @@ const FullscreenSlider = ({ initialImageId, onClick: onClickImage, imageList }: 
   return (
     <FullscreenSliderWrapper>
       <StyledFullscreenSlider $isMobile={screenSize.deviceType === "mobile" || screenSize.deviceType === "tablet"}>
-        <FullscreenSliderImage image={currentImage} onClick={onClickImage} />
+        <FullscreenSliderImage image={currentImage} onClick={onClose} />
         {imageList.length !== 1 && (
           <>
+            <CloseButton onClick={onClose} />
             <FullscreenSliderbutton isInverted isEnd={currentImageId === 1 ? true : false} onClick={handleBack} />
             <FullscreenSliderbutton
               isEnd={currentImageId === imageList.length ? true : false}

@@ -4,6 +4,7 @@ import { StyledSliderSvg } from "./styledSliderSvg";
 // Helpers
 import useScreenSize from "../../../../../../../utils/hooks/screenSize/useScreenSize";
 import useKeyboardHandler from "../../../../../../../utils/hooks/keyboardHandler/useKeyboardHandler";
+import useWheelHandler from "../../../../../../../utils/hooks/mouseHandler/useWheelHandler";
 
 type ImageSlider_ButtonProps = {
   isInverted?: boolean;
@@ -31,6 +32,15 @@ const ImageSlider_Button = ({ isInverted = false, isEnd = false, onClick }: Imag
       if (!isEnd && !isInverted) onClick();
     },
     ArrowLeft: () => {
+      if (!isEnd && isInverted) onClick();
+    },
+  });
+
+  useWheelHandler({
+    WheelRight: () => {
+      if (!isEnd && !isInverted) onClick();
+    },
+    WheelLeft: () => {
       if (!isEnd && isInverted) onClick();
     },
   });

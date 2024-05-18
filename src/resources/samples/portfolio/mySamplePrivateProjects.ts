@@ -32,6 +32,33 @@ export const mySamplePrivateProjects: ProjectType[] = [
         },
         imgAlt: "Final Jump-and-Run Spiel",
       },
+      {
+        imgTitle: "Final Jump-and-Run Spiel",
+        imgSrcs: {
+          preview: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+          mobile: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+          full: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+        },
+        imgAlt: "Final Jump-and-Run Spiel",
+      },
+      {
+        imgTitle: "Final Jump-and-Run Spiel",
+        imgSrcs: {
+          preview: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+          mobile: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+          full: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+        },
+        imgAlt: "Final Jump-and-Run Spiel",
+      },
+      {
+        imgTitle: "Final Jump-and-Run Spiel",
+        imgSrcs: {
+          preview: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+          mobile: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+          full: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+        },
+        imgAlt: "Final Jump-and-Run Spiel",
+      },
     ],
     links: [],
     addedDate: new Date("2024-04-28"),

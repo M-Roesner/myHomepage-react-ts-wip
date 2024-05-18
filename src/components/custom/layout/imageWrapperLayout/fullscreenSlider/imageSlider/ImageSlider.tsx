@@ -48,10 +48,10 @@ const ImageSlider = ({ image, sliderLength, setImageId, onClose }: ImageSliderPr
   return (
     <StyledImageSlider $isMobile={screenSize.deviceType === "mobile" || screenSize.deviceType === "tablet"}>
       <ImageSlider_Image image={image} onClick={onClose} />
+      <CloseButton onClick={onClose} />
       {sliderLength !== 1 && (
         <>
           <ImageSlider_Counter currentImageIndex={imageId} totalImages={sliderLength}></ImageSlider_Counter>
-          <CloseButton onClick={onClose} />
           <ImageSlider_Button isInverted isEnd={imageId === 1 ? true : false} onClick={handleBack} />
           <ImageSlider_Button isEnd={imageId === sliderLength ? true : false} onClick={handleForward} />
         </>

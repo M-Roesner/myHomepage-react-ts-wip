@@ -1,14 +1,8 @@
 import { useEffect } from "react";
 
 // Define permissible mouse events
-type AllowedMouseEvents =
-  | "mousedown"
-  //   | "mouseenter"
-  //   | "mouseleave"
-  //   | "mousemove"
-  //   | "mouseout"
-  | "mouseover"
-  | "mouseup";
+type AllowedMouseEvents = "contextmenu" | "mousedown" | "mouseover" | "mouseup";
+// | "mouseenter" | "mouseleave" | "mousemove" | "mouseout" | "dblclick" | "click"
 
 type MouseHandler = (event: MouseEvent) => void;
 
@@ -22,7 +16,11 @@ type MouseHandlers = {
  * @param {Object.<AllowedMouseEvents, MouseHandler>} mouseHandlers - An object where keys are mouse event names from AllowedMouseEvents and values are handler functions.
  * @example
  * useMouseHandler({
+ *   click: () => console.log('Mouse clicked'),
+ *   contextmenu: () => console.log('Mouse right clicked'),
  *   mouseover: () => console.log('Mouse over'),
+ *   mouseenter: () => console.log('Mouse entered'),
+ *   mouseleave: () => console.log('Mouse left')
  * });
  *
  * @returns {void}

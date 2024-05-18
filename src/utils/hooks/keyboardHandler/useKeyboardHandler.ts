@@ -34,8 +34,6 @@ const useKeyboardHandler = (keyHandlers: KeyHandlers, listenOnKeyUp: boolean = f
     // Function to handle keyboard events
     const handleKeyEvent = (event: KeyboardEvent) => {
       const handler = keyHandlers[event.key as AllowedKeys];
-      console.log(handler);
-
       // Call the corresponding handler if it exists
       if (handler) {
         handler(event);

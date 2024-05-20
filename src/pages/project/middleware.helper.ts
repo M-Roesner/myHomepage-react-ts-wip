@@ -1,4 +1,7 @@
-// Types
+// Helpers
+import { sortListByKeyType } from "../../utils/sortListByKeyType";
+
+// Types and Enums
 import { ImageType } from "../../components/custom/layout/imageWrapperLayout/imageType";
 import { ListItemType } from "../../components/custom/layout/listLayout/listLayoutTypes";
 import {
@@ -44,20 +47,7 @@ export const mwProject_TechnologyToListItems = (list: ProjectTechnologyType[]): 
     return { text: item.title, iconSrc };
   });
 
-  newlist.sort((a, b) => {
-    // Überprüfe, ob das icon-Feld in beiden Objekten definiert ist
-    if (a.iconSrc === undefined && b.iconSrc === undefined) return 0; // Wenn beide undefined sind, bleiben sie in der gleichen Reihenfolge
-    if (a.iconSrc === undefined) return 1; // Wenn nur a.iconSrc undefined ist, soll es nach hinten sortiert werden
-    if (b.iconSrc === undefined) return -1; // Wenn nur b.iconSrc undefined ist, soll es nach vorne sortiert werden
-
-    // Vergleiche die iconSrc-Werte, um die Sortierreihenfolge zu bestimmen
-    return a.iconSrc.localeCompare(b.iconSrc);
-
-    // if (a.iconSrc < b.iconSrc) return -1;
-    // if (a.iconSrc > b.iconSrc) return 1;
-    // return 0; // Wenn die iconSrc-Werte gleich sind, bleiben sie in der gleichen Reihenfolge
-  });
-  return newlist;
+  return sortListByKeyType(newlist, "iconSrc", "acc");
 };
 
 /**

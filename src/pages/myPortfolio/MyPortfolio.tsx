@@ -1,13 +1,21 @@
 // Components
 import PageLayout from "../../components/custom/layout/pageLayout/PageLayout";
-import PersonalProjectWrapper from "./sections/personal/PersonalProjectWrapper";
+import ProjectWrapper from "./projectsWrapper/ProjectsWrapper";
 
+// Helpers
+import { myRetrainingProjects } from "../../resources/portfolio/myRetrainingProjects";
+
+/**
+ * Renders the portfolio page displaying various portfolios.
+ *
+ * @returns {React.ReactNode} - The portfolio page layout containing different portfolios.
+ */
 const MyPortfolio = () => {
+  const retrainingList = myRetrainingProjects;
+
   return (
-    <PageLayout headlineText="MyPortfolio page">
-      <PersonalProjectWrapper />
-      {/* duplicate for testing */}
-      <PersonalProjectWrapper />
+    <PageLayout headlineText="Meine Portfolios">
+      <ProjectWrapper title="Umschulungs Projekte" list={retrainingList} />
     </PageLayout>
   );
 };

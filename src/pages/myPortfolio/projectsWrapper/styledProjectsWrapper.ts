@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DefaultProjectGridStyle = styled.div`
+export const StyledProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: ${(props) => props.theme.sizes.common.gap};

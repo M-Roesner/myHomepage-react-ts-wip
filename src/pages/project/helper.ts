@@ -1,5 +1,5 @@
 // Resources and Helpers
-import { mySamplePrivateProjects } from "../../resources/samples/portfolio/mySamplePrivateProjects";
+import { myRetrainingProjects } from "../../resources/portfolio/myRetrainingProjects";
 import { checkNumber } from "../../utils/CheckNumber";
 import { ProjectCategoryType, ProjectType } from "../myPortfolio/types/projectTypes";
 
@@ -13,8 +13,8 @@ import { ProjectCategoryType, ProjectType } from "../myPortfolio/types/projectTy
  */
 const getProjectsByCategoryName = (category: ProjectCategoryType): ProjectType[] | undefined => {
   switch (category) {
-    case "personal":
-      return mySamplePrivateProjects;
+    case "retraining":
+      return myRetrainingProjects;
     default:
       return undefined;
   }

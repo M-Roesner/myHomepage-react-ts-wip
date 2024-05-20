@@ -20,7 +20,9 @@ const CardProject = ({ url, content }: CardProjectProps) => {
         />
       )}
       <CardHeadline level={4}>{content.title}</CardHeadline>
-      <CardParagraphStyle>{content.cardIntroduction}</CardParagraphStyle>
+      {content.cardIntroduction.map((paragraph, index) => (
+        <CardParagraphStyle key={index}>{paragraph}</CardParagraphStyle>
+      ))}
     </StyledCardProject>
   );
 };

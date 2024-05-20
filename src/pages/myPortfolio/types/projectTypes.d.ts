@@ -32,9 +32,9 @@ export type ProjectType = {
   id: number;
   category: ProjectCategoryType;
   title: string;
-  cardIntroduction: string;
-  introduction: string;
-  description: string;
+  cardIntroduction: string[];
+  introduction: string[];
+  why: string[];
   skills?: string[];
   technologies?: ProjectTechnologyType[];
   images?: ProjectImageType[];

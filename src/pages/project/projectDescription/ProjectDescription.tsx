@@ -8,7 +8,7 @@ import { EProjectTagId } from "../projectEnums";
 type PortfolioDescriptionProps = {
   title: string;
   tagId: EProjectTagId;
-  children: React.ReactNode;
+  list: string[];
 };
 
 /**
@@ -18,10 +18,12 @@ type PortfolioDescriptionProps = {
  * @param {EProjectTagId} props.tagId - Unique identifier for direct navigation via the URL to the corresponding "#tagId" section.
  * @param {React.ReactNode} props.children
  */
-const ProjectDescription = ({ title, tagId, children }: PortfolioDescriptionProps) => {
+const ProjectDescription = ({ title, tagId, list }: PortfolioDescriptionProps) => {
   return (
     <SectionLayout tagId={tagId} headlineText={title}>
-      <CardParagraphStyle>{children}</CardParagraphStyle>
+      {list.map((item, index) => (
+        <CardParagraphStyle key={index}>{item}</CardParagraphStyle>
+      ))}
     </SectionLayout>
   );
 };

@@ -12,7 +12,7 @@ import ErrorPage_InclProps from "../errorPage/ErrorPage_InclProps";
 // Rosources and Helpers
 import { getProjectContent } from "./helper";
 import {
-  mwProject_SkillsToListItems,
+  mwProject_TechnologyToListItems,
   mwProject_LinksToListItemType,
   mwProject_ImageToImageType,
   mwProject_AsideNavigation,
@@ -41,7 +41,7 @@ const Project = () => {
       ></ErrorPage_InclProps>
     );
 
-  const skills = content.skills ? mwProject_SkillsToListItems(content.skills) : undefined;
+  const technologies = content.technologies ? mwProject_TechnologyToListItems(content.technologies) : undefined;
   const projectLinks = content.links ? mwProject_LinksToListItemType(content.links) : undefined;
   const images = content.images ? mwProject_ImageToImageType(content.images) : undefined;
 
@@ -54,12 +54,12 @@ const Project = () => {
       <ProjectDescription title="Warum:" tagId={EProjectTagId.WHY}>
         {content.description}
       </ProjectDescription>
-      {skills && (
+      {technologies && (
         <ProjectList
-          title="Verwendete Fähigkeiten:"
-          tagId={EProjectTagId.SKILLS}
-          list={skills}
-          numerusText={{ singular: "weitere Fähigkeit", plural: "weitere Fähigkeiten" }}
+          title="Verwendete Technologien:"
+          tagId={EProjectTagId.TECHNOLOGIES}
+          list={technologies}
+          numerusText={{ singular: "weitere Technologie", plural: "weitere Technologien" }}
         />
       )}
       {projectLinks && (

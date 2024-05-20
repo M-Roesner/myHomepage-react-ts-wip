@@ -1,7 +1,12 @@
 // Types
 import { ImageType } from "../../components/custom/layout/imageWrapperLayout/imageType";
 import { ListItemType } from "../../components/custom/layout/listLayout/listLayoutTypes";
-import { ProjectLinkType, ProjectSkillType, ProjectImageType, ProjectType } from "../myPortfolio/types/projectTypes";
+import {
+  ProjectLinkType,
+  ProjectTechnologyType,
+  ProjectImageType,
+  ProjectType,
+} from "../myPortfolio/types/projectTypes";
 import { EProjectTagId } from "./projectEnums";
 import { ProjectAsideNavigationButtonProps } from "./projectNavigation/ProjectNavigation";
 
@@ -29,14 +34,14 @@ export const mwProject_LinksToListItemType = (list: ProjectLinkType[]): ListItem
  * Converts a list of ProjectSkillType to an array of ListItemType objects.
  * Each string in the input array corresponds to the 'text' property of the ListItemType object.
  *
- * @param {ProjectSkillType[]} list - The array of ProjectSkillType to be converted.
+ * @param {ProjectTechnologyType[]} list - The array of ProjectSkillType to be converted.
  * @returns {ListItemType[]} - An array of ListItemType objects.
  */
-export const mwProject_SkillsToListItems = (list: ProjectSkillType[]): ListItemType[] | undefined => {
+export const mwProject_TechnologyToListItems = (list: ProjectTechnologyType[]): ListItemType[] | undefined => {
   if (list.length === 0) return undefined;
-  const newlist = list.map((string) => {
-    const iconSrc = string.isNewSkill ? svgNewLabel : undefined;
-    return { text: string.skillTitle, iconSrc };
+  const newlist = list.map((item) => {
+    const iconSrc = item.isNew ? svgNewLabel : undefined;
+    return { text: item.title, iconSrc };
   });
 
   newlist.sort((a, b) => {
@@ -91,9 +96,9 @@ export const mwProject_AsideNavigation = (content: ProjectType): ProjectAsideNav
   const listOfAsideNavigation: ProjectAsideNavigationButtonProps[] = [
     { tagId: EProjectTagId.WHY, buttonText: "Warum" }, // "why" is always set
   ];
-  // Check if "skills" is set in the content
-  if (content.skills && content.skills.length > 0)
-    listOfAsideNavigation.push({ tagId: EProjectTagId.SKILLS, buttonText: "Fähigkeiten" });
+  // Check if "technologies" is set in the content
+  if (content.technologies && content.technologies.length > 0)
+    listOfAsideNavigation.push({ tagId: EProjectTagId.TECHNOLOGIES, buttonText: "Technologien" });
 
   // Check if "links" is set in the content
   if (content.links && content.links.length > 0)

@@ -2,9 +2,9 @@ import { ERouteType } from "../../../routes/router";
 
 export type ProjectCategoryType = "personal" | "retraining" | "internship";
 
-export type ProjectSkillType = {
-  skillTitle: string;
-  isNewSkill?: boolean;
+export type ProjectTechnologyType = {
+  title: string;
+  isNew?: boolean;
 };
 
 export type imgSrcType = {
@@ -35,7 +35,8 @@ export type ProjectType = {
   cardIntroduction: string;
   introduction: string;
   description: string;
-  skills?: ProjectSkillType[];
+  skills?: string[];
+  technologies?: ProjectTechnologyType[];
   images?: ProjectImageType[];
   links?: ProjectLinkType[];
   addedDate?: Date;

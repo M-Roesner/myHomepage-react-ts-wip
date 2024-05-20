@@ -5,6 +5,7 @@ import PageLayout from "../../components/custom/layout/pageLayout/PageLayout";
 import ProjectAsideNavigation from "./projectNavigation/ProjectNavigation";
 import { CardParagraphStyle } from "../../components/custom/card/cardParagraph/styledCardParagraphStyle";
 import ProjectDescription from "./projectDescription/ProjectDescription";
+import SimpleList from "./simpleList/SimpleList";
 import ProjectList from "./projectList/ProjectList";
 import ProjectImages from "./projectImages/ProjectImages";
 import ErrorPage_InclProps from "../errorPage/ErrorPage_InclProps";
@@ -54,6 +55,9 @@ const Project = () => {
       <ProjectDescription title="Warum:" tagId={EProjectTagId.WHY}>
         {content.description}
       </ProjectDescription>
+      {content.skills && (
+        <SimpleList title="Verwendete Fähigkeiten:" tagId={EProjectTagId.SKILLS} list={content.skills} />
+      )}
       {technologies && (
         <ProjectList
           title="Verwendete Technologien:"

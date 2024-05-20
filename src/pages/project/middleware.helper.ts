@@ -96,6 +96,10 @@ export const mwProject_AsideNavigation = (content: ProjectType): ProjectAsideNav
   const listOfAsideNavigation: ProjectAsideNavigationButtonProps[] = [
     { tagId: EProjectTagId.WHY, buttonText: "Warum" }, // "why" is always set
   ];
+  // Check if "skills" is set in the content
+  if (content.skills && content.skills.length > 0)
+    listOfAsideNavigation.push({ tagId: EProjectTagId.SKILLS, buttonText: "Fähigkeiten" });
+
   // Check if "technologies" is set in the content
   if (content.technologies && content.technologies.length > 0)
     listOfAsideNavigation.push({ tagId: EProjectTagId.TECHNOLOGIES, buttonText: "Technologien" });

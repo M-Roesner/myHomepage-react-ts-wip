@@ -3,14 +3,16 @@
  *
  * @param {T[]} list - The list of objects to be sorted.
  * @param {keyof T} sortBy - The key by which the list should be sorted.
- * @param {boolean} [descending=true] (default is true) - Optional parameter to specify whether to sort in descending order. Set to false for ascending order.
+ * @param {"acc" | "desc"} [order="desc"] - Optional parameter to specify the sorting order. Use "desc" for descending order, "acc" for ascending order.
  * @returns {T[]} - The sorted list.
  *
  * @remarks
  * This function supports sorting by string, number, boolean, and Date types.
  * For other types, the order of the elements remains unchanged.
  */
-export const sortListByKeyType = <T>(list: T[], sortBy: keyof T, descending: boolean = true): T[] => {
+export const sortListByKeyType = <T>(list: T[], sortBy: keyof T, order: "acc" | "desc" = "desc"): T[] => {
+  const descending = order === "desc";
+
   return list.sort((a, b) => {
     const valueA = a[sortBy];
     const valueB = b[sortBy];
@@ -21,7 +23,6 @@ export const sortListByKeyType = <T>(list: T[], sortBy: keyof T, descending: boo
     if (valueB === undefined) return -1; // If only b.sortBy is undefined, it should be sorted towards the beginning
 
     // Determine the sorting order based on the descending parameter
-    // If descending is true, sortOrder is -1 (descending order), otherwise it is 1 (ascending order)
     const sortOrder = descending ? -1 : 1;
 
     // Compare the values of sortBy depending on the type to determine the order.

@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 // Components
 import PageLayout from "../../components/custom/layout/pageLayout/PageLayout";
 import ProjectAsideNavigation from "./projectNavigation/ProjectNavigation";
-import { CardParagraphStyle } from "../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import ProjectIntroduction from "./projectIntroduction/ProjectIntroduction";
 import ProjectDescription from "./projectDescription/ProjectDescription";
 import SimpleList from "./simpleList/SimpleList";
 import ProjectList from "./projectList/ProjectList";
@@ -50,13 +50,12 @@ const Project = () => {
 
   return (
     <PageLayout headlineText={content.title}>
-      {asideNavigation && <ProjectAsideNavigation ancorList={asideNavigation}></ProjectAsideNavigation>}
-      <CardParagraphStyle>{content.introduction}</CardParagraphStyle>
-      <ProjectDescription title="Warum:" tagId={EProjectTagId.WHY}>
-        {content.description}
-      </ProjectDescription>
+      {asideNavigation && <ProjectAsideNavigation ancorList={asideNavigation} />}
+      <ProjectIntroduction texts={content.introduction} />
+      <ProjectDescription title="Warum:" tagId={EProjectTagId.WHY} list={content.why} />
+      {images && <ProjectImages title={"Bilder:"} tagId={EProjectTagId.IMAGES} images={images} />}
       {content.skills && (
-        <SimpleList title="Verwendete Fähigkeiten:" tagId={EProjectTagId.SKILLS} list={content.skills} />
+        <SimpleList title="Erlernte Fähigkeiten:" tagId={EProjectTagId.SKILLS} list={content.skills} />
       )}
       {technologies && (
         <ProjectList
@@ -74,7 +73,6 @@ const Project = () => {
           numerusText={{ singular: "weiterer Link", plural: "weitere Links" }}
         />
       )}
-      {images && <ProjectImages title={"Bilder:"} tagId={EProjectTagId.IMAGES} images={images} />}
     </PageLayout>
   );
 };

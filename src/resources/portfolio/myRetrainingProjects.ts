@@ -2,81 +2,7 @@ import { ProjectType } from "../../pages/myPortfolio/types/projectTypes";
 
 export const myRetrainingProjects: ProjectType[] = [
   {
-    id: 1,
-    category: "retraining",
-    title: "Endless Jumping and Running Game",
-    cardIntroduction: [
-      "Ein Spiel zur praktischen Übung in OOP mit JavaScript, Canvas-Nutzung, Kollisionsabfragen, Eventhandling und mehr.",
-    ],
-    introduction: [
-      "Dieses Jump-and-Run-Spiel habe ich mithilfe eines Tutorials auf YouTube entwickelt, um meine Fähigkeiten in der objektorientierten Programmierung (OOP) mit JavaScript zu verbessern.",
-    ],
-    why: [
-      "Die Entwicklung eines Spiels bot eine hervorragende Möglichkeit, ein tieferes Verständnis für die Anwendung der Objektorientierung in JavaScript zu erlangen.",
-      "Durch das Projekt konnte ich verschiedene Techniken und Ansätze kennenlernen, darunter die Nutzung von Canvas, das Handling von Mausevents und Kollisionsabfragen.",
-    ],
-    images: [
-      {
-        imgTitle: "Krähen schießen Spiel",
-        imgSrcs: {
-          preview: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
-          mobile: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
-          full: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
-        },
-        imgAlt: "Krähen schießen Spiel",
-        imgDescription:
-          "Beim Krähen schießen Spiel habe ich getestet, wie man Mausevents verarbeitet und Kollisionen mit Objekten erkennt.",
-        isMainPreview: true,
-      },
-      {
-        imgTitle: "Final Jump-and-Run Spiel",
-        imgSrcs: {
-          preview: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
-          mobile: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
-          full: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
-        },
-        imgAlt: "Final Jump-and-Run Spiel",
-        imgDescription:
-          "In diesem Spiel steuert man einen kleinen Hund, der Gegnern ausweichen muss. Mit bestimmten Fähigkeiten kann man Gegner besiegen und Punkte sammeln.",
-      },
-    ],
-    skills: [
-      "Umgang mit Objektorientierung in JavaScript",
-      "Nutzung von Canvas-Funktionen zum Zeichnen von Bildern",
-      "Techniken für Sprite-Animationen",
-      "Parallaxeffekte",
-      "Bewegungsmuster für Gegner",
-      "Handling von Maus- und Tastenevents",
-      "Kollisionsabfragen von Objekten",
-      "State-Management für die Charakterbewegungen",
-      "Implementierung von Partikelsystemen für spezielle Effekte",
-    ],
-    technologies: [
-      { title: "JavaScript OOP", isNew: true },
-      { title: "Canvas" },
-      { title: "Git" },
-      { title: "HTML" },
-      { title: "CSS" },
-    ],
-    links: [
-      {
-        text: "Github: mein Code",
-        route: "https://github.com/M-Roesner/frankslaboratory_JavaScript-Game-Development-Course-for-Beginners",
-        iconSrc: "/src/assets/fontawesome-free-svg/github.svg",
-        iconAltText: "externer Github Link",
-      },
-      {
-        text: "YouTube Tutorial",
-        route: "https://www.youtube.com/c/Frankslaboratory",
-        iconSrc: "/src/assets/fontawesome-free-svg/external-link.svg",
-        iconAltText: "externer link",
-      },
-    ],
-    addedDate: new Date("2024-2-01"),
-    updatedDate: new Date("2024-04-13"),
-  },
-  {
-    id: 2,
+    id: 3,
     category: "retraining",
     title: "4 Gewinnt - SRH Edition",
     cardIntroduction: ["Gruppenprojekt während meiner Umschulung, mit Schwerpunkt auf PHP."],
@@ -122,7 +48,7 @@ export const myRetrainingProjects: ProjectType[] = [
     updatedDate: new Date("2024-04-05"),
   },
   {
-    id: 3,
+    id: 2,
     category: "retraining",
     title: "Haushaltsbuch",
     cardIntroduction: ["Erstellung eines Haushaltsbuches mit Datenbankanbindung als DO-IT-Projekt."],
@@ -151,11 +77,11 @@ export const myRetrainingProjects: ProjectType[] = [
       { title: "CSS (Scss)", isNew: true },
       { title: "etwas JavaScript", isNew: true },
     ],
-    addedDate: new Date("2024-03-27"),
-    updatedDate: new Date("2024-04-05"),
+    addedDate: new Date("2023-03-27"),
+    updatedDate: new Date("2023-04-05"),
   },
   {
-    id: 4,
+    id: 1,
     category: "retraining",
     title: "Minesweeper",
     cardIntroduction: ["Entwicklung des Minesweeper-Spiels zur Erlernung von Arrays und Aufbau eines Spielmenüs."],
@@ -173,7 +99,7 @@ export const myRetrainingProjects: ProjectType[] = [
       "Speichern von Parametern",
     ],
     technologies: [{ title: "IntelliJ - Ein-, Ausgabe in der Konsole", isNew: true }],
-    addedDate: new Date("2024-03-27"),
-    updatedDate: new Date("2024-04-05"),
+    addedDate: new Date("2023-01-01"),
+    updatedDate: new Date("2023-01-01"),
   },
 ];

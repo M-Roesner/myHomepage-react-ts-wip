@@ -40,9 +40,9 @@ const NavLinkButton = ({ to, children }: StyledLinkButtonProps) => {
     const extractedParams = params && params.length > 0 ? `/${params.join("/")}` : "";
     const extractedTagId = tagId !== undefined ? `#${tagId}` : "";
     url = `/${route}${extractedParams}${extractedTagId}`;
-    console.log("url", url);
+    // console.log("url", url);
   }
-  console.log("log url", typeof url, `url="${url}"`);
+  // console.log("log url", typeof url, `url="${url}"`);
 
   if (isExternalLink(url))
     return (

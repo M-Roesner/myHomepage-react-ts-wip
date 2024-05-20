@@ -24,7 +24,14 @@ import { ProjectCategoryType } from "../myPortfolio/types/projectTypes";
 import { ERouteType } from "../../routes/router";
 import { EProjectTagId } from "./projectEnums";
 
-const Project = () => {
+/**
+ * Renders a single Project page.
+ *
+ * It displays the the title of the project, the description and some additional information.
+ *
+ * @returns {React.ReactNode}.
+ */
+const Project = (): React.ReactNode => {
   const { portfolioCategory, portfolioId } = useParams<{
     portfolioCategory: ProjectCategoryType;
     portfolioId: string;

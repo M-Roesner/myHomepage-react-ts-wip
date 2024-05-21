@@ -21,6 +21,12 @@ interface IColorNavBar {
   backgroundColor_ActiveHover: string;
 }
 
+interface IButton {
+  backgroundColor: string;
+  backgroundColor_Hover: string;
+  backgroundColor_Active: string;
+}
+
 interface IColorHeadline {
   textColor_level1: string;
   textColor_level2: string;
@@ -48,6 +54,7 @@ declare module "styled-components" {
       };
     };
     colors: {
+      button: IButton;
       common: IColorCommon;
       fullScreen: IFullScreen;
       headline: IColorHeadline;

@@ -18,6 +18,12 @@ export const defaultTheme: DefaultTheme = {
     },
   },
   colors: {
+    button: {
+      // orange
+      backgroundColor: "rgb(184 97 15)",
+      backgroundColor_Hover: "#ff9100",
+      backgroundColor_Active: "rgb(184 97 15 / 70%)",
+    },
     common: {
       backgroundColor: "#383838", // dark gray
       backgroundColor_Hover: "#4c4c4c",

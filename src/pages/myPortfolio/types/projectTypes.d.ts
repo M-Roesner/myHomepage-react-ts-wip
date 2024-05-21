@@ -28,6 +28,11 @@ export type ProjectLinkType = {
   iconAltText?: string;
 };
 
+export type ProjectAdditionalInfoType = {
+  headlinetext: string;
+  texts: string[];
+};
+
 export type ProjectType = {
   id: number;
   category: ProjectCategoryType;
@@ -35,6 +40,7 @@ export type ProjectType = {
   cardIntroduction: string[];
   introduction: string[];
   why: string[];
+  additionalInfo?: ProjectAdditionalInfoType[];
   skills?: string[];
   technologies?: ProjectTechnologyType[];
   images?: ProjectImageType[];

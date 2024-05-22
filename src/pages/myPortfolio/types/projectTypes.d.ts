@@ -30,7 +30,9 @@ export type ProjectLinkType = {
 
 export type ProjectAdditionalInfoType = {
   headlinetext: string;
-  texts: string[];
+  paragraphs: string[];
+  idTag: string;
+  asidebarText: string;
 };
 
 export type ProjectType = {

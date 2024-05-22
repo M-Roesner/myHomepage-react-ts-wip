@@ -38,7 +38,7 @@ export const myInternshipProjects: ProjectType[] = [
       "Während meines Praktikums bei der FutureNext GmbH habe ich umfangreiche Kenntnisse in verschiedenen Technologien und Methoden erworben.",
     ],
     introduction: [
-      "In meinem Praktikum bei FutureNext GmbH, einem führenden Unternehmen in der Entwicklung von Web-Software, konnte ich tiefgehende Einblicke in die Praxis der Softwareentwicklung gewinnen und meine Kenntnisse in verschiedenen Technologien erweitern.",
+      "In meinem Praktikum bei der FutureNext GmbH, einem führenden Unternehmen in der Entwicklung von Web-Software, konnte ich tiefgehende Einblicke in die Praxis der Softwareentwicklung gewinnen und meine Kenntnisse in verschiedenen Technologien erweitern.",
     ],
     why: [
       "Das Praktikum bot mir die Möglichkeit, theoretisches Wissen in der Praxis anzuwenden und meine technischen Fähigkeiten zu vertiefen.",
@@ -47,25 +47,24 @@ export const myInternshipProjects: ProjectType[] = [
     ],
     additionalInfo: [
       {
-        headlinetext: "Über die FutureNext GmbH",
-        texts: [
-          "Die FutureNext GmbH, ansässig in Mannheim, beschäftigt aktuell 20 Mitarbeiter und ist bekannt für die Produktion von Virtualbadge.io. Diese Web-Software ermöglicht das Erstellen, Versenden und Verwalten von fälschungssicheren digitalen Zertifikaten, Teilnahmebescheinigungen und Badges.",
+        headlinetext: "Über FutureNext GmbH",
+        paragraphs: [
+          "Die Firma FutureNext GmbH ist ansässig in Mannheim, beschäftigte zu diesem Zeitpunkt ca. 20 Mitarbeiter und ist bekannt für die Produktion von Virtualbadge.io. Diese Web-Software ermöglicht das Erstellen, Versenden und Verwalten von fälschungssicheren digitalen Zertifikaten, Teilnahmebescheinigungen und Badges.",
         ],
-      },
-      {
-        headlinetext: "Was ist Polotno?",
-        texts: [
-          "Polotno Studio ist ein Design-Editor, der eine umfangreiche Bibliothek mit Fotos und Vektorillustrationen verwendet, um Bilder für soziale Medien, YouTube-Vorschauen, Cover und Präsentationen zu erstellen.",
-        ],
+        idTag: "futurenext",
+        asidebarText: "FutureNext GmbH",
       },
       {
         headlinetext: "Agile Arbeitsmethoden",
-        texts: [
-          "Während meines Praktikums arbeitete ich mit Scrum in einem 3-Wochen-Sprint. Dies beinhaltete tägliche Standups und wöchentliche Meetings mit dem gesamten Unternehmen. Diese agile Arbeitsweise hat meine Fähigkeiten im Projektmanagement und der Teamkommunikation erheblich verbessert.",
+        paragraphs: [
+          "Während meines Praktikums arbeitete ich mit Scrum in einem 3-Wochen-Sprint. Dies beinhaltete tägliche Standups und wöchentliche Meetings mit dem gesamten Unternehmen. Diese agile Arbeitsweise hat meine Teamkommunikationsfähigkeiten in einem englischsprachigen Umfeld erheblich verbessert.",
         ],
+        idTag: "srum",
+        asidebarText: "Arbeitsmethoden",
       },
     ],
     skills: [
+      "Erlernen neuer Sprachen und Frameworks/Libraries wie TypeScript und React.js.",
       "Umgang mit XML (docx), JSON, CSV",
       "Translation (i18next) - Englisch/Deutsch",
       "Arbeiten in agilen Teams mit Scrum",
@@ -77,6 +76,7 @@ export const myInternshipProjects: ProjectType[] = [
       { title: "React.js", isNew: true },
       { title: "Redux", isNew: true },
       { title: "Figma", isNew: true },
+      { title: "i18next", isNew: true },
     ],
     addedDate: new Date("2023-09-21"),
     updatedDate: new Date("2023-09-21"),

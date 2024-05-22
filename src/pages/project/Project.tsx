@@ -5,6 +5,7 @@ import PageLayout from "../../components/custom/layout/pageLayout/PageLayout";
 import ProjectAsideNavigation from "./projectNavigation/ProjectNavigation";
 import ProjectIntroduction from "./sections/projectIntroduction/ProjectIntroduction";
 import ParagraphList from "./utils/paragraphList/ParagraphList";
+import AdditionalInfo from "./sections/additionalInfo/AdditionalInfo";
 import SimpleList from "./utils/simpleList/SimpleList";
 import ProjectList from "./utils/projectList/ProjectList";
 import ProjectImages from "./sections/projectImages/ProjectImages";
@@ -60,6 +61,7 @@ const Project = (): React.ReactNode => {
       {asideNavigation && <ProjectAsideNavigation ancorList={asideNavigation} />}
       <ProjectIntroduction texts={content.introduction} />
       <ParagraphList title="Warum:" tagId={EProjectTagId.WHY} list={content.why} />
+      {content.additionalInfo && <AdditionalInfo list={content.additionalInfo} />}
       {images && <ProjectImages title={"Bilder:"} tagId={EProjectTagId.IMAGES} images={images} />}
       {content.skills && (
         <SimpleList title="Erlernte Fähigkeiten:" tagId={EProjectTagId.SKILLS} list={content.skills} />

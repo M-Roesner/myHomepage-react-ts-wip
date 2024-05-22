@@ -1,8 +1,10 @@
 export type ImageType = {
   id: number;
-  src: string;
-  srcFullSize: string;
-  srcPreviewSize: string;
+  srcPreview?: string;
+  srcMobile: string;
+  srcTablet?: string;
+  srcLaptop?: string;
+  srcDesktop?: string;
   title?: string;
   alt?: string;
   description?: string;

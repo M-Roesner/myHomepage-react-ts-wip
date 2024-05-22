@@ -8,9 +8,11 @@ export type ProjectTechnologyType = {
 };
 
 export type imgSrcType = {
-  preview: string;
+  preview?: string;
   mobile: string;
-  full: string;
+  tablet?: string;
+  laptop?: string;
+  desktop?: string;
 };
 
 export type ProjectImageType = {

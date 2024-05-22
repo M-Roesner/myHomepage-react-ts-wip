@@ -61,9 +61,11 @@ export const mwProject_ImageToImageType = (images: ProjectImageType[]): ImageTyp
   return images?.map((image, index) => {
     return {
       id: index + 1, // + 1 to index because IDs must start from 1 (0 is not allowed to avoid ambiguity with falsy values).
-      src: image.imgSrcs.mobile,
-      srcFullSize: image.imgSrcs.full,
-      srcPreviewSize: image.imgSrcs.preview === "" ? image.imgSrcs.preview : image.imgSrcs.mobile,
+      srcPreview: image.imgSrcs.preview,
+      srcMobile: image.imgSrcs.mobile,
+      srcTablet: image.imgSrcs.tablet,
+      srcLaptop: image.imgSrcs.laptop,
+      srcDesktop: image.imgSrcs.desktop,
       title: image.imgTitle,
       alt: image.imgAlt,
       description: image.imgDescription,

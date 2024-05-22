@@ -29,7 +29,7 @@ const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
         {images.map((image) => (
           <StyledImage
             key={image.id}
-            src={image.src}
+            src={image.srcMobile}
             alt={image.alt}
             title={image.title ? image.title : image.alt}
             onClick={() => handleOpenFullscreen(image.id)}

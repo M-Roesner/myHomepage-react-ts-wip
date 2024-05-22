@@ -18,14 +18,15 @@ export const myPersonalProjects: ProjectType[] = [
     ],
     images: [
       {
-        imgTitle: "Homepage Preview",
+        imgTitle: "Image Slider",
         imgSrcs: {
-          preview: "/src/assets/projects/homepage-preview.png",
-          mobile: "/src/assets/projects/homepage-mobile.png",
-          full: "/src/assets/projects/homepage-full.png",
+          preview: "/src/assets/projects/homepageV2/imageSlider/ImageSlider_B267xH200_quer.jpg",
+          mobile: "/src/assets/projects/homepageV2/imageSlider/ImageSlider_B434xH400_quer.jpg",
+          tablet: "/src/assets/projects/homepageV2/imageSlider/ImageSlider_B1067xH800_quer.jpg",
+          laptop: "/src/assets/projects/homepageV2/imageSlider/ImageSlider_B1600xH1200_quer.jpg",
         },
-        imgAlt: "Vorschau der Homepage",
-        imgDescription: "Einblicke in die Struktur und das Design der Homepage.",
+        imgAlt: "Image Slider",
+        imgDescription: "Konzeptionszeichnung des Bildsliders für den Vollbildmodus.",
         isMainPreview: true,
       },
     ],
@@ -75,7 +76,7 @@ export const myPersonalProjects: ProjectType[] = [
         imgSrcs: {
           preview: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
           mobile: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
-          full: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
+          desktop: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
         },
         imgAlt: "Krähen schießen Spiel",
         imgDescription:
@@ -87,7 +88,7 @@ export const myPersonalProjects: ProjectType[] = [
         imgSrcs: {
           preview: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
           mobile: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
-          full: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+          desktop: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
         },
         imgAlt: "Final Jump-and-Run Spiel",
         imgDescription:

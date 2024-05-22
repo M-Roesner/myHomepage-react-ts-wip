@@ -21,7 +21,7 @@ export const myRetrainingProjects: ProjectType[] = [
         imgSrcs: {
           preview: "/src/assets/projects/4wins/4gewinnt-600pxWide.png",
           mobile: "/src/assets/projects/4wins/4gewinnt-600pxWide.png",
-          full: "/src/assets/projects/4wins/4gewinnt-600pxWide.png",
+          desktop: "/src/assets/projects/4wins/4gewinnt-600pxWide.png",
         },
         imgAlt: "4 Gewinnt",
         imgDescription: "4 Gewinnt",

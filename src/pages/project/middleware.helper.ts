@@ -86,6 +86,20 @@ export const mwProject_AsideNavigation = (content: ProjectType): ProjectAsideNav
   const listOfAsideNavigation: ProjectAsideNavigationButtonProps[] = [
     { tagId: EProjectTagId.WHY, buttonText: "Warum" }, // "why" is always set
   ];
+
+  if (content.additionalInfo && content.additionalInfo.length > 0) {
+    content.additionalInfo.forEach((element) => {
+      listOfAsideNavigation.push({
+        tagId: element.idTag,
+        buttonText: element.asidebarText,
+      });
+    });
+  }
+
+  // Check if "images" is set in the content
+  if (content.images && content.images.length > 0)
+    listOfAsideNavigation.push({ tagId: EProjectTagId.IMAGES, buttonText: "Bilder" });
+
   // Check if "skills" is set in the content
   if (content.skills && content.skills.length > 0)
     listOfAsideNavigation.push({ tagId: EProjectTagId.SKILLS, buttonText: "Fähigkeiten" });
@@ -97,10 +111,6 @@ export const mwProject_AsideNavigation = (content: ProjectType): ProjectAsideNav
   // Check if "links" is set in the content
   if (content.links && content.links.length > 0)
     listOfAsideNavigation.push({ tagId: EProjectTagId.LINKS, buttonText: "Links" });
-
-  // Check if "images" is set in the content
-  if (content.images && content.images.length > 0)
-    listOfAsideNavigation.push({ tagId: EProjectTagId.IMAGES, buttonText: "Bilder" });
 
   return listOfAsideNavigation;
 };

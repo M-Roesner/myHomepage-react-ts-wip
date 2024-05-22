@@ -10,7 +10,7 @@ import { StyledLinkButton } from "../../../components/custom/button/linkButton/s
 import { EProjectTagId } from "../projectEnums";
 
 export type ProjectAsideNavigationButtonProps = {
-  tagId: EProjectTagId;
+  tagId: EProjectTagId | string;
   buttonText: string;
 };
 

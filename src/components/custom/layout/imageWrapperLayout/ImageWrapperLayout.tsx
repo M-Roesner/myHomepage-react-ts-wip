@@ -25,7 +25,7 @@ const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
 
   return (
     <>
-      <StyledImageWrapperLayout>
+      <StyledImageWrapperLayout $maxColumns={images.length}>
         {images.map((image) => (
           <StyledImage
             key={image.id}

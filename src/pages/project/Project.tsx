@@ -3,11 +3,11 @@ import { useParams } from "react-router";
 // Components
 import PageLayout from "../../components/custom/layout/pageLayout/PageLayout";
 import ProjectAsideNavigation from "./projectNavigation/ProjectNavigation";
-import ProjectIntroduction from "./projectIntroduction/ProjectIntroduction";
-import ProjectDescription from "./projectDescription/ProjectDescription";
-import SimpleList from "./simpleList/SimpleList";
-import ProjectList from "./projectList/ProjectList";
-import ProjectImages from "./projectImages/ProjectImages";
+import ProjectIntroduction from "./sections/projectIntroduction/ProjectIntroduction";
+import ProjectDescription from "./sections/projectDescription/ProjectDescription";
+import SimpleList from "./utils/simpleList/SimpleList";
+import ProjectList from "./utils/projectList/ProjectList";
+import ProjectImages from "./sections/projectImages/ProjectImages";
 import ErrorPage_InclProps from "../errorPage/ErrorPage_InclProps";
 
 // Rosources and Helpers

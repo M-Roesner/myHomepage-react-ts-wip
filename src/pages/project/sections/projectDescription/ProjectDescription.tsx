@@ -1,9 +1,9 @@
 // Components
-import { CardParagraphStyle } from "../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
-import SectionLayout from "../../../components/custom/layout/sectionLayout/SectionLayout";
+import { CardParagraphStyle } from "../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import SectionLayout from "../../../../components/custom/layout/sectionLayout/SectionLayout";
 
 // Types & Enums
-import { EProjectTagId } from "../projectEnums";
+import { EProjectTagId } from "../../projectEnums";
 
 type PortfolioDescriptionProps = {
   title: string;

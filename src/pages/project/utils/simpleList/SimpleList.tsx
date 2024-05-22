@@ -1,5 +1,5 @@
-import SectionLayout from "../../../components/custom/layout/sectionLayout/SectionLayout";
-import { EProjectTagId } from "../projectEnums";
+import SectionLayout from "../../../../components/custom/layout/sectionLayout/SectionLayout";
+import { EProjectTagId } from "../../projectEnums";
 import { StyledSimpleList } from "./styledSimpleList";
 
 type SimpleListProps = {

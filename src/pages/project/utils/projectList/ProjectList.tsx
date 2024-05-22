@@ -1,10 +1,10 @@
 // Components
-import ListLayout from "../../../components/custom/layout/listLayout/ListLayout";
-import { ListItemType, NumerusType } from "../../../components/custom/layout/listLayout/listLayoutTypes";
-import SectionLayout_NoStyle from "../../../components/custom/layout/sectionLayout/SectionLayout_NoStyle";
+import ListLayout from "../../../../components/custom/layout/listLayout/ListLayout";
+import { ListItemType, NumerusType } from "../../../../components/custom/layout/listLayout/listLayoutTypes";
+import SectionLayout_NoStyle from "../../../../components/custom/layout/sectionLayout/SectionLayout_NoStyle";
 
 // Types & Enums
-import { EProjectTagId } from "../projectEnums";
+import { EProjectTagId } from "../../projectEnums";
 
 type ProjectListProps = {
   title: string;

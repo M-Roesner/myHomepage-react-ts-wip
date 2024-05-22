@@ -1,4 +1,4 @@
-import { CardParagraphStyle } from "../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import { CardParagraphStyle } from "../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
 
 type ProjectIntroductionProps = {
   texts: string[];

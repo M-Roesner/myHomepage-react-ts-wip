@@ -72,21 +72,22 @@ export const mwProject_ImageToImageType = (images: ProjectImageType[]): ImageTyp
 };
 
 /**
- * Converts the content of ProjectType to an array of ProjectNavigationButtonProps objects.
+ * Converts the content of ProjectType to an array of ProjectAsideNavigationButtonProps objects.
  *
  * Checks whether a specific key exists and is not empty.
- * Currently types will be checked: skills, links and images.
+ * Currently types will be checked: skills, links, images and additional content.
  *
  * Ensure that the tagId must match the id of the tag being viewed.
  *
  * @param {ProjectType[]} content - The project content
- * @returns {ProjectAsideNavigationButtonProps[]} - An array of ProjectNavigationButtonProps objects.
+ * @returns {ProjectAsideNavigationButtonProps[]} - An array of ProjectAsideNavigationButtonProps objects.
  */
 export const mwProject_AsideNavigation = (content: ProjectType): ProjectAsideNavigationButtonProps[] | undefined => {
   const listOfAsideNavigation: ProjectAsideNavigationButtonProps[] = [
     { tagId: EProjectTagId.WHY, buttonText: "Warum" }, // "why" is always set
   ];
 
+  // Inserts the additional content into the sidebar if additional content is available.
   if (content.additionalInfo && content.additionalInfo.length > 0) {
     content.additionalInfo.forEach((element) => {
       listOfAsideNavigation.push({

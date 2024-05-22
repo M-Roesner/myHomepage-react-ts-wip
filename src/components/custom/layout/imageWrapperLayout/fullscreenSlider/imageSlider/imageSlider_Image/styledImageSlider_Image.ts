@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const ImageSlider_ImageWrapper = styled.figure.attrs<{
-  $isMobile: boolean;
+  $isMobile?: boolean; // Wird aktuell nicht verwendet!
 }>(() => ({}))`
+  // TODO: Size: Größe des Bildes anpassen, wenn es unterschiedlich breite Bilder in der Liste gibt!
   width: 100%;
 
   position: relative;

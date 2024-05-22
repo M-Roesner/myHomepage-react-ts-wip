@@ -7,8 +7,8 @@ import { determineDeviceType } from "./helper";
  * Helper function for determining the size of the device and the type.
  *
  *  deviceType:
- * - width <= 600 = "mobile"
- * - width <= 900 = "tablet"
+ * - width <= 400 = "mobile"
+ * - width <= 800 = "tablet"
  * - width <= 1200 = "laptop"
  * - else "desktop"
  *

@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import PageLayout from "../../components/custom/layout/pageLayout/PageLayout";
 import ProjectAsideNavigation from "./projectNavigation/ProjectNavigation";
 import ProjectIntroduction from "./sections/projectIntroduction/ProjectIntroduction";
-import ProjectDescription from "./sections/projectDescription/ProjectDescription";
+import ParagraphList from "./utils/paragraphList/ParagraphList";
 import SimpleList from "./utils/simpleList/SimpleList";
 import ProjectList from "./utils/projectList/ProjectList";
 import ProjectImages from "./sections/projectImages/ProjectImages";
@@ -59,7 +59,7 @@ const Project = (): React.ReactNode => {
     <PageLayout headlineText={content.title}>
       {asideNavigation && <ProjectAsideNavigation ancorList={asideNavigation} />}
       <ProjectIntroduction texts={content.introduction} />
-      <ProjectDescription title="Warum:" tagId={EProjectTagId.WHY} list={content.why} />
+      <ParagraphList title="Warum:" tagId={EProjectTagId.WHY} list={content.why} />
       {images && <ProjectImages title={"Bilder:"} tagId={EProjectTagId.IMAGES} images={images} />}
       {content.skills && (
         <SimpleList title="Erlernte Fähigkeiten:" tagId={EProjectTagId.SKILLS} list={content.skills} />

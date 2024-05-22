@@ -55,19 +55,14 @@ export const myRetrainingProjects: ProjectType[] = [
       "Mein erster Internet-Auftritt, auf dem ich mich selbst präsentiert habe. Entwickelt mit PHP, HTML und SCSS.",
     ],
     introduction: [
-      "Diese Homepage war mein erster Schritt in die Welt des Internets. Sie diente dazu, mich selbst vorzustellen und meine Motivation für den Einstieg in die IT-Branche zu erklären.",
-      "Sie bietete einen Einblicke in meine bisherigen Projekte.",
+      "Diese Homepage präsentierte meinen ersten Internet-Auftritt, um mich mich selbst vorzustellen und meine Motivation für den Einstieg in die IT-Branche zu erklären.",
+      "Und zeigte einen kleinen Einblick meiner Fähigkeiten, welche ich bis dahin erwarb und in meinen bisherigen Projekte.",
     ],
     why: [
       "Die Entwicklung dieser Homepage war für mich ein wichtiger Schritt, um mich selbst und meine Ziele in der IT-Branche zu präsentieren.",
       "Durch die Gestaltung und Entwicklung dieser Seite konnte ich meine Kenntnisse in den Bereichen PHP, HTML und SCSS vertiefen und praktische Erfahrungen sammeln.",
     ],
-    skills: [
-      "Grundlagen der Webentwicklung mit PHP",
-      "Kenntnisse in HTML und SCSS",
-      "Selbstpräsentation und Motivationserklärung",
-      "",
-    ],
+    skills: ["Grundlagen der Webentwicklung mit PHP", "Kenntnisse in HTML und SCSS", ""],
     technologies: [{ title: "PHP" }, { title: "HTML" }, { title: "CSS (SCSS)" }],
     addedDate: new Date("2022-12-01"),
     updatedDate: new Date("2022-12-01"),

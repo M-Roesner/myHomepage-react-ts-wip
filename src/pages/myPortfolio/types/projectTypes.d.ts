@@ -28,7 +28,7 @@ export type ProjectLinkType = {
   iconAltText?: string;
 };
 
-export type ProjectAdditionalInfoType = {
+export type ContentSectionType = {
   headlinetext: string;
   paragraphs: string[];
   idTag: string;
@@ -42,7 +42,7 @@ export type ProjectType = {
   cardIntroduction: string[];
   introduction: string[];
   why: string[];
-  additionalInfo?: ProjectAdditionalInfoType[];
+  additionalInfo?: ContentSectionType[];
   skills?: string[];
   technologies?: ProjectTechnologyType[];
   images?: ProjectImageType[];

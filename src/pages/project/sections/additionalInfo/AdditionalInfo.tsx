@@ -1,7 +1,7 @@
-import { ProjectAdditionalInfoType } from "../../../myPortfolio/types/projectTypes";
+import { ContentSectionType } from "../../../myPortfolio/types/projectTypes";
 import ParagraphList from "../../utils/paragraphList/ParagraphList";
 
-type AdditionalInfoProps = { list: ProjectAdditionalInfoType[] };
+type AdditionalInfoProps = { list: ContentSectionType[] };
 
 const AdditionalInfo = ({ list }: AdditionalInfoProps) => {
   return (

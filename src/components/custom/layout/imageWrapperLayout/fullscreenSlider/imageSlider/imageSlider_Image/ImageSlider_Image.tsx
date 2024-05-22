@@ -7,8 +7,8 @@ import {
   StyledFullscreenSliderImage,
 } from "./styledImageSlider_Image";
 
-// Helpers
-import useScreenSize from "../../../../../../../utils/hooks/screenSize/useScreenSize";
+// Helper
+import useImageSrc from "./helper";
 
 // Type
 import { ImageType } from "../../../imageType";
@@ -24,24 +24,20 @@ type FullscreenSliderImageProps = { image: ImageType; onClick: () => void };
  * @returns
  */
 const ImageSlider_Image = ({ image, onClick }: FullscreenSliderImageProps) => {
-  const screenSize = useScreenSize();
   const [isExpanded, setIsExpanded] = useState(false);
   const [title, setTitle] = useState("Text minimieren.");
+  const src = useImageSrc(image);
 
   useEffect(() => {
     setTitle(isExpanded ? "Text minimieren." : "Text maximieren.");
   }, [isExpanded]);
 
-  const getImageSrc = (image: ImageType): string => {
-    return screenSize.deviceType === "tablet" || screenSize.deviceType === "mobile" ? image.src : image.srcFullSize;
-  };
-
   const toggleExpanded = () => setIsExpanded((prev) => !prev);
 
   return (
-    <ImageSlider_ImageWrapper $isMobile={screenSize.deviceType === "mobile" || screenSize.deviceType === "tablet"}>
+    <ImageSlider_ImageWrapper>
       <StyledFullscreenSliderImage
-        src={getImageSrc(image)}
+        src={src}
         alt={image.alt}
         title={image.title ? image.title : image.alt}
         onClick={onClick}

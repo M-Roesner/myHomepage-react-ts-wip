@@ -47,7 +47,7 @@ const Project = (): React.ReactNode => {
         url={ERouteType.MY_PORTFOLIO}
         titleButton={"Zurück zu Portfolio Seite"}
         descriptionText={"Portfolio nicht gefunden!"}
-      ></ErrorPage_InclProps>
+      />
     );
 
   const technologies = content.technologies ? mwProject_TechnologyToListItems(content.technologies) : undefined;

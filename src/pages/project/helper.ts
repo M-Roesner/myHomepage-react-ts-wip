@@ -3,9 +3,9 @@ import { myInternshipProjects } from "../../resources/portfolio/myInternshipProj
 import { myPersonalProjects } from "../../resources/portfolio/myPersonalProjects";
 import { myRetrainingProjects } from "../../resources/portfolio/myRetrainingProjects";
 import { checkNumber } from "../../utils/CheckNumber";
-import { ProjectCategoryType, ProjectType } from "../myPortfolio/types/projectTypes";
 
 // Types
+import { ProjectCategoryType, ProjectType } from "../myPortfolio/types/projectTypes";
 
 /**
  * Returns a array of projects for the given category otherwise returns undefined

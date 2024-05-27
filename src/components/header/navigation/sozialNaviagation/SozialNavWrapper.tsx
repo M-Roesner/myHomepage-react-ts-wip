@@ -14,10 +14,14 @@ import { faGithub, faLinkedinIn, faSquareXing } from "@fortawesome/free-brands-s
 const SozialNavWrapper = () => {
   return (
     <StyledSozialNavWrapper>
-      <IconButton url="mailto:contact@markus-roesner.dev" icon={faEnvelope}></IconButton>
-      <IconButton url="https://github.com/M-Roesner" icon={faGithub}></IconButton>
-      <IconButton url="https://www.linkedin.com/in/markus-r%C3%B6sner-507354216/" icon={faLinkedinIn}></IconButton>
-      <IconButton url="https://www.xing.com/profile/Markus_Roesner14" icon={faSquareXing}></IconButton>
+      <IconButton url="mailto:contact@markus-roesner.dev" icon={faEnvelope} title="E-Mail" />
+      <IconButton url="https://github.com/M-Roesner" icon={faGithub} title="GitHub" />
+      <IconButton
+        url="https://www.linkedin.com/in/markus-r%C3%B6sner-507354216/"
+        icon={faLinkedinIn}
+        title="LinkedIn"
+      />
+      <IconButton url="https://www.xing.com/profile/Markus_Roesner14" icon={faSquareXing} title="Xing" />
     </StyledSozialNavWrapper>
   );
 };

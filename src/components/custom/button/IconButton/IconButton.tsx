@@ -15,6 +15,7 @@ type IconButtonProps = {
   rotation?: RotateProp;
   size?: SizeProp;
   color?: string;
+  title?: string;
 };
 
 /**
@@ -26,11 +27,12 @@ type IconButtonProps = {
  * @param {Object} props - The props object containing the following properties:
  *   @param {string} props.url - The URL the link should navigate to.
  *   @param {IconDefinition} props.icon - The icon to render.
- *   @param {RotateProp} [props.rotation] - Optional rotation for the icon (90, 180, or 270).
- *   @param {string} [props.color] - Optional color for the icon.
- *   @param {SizeProp} [props.size] - Optional size for the icon (e.g., "lg", "2x", "3x", "4x", "5x", "10x").
+ *   @param {RotateProp} props.rotation - Optional rotation for the icon (90, 180, or 270).
+ *   @param {SizeProp} props.size - Optional size for the icon (e.g., "lg", "2x", "3x", "4x", "5x", "10x").
+ *   @param {string} props.color - Optional color for the icon.
+ *   @param {string} prop.title - Optional title for hovering over the icon.
  */
-const IconButton = ({ url, icon, rotation, color, size }: IconButtonProps) => {
+const IconButton = ({ url, icon, rotation, color, size, title }: IconButtonProps) => {
   return (
     <StyledIconButton to={url} target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon
@@ -38,6 +40,7 @@ const IconButton = ({ url, icon, rotation, color, size }: IconButtonProps) => {
         rotation={rotation}
         size={size}
         style={color != undefined && isValidColor(color) ? { color: color } : undefined}
+        title={title}
       />
     </StyledIconButton>
   );

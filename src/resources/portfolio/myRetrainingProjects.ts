@@ -12,7 +12,7 @@ export const myRetrainingProjects: ProjectType[] = [
     why: [
       "Der Schwerpunkt lag auf der Entwicklung einer Webseite ausschließlich mit PHP, wobei folgende Vorgaben von unserem Dozenten festgelegt wurden:",
       "Verwendung von Funktionen, Schleifen und If-Klauseln.",
-      "Da ich mit einem Klassenkameraten ein gemeinsames Projekt umsetzen wollte, musste der Umfang entsprechend größer sein, um die Note zu rechtfertigen. Aus diesem Grund haben wir uns für die Entwicklung dieses Spiels entschieden.",
+      "Da ich mit einem Klassenkameraden ein gemeinsames Projekt umsetzen wollte, musste der Umfang entsprechend größer sein, um die Note zu rechtfertigen. Aus diesem Grund haben wir uns für die Entwicklung dieses Spiels entschieden.",
       "Zusätzlich wollten wir es auch als ein objektorientiertes Spiel umsetzen.",
     ],
     images: [
@@ -29,10 +29,10 @@ export const myRetrainingProjects: ProjectType[] = [
       },
     ],
     skills: [
-      "Umgang mit Objektorientierung in PHP",
-      "Beherrschung von PHP-Grundlagen wie Funktionen, Arrays, Schleifen und If-Klauseln",
+      "Umgang mit Objektorientierung in PHP.",
+      "Beherrschung von PHP-Grundlagen wie Funktionen, Arrays, Schleifen und If-Klauseln.",
       "Zusammenarbeit im Team durch klare Aufgabenverteilung.",
-      "Verwendung von Animationen mit CSS",
+      "Verwendung von Animationen mit CSS.",
       "Verbesserung der Code-Qualität durch Auslagerung von Dateien und Anwendung von Clean-Code-Prinzipien.",
     ],
     technologies: [{ title: "PHP OOP" }, { title: "HTML" }, { title: "CSS" }],
@@ -55,14 +55,18 @@ export const myRetrainingProjects: ProjectType[] = [
       "Mein erster Internet-Auftritt, auf dem ich mich selbst präsentiert habe. Entwickelt mit PHP, HTML und SCSS.",
     ],
     introduction: [
-      "Diese Homepage präsentierte meinen ersten Internet-Auftritt, um mich mich selbst vorzustellen und meine Motivation für den Einstieg in die IT-Branche zu erklären.",
-      "Und zeigte einen kleinen Einblick meiner Fähigkeiten, welche ich bis dahin erwarb und in meinen bisherigen Projekte.",
+      "Diese Homepage präsentierte meinen ersten Internet-Auftritt, um mich selbst vorzustellen und meine Motivation für den Einstieg in die IT-Branche zu erklären.",
+      "Sie zeigte einen kleinen Einblick in meine Fähigkeiten, die ich bis dahin erworben hatte, sowie in meine bisherigen Projekte.",
     ],
     why: [
       "Die Entwicklung dieser Homepage war für mich ein wichtiger Schritt, um mich selbst und meine Ziele in der IT-Branche zu präsentieren.",
       "Durch die Gestaltung und Entwicklung dieser Seite konnte ich meine Kenntnisse in den Bereichen PHP, HTML und SCSS vertiefen und praktische Erfahrungen sammeln.",
     ],
-    skills: ["Grundlagen der Webentwicklung mit PHP", "Kenntnisse in HTML und SCSS", ""],
+    skills: [
+      "Vertiefte Kenntnisse in der Webentwicklung mit PHP.",
+      "Erweiterte Fähigkeiten in HTML und SCSS.",
+      "Umsetzung von Responsive Design für verschiedene Endgeräte.",
+    ],
     technologies: [{ title: "PHP" }, { title: "HTML" }, { title: "CSS (SCSS)" }],
     addedDate: new Date("2022-12-01"),
     updatedDate: new Date("2022-12-01"),
@@ -81,9 +85,9 @@ export const myRetrainingProjects: ProjectType[] = [
       "Durch den Aufbau eines Spielmenüs konnte ich wichtige Benutzerinteraktionen umsetzen und die Strukturierung von Benutzeroberflächen kennenlernen.",
     ],
     skills: [
-      "Verständnis und Anwendung von Arrays in mehreren Dimensionen",
-      "Aufbau eines Spielmenüs",
-      "Speichern von Parametern",
+      "Verständnis und Anwendung von Arrays in mehreren Dimensionen.",
+      "Aufbau eines Spielmenüs.",
+      "Speichern von Parametern.",
     ],
     technologies: [{ title: "IntelliJ - Ein-, Ausgabe in der Konsole", isNew: true }],
     addedDate: new Date("2022-10-01"),
@@ -105,11 +109,11 @@ export const myRetrainingProjects: ProjectType[] = [
       "Durch das DO-IT-Projekt konnte ich selbstständig neue Technologien erkunden und herausfinden, wie sie in einem realen Projekt eingesetzt werden können.",
     ],
     skills: [
-      "Entwicklung einer Datenbankanbindung mit PHP OOP",
-      "Arbeit mit relationalen Datenbanken (MySQL) und PDO-Schnittstelle",
-      "Gestaltung der Benutzeroberfläche mit HTML und CSS (SCSS)",
-      "Implementierung von JavaScript für interaktive Funktionen",
-      "Dokumentation des Projekts nach IHK-Standards",
+      "Entwicklung einer Datenbankanbindung mit PHP OOP.",
+      "Arbeit mit relationalen Datenbanken (MySQL) und PDO-Schnittstelle.",
+      "Gestaltung der Benutzeroberfläche mit HTML und CSS (SCSS).",
+      "Implementierung von JavaScript für interaktive Funktionen.",
+      "Dokumentation des Projekts nach IHK-Standards.",
     ],
     technologies: [
       { title: "PHP OOP", isNew: true },
@@ -123,50 +127,3 @@ export const myRetrainingProjects: ProjectType[] = [
     updatedDate: new Date("2022-07-01"),
   },
 ];
-
-// eintrag für mein portfolio:
-
-// {
-//     id: 3,
-//     category: "retraining",
-//     title: "Homepage with PHP",
-//     cardIntroduction: [""],
-//     introduction: [
-//       "",
-//       "",
-//     ],
-//     why: [
-//       "",
-//     ],
-//     skills: [
-//       "Verständnis und Anwendung von Arrays in mehreren Dimensionen",
-//       "Aufbau eines Spielmenüs",
-//       "Speichern von Parametern",
-//     ],
-//     technologies: [{ title: "PHP"}, {title: "HTML"}, {title: "CSS (Scss)"}],
-//     addedDate: new Date("2023-02-01"),
-//     updatedDate: new Date("2023-05-01"),
-//   },
-
-// die texte passen nicht anpassen und ergänzen!
-
-// Dies war mein  erster intetrnetauftritt wo ich mich selbst präsentierte habe, diese seite habe ich mit php html und SCSS entwickelt, dir kann man einiges über mich erfahren warum ich den weg in die welt der IT gegangen bin und ein paar projekte die ich bis dahin gemacht habe
-
-// alle keys können angepasst werden
-
-// export type ProjectType = {
-//   id: number;
-//   category: ProjectCategoryType;
-//   title: string;
-//   cardIntroduction: string[];
-//   introduction: string[];
-//   why: string[];
-//   skills?: string[];
-//   technologies?: ProjectTechnologyType[];
-//   images?: ProjectImageType[];
-//   links?: ProjectLinkType[];
-//   addedDate?: Date;
-//   updatedDate?: Date;
-// };
-
-// string [] wird der abschnitt in paragraphen dargestellt oder eine auflistung

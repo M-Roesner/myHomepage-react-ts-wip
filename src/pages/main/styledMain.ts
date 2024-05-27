@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 const StyledMain = styled.div`
+  max-width: 1200px;
+  margin-inline: auto;
+
+  // the footer has position absolute (child element)
+  position: relative;
   min-height: 100vh;
-  background-color: ${(props) => props.theme.colors.common.backgroundColor};
-  color: ${(props) => props.theme.colors.common.textColorMain};
-  font-family: ${(props) => props.theme.fontFamily};
-  font-weight: 400;
-  font-style: normal;
-  font-size: ${(props) => props.theme.sizes.common.fontSize};
-  letter-spacing: ${(props) => props.theme.sizes.common.letterSpacing};
 `;
 
 export default StyledMain;

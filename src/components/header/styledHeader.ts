@@ -12,7 +12,7 @@ export const StyledHeader = styled.header`
   padding-right: 5px;
 
   height: ${(props) => props.theme.sizes.navBar.height};
-  margin-bottom: 2rem;
+  margin-bottom: ${(props) => props.theme.sizes.navBar.marginBottom};
 
   /* '>' is used to select the first direct child of the StyledHeader. */
   & > :first-child {

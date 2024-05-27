@@ -51,6 +51,11 @@ declare module "styled-components" {
       navBar: {
         height: string;
         gap: string;
+        marginBottom: string;
+      };
+      footer: {
+        height: string;
+        marginTop: string;
       };
     };
     colors: {

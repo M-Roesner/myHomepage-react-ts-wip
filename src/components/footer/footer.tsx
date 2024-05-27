@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+// Components
+import { StyledFooter } from "./styledFooter";
+import NavbarButton from "../header/utils/navbarButton/NavbarButton";
 
 const Footer = () => {
   return (
-    <footer>
-      <Link to={"/imprint"}>[Impressum]</Link>
-    </footer>
+    <StyledFooter>
+      <NavbarButton to={"/imprint"}>Impressum</NavbarButton>
+    </StyledFooter>
   );
 };
 

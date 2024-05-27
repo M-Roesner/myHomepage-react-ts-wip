@@ -15,6 +15,11 @@ export const defaultTheme: DefaultTheme = {
     navBar: {
       height: "80px",
       gap: "5px",
+      marginBottom: "2rem",
+    },
+    footer: {
+      height: "50px",
+      marginTop: "2rem",
     },
   },
   colors: {

@@ -35,7 +35,6 @@ export const styledCardHeadline3 = styled.h3`
 
 export const styledCardHeadline4 = styled.h4`
   ${defaultHeaderStyles};
-  margin-block: 0;
   font-size: 1.4rem;
   color: ${(props) => props.theme.colors.common.textColorSecond};
 `;

@@ -20,8 +20,8 @@ const MyPortfolio = (): React.ReactNode => {
   return (
     <PageLayout headlineText="Meine Portfolios">
       <ProjectWrapper title="Private Projekte" list={privateList} />
-      <ProjectWrapper title="Umschulungs Projekte" list={retrainingList} />
       <ProjectWrapper title="Praktikums Projekte" list={internshipList} />
+      <ProjectWrapper title="Umschulungs Projekte" list={retrainingList} />
     </PageLayout>
   );
 };

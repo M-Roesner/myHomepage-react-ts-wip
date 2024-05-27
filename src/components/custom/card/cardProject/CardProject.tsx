@@ -15,7 +15,7 @@ const CardProject = ({ url, content }: CardProjectProps) => {
     <StyledCardProject to={url}>
       {previewImage && (
         <StyledCardImage
-          src={previewImage.imgSrcs.preview}
+          src={previewImage.imgSrcs.mobile}
           alt={previewImage.imgAlt ? previewImage.imgAlt : previewImage.imgTitle}
         />
       )}

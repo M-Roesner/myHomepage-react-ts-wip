@@ -1,6 +1,6 @@
 import { DefaultTheme } from "styled-components";
 export const defaultTheme: DefaultTheme = {
-  fontFamily: '"IBM", monospace',
+  fontFamily: '"IBM", monospace', // The default font is configured with GlobalStyles on the body tag.
   sizes: {
     common: {
       gap: "5px",

@@ -13,7 +13,7 @@ interface IColorCommon {
   borderColor: string;
 }
 
-interface IFullScreen {
+interface IImageSliderFullScreen {
   backgroundColor: string;
 }
 interface IColorNavBar {
@@ -61,7 +61,7 @@ declare module "styled-components" {
     colors: {
       button: IButton;
       common: IColorCommon;
-      fullScreen: IFullScreen;
+      ImageSliderFullScreen: IImageSliderFullScreen;
       headline: IColorHeadline;
       navBar: IColorNavBar;
     };

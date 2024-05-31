@@ -42,7 +42,7 @@ export const defaultTheme: DefaultTheme = {
       textColorThird: "rgb(184 97 15)",
       borderColor: "#5c606d",
     },
-    fullScreen: {
+    ImageSliderFullScreen: {
       backgroundColor: "rgba(0, 0, 0, 0.5)",
     },
     headline: {

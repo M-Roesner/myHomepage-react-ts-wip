@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
-export const StyledPageNavWrapper = styled.nav`
-  height: ${(props) => props.theme.sizes.navBar.height};
-`;
+export const StyledPageNavWrapper = styled.nav``;
 
 export const StyledNavUnorderedList = styled.ul`
-  height: inherit;
+  height: 100%;
   margin-left: 5px;
   list-style-type: none;
   display: flex;

@@ -14,6 +14,7 @@ export const defaultTheme: DefaultTheme = {
     },
     navBar: {
       height: "80px",
+      height_mobile: "64px",
       gap: "5px",
       marginBottom: "2rem",
     },

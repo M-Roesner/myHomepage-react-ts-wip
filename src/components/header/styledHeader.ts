@@ -18,6 +18,7 @@ export const StyledHeader = styled.header`
   & > :first-child {
     border-right: solid 5px ${(props) => props.theme.colors.common.backgroundColor};
   }
-  @media (min-width: 768px) {
+  @media (max-width: 700px) {
+    height: ${(props) => props.theme.sizes.navBar.height_mobile};
   }
 `;

@@ -1,4 +1,28 @@
 import "styled-components";
+
+interface ICommonSizes {
+  gap: string;
+  padding: string;
+  lineHeight: string;
+  letterSpacing: string;
+  borderRadius: string;
+  fontSize: string;
+  fontSizeMobile: string;
+  fontSizeAsFootnote: string;
+}
+
+interface INavBarSizes {
+  height: string;
+  height_mobile: string;
+  gap: string;
+  marginBottom: string;
+}
+
+interface IFooterSizes {
+  height: string;
+  marginTop: string;
+}
+
 interface IColorCommon {
   backgroundColor: string;
   backgroundColorAccent: string;
@@ -32,31 +56,13 @@ interface IColorHeadline {
   textColor_level2: string;
 }
 
-interface ISizes {
-  gap: string;
-  padding: string;
-  lineHeight: string;
-  letterSpacing: string;
-  borderRadius: string;
-  fontSize: string;
-  fontSizeMobile: string;
-  fontSizeAsFootnote: string;
-}
-
 declare module "styled-components" {
   export interface DefaultTheme {
     fontFamily: string;
     sizes: {
-      common: ISizes;
-      navBar: {
-        height: string;
-        gap: string;
-        marginBottom: string;
-      };
-      footer: {
-        height: string;
-        marginTop: string;
-      };
+      common: ICommonSizes;
+      navBar: INavBarSizes;
+      footer: IFooterSizes;
     };
     colors: {
       button: IButton;

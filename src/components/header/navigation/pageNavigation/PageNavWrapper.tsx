@@ -10,7 +10,7 @@ import { StyledPageNavWrapper, StyledNavUnorderedList } from "./styledPageNavWra
  * Functional component for routing to several pages.
  */
 const PageNavWrapper = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <StyledPageNavWrapper>

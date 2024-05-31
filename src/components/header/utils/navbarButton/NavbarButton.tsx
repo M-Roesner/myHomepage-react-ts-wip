@@ -6,8 +6,9 @@ import {
 
 type NavbarButtonProps = {
   to: string;
-  children: React.ReactNode;
   wrap?: boolean;
+  animationRevers?: boolean;
+  children: React.ReactNode;
 };
 
 /**
@@ -17,20 +18,21 @@ type NavbarButtonProps = {
  * @param {Object} props - The props object containing the following properties:
  * @param {string} props.to - The path to navigate to when the link is clicked.
  * @param {boolean} props.wrap - Optional: Specifies whether the link should wrap its content.
+ * @param {boolean} [props.animationRevers=false] - Optional: Specifies whether the animation should be reversed.
  * @param {ReactNode} props.children - The content of the link.
  */
-const NavbarButton = ({ to, children, wrap }: NavbarButtonProps) => {
+const NavbarButton = ({ to, wrap, animationRevers = false, children }: NavbarButtonProps) => {
   {
     /* Span-tag is important for the style, it ensures that the text is always displayed. */
   }
   return (
     <>
       {wrap ? (
-        <StyledNavbarButtonWrap to={to}>
+        <StyledNavbarButtonWrap to={to} $reverse={animationRevers}>
           <span>{children}</span>
         </StyledNavbarButtonWrap>
       ) : (
-        <StyledNavbarButton to={to}>
+        <StyledNavbarButton to={to} $reverse={animationRevers}>
           <span>{children}</span>
         </StyledNavbarButton>
       )}

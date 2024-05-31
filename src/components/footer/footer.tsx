@@ -5,7 +5,9 @@ import NavbarButton from "../header/utils/navbarButton/NavbarButton";
 const Footer = () => {
   return (
     <StyledFooter>
-      <NavbarButton to={"/imprint"}>Impressum</NavbarButton>
+      <NavbarButton to={"/imprint"} animationRevers>
+        Impressum
+      </NavbarButton>
     </StyledFooter>
   );
 };

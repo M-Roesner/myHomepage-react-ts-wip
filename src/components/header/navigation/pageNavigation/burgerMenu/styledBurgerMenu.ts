@@ -1,5 +1,28 @@
 import styled, { css } from "styled-components";
 
+interface StyledBurgerMenuSvgItemProps {
+  $isOpen: boolean;
+}
+
+export const BurgerMenuSvg = styled.svg`
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (max-width: 700px) {
+    display: flex;
+  }
+`;
+
+export const StyledBurgerMenuSvgItem = styled.line<StyledBurgerMenuSvgItemProps>`
+  stroke: ${(props) => props.theme.colors.common.borderColor};
+`;
+
 interface StyledBurgerMenuItemProps {
   $isOpen: boolean;
 }

@@ -1,4 +1,4 @@
-import { StyledBurgerMenu, StyledBurgerMenuItem } from "./styledBurgerMenu";
+import { BurgerMenuSvg, StyledBurgerMenuSvgItem } from "./styledBurgerMenu";
 
 type BurgerMenuProps = {
   isOpen: boolean;
@@ -6,12 +6,44 @@ type BurgerMenuProps = {
 };
 const BurgerMenu = ({ isOpen, onClick }: BurgerMenuProps) => {
   return (
-    // TODO: Replace burger icon to svg and use gsap for the transformation.
-    <StyledBurgerMenu onClick={onClick}>
-      <StyledBurgerMenuItem $isOpen={isOpen} />
-      <StyledBurgerMenuItem $isOpen={isOpen} />
-      <StyledBurgerMenuItem $isOpen={isOpen} />
-    </StyledBurgerMenu>
+    <BurgerMenuSvg onClick={onClick} className="hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <StyledBurgerMenuSvgItem
+        $isOpen={isOpen}
+        className="line-one"
+        x1={25}
+        y1={42}
+        x2={75}
+        y2={42}
+        fill="none"
+        stroke="#000"
+        strokeMiterlimit={10}
+        strokeWidth={4}
+      />
+      <StyledBurgerMenuSvgItem
+        $isOpen={isOpen}
+        className="line-one"
+        x1={25}
+        y1={50}
+        x2={75}
+        y2={50}
+        fill="none"
+        stroke="#000"
+        strokeMiterlimit={10}
+        strokeWidth={4}
+      />
+      <StyledBurgerMenuSvgItem
+        $isOpen={isOpen}
+        className="line-one"
+        x1={25}
+        y1={58}
+        x2={75}
+        y2={58}
+        fill="none"
+        stroke="#000"
+        strokeMiterlimit={10}
+        strokeWidth={4}
+      />
+    </BurgerMenuSvg>
   );
 };
 

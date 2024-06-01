@@ -30,17 +30,19 @@ const BurgerMenu = ({ isOpen, onClick }: BurgerMenuProps) => {
   useEffect(() => {
     // Initialize GSAP timeline for burger menu animation
     tl.current = gsap
-      .timeline({ reversed: true, paused: true })
-      .to(lineTwo.current, { duration, opacity: 0, transformOrigin, ease }) // Fade out the middle line
+      .timeline() // { reversed: true, paused: true } is not needed here -> .timeline({ reversed: true, paused: true }) -
       .to(lineOne.current, { duration, transformOrigin, ease, y: 8 }, "slide") // Slide the top line down
       .to(lineThree.current, { duration, transformOrigin, ease, y: -8 }, "slide") // Slide the bottom line up
+      .to(lineTwo.current, { duration, opacity: 0 }, "cross") // Fade out the middle line
       .to(lineOne.current, { duration, rotate: 45, ease }, "cross") // Rotate the top line to form a cross
       .to(lineThree.current, { duration, rotate: -45, ease }, "cross"); // Rotate the bottom line to form a cross
   }, []);
 
   useEffect(() => {
     // Play or reverse the animation based on the isOpen state
-    isOpen ? tl.current?.play() : tl.current?.reverse();
+    if (tl.current) {
+      isOpen ? tl.current.play() : tl.current.reverse(); // Play the animation if isOpen is true, otherwise reverse it
+    }
   }, [isOpen]);
 
   return (

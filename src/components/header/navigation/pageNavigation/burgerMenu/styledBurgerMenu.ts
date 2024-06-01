@@ -6,7 +6,7 @@ import styled from "styled-components";
  * The burger menu is hidden by default and only displayed on screens
  * with a maximum width of 700px.
  */
-export const BurgerMenuSvg = styled.svg`
+export const StyledBurgerMenuSvg = styled.svg`
   cursor: pointer;
   width: 100%;
   height: 100%;

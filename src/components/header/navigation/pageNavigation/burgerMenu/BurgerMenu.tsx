@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 // Components
-import { BurgerMenuSvg, StyledBurgerMenuSvgItem } from "./styledBurgerMenu";
+import { StyledBurgerMenuSvg, StyledBurgerMenuSvgItem } from "./styledBurgerMenu";
 
 type BurgerMenuProps = {
   isOpen: boolean;
@@ -46,11 +46,11 @@ const BurgerMenu = ({ isOpen, onClick }: BurgerMenuProps) => {
   }, [isOpen]);
 
   return (
-    <BurgerMenuSvg onClick={onClick} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <StyledBurgerMenuSvg onClick={onClick} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
       <StyledBurgerMenuSvgItem ref={lineOne} x1={25} y1={42} x2={75} y2={42} />
       <StyledBurgerMenuSvgItem ref={lineTwo} x1={25} y1={50} x2={75} y2={50} />
       <StyledBurgerMenuSvgItem ref={lineThree} x1={25} y1={58} x2={75} y2={58} />
-    </BurgerMenuSvg>
+    </StyledBurgerMenuSvg>
   );
 };
 

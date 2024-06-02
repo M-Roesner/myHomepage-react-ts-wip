@@ -12,7 +12,7 @@ type CardProjectProps = {
 const CardProject = ({ url, content }: CardProjectProps) => {
   const previewImage = content.images?.find((img) => img.isMainPreview);
   return (
-    <StyledCardProject_NavLink to={url}>
+    <StyledCardProject_NavLink $display="block" to={url}>
       {previewImage && (
         <StyledCardImage
           src={previewImage.imgSrcs.mobile}

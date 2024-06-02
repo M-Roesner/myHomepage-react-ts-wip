@@ -1,16 +1,26 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+export type NavLinkButtonWrapperType = {
+  $display?: "inline" | "block";
+};
+
 /**
- * Default style for a NavLink buttom.
+ * Default style for a NavLink button wrapper.
  *
  * Contains:
  * - background-color, color, text-decoration, cursor
  * - hover style: background-color
  *
+ * @param $display - Optional prop to set the display style of the NavLink button wrapper. Defaults to "inline".
+ * Example usage: `display: ${(props) => props.$display || "inline"};`
+ *
+ * Ensure to utilize the exported type `NavLinkButtonWrapperType` for correct typing.
+ *
  * **This styled component should not be directly used and requires an alias when imported.**
  */
-export const navLinkButtonWrapper_Default = styled(NavLink)`
+export const navLinkButtonWrapper_Default = styled(NavLink)<NavLinkButtonWrapperType>`
+  display: ${(props) => props.$display || "inline"};
   text-decoration: none;
 
   background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};

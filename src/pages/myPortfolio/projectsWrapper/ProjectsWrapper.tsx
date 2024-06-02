@@ -1,6 +1,6 @@
 // Components
 import SectionLayout_NoStyle from "../../../components/custom/layout/sectionLayout/SectionLayout_NoStyle";
-import { StyledProjectsGrid } from "./styledProjectsWrapper";
+import { StyledGrid } from "../../../components/custom/grid/styledGrid";
 import CardProject from "../../../components/custom/card/cardProject/CardProject";
 
 // Helpers
@@ -27,7 +27,7 @@ const ProjectsWrapper = ({ title, list }: ProjectsWrapperProps): React.ReactNode
 
   return (
     <SectionLayout_NoStyle headlineText={title}>
-      <StyledProjectsGrid>
+      <StyledGrid>
         {sortedList.map((project, index) => (
           <CardProject
             key={index}
@@ -35,7 +35,7 @@ const ProjectsWrapper = ({ title, list }: ProjectsWrapperProps): React.ReactNode
             content={project}
           ></CardProject>
         ))}
-      </StyledProjectsGrid>
+      </StyledGrid>
     </SectionLayout_NoStyle>
   );
 };

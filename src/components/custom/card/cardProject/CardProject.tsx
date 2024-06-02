@@ -2,7 +2,7 @@ import { ProjectType } from "../../../../pages/myPortfolio/types/projectTypes";
 import CardHeadline from "../cardHeadline/CardHeadline";
 import { CardParagraph } from "../cardParagraph/styledCardParagraphStyle";
 import { StyledCardImage } from "../cardImage/styledCardImage";
-import { StyledCardProject } from "./styledCardProject";
+import { StyledCardProject_NavLink } from "./styledCardProject";
 
 type CardProjectProps = {
   url: string;
@@ -12,7 +12,7 @@ type CardProjectProps = {
 const CardProject = ({ url, content }: CardProjectProps) => {
   const previewImage = content.images?.find((img) => img.isMainPreview);
   return (
-    <StyledCardProject to={url}>
+    <StyledCardProject_NavLink to={url}>
       {previewImage && (
         <StyledCardImage
           src={previewImage.imgSrcs.mobile}
@@ -23,7 +23,7 @@ const CardProject = ({ url, content }: CardProjectProps) => {
       {content.cardIntroduction.map((paragraph, index) => (
         <CardParagraph key={index}>{paragraph}</CardParagraph>
       ))}
-    </StyledCardProject>
+    </StyledCardProject_NavLink>
   );
 };
 

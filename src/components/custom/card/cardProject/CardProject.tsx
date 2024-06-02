@@ -1,6 +1,6 @@
 import { ProjectType } from "../../../../pages/myPortfolio/types/projectTypes";
 import CardHeadline from "../cardHeadline/CardHeadline";
-import { CardParagraphStyle } from "../cardParagraph/styledCardParagraphStyle";
+import { CardParagraph } from "../cardParagraph/styledCardParagraphStyle";
 import { StyledCardImage } from "../cardImage/styledCardImage";
 import { StyledCardProject } from "./styledCardProject";
 
@@ -21,7 +21,7 @@ const CardProject = ({ url, content }: CardProjectProps) => {
       )}
       <CardHeadline level={4}>{content.title}</CardHeadline>
       {content.cardIntroduction.map((paragraph, index) => (
-        <CardParagraphStyle key={index}>{paragraph}</CardParagraphStyle>
+        <CardParagraph key={index}>{paragraph}</CardParagraph>
       ))}
     </StyledCardProject>
   );

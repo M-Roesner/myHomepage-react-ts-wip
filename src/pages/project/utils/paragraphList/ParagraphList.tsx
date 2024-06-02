@@ -1,6 +1,6 @@
 // Components
 import SectionLayout from "../../../../components/custom/layout/sectionLayout/SectionLayout";
-import { CardParagraphStyle } from "../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import { CardParagraph } from "../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
 
 // Types & Enums
 import { EProjectTagId } from "../../projectEnums";
@@ -22,7 +22,7 @@ const ParagraphList = ({ title, tagId, list }: ParagraphListProps) => {
   return (
     <SectionLayout tagId={tagId} headlineText={title}>
       {list.map((item, index) => (
-        <CardParagraphStyle key={index}>{item}</CardParagraphStyle>
+        <CardParagraph key={index}>{item}</CardParagraph>
       ))}
     </SectionLayout>
   );

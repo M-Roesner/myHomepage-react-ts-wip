@@ -1,8 +1,5 @@
 import styled, { css } from "styled-components";
-import {
-  NavLinkButtonWrapperType,
-  navLinkButtonWrapper_Default,
-} from "../../../../../components/custom/button/navLinkButton/styledNavLinkButton";
+import { NavLinkButtonWrapperType, navLinkButtonWrapper_Default } from "../../button/navLinkButton/styledNavLinkButton";
 
 type StyledInfoCard_NavLinkProps = NavLinkButtonWrapperType & {
   $bgImage?: string;

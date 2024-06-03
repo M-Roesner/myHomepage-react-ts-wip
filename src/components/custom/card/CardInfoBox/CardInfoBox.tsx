@@ -9,8 +9,8 @@ export type CardInfoBoxImageType = {
   imgAlt?: string;
 };
 
-type CardInfoBoxProps = {
-  route: ERouteType;
+export type CardInfoBoxProps = {
+  route: ERouteType | string;
   title: string;
   descriptions: string[];
   image?: CardInfoBoxImageType;
@@ -32,8 +32,9 @@ type CardInfoBoxProps = {
  * @returns {React.ReactNode} - A styled info card component.
  */
 const CardInfoBox = ({ route, title, descriptions, image, isBGImage }: CardInfoBoxProps): React.ReactNode => {
+  const url = typeof route === "string" ? route : `/${route}`;
   return (
-    <StyledInfoCard_NavLink $bgImage={isBGImage ? image?.imgSrc : undefined} $display="block" to={`/${route}`}>
+    <StyledInfoCard_NavLink $bgImage={isBGImage ? image?.imgSrc : undefined} $display="block" to={url}>
       {!isBGImage && image && <StyledCardImage src={image.imgSrc} alt={image.imgAlt} />}
       <CardHeadline level={4}>{title}</CardHeadline>
       {descriptions.map((description, index) => (

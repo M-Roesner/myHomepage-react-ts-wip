@@ -1,14 +1,14 @@
 // Components
 import SectionLayout_NoStyle from "../../../components/custom/layout/sectionLayout/SectionLayout_NoStyle";
 import { StyledGrid } from "../../../components/custom/grid/styledGrid";
-import CardProject from "../../../components/custom/card/cardProject/CardProject";
 
 // Helpers
 import { sortListByKeyType } from "../../../utils/sortListByKeyType";
+import { middlewareProjectTypeToCardInfoBoxProps as middleware_ProjectType_To_CardInfoBoxProps } from "./middlewere.helper";
 
 // Types & Enums
-import { ERouteType } from "../../../routes/router";
 import { ProjectType } from "../types/projectTypes";
+import CardInfoBox from "../../../components/custom/card/CardInfoBox/CardInfoBox";
 
 type ProjectsWrapperProps = { title: string; list: ProjectType[] };
 
@@ -28,13 +28,19 @@ const ProjectsWrapper = ({ title, list }: ProjectsWrapperProps): React.ReactNode
   return (
     <SectionLayout_NoStyle headlineText={title}>
       <StyledGrid>
-        {sortedList.map((project, index) => (
-          <CardProject
-            key={index}
-            url={`/${ERouteType.PROJECT}/${project.category}/${project.id}`}
-            content={project}
-          ></CardProject>
-        ))}
+        {sortedList.map((project, index) => {
+          const convertetProject = middleware_ProjectType_To_CardInfoBoxProps(project);
+          return (
+            <CardInfoBox
+              key={index}
+              route={convertetProject.route}
+              title={convertetProject.title}
+              descriptions={convertetProject.descriptions}
+              image={convertetProject.image}
+              isBGImage={convertetProject.isBGImage}
+            />
+          );
+        })}
       </StyledGrid>
     </SectionLayout_NoStyle>
   );

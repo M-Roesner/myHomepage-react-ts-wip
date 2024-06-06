@@ -49,7 +49,15 @@ const GlobalStyles = createGlobalStyle`
     font-display: swap;
   }
 
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Box-sizing set to border-box ensures elements include padding and border in their total width and height */
+  }
+  
   body {
+    overflow-y: scroll; /* Ensure scrollbar is always visible */
     font-family: "IBM" ,monospace;
   }
 `;

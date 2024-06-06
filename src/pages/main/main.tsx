@@ -6,7 +6,6 @@ import { RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "../../utils/theme/theme.ts";
 import StyledMain from "./styledMain";
-import "./index.css";
 
 // Routes
 import { router } from "../../routes/router.tsx";

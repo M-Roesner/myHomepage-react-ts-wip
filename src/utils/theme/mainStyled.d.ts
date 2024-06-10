@@ -56,6 +56,11 @@ interface IColorHeadline {
   textColor_level2: string;
 }
 
+interface IColorProgressBar {
+  backgroundColor: string;
+  color: string;
+}
+
 declare module "styled-components" {
   export interface DefaultTheme {
     fontFamily: string;
@@ -70,6 +75,7 @@ declare module "styled-components" {
       ImageSliderFullScreen: IImageSliderFullScreen;
       headline: IColorHeadline;
       navBar: IColorNavBar;
+      progressBar: IColorProgressBar;
     };
   }
 }

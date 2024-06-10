@@ -54,5 +54,9 @@ export const defaultTheme: DefaultTheme = {
       backgroundColor_ActiveHover: "#474747",
       backgroundColorNavigation: "rgb(61 61 61)",
     },
+    progressBar: {
+      backgroundColor: "#91a187",
+      color: "#e7e7e7",
+    },
   },
 };

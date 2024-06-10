@@ -7,7 +7,11 @@ import ProgressList from "./sections/progressListSection/ProgressListWrapper";
 const HomePage = () => {
   return (
     <PageLayout useBackButton={false} headlineText="Willkommen auf meiner Seite!">
-      <CardParagraph>Auf dieser Seite können Sie vieles über mich und meine Projekte erfahren.</CardParagraph>
+      <CardParagraph>
+        Willkommen auf meiner Seite! Hier können Sie mehr über meine aktuellen Projekte erfahren und den Fortschritt
+        verfolgen.
+      </CardParagraph>
+
       <ProgressList />
       <InfoCardSection />
     </PageLayout>

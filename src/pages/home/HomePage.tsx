@@ -12,7 +12,6 @@ const HomePage = () => {
           "Willkommen auf meiner Seite! Hier können Sie mehr über meine aktuellen Projekte erfahren und den Fortschritt verfolgen.",
         ]}
       />
-
       <ProgressList />
       <InfoCardSection />
     </PageLayout>

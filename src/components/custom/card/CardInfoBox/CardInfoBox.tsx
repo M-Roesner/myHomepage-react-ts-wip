@@ -1,8 +1,11 @@
-import CardHeadline from "../cardHeadline/CardHeadline";
-import { StyledCardImage } from "../cardImage/styledCardImage";
-import { CardParagraph } from "../cardParagraph/styledCardParagraphStyle";
-import { ERouteType } from "../../../../routes/router";
+// Components
 import { StyledInfoCard_NavLink } from "./styledCardInfoBox";
+import CardHeadline from "../cardHeadline/CardHeadline";
+import CardParagraph from "../cardParagraph/CardParagraph";
+import { StyledCardImage } from "../cardImage/styledCardImage";
+
+// Types
+import { ERouteType } from "../../../../routes/router";
 
 export type CardInfoBoxImageType = {
   imgSrc: string;
@@ -37,9 +40,7 @@ const CardInfoBox = ({ route, title, descriptions, image, isBGImage }: CardInfoB
     <StyledInfoCard_NavLink $bgImage={isBGImage ? image?.imgSrc : undefined} $display="block" to={url}>
       {!isBGImage && image && <StyledCardImage src={image.imgSrc} alt={image.imgAlt} />}
       <CardHeadline level={4}>{title}</CardHeadline>
-      {descriptions.map((description, index) => (
-        <CardParagraph key={index}>{description}</CardParagraph>
-      ))}
+      <CardParagraph paragraphs={descriptions} />
     </StyledInfoCard_NavLink>
   );
 };

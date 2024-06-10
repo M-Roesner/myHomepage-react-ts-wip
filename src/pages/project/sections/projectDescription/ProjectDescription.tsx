@@ -1,5 +1,5 @@
 // Components
-import { CardParagraph } from "../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import CardParagraph from "../../../../components/custom/card/cardParagraph/CardParagraph";
 import SectionLayout from "../../../../components/custom/layout/sectionLayout/SectionLayout";
 
 // Types & Enums
@@ -21,9 +21,7 @@ type PortfolioDescriptionProps = {
 const ProjectDescription = ({ title, tagId, list }: PortfolioDescriptionProps) => {
   return (
     <SectionLayout tagId={tagId} headlineText={title}>
-      {list.map((item, index) => (
-        <CardParagraph key={index}>{item}</CardParagraph>
-      ))}
+      <CardParagraph paragraphs={list} />
     </SectionLayout>
   );
 };

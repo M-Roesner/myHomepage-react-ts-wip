@@ -8,7 +8,7 @@ import styled from "styled-components";
  * Contains:
  * - padding &:first-child &:last-child
  */
-export const CardParagraph = styled.p<{ $isFootnote?: boolean }>`
+export const StyledCardParagraph = styled.p<{ $isFootnote?: boolean }>`
   padding-bottom: 2ch;
   font-size: ${(props) =>
     props.$isFootnote ? props.theme.sizes.common.fontSizeAsFootnote : props.theme.sizes.common.fontSize};

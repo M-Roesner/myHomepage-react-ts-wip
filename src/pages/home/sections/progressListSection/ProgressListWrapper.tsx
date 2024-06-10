@@ -1,6 +1,7 @@
-import CardHeadline from "../../../../components/custom/card/cardHeadline/CardHeadline";
-import { CardParagraph } from "../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+// Components
 import SectionLayout from "../../../../components/custom/layout/sectionLayout/SectionLayout";
+import CardHeadline from "../../../../components/custom/card/cardHeadline/CardHeadline";
+import CardParagraph from "../../../../components/custom/card/cardParagraph/CardParagraph";
 import ProgressBar from "../../../../components/custom/card/progressBar/ProgressBar";
 import { StyledProgressList } from "./styledProgressListWrapper";
 
@@ -36,11 +37,11 @@ const ProgressList = () => {
   return (
     <StyledProgressList>
       <SectionLayout headlineText={"Fortschritt"}>
-        <CardParagraph>
-          {
-            "Diese Übersicht zeigt den Prozentsatz der fertiggestellten Funktionen sowie eine Liste der bereits fertiggestellten und der noch geplanten Funktionen."
-          }
-        </CardParagraph>
+        <CardParagraph
+          paragraphs={[
+            "Diese Übersicht zeigt den Prozentsatz der fertiggestellten Funktionen sowie eine Liste der bereits fertiggestellten und der noch geplanten Funktionen.",
+          ]}
+        />
         <ProgressBar progressInPercent={progress}></ProgressBar>
         <CardHeadline level={4}>Abgeschlossene Funktionen:</CardHeadline>
         <ul>

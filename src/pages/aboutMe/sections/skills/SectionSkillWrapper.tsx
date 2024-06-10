@@ -1,6 +1,6 @@
 // components
 import SectionLayout from "../../../../components/custom/layout/sectionLayout/SectionLayout";
-import { CardParagraph } from "../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import CardParagraph from "../../../../components/custom/card/cardParagraph/CardParagraph";
 import { SectionSkillWrapperStyle } from "./sectionSkillWrapperStyle";
 import SkillListWrapper from "./skillListWrapper/SkillListWrapper";
 import { CardVerticalLineStyleAsSpan } from "../../../../components/custom/card/cardVerticalLine/styledCardVerticalLineStyle";
@@ -12,7 +12,7 @@ import SkillDescription from "./skillDescription/SkillDescription";
 const SectionSkillWrapper = () => {
   return (
     <SectionLayout tagId="skills" headlineText="Meine Fähigkeiten">
-      <CardParagraph>Ein Überblick über meine Fühigkeiten und verwendet Tools.</CardParagraph>
+      <CardParagraph paragraphs={["Ein Überblick über meine Fühigkeiten und verwendet Tools."]} />
       <SectionSkillWrapperStyle>
         <SkillListWrapper />
         <CardVerticalLineStyleAsSpan />

@@ -1,4 +1,4 @@
-import { CardParagraph } from "../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import CardParagraph from "../../../../components/custom/card/cardParagraph/CardParagraph";
 
 type ProjectIntroductionProps = {
   texts: string[];
@@ -7,9 +7,7 @@ type ProjectIntroductionProps = {
 const ProjectIntroduction = ({ texts }: ProjectIntroductionProps) => {
   return (
     <div>
-      {texts.map((text, index) => (
-        <CardParagraph key={index}>{text}</CardParagraph>
-      ))}
+      <CardParagraph paragraphs={texts} />
     </div>
   );
 };

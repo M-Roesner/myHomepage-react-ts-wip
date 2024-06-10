@@ -1,6 +1,6 @@
 // components
 import { StyledSkillListWrapper } from "./styledSkillListWrapper";
-import { CardParagraph } from "../../../../../components/custom/card/cardParagraph/styledCardParagraphStyle";
+import { StyledCardParagraph } from "../../../../../components/custom/card/cardParagraph/styledCardParagraph";
 import SkillList from "./skillList/skillList";
 
 // Resources, helpers and types
@@ -65,7 +65,8 @@ export const SkillListWrapper = () => {
       {otherSkillList && otherSkillList.length > 0 && (
         <SkillList skillList={otherSkillList} title={"Sonstige"}></SkillList>
       )}
-      <CardParagraph $isFootnote>{`letztes update am: ${lastDate}`}</CardParagraph>
+      {/* TODO: Change StyledCardParagraph to a CardFootnote! */}
+      <StyledCardParagraph $isFootnote>{`letztes update am: ${lastDate}`}</StyledCardParagraph>
     </StyledSkillListWrapper>
   );
 };

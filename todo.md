@@ -37,7 +37,7 @@ React, TypeScript, React-Router, Styled-Component
     - [] Home page content
       - [] short description
       - [] List of implemented and not yet implemented features.
-      - [x] Maps to navigate to the “About me” and “Portfolio” pages
+      - [x] Cards to navigate to the “About me” and “Portfolio” pages
     - [] About me page
       - [] Introduction
         - [x] Styles
@@ -74,6 +74,7 @@ React, TypeScript, React-Router, Styled-Component
 
     - [x] Responsive design
     - [x] Add font
+    - [] Add final color Theme (60|30|10) primary color | secondary color | interactive elements
 
 ## Final steps for publication:
 
@@ -81,7 +82,7 @@ React, TypeScript, React-Router, Styled-Component
 - Add all project details.
 - Customizing skills links to the projects on the about page.
 - Add home page content.
-- Add correct font, lineheight.
+- Add new color Theme (60|30|10).
 - Clean up code.
 - Add / Adjust documentation if it is necessary.
 - Inform how to get my new page online.

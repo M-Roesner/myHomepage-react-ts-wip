@@ -37,32 +37,33 @@ React, TypeScript, React-Router, Styled-Component
     - [] Home page content
       - [] short description
       - [] List of implemented and not yet implemented features.
+      - [x] Maps to navigate to the “About me” and “Portfolio” pages
     - [] About me page
       - [] Introduction
         - [x] Styles
         - [] content
       - [] My future career
         - [x] Styles
-        - [] content
-      - [] Why in the world of the IT
+        - [x] content
+      - [x] Why in the world of the IT
         - [x] Styles
-        - [] content
+        - [x] content
       - [] Skills
         - [x] Skill list (style different categories)
-        - [] Skill description (style)
+        - [x] Skill description (style)
           - [] Icon (fontawesome? - There aren't all icons available.)
           - [x] name
           - [x] description
           - [] project links
     - [] Project page
-      - [] general design
+      - [x] general design
         - [x] Aside navigation with links to the contained headlines.
         - [x] Title
         - [x] Description
           - [x] Why this project ...
-        - [] Image
+        - [x] Image
           - [x] Display the selected image in full screen mode.
-          - [] Display of the selected image in full-screen mode and a list of images to scroll through.
+          - [x] Display of the selected image in full-screen mode and a list of images to scroll through.
         - [x] used skills
         - [x] Links
         - [x] category
@@ -71,17 +72,15 @@ React, TypeScript, React-Router, Styled-Component
 
 5.  Additional Features
 
-    - [] Responsive design
-    - [] Add font
+    - [x] Responsive design
+    - [x] Add font
 
 ## Final steps for publication:
 
-- Complete image slider for full screen mode.
 - Add all personal information.
 - Add all project details.
 - Customizing skills links to the projects on the about page.
 - Add home page content.
-- Responsive styles.
 - Add correct font, lineheight.
 - Clean up code.
 - Add / Adjust documentation if it is necessary.

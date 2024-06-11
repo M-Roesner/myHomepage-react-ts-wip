@@ -11,15 +11,18 @@ export const StyledProgressBarWrapper = styled.div`
 
 interface StyledProgressFillProps {
   $progressInPercent: number;
+  $isVisible: boolean;
 }
 export const StyledProgressFill = styled.div<StyledProgressFillProps>`
   position: absolute;
   top: 0;
   left: 0;
-  width: ${(props) => props.$progressInPercent}%;
   height: 100%;
   background-color: ${(props) => props.theme.colors.progressBar.backgroundColor};
   border-radius: 5px;
+
+  width: ${(props) => (props.$isVisible ? `${props.$progressInPercent}%` : "0%")};
+  transition: width 2s linear;
 `;
 
 export const StyledProgressText = styled.span`

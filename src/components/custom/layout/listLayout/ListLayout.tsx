@@ -22,6 +22,11 @@ import CustomListLayout from "../customListLayout/CustomListLayout";
 const ListLayout = ({ list, numerusText, maxVisibleItems = 5 }: ListLayoutProps): JSX.Element => {
   const renderCustomItem = (item: ListItemType, index: number) => <ListItem key={index} item={item} />;
 
+  //  TODO: Adjust the structure of this list layout, it is too complicated.
+  // It is currently used on the about and project pages.
+  // Rename the list (maybe in the display flex layout)
+  // List items are also too complicated. ( whether it is a button or a normal element )
+
   return (
     <StyledListLayout>
       <CustomListLayout

@@ -4,6 +4,7 @@ import ProgressListItem from "../progressListItem/ProgressListItem";
 
 // Types & Interfaces
 import { IProgress } from "../../types/progressTypes";
+import CustomListLayout from "../../../../../../components/custom/layout/customListLayout/CustomListLayout";
 
 type ListItemProps = {
   list: IProgress[];
@@ -16,12 +17,12 @@ type ListItemProps = {
  * @returns The rendered progress list component.
  */
 const ProgressList = ({ list }: ListItemProps) => {
+  const renderProgressItem = (item: IProgress, index: number) => (
+    <ProgressListItem key={index} status={item.status} text={item.name} />
+  );
   return (
     <StyledProgressList>
-      {list.map((item, index) => (
-        <ProgressListItem key={index} status={item.status} text={item.name} />
-      ))}
-      {/* TODO: Add maximum visible elements as in the ListLayout component! */}
+      <CustomListLayout list={list} renderItem={renderProgressItem} />
     </StyledProgressList>
   );
 };

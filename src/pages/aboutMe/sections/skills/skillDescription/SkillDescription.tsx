@@ -22,7 +22,7 @@ export type imgFontAwesomeType = {
  * Returns a styled description of the skill that utilizes parameters from the React Router.
  */
 const SkillDescription = () => {
-  const { skillId, skillCategory } = useParams<{ skillId: string; skillCategory: SkillCategoryType }>();
+  const { skillCategory, skillId } = useParams<{ skillCategory: SkillCategoryType; skillId: string }>();
   const skill = getSingleSkill(skillCategory, skillId);
 
   return (

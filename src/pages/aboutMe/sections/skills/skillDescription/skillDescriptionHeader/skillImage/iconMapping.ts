@@ -12,6 +12,7 @@ import {
   SiMicrosoftword,
   SiMicrosoftexcel,
   SiFigma,
+  SiRedux,
   SiAzuredevops,
 } from "react-icons/si";
 import { DiSqllite } from "react-icons/di";
@@ -38,6 +39,7 @@ const iconMapping: { [key: string]: React.ElementType } = {
   SiMicrosoftexcel,
   SiFigma,
   SiAzuredevops,
+  SiRedux,
   DiSqllite,
   // Add more icons here as needed
 };

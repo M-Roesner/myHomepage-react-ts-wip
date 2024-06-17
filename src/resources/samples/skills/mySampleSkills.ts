@@ -114,6 +114,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Frontend",
       description:
         "Redux Toolkit ist ein offizielles, von Redux maintainiertes Paket, das verschiedene Utility-Funktionen und abstrakte Schichten für die Redux-Logik bereitstellt.",
+      icon: "SiRedux",
       addedDate: new Date("2024-06-17"),
       updatedDate: new Date("2024-06-17"),
     },

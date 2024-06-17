@@ -31,7 +31,7 @@ const SkillDescription = () => {
     <StyledSkillDescription $isMobile={isMobile}>
       {skill ? (
         <>
-          <SkillDesciptionHeader name={skill.name} icon={skill.icon} />
+          <SkillDesciptionHeader name={skill.name} icon={skill.icon} skillLevel={skill.level} />
           <SkilledDescriptionText text={skill.description} />
           {skill.projectLinks !== undefined && <SkillProjectLinks links={skill.projectLinks} />}
         </>

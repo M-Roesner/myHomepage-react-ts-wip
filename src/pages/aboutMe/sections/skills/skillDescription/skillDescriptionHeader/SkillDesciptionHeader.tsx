@@ -24,8 +24,10 @@ type SkillDesciptionHeaderProps = {
 const SkillDesciptionHeader = ({ name, icon, skillLevel }: SkillDesciptionHeaderProps) => {
   return (
     <StyledSkillDesciptionHeader>
-      {icon && <SkillImage icon={icon} />}
-      <CardHeadline level={3}>{name}</CardHeadline>
+      <div style={{ display: "flex", alignItems: "center", paddingRight: "0.5rem" }}>
+        {icon && <SkillImage icon={icon} />}
+        <CardHeadline level={3}>{name}</CardHeadline>
+      </div>
       {skillLevel && <SkillStars level={skillLevel} />}
     </StyledSkillDesciptionHeader>
   );

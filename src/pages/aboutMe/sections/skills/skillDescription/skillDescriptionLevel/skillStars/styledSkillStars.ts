@@ -2,7 +2,6 @@ import { styled } from "styled-components";
 
 export const StarContainer = styled.div`
   display: flex;
-  padding-inline: 0.5em;
 `;
 
 interface IStar {

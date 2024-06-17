@@ -1,37 +1,33 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 // Components
 import { StyledSkillImage } from "./styledSkillImage";
 
-// Types
-import { imgFontAwesomeType } from "../../SkillDescription";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-
-type SkillImageType = {
-  imgStyle: imgFontAwesomeType | IconDefinition;
-};
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const isFontAwesomeType = (imgStyle: any): imgStyle is imgFontAwesomeType => {
-  return "className" in imgStyle && "style" in imgStyle;
-};
+// helpers
+import iconMapping from "./iconMapping";
 
 /**
- * Returns a given image.
+ * A component that renders an icon based on the provided icon name.
+ * If the icon does not exist in the iconMapping, nothing is rendered.
  *
- * TODO: wip - More icons are needed, currently only with fontawesome.
- *
- * @param {} imgStyle
+ * @param {SkillImageProps} props - The properties for the SkillImage component.
+ * @param {string} props.icon - The name of the icon to render.
+ * @returns A JSX element containing the icon, or null if the icon is not found.
  */
-const SkillImage = ({ imgStyle }: SkillImageType) => {
+const SkillImage = ({ icon }: { icon: string }) => {
+  const IconComponent = iconMapping[icon] || null;
+
+  // Avoid rendering the span if IconComponent is null
+  if (!IconComponent) return null;
+
   return (
     <StyledSkillImage>
-      {isFontAwesomeType(imgStyle) ? (
-        <i className={imgStyle.className} style={imgStyle.style}></i>
-      ) : (
-        <FontAwesomeIcon icon={imgStyle} />
+      {/* IconContext.Provider is alternative to style the icon. */}
+      {/* <IconContext.Provider value={{ size: "2em", color: "red" }}> */}
+      {IconComponent && (
+        <span>
+          <IconComponent />
+        </span>
       )}
-      {/* <i className="fa-brands fa-js fa-lg" style={{ color: "#FFD43B" }}></i> */}
+      {/* </IconContext.Provider> */}
     </StyledSkillImage>
   );
 };

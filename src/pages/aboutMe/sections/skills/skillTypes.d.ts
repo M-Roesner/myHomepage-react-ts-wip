@@ -13,7 +13,7 @@ export type SkillType = {
   personalKnowledgeLevel?: number;
   addedDate?: Date;
   updatedDate?: Date;
-  iconSrc?: string; // TODO: Add icon to the corresponding skill
+  icon?: string;
 };
 
 export type GroupedSkills = {

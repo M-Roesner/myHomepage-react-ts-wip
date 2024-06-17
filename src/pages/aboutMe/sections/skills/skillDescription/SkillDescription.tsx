@@ -13,13 +13,11 @@ import { getSingleSkill } from "./helper";
 import { SkillCategoryType } from "../skillTypes";
 import CardParagraph from "../../../../../components/custom/card/cardParagraph/CardParagraph";
 
-export type imgFontAwesomeType = {
-  className: string;
-  style: React.CSSProperties;
-};
-
 /**
- * Returns a styled description of the skill that utilizes parameters from the React Router.
+ * A component that returns a styled description of the skill.
+ * Utilizes parameters from the React Router to fetch and display the relevant skill data.
+ *
+ * @returns A JSX element containing the skill description, header, text, and project links.
  */
 const SkillDescription = () => {
   const { skillCategory, skillId } = useParams<{ skillCategory: SkillCategoryType; skillId: string }>();
@@ -29,8 +27,7 @@ const SkillDescription = () => {
     <StyledSkillDescription>
       {skill ? (
         <>
-          {/* TODO: Icon: Find a matching icon for the respective skill! */}
-          <SkillDesciptionHeader name={skill.name} />
+          <SkillDesciptionHeader name={skill.name} icon={skill.icon} />
           <SkilledDescriptionText text={skill.description} />
           {skill.projectLinks !== undefined && <SkillProjectLinks links={skill.projectLinks} />}
         </>

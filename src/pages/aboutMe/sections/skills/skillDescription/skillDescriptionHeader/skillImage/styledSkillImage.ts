@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const StyledSkillImage = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 64px;
-  height: 64px;
-  /* border: 1px solid ${(props) => props.theme.colors.common.borderColor}; */
-  border-radius: 50%;
+
+  span {
+    font-size: 2em; /* Icon size */
+    margin-inline: 0.5em;
+    // color: red; /* Icon color */
+  }
 `;

@@ -1,7 +1,7 @@
-import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
-import { imgFontAwesomeType } from "../SkillDescription";
-import SkillImage from "./skillImage/SkillImage";
+// Components
 import { StyledSkillDesciptionHeader } from "./styledSkillDesciptionHeader";
+import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
+import SkillImage from "./skillImage/SkillImage";
 
 type SkillDesciptionHeaderProps = {
   name: string;
@@ -9,18 +9,17 @@ type SkillDesciptionHeaderProps = {
 };
 
 /**
- * Returns a styled header with an icon and title.
+ * A component that returns a styled header with an optional icon and a title.
  *
- * @param {string} name
+ * @param {SkillDesciptionHeaderProps} props - The properties for the SkillDescriptionHeader component.
+ * @param {string} props.name - The name of the skill.
+ * @param {string} [props.icon] - The optional icon name for the skill.
+ * @returns A JSX element containing a styled header with an icon and title.
  */
 const SkillDesciptionHeader = ({ name, icon }: SkillDesciptionHeaderProps) => {
-  // TODO: Image - Adding images to the description does not currently work with fontawesome.
-  // The following import is required to get icons from fontawesome. (in index.html)
-  // <script src="https://kit.fontawesome.com/418764a8f1.js" crossorigin="anonymous"></script>
-  const imgStyle: imgFontAwesomeType = { className: "fa-brands fa-vuejs fa-lg", style: {} };
   return (
     <StyledSkillDesciptionHeader>
-      {icon || (imgStyle && <SkillImage imgStyle={imgStyle} />)}
+      {icon && <SkillImage icon={icon} />}
       <CardHeadline level={3}>{name}</CardHeadline>
     </StyledSkillDesciptionHeader>
   );

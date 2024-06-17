@@ -1,14 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 // Components
 import CardHeadline from "../../card/cardHeadline/CardHeadline";
 import { CardVerticalLineStyle } from "../../card/cardVerticalLine/styledCardVerticalLineStyle";
-import { StyledNormalButton } from "../../button/normalButton/styledNormalButton";
 
 type PageLayoutProps = {
   headlineText: React.ReactNode;
-  useBackButton?: boolean;
   children: React.ReactNode;
 };
 
@@ -20,22 +17,12 @@ type PageLayoutProps = {
  * @param {React.ReactNode} props.children - The children components to be rendered inside the layout.
  * @returns {JSX.Element} - Returns the JSX for the PageLayout component.
  */
-const PageLayout = ({ headlineText, useBackButton = true, children }: PageLayoutProps): JSX.Element => {
-  const navigate = useNavigate();
-
-  // TODO: Backbutton test. Maybe it should be in the header instead.
+const PageLayout = ({ headlineText, children }: PageLayoutProps): JSX.Element => {
   return (
-    <div>
-      <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-        <CardHeadline level={1}>{headlineText}</CardHeadline>
-        {useBackButton && (
-          <StyledNormalButton style={{ height: "max-content", transform: "scaleX(-1)" }} onClick={() => navigate(-1)}>
-            &#10149;
-          </StyledNormalButton>
-        )}
-      </div>
+    <>
+      <CardHeadline level={1}>{headlineText}</CardHeadline>
       <CardVerticalLineStyle>{children}</CardVerticalLineStyle>
-    </div>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ import ProgressSection from "./sections/progressSection/ProgressSection";
 
 const HomePage = () => {
   return (
-    <PageLayout useBackButton={false} headlineText="Willkommen auf meiner Seite!">
+    <PageLayout headlineText="Willkommen auf meiner Seite!">
       <CardParagraph
         paragraphs={[
           "Willkommen auf meiner Seite! Hier können Sie mehr über meine aktuellen Projekte erfahren und den Fortschritt verfolgen.",

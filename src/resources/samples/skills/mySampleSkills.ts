@@ -6,6 +6,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 2,
       name: "JavaScript",
       priority: 1,
+      level: 4,
       category: "Frontend",
       description:
         "JavaScript ist eine vielseitige Programmiersprache, die häufig für die Webentwicklung verwendet wird.",
@@ -22,6 +23,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 3,
       name: "React.js",
       priority: 1,
+      level: 4,
       category: "Frontend",
       description: "React.js ist eine beliebte JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen.",
       projectLinks: [
@@ -37,6 +39,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 4,
       name: "TypeScript",
       priority: 1,
+      level: 4,
       category: "Frontend",
       description:
         "TypeScript ist eine Erweiterung von JavaScript, die statisches Typing und andere Funktionen hinzufügt.",
@@ -54,6 +57,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 17,
       name: "HTML",
       priority: 5,
+      level: 4,
       category: "Frontend",
       description:
         "HTML (Hypertext Markup Language) ist die Standardauszeichnungssprache zur Strukturierung von Webseiten und Webanwendungen.",
@@ -71,6 +75,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 8,
       name: "CSS / SCSS",
       priority: 5,
+      level: 4,
       category: "Frontend",
       description:
         "SCSS (Sassy CSS) ist eine Erweiterung von CSS, die Funktionen wie Variablen, Verschachtelungen und Mixins bietet.",
@@ -88,6 +93,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 11,
       name: "Styled Components",
       priority: 2,
+      level: 4,
       category: "Frontend",
       description:
         "Styled Components ist eine CSS-in-JS-Bibliothek, mit der CSS direkt in JavaScript-Dateien geschrieben werden kann.",
@@ -100,6 +106,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 12,
       name: "React Router",
       priority: 1,
+      level: 3,
       category: "Frontend",
       description: "React Router ist eine Bibliothek für die Navigation in React-Anwendungen.",
       projectLinks: [{ text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" }],
@@ -111,6 +118,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 19,
       name: "Redux (Toolkit)",
       priority: 2,
+      level: 3,
       category: "Frontend",
       description:
         "Redux Toolkit ist ein offizielles, von Redux maintainiertes Paket, das verschiedene Utility-Funktionen und abstrakte Schichten für die Redux-Logik bereitstellt.",
@@ -124,6 +132,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 1,
       name: "Java",
       priority: 3,
+      level: 2,
       category: "Backend",
       description:
         "Java ist eine weit verbreitete Programmiersprache, die für ihre Portabilität und Robustheit bekannt ist.",
@@ -136,6 +145,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 5,
       name: "PHP",
       priority: 1,
+      level: 3,
       category: "Backend",
       description: "PHP ist eine serverseitige Skriptsprache, die häufig für die Webentwicklung verwendet wird.",
       projectLinks: [
@@ -150,6 +160,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 14,
       name: "MySQL",
       priority: 3,
+      level: 3,
       category: "Backend",
       description:
         "MySQL ist ein Open-Source-Relationales Datenbankmanagementsystem, das SQL (Structured Query Language) verwendet, um Daten in einer relationalen Datenbank zu verwalten und abzufragen.",
@@ -161,6 +172,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 15,
       name: "SQLite",
       priority: 4,
+      level: 1,
       category: "Backend",
       description:
         "SQLite ist eine C-Bibliothek, die eine kleine, schnelle, eigenständige, zuverlässige, voll ausgestattete SQL-Datenbank-Engine implementiert.",
@@ -172,6 +184,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 16,
       name: "Express.js",
       priority: 5,
+      level: 1,
       category: "Backend",
       description:
         "Express.js ist ein Webanwendungs-Framework für Node.js, das zur Erstellung von Webanwendungen und APIs verwendet wird.",
@@ -236,16 +249,6 @@ export const mySampleSkills: GroupedSkills = {
         "Azure ist eine umfassende Cloud-Computing-Plattform von Microsoft, die eine Vielzahl von Diensten zur Entwicklung, Bereitstellung und Verwaltung von Anwendungen und Diensten über das Internet bietet.",
       icon: "SiAzuredevops",
 
-      addedDate: new Date("2024-06-17"),
-      updatedDate: new Date("2024-06-17"),
-    },
-    {
-      id: 21,
-      name: "SVG",
-      priority: 3,
-      category: "Other",
-      description:
-        "SVG (Skalierbare Vektorgrafik) ist ein XML-basiertes Format für die Darstellung von zweidimensionalen Vektorgrafiken.",
       addedDate: new Date("2024-06-17"),
       updatedDate: new Date("2024-06-17"),
     },

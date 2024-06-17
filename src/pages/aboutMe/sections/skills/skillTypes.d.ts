@@ -3,10 +3,12 @@ export type LinkType = {
   text: string;
   route: string;
 };
+export type SkillLevelType = 1 | 2 | 3 | 4 | 5;
 export type SkillType = {
   id: number;
   name: string;
   priority: 1 | 2 | 3 | 4 | 5;
+  level?: SkillLevelType;
   category: SkillCategoryType;
   description: string;
   projectLinks?: LinkType[];

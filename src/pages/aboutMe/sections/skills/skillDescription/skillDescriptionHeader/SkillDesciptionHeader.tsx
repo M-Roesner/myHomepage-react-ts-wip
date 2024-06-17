@@ -1,11 +1,16 @@
 // Components
 import { StyledSkillDesciptionHeader } from "./styledSkillDesciptionHeader";
-import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
 import SkillImage from "./skillImage/SkillImage";
+import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
+import SkillStars from "../skillDescriptionLevel/skillStars/SkillStars";
+
+// Types
+import { SkillLevelType } from "../../skillTypes";
 
 type SkillDesciptionHeaderProps = {
   name: string;
   icon?: string;
+  skillLevel?: SkillLevelType;
 };
 
 /**
@@ -16,11 +21,12 @@ type SkillDesciptionHeaderProps = {
  * @param {string} [props.icon] - The optional icon name for the skill.
  * @returns A JSX element containing a styled header with an icon and title.
  */
-const SkillDesciptionHeader = ({ name, icon }: SkillDesciptionHeaderProps) => {
+const SkillDesciptionHeader = ({ name, icon, skillLevel }: SkillDesciptionHeaderProps) => {
   return (
     <StyledSkillDesciptionHeader>
       {icon && <SkillImage icon={icon} />}
       <CardHeadline level={3}>{name}</CardHeadline>
+      {skillLevel && <SkillStars level={skillLevel} />}
     </StyledSkillDesciptionHeader>
   );
 };

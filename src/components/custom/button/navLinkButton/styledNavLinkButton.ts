@@ -61,7 +61,7 @@ export const navLinkButtonWrapper_FlexCenter = styled(navLinkButtonWrapper_Defau
  * @enum {ERouteType}
  */
 export const StyledNavLinkButton = styled(navLinkButtonWrapper_FlexCenter)`
-  padding: 10px;
+  padding: ${(props) => props.theme.sizes.button.padding};
   width: 100%;
   gap: ${(props) => props.theme.sizes.common.gap};
   justify-content: center;

@@ -22,7 +22,7 @@ const buttonWrapper_Default = styled.button`
  * - hover style: background-color, color
  */
 export const StyledNormalButton = styled(buttonWrapper_Default)`
-  padding: 10px;
+  padding: ${(props) => props.theme.sizes.button.padding};
 
   border: 1px solid ${(props) => props.theme.colors.common.borderColor};
 

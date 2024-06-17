@@ -19,6 +19,9 @@ export const defaultTheme: DefaultTheme = {
       gap: "5px",
       marginBottom: "2rem",
     },
+    button: {
+      padding: "clamp(5px, 1vw, 10px)",
+    },
     footer: {
       height: "50px",
       marginTop: "2rem",

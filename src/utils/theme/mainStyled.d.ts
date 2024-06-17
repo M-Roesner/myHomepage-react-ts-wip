@@ -19,6 +19,10 @@ interface INavBarSizes {
   marginBottom: string;
 }
 
+interface IButtonSizes {
+  padding: string;
+}
+
 interface IFooterSizes {
   height: string;
   marginTop: string;
@@ -69,6 +73,7 @@ declare module "styled-components" {
       common: ICommonSizes;
       navBar: INavBarSizes;
       footer: IFooterSizes;
+      button: IButtonSizes;
     };
     colors: {
       button: IButton;

@@ -6,7 +6,7 @@ export type LinkType = {
 export type SkillType = {
   id: number;
   name: string;
-  order: number;
+  priority: 1 | 2 | 3 | 4 | 5;
   category: SkillCategoryType;
   description: string;
   projectLinks?: LinkType[];

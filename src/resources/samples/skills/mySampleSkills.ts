@@ -5,14 +5,14 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 2,
       name: "JavaScript",
-      order: 3,
+      priority: 1,
       category: "Frontend",
       description:
         "JavaScript ist eine vielseitige Programmiersprache, die häufig für die Webentwicklung verwendet wird.",
       projectLinks: [
-        { text: "Projekt JavaScript 1", route: "/projectJavaScript1" },
-        { text: "Projekt JavaScript 2", route: "/projectJavaScript2" },
-        { text: "Projekt JavaScript 3", route: "/projectJavaScript3" },
+        { text: "Endloses Sprung- und Laufspiel", route: "/project/personal/2" },
+        { text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" },
+        { text: "Haushaltsbuch", route: "/project/retraining/1" },
       ],
       icon: "SiJavascript",
       addedDate: new Date("2024-04-27"),
@@ -21,12 +21,13 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 3,
       name: "React.js",
-      order: 2,
+      priority: 1,
       category: "Frontend",
       description: "React.js ist eine beliebte JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen.",
       projectLinks: [
-        { text: "Projekt React 1", route: "/projectReact1" },
-        { text: "Projekt React 2", route: "/projectReact2" },
+        { text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" },
+        { text: "Konverter Prototyp (docx zu JSON)", route: "/project/internship/2" },
+        { text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" },
       ],
       icon: "FaReact",
       addedDate: new Date("2024-04-22"),
@@ -35,10 +36,16 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 4,
       name: "TypeScript",
-      order: 2,
+      priority: 1,
       category: "Frontend",
       description:
         "TypeScript ist eine Erweiterung von JavaScript, die statisches Typing und andere Funktionen hinzufügt.",
+      projectLinks: [
+        { text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" },
+        { text: "Endloses Sprung- und Laufspiel", route: "/project/personal/2" },
+        { text: "Konverter Prototyp (docx zu JSON)", route: "/project/internship/2" },
+        { text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" },
+      ],
       icon: "SiTypescript",
       addedDate: new Date("2024-04-26"),
       updatedDate: new Date("2024-04-26"),
@@ -46,29 +53,32 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 17,
       name: "HTML",
-      order: 7,
+      priority: 5,
       category: "Frontend",
       description:
         "HTML (Hypertext Markup Language) ist die Standardauszeichnungssprache zur Strukturierung von Webseiten und Webanwendungen.",
       icon: "SiHtml5",
       projectLinks: [
-        { text: "HTML Tutorial", route: "https://www.w3schools.com/html/" },
-        { text: "MDN Web Docs - HTML", route: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+        { text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" },
+        { text: "Endloses Sprung- und Laufspiel", route: "/project/personal/2" },
+        { text: "4 Gewinnt - SRH Edition", route: "/project/retraining/4" },
+        { text: "Homepage mit PHP", route: "/project/retraining/3" },
       ],
       addedDate: new Date("2024-04-22"),
       updatedDate: new Date("2024-04-22"),
     },
     {
       id: 8,
-      name: "SCSS",
-      order: 6,
+      name: "CSS / SCSS",
+      priority: 5,
       category: "Frontend",
       description:
         "SCSS (Sassy CSS) ist eine Erweiterung von CSS, die Funktionen wie Variablen, Verschachtelungen und Mixins bietet.",
       projectLinks: [
-        { text: "Projekt SCSS 1", route: "/projectSCSS1" },
-        { text: "Projekt SCSS 2", route: "/projectSCSS2" },
-        { text: "Projekt SCSS 3", route: "/projectSCSS3" },
+        { text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" },
+        { text: "Endloses Sprung- und Laufspiel", route: "/project/personal/2" },
+        { text: "4 Gewinnt - SRH Edition", route: "/project/retraining/4" },
+        { text: "Homepage mit PHP", route: "/project/retraining/3" },
       ],
       icon: "SiCss3",
       addedDate: new Date("2024-04-10"),
@@ -77,15 +87,11 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 11,
       name: "Styled Components",
-      order: 5,
+      priority: 2,
       category: "Frontend",
       description:
         "Styled Components ist eine CSS-in-JS-Bibliothek, mit der CSS direkt in JavaScript-Dateien geschrieben werden kann.",
-      projectLinks: [
-        { text: "Projekt Styled Components 1", route: "/projectStyledComponents1" },
-        { text: "Projekt Styled Components 2", route: "/projectStyledComponents2" },
-        { text: "Projekt Styled Components 3", route: "/projectStyledComponents3" },
-      ],
+      projectLinks: [{ text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" }],
       icon: "SiStyledcomponents",
       addedDate: new Date("2024-04-17"),
       updatedDate: new Date("2024-04-17"),
@@ -93,22 +99,34 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 12,
       name: "React Router",
-      order: 4,
+      priority: 1,
       category: "Frontend",
       description: "React Router ist eine Bibliothek für die Navigation in React-Anwendungen.",
+      projectLinks: [{ text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" }],
       icon: "SiReactrouter",
       addedDate: new Date("2024-04-02"),
       updatedDate: new Date("2024-04-02"),
+    },
+    {
+      id: 19,
+      name: "Redux (Toolkit)",
+      priority: 2,
+      category: "Frontend",
+      description:
+        "Redux Toolkit ist ein offizielles, von Redux maintainiertes Paket, das verschiedene Utility-Funktionen und abstrakte Schichten für die Redux-Logik bereitstellt.",
+      addedDate: new Date("2024-06-17"),
+      updatedDate: new Date("2024-06-17"),
     },
   ],
   Backend: [
     {
       id: 1,
       name: "Java",
-      order: 1,
+      priority: 3,
       category: "Backend",
       description:
         "Java ist eine weit verbreitete Programmiersprache, die für ihre Portabilität und Robustheit bekannt ist.",
+      projectLinks: [{ text: "Minesweeper", route: "/project/retraining/2" }],
       icon: "FaJava",
       addedDate: new Date("2024-04-10"),
       updatedDate: new Date("2024-04-10"),
@@ -116,29 +134,24 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 5,
       name: "PHP",
-      order: 2,
+      priority: 1,
       category: "Backend",
       description: "PHP ist eine serverseitige Skriptsprache, die häufig für die Webentwicklung verwendet wird.",
+      projectLinks: [
+        { text: "4 Gewinnt - SRH Edition", route: "/project/retraining/4" },
+        { text: "Homepage mit PHP", route: "/project/retraining/3" },
+      ],
       icon: "SiPhp",
       addedDate: new Date("2024-04-08"),
       updatedDate: new Date("2024-04-08"),
     },
     {
-      id: 6,
-      name: "SQL",
-      order: 3,
-      category: "Backend",
-      description:
-        "SQL (Structured Query Language) ist eine domänenspezifische Sprache, die für das Programmieren entwickelt wurde und zur Verwaltung von Daten in einem relationalen Datenbankmanagementsystem dient.",
-      addedDate: new Date("2024-04-20"),
-      updatedDate: new Date("2024-04-20"),
-    },
-    {
       id: 14,
       name: "MySQL",
-      order: 6,
+      priority: 3,
       category: "Backend",
-      description: "MySQL ist ein Open-Source-Relationales Datenbankmanagementsystem.",
+      description:
+        "MySQL ist ein Open-Source-Relationales Datenbankmanagementsystem, das SQL (Structured Query Language) verwendet, um Daten in einer relationalen Datenbank zu verwalten und abzufragen.",
       icon: "SiMysql",
       addedDate: new Date("2024-03-10"),
       updatedDate: new Date("2024-03-10"),
@@ -146,7 +159,7 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 15,
       name: "SQLite",
-      order: 4,
+      priority: 4,
       category: "Backend",
       description:
         "SQLite ist eine C-Bibliothek, die eine kleine, schnelle, eigenständige, zuverlässige, voll ausgestattete SQL-Datenbank-Engine implementiert.",
@@ -157,7 +170,7 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 16,
       name: "Express.js",
-      order: 5,
+      priority: 5,
       category: "Backend",
       description:
         "Express.js ist ein Webanwendungs-Framework für Node.js, das zur Erstellung von Webanwendungen und APIs verwendet wird.",
@@ -165,12 +178,13 @@ export const mySampleSkills: GroupedSkills = {
       updatedDate: new Date("2024-04-11"),
     },
   ],
+
   Design: [],
   Other: [
     {
       id: 7,
       name: "GitHub",
-      order: 1,
+      priority: 1,
       category: "Other",
       description:
         "GitHub ist eine webbasierte Plattform zur Versionskontrolle und Zusammenarbeit an Softwareprojekten.",
@@ -181,7 +195,7 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 9,
       name: "MS Word",
-      order: 3,
+      priority: 4,
       category: "Other",
       description:
         "Microsoft Word ist ein Textverarbeitungsprogramm, das zur Erstellung von Dokumenten verwendet wird.",
@@ -192,7 +206,7 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 10,
       name: "MS Excel",
-      order: 4,
+      priority: 4,
       category: "Other",
       description:
         "Microsoft Excel ist ein Tabellenkalkulationsprogramm, das für Berechnungen, Datenanalyse und Visualisierung verwendet wird.",
@@ -203,13 +217,46 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 13,
       name: "Figma",
-      order: 2,
+      priority: 3,
       category: "Other",
       description:
         "Figma ist ein webbasiertes Design- und Prototyping-Tool, das zur Erstellung von UI/UX-Designs verwendet wird.",
+      projectLinks: [{ text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" }],
       icon: "SiFigma",
       addedDate: new Date("2024-04-01"),
       updatedDate: new Date("2024-04-01"),
+    },
+    {
+      id: 22,
+      name: "Azure",
+      priority: 2,
+      category: "Other",
+      description:
+        "Azure ist eine umfassende Cloud-Computing-Plattform von Microsoft, die eine Vielzahl von Diensten zur Entwicklung, Bereitstellung und Verwaltung von Anwendungen und Diensten über das Internet bietet.",
+      icon: "SiAzuredevops",
+
+      addedDate: new Date("2024-06-17"),
+      updatedDate: new Date("2024-06-17"),
+    },
+    {
+      id: 21,
+      name: "SVG",
+      priority: 3,
+      category: "Other",
+      description:
+        "SVG (Skalierbare Vektorgrafik) ist ein XML-basiertes Format für die Darstellung von zweidimensionalen Vektorgrafiken.",
+      addedDate: new Date("2024-06-17"),
+      updatedDate: new Date("2024-06-17"),
+    },
+    {
+      id: 20,
+      name: "Canvas",
+      priority: 3,
+      category: "Other",
+      description:
+        "Canvas ist ein HTML5-Element, das zur dynamischen, programmatischen Generierung und Manipulation von Grafiken, Animationen und anderen visuellen Effekten verwendet wird.",
+      addedDate: new Date("2024-06-17"),
+      updatedDate: new Date("2024-06-17"),
     },
   ],
 };

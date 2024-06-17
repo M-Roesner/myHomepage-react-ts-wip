@@ -37,10 +37,10 @@ const findLastDateOfSkillList = (skillList: SkillType[]): Date => {
  */
 export const SkillListWrapper = () => {
   // TODO: SkillList data receiving: This structure for receiving data will be changed with the database in future.
-  const frontendSkillList = sortListByKeyType(mySampleSkills["Frontend"], "order", "acc");
-  const backendSkillList = sortListByKeyType(mySampleSkills["Backend"], "order", "acc");
-  const designSkillList = sortListByKeyType(mySampleSkills["Design"], "order", "acc");
-  const otherSkillList = sortListByKeyType(mySampleSkills["Other"], "order", "acc");
+  const frontendSkillList = sortListByKeyType(mySampleSkills["Frontend"], "priority", "acc");
+  const backendSkillList = sortListByKeyType(mySampleSkills["Backend"], "priority", "acc");
+  const designSkillList = sortListByKeyType(mySampleSkills["Design"], "priority", "acc");
+  const otherSkillList = sortListByKeyType(mySampleSkills["Other"], "priority", "acc");
 
   const lastDateArray: Date[] = [];
   lastDateArray.push(findLastDateOfSkillList(mySampleSkills["Frontend"]));

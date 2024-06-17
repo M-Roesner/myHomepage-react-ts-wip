@@ -20,7 +20,7 @@ export const RenderSkillCategories = ({ skillListCollection }: RenderSkillCatego
 
   return skillCategories.map((category) => {
     // Get the skill list for the current category
-    const skillList = skillListCollection[category]?.sort((a, b) => a.order - b.order);
+    const skillList = skillListCollection[category]?.sort((a, b) => a.priority - b.priority);
     // Get the title for the current category
     const titleCategory = getCategoryName(category);
 

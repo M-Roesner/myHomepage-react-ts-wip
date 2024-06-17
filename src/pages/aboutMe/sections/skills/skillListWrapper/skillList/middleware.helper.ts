@@ -17,7 +17,6 @@ export const mwAbout_SkillToListItemType = (list: SkillType[]): ListItemType[] |
     return {
       text: skill.name,
       buttonUrl,
-      // TODO Add: iconSrc
     };
   });
 };

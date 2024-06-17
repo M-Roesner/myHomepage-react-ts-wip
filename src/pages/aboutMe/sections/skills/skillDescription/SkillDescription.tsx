@@ -12,6 +12,7 @@ import { getSingleSkill } from "./helper";
 // Types
 import { SkillCategoryType } from "../skillTypes";
 import CardParagraph from "../../../../../components/custom/card/cardParagraph/CardParagraph";
+import useScreenSize from "../../../../../utils/hooks/screenSize/useScreenSize";
 
 /**
  * A component that returns a styled description of the skill.
@@ -20,11 +21,14 @@ import CardParagraph from "../../../../../components/custom/card/cardParagraph/C
  * @returns A JSX element containing the skill description, header, text, and project links.
  */
 const SkillDescription = () => {
+  const screnSize = useScreenSize();
+  const isMobile = screnSize.deviceType === "mobile" || screnSize.deviceType === "tablet";
+
   const { skillCategory, skillId } = useParams<{ skillCategory: SkillCategoryType; skillId: string }>();
   const skill = getSingleSkill(skillCategory, skillId);
 
   return (
-    <StyledSkillDescription>
+    <StyledSkillDescription $isMobile={isMobile}>
       {skill ? (
         <>
           <SkillDesciptionHeader name={skill.name} icon={skill.icon} />
@@ -33,7 +37,9 @@ const SkillDescription = () => {
         </>
       ) : (
         <div style={{ display: "flex", textAlign: "center", alignItems: "center", height: "100%" }}>
-          <CardParagraph paragraphs={["Wählen Sie eine Fähigkeit aus, um die entsprechende Beschreibung zu sehen!"]} />
+          <CardParagraph
+            paragraphs={["Wählen Sie eine Fähigkeit aus, um hier detaillierte Informationen zu erhalten."]}
+          />
         </div>
       )}
     </StyledSkillDescription>

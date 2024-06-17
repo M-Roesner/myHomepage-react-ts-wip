@@ -1,7 +1,19 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const SectionSkillWrapperStyle = styled.section`
-  display: flex;
-  flex-direction: row;
+interface ISectionSkillWrapperStyle {
+  $fullSize?: boolean;
+}
+
+export const SectionSkillWrapperStyle = styled.section<ISectionSkillWrapperStyle>`
+  ${(props) =>
+    props.$fullSize
+      ? css`
+          display: flex;
+          flex-direction: column-reverse;
+        `
+      : css`
+          display: grid;
+          grid-template-columns: calc(100% / 2 - 21px) 1px calc(100% / 2 - 21px);
+        `}
   gap: 10px;
 `;

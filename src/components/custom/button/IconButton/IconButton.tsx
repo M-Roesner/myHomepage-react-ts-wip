@@ -7,7 +7,8 @@ import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import { RotateProp, SizeProp } from "@fortawesome/fontawesome-svg-core";
 
 // Helper function
-import { isValidColor } from "../../../../utils/colorValidators";
+// import { isValidColor } from "../../../../utils/colorValidators";
+import { useTheme } from "styled-components";
 
 type IconButtonProps = {
   url: string;
@@ -33,13 +34,14 @@ type IconButtonProps = {
  *   @param {string} prop.title - Optional title for hovering over the icon.
  */
 const IconButton = ({ url, icon, rotation, color, size, title }: IconButtonProps) => {
+  const theme = useTheme();
   return (
     <StyledIconButton to={url} target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon
         icon={icon}
         rotation={rotation}
         size={size}
-        style={color != undefined && isValidColor(color) ? { color: color } : undefined}
+        style={{ color: color || theme.colors.common.textColorMain }}
         title={title}
       />
     </StyledIconButton>

@@ -1,6 +1,6 @@
 // components
 import { StyledSkillListWrapper } from "./styledSkillListWrapper";
-import SkillList from "./skillList/skillList";
+import SkillList from "./skillList/SkillList";
 import { StyledCardFootnote } from "../../../../../components/custom/card/cardFootnote/StyledCardFootnote";
 
 // Resources, helpers and types
@@ -54,17 +54,11 @@ export const SkillListWrapper = () => {
   return (
     <StyledSkillListWrapper>
       {frontendSkillList && frontendSkillList.length > 0 && (
-        <SkillList skillList={frontendSkillList} title={"Frontend"}></SkillList>
+        <SkillList skillList={frontendSkillList} title={"Frontend"} />
       )}
-      {backendSkillList && backendSkillList.length > 0 && (
-        <SkillList skillList={backendSkillList} title={"Backend"}></SkillList>
-      )}
-      {designSkillList && designSkillList.length > 0 && (
-        <SkillList skillList={designSkillList} title={"Design"}></SkillList>
-      )}
-      {otherSkillList && otherSkillList.length > 0 && (
-        <SkillList skillList={otherSkillList} title={"Sonstige"}></SkillList>
-      )}
+      {backendSkillList && backendSkillList.length > 0 && <SkillList skillList={backendSkillList} title={"Backend"} />}
+      {designSkillList && designSkillList.length > 0 && <SkillList skillList={designSkillList} title={"Design"} />}
+      {otherSkillList && otherSkillList.length > 0 && <SkillList skillList={otherSkillList} title={"Sonstige"} />}
       <StyledCardFootnote>{`letztes update am: ${lastDate}`}</StyledCardFootnote>
     </StyledSkillListWrapper>
   );

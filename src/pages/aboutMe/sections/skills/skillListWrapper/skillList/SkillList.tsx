@@ -1,5 +1,5 @@
 // Components
-import { StyledSkillList } from "./styledskillList";
+import { StyledSkillList } from "./styledSkillList";
 import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
 import ListLayout from "../../../../../../components/custom/layout/listLayout/ListLayout";
 
@@ -28,7 +28,7 @@ const SkillList = ({ skillList, title }: SkillListProps) => {
 
   return (
     <StyledSkillList>
-      <CardHeadline level={4}>{title}:</CardHeadline>
+      <CardHeadline level={3}>{title}:</CardHeadline>
       <ListLayout
         list={newList}
         numerusText={{ singular: "weitere Fähigkeit", plural: "weitere Fähigkeiten" }}

@@ -14,6 +14,7 @@ export const SectionSkillWrapperStyle = styled.section<ISectionSkillWrapperStyle
       : css`
           display: grid;
           grid-template-columns: calc(100% / 2 - 21px) 1px calc(100% / 2 - 21px);
+          justify-content: space-evenly;
         `}
   gap: 10px;
 `;

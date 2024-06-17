@@ -9,5 +9,5 @@ export const StyledSkillProjectList = styled(unorderedListWrapper_Default)`
 `;
 
 export const StyledSkillProjectItem = styled(listItemWrapper_Default)`
-  width: calc(50% - 3px);
+  width: 100%;
 `;

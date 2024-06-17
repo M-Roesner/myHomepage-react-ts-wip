@@ -1,7 +1,7 @@
 import React from "react";
 import { GroupedSkills } from "../skillTypes";
 import { extractSkillCategories, getCategoryName } from "./helper";
-import SkillList from "./skillList/skillList";
+import SkillList from "./skillList/SkillList";
 
 // XXX: This is an old version of handling the skill list, remove after receiving data with the database.
 

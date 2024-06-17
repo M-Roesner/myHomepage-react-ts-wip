@@ -11,7 +11,10 @@ const defaultHeaderStyles = css`
 export const styledCardHeadline1 = styled.h1`
   ${defaultHeaderStyles};
   color: ${(props) => props.theme.colors.headline.textColor_level1};
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: clamp(2ch, 3vw, 3ch);
+  margin-block: clamp(1ch, 1vw, 1ch);
   &::after {
     content: "{}";
     color: ${(props) => props.theme.colors.common.textColorMain};
@@ -20,7 +23,10 @@ export const styledCardHeadline1 = styled.h1`
 
 export const styledCardHeadline2 = styled.h2`
   ${defaultHeaderStyles};
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  line-height: clamp(2ch, 3vw, 3ch);
+  margin-block: clamp(1ch, 1vw, 1ch);
   color: ${(props) => props.theme.colors.headline.textColor_level2};
   &::before {
     content: "// ";
@@ -29,19 +35,28 @@ export const styledCardHeadline2 = styled.h2`
 
 export const styledCardHeadline3 = styled.h3`
   ${defaultHeaderStyles};
-  font-size: 1.6rem;
-  color: ${(props) => props.theme.colors.common.textColorThird};
+  /* font-size: 1.6rem; */
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  line-height: clamp(2ch, 3vw, 3ch);
+  margin-block: clamp(1ch, 1vw, 1ch);
+  color: ${(props) => props.theme.colors.common.textColorSecond};
 `;
 
 export const styledCardHeadline4 = styled.h4`
   ${defaultHeaderStyles};
-  font-size: 1.4rem;
+  /* font-size: 1.4rem; */
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: clamp(2ch, 3vw, 3ch);
+  margin-block: clamp(1ch, 1vw, 1ch);
   color: ${(props) => props.theme.colors.common.textColorSecond};
 `;
 
 export const styledCardHeadline5 = styled.h5`
   ${defaultHeaderStyles};
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
+  font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+  line-height: clamp(2ch, 3vw, 3ch);
+  margin-block: clamp(1ch, 1vw, 1ch);
   color: ${(props) => props.theme.colors.common.textColorSecond};
 `;
 

@@ -7,7 +7,7 @@ import styled from "styled-components";
  * - padding &:first-child &:last-child
  */
 export const StyledCardParagraph = styled.p`
-  padding-bottom: 2ch;
+  padding-bottom: clamp(1ch, 1vw, 2ch);
 
   &:first-child {
     padding-top: 0;

@@ -6,7 +6,8 @@ interface ICommonSizes {
   lineHeight: string;
   letterSpacing: string;
   borderRadius: string;
-  fontSize: string;
+  fontSizeMax: string;
+  fontSizeMin: string;
   fontSizeMobile: string;
   fontSizeAsFootnote: string;
 }

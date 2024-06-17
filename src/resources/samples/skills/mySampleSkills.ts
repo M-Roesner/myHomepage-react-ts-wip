@@ -14,6 +14,7 @@ export const mySampleSkills: GroupedSkills = {
         { text: "Projekt JavaScript 2", route: "/projectJavaScript2" },
         { text: "Projekt JavaScript 3", route: "/projectJavaScript3" },
       ],
+      icon: "SiJavascript",
       addedDate: new Date("2024-04-27"),
       updatedDate: new Date("2024-04-27"),
     },
@@ -27,6 +28,7 @@ export const mySampleSkills: GroupedSkills = {
         { text: "Projekt React 1", route: "/projectReact1" },
         { text: "Projekt React 2", route: "/projectReact2" },
       ],
+      icon: "FaReact",
       addedDate: new Date("2024-04-22"),
       updatedDate: new Date("2024-04-22"),
     },
@@ -37,6 +39,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Frontend",
       description:
         "TypeScript ist eine Erweiterung von JavaScript, die statisches Typing und andere Funktionen hinzufügt.",
+      icon: "SiTypescript",
       addedDate: new Date("2024-04-26"),
       updatedDate: new Date("2024-04-26"),
     },
@@ -47,6 +50,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Frontend",
       description:
         "HTML (Hypertext Markup Language) ist die Standardauszeichnungssprache zur Strukturierung von Webseiten und Webanwendungen.",
+      icon: "SiHtml5",
       projectLinks: [
         { text: "HTML Tutorial", route: "https://www.w3schools.com/html/" },
         { text: "MDN Web Docs - HTML", route: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
@@ -66,6 +70,7 @@ export const mySampleSkills: GroupedSkills = {
         { text: "Projekt SCSS 2", route: "/projectSCSS2" },
         { text: "Projekt SCSS 3", route: "/projectSCSS3" },
       ],
+      icon: "SiCss3",
       addedDate: new Date("2024-04-10"),
       updatedDate: new Date("2024-04-10"),
     },
@@ -81,6 +86,7 @@ export const mySampleSkills: GroupedSkills = {
         { text: "Projekt Styled Components 2", route: "/projectStyledComponents2" },
         { text: "Projekt Styled Components 3", route: "/projectStyledComponents3" },
       ],
+      icon: "SiStyledcomponents",
       addedDate: new Date("2024-04-17"),
       updatedDate: new Date("2024-04-17"),
     },
@@ -90,6 +96,7 @@ export const mySampleSkills: GroupedSkills = {
       order: 4,
       category: "Frontend",
       description: "React Router ist eine Bibliothek für die Navigation in React-Anwendungen.",
+      icon: "SiReactrouter",
       addedDate: new Date("2024-04-02"),
       updatedDate: new Date("2024-04-02"),
     },
@@ -102,6 +109,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Backend",
       description:
         "Java ist eine weit verbreitete Programmiersprache, die für ihre Portabilität und Robustheit bekannt ist.",
+      icon: "FaJava",
       addedDate: new Date("2024-04-10"),
       updatedDate: new Date("2024-04-10"),
     },
@@ -111,6 +119,7 @@ export const mySampleSkills: GroupedSkills = {
       order: 2,
       category: "Backend",
       description: "PHP ist eine serverseitige Skriptsprache, die häufig für die Webentwicklung verwendet wird.",
+      icon: "SiPhp",
       addedDate: new Date("2024-04-08"),
       updatedDate: new Date("2024-04-08"),
     },
@@ -130,6 +139,7 @@ export const mySampleSkills: GroupedSkills = {
       order: 6,
       category: "Backend",
       description: "MySQL ist ein Open-Source-Relationales Datenbankmanagementsystem.",
+      icon: "SiMysql",
       addedDate: new Date("2024-03-10"),
       updatedDate: new Date("2024-03-10"),
     },
@@ -140,6 +150,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Backend",
       description:
         "SQLite ist eine C-Bibliothek, die eine kleine, schnelle, eigenständige, zuverlässige, voll ausgestattete SQL-Datenbank-Engine implementiert.",
+      icon: "DiSqllite",
       addedDate: new Date("2024-01-28"),
       updatedDate: new Date("2024-01-28"),
     },
@@ -163,6 +174,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Other",
       description:
         "GitHub ist eine webbasierte Plattform zur Versionskontrolle und Zusammenarbeit an Softwareprojekten.",
+      icon: "SiGithub",
       addedDate: new Date("2024-04-26"),
       updatedDate: new Date("2024-04-26"),
     },
@@ -173,6 +185,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Other",
       description:
         "Microsoft Word ist ein Textverarbeitungsprogramm, das zur Erstellung von Dokumenten verwendet wird.",
+      icon: "SiMicrosoftword",
       addedDate: new Date("2024-04-09"),
       updatedDate: new Date("2024-04-09"),
     },
@@ -183,6 +196,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Other",
       description:
         "Microsoft Excel ist ein Tabellenkalkulationsprogramm, das für Berechnungen, Datenanalyse und Visualisierung verwendet wird.",
+      icon: "SiMicrosoftexcel",
       addedDate: new Date("2024-04-27"),
       updatedDate: new Date("2024-04-27"),
     },
@@ -193,6 +207,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Other",
       description:
         "Figma ist ein webbasiertes Design- und Prototyping-Tool, das zur Erstellung von UI/UX-Designs verwendet wird.",
+      icon: "SiFigma",
       addedDate: new Date("2024-04-01"),
       updatedDate: new Date("2024-04-01"),
     },

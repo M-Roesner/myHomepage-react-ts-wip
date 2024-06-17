@@ -10,7 +10,7 @@ export const mySampleSkills: GroupedSkills = {
       description:
         "JavaScript ist eine vielseitige Programmiersprache, die häufig für die Webentwicklung verwendet wird.",
       projectLinks: [
-        { text: "Endloses Sprung- und Laufspiel", route: "/project/personal/2" },
+        { text: "Jump and Run Spiel", route: "/project/personal/2" },
         { text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" },
         { text: "Haushaltsbuch", route: "/project/retraining/1" },
       ],
@@ -42,7 +42,7 @@ export const mySampleSkills: GroupedSkills = {
         "TypeScript ist eine Erweiterung von JavaScript, die statisches Typing und andere Funktionen hinzufügt.",
       projectLinks: [
         { text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" },
-        { text: "Endloses Sprung- und Laufspiel", route: "/project/personal/2" },
+        { text: "Jump and Run Spiel", route: "/project/personal/2" },
         { text: "Konverter Prototyp (docx zu JSON)", route: "/project/internship/2" },
         { text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" },
       ],
@@ -60,7 +60,7 @@ export const mySampleSkills: GroupedSkills = {
       icon: "SiHtml5",
       projectLinks: [
         { text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" },
-        { text: "Endloses Sprung- und Laufspiel", route: "/project/personal/2" },
+        { text: "Jump and Run Spiel", route: "/project/personal/2" },
         { text: "4 Gewinnt - SRH Edition", route: "/project/retraining/4" },
         { text: "Homepage mit PHP", route: "/project/retraining/3" },
       ],
@@ -76,7 +76,7 @@ export const mySampleSkills: GroupedSkills = {
         "SCSS (Sassy CSS) ist eine Erweiterung von CSS, die Funktionen wie Variablen, Verschachtelungen und Mixins bietet.",
       projectLinks: [
         { text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" },
-        { text: "Endloses Sprung- und Laufspiel", route: "/project/personal/2" },
+        { text: "Jump and Run Spiel", route: "/project/personal/2" },
         { text: "4 Gewinnt - SRH Edition", route: "/project/retraining/4" },
         { text: "Homepage mit PHP", route: "/project/retraining/3" },
       ],

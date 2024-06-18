@@ -15,6 +15,8 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
   display: flex;
   flex-direction: row;
   gap: 5px;
+  background-color: ${(props) => props.theme.colors.common.backgroundColor};
+  min-width: 300px;
 
   @media (max-width: 700px) {
     position: absolute;
@@ -22,12 +24,22 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
     right: 0;
 
     display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
-    /* flex-direction: column; */
+    flex-direction: column;
+    text-align: center;
 
     z-index: 10;
+    border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+    border-top: 0;
+    height: max-content;
   }
 `;
 
 export const StyledNavListItem = styled.li`
   background-color: ${(props) => props.theme.colors.navBar.backgroundColorNavigation};
+  @media (max-width: 700px) {
+    width: inherit;
+
+    display: flex;
+    justify-content: center;
+  }
 `;

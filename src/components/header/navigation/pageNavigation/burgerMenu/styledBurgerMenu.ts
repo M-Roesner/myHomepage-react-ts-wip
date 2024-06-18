@@ -25,7 +25,7 @@ export const StyledBurgerMenuSvg = styled.svg`
  */
 export const StyledBurgerMenuSvgItem = styled.line`
   fill: none;
-  stroke: ${(props) => props.theme.colors.common.borderColor}; // Use the theme's border color for the stroke
+  stroke: ${(props) => props.theme.colors.common.textColorMain}; // Use the theme's border color for the stroke: ;
   stroke-miterlimit: 10;
   stroke-width: 4;
 `;

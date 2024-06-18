@@ -17,6 +17,7 @@ export const styledNavbarButton_Default = styled(NavLink)`
  * **This styled component should not be directly used and requires an alias when imported.**
  *
  * @param {boolean} $reverse - Specifies whether the animation should be reversed.
+ * E.g. the imprint is at the bottom of the page, so the animation should be reversed.
  */
 export const styledNavbarButton = styled(styledNavbarButton_Default).attrs<{
   $reverse: boolean;
@@ -78,6 +79,12 @@ export const styledNavbarButton = styled(styledNavbarButton_Default).attrs<{
       &::after {
         background-color: ${(props) => props.theme.colors.navBar.backgroundColor_ActiveHover};
       }
+    }
+  }
+  @media (max-width: 700px) {
+    &.navbar {
+      width: 100%;
+      justify-content: center;
     }
   }
 

@@ -4,7 +4,6 @@ import { StyledNavListItem } from "../styledPageNavWrapper";
 
 type NavListItemProps = {
   to: string;
-  wrap?: boolean;
   children: React.ReactNode;
 };
 
@@ -13,14 +12,13 @@ type NavListItemProps = {
  *
  * @param {Object} props - The props object containing the following properties:
  * @param {string} props.to - The path to navigate to when the link is clicked.
- * @param {boolean} props.wrap - Optional: Specifies whether the link should wrap its content.
  * @param {ReactNode} props.children - Optional: The content of the navigation item.
  * @returns
  */
-const NavListItem = ({ to, wrap, children }: NavListItemProps) => {
+const NavListItem = ({ to, children }: NavListItemProps) => {
   return (
     <StyledNavListItem>
-      <NavbarButton to={to} wrap={wrap}>
+      <NavbarButton to={to} className="navbar">
         {children}
       </NavbarButton>
     </StyledNavListItem>

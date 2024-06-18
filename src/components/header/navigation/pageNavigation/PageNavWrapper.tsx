@@ -17,9 +17,7 @@ const PageNavWrapper = () => {
       <BurgerMenu isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       <StyledNavUnorderedList $isOpen={isOpen}>
         <NavListItem to="/aboutMe">Über mich</NavListItem>
-        <NavListItem to="/myPortfolio" wrap>
-          Mein Portfolio
-        </NavListItem>
+        <NavListItem to="/myPortfolio">Portfolio</NavListItem>
       </StyledNavUnorderedList>
     </StyledPageNavWrapper>
   );

@@ -46,7 +46,7 @@ export const StyledListLayout = styled(unorderedListWrapper_Default)`
 
 export const StyledListLayoutItem = styled(listItemWrapper_Default)`
   ${iconHeight};
-  padding: 10px;
+  padding: ${(props) => props.theme.sizes.common.paddingResponsive};
   gap: ${(props) => props.theme.sizes.common.gap};
 
   /* 
@@ -55,7 +55,7 @@ export const StyledListLayoutItem = styled(listItemWrapper_Default)`
    - 2 * 10px for padding
    - 2 * 1px for border
 */
-  height: calc(var(--iconHeight) + 2 * 10px + 2 * 1px);
+  height: calc(var(--iconHeight) + 2 * ${(props) => props.theme.sizes.common.paddingResponsive} + 2 * 1px);
 
   display: flex;
   align-items: center;

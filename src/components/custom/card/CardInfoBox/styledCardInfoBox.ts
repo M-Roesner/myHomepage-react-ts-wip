@@ -16,7 +16,7 @@ type StyledInfoCard_NavLinkProps = NavLinkButtonWrapperType & {
 export const StyledInfoCard_NavLink = styled(navLinkButtonWrapper_Default)<StyledInfoCard_NavLinkProps>`
   position: relative;
   display: ${(props) => props.$display || "inline"};
-  padding: 10px;
+  padding: ${(props) => props.theme.sizes.common.paddingResponsive};
   text-align: center;
   border: solid 1px ${(props) => props.theme.colors.common.borderColor};
   z-index: 1;

@@ -16,7 +16,6 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
   flex-direction: row;
   gap: 5px;
   background-color: ${(props) => props.theme.colors.common.backgroundColor};
-  min-width: 300px;
 
   @media (max-width: 700px) {
     position: absolute;
@@ -31,6 +30,7 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
     border: 1px solid ${(props) => props.theme.colors.common.borderColor};
     border-top: 0;
     height: max-content;
+    min-width: 300px;
   }
 `;
 

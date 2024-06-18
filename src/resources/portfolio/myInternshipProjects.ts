@@ -35,7 +35,8 @@ export const myInternshipProjects: ProjectType[] = [
     category: "internship",
     title: "Erworbene Fähigkeiten während meines Praktikums",
     cardIntroduction: [
-      "Während meines Praktikums als Webentwickler bei der FutureNext GmbH habe ich Kenntnisse in verschiedenen Technologien und Methoden erworben.",
+      "Als Webentwickler bei der FutureNext GmbH erwarb ich Kenntnisse in verschiedenen Technologien und Methoden.",
+      "Erfahren Sie mehr über meine Zeit bei FutureNext GmbH und die Projekte, an denen ich gearbeitet habe.",
     ],
     introduction: [
       "In meinem Praktikum bei der FutureNext GmbH, einem führenden Unternehmen in der Entwicklung von fälschungssicheren Zertifikaten, konnte ich tiefgehende Einblicke in die Praxis der Softwareentwicklung gewinnen.",

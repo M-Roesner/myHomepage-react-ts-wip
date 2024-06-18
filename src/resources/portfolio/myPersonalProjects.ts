@@ -61,7 +61,7 @@ export const myPersonalProjects: ProjectType[] = [
     category: "personal",
     title: "Endless Jumping and Running Game",
     cardIntroduction: [
-      "Ein Spiel zur praktischen Übung in OOP mit JavaScript, Canvas-Nutzung, Kollisionsabfragen, Eventhandling und mehr.",
+      "Ein Spiel zur Vertiefung des Verständnisses von Objektorientierung in JavaScript, mit Canvas-Nutzung, Kollisionsabfragen, Eventhandling und mehr.",
     ],
     introduction: [
       "Dieses Jump-and-Run-Spiel habe ich mithilfe eines Tutorials auf YouTube entwickelt, um meine Fähigkeiten in der objektorientierten Programmierung (OOP) mit JavaScript zu verbessern.",

@@ -123,6 +123,14 @@ export const myRetrainingProjects: ProjectType[] = [
       { title: "CSS (SCSS)", isNew: true },
       { title: "etwas JavaScript", isNew: true },
     ],
+    links: [
+      {
+        text: "Github: mein Code",
+        route: "https://github.com/M-Roesner/Haushaltsbuch_2321",
+        iconSrc: "/src/assets/fontawesome-free-svg/github.svg",
+        iconAltText: "externer Github Link",
+      },
+    ],
     addedDate: new Date("2022-07-01"),
     updatedDate: new Date("2022-07-01"),
   },

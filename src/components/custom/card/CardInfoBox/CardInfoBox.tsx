@@ -2,10 +2,10 @@
 import { StyledInfoCard_NavLink } from "./styledCardInfoBox";
 import CardHeadline from "../cardHeadline/CardHeadline";
 import CardParagraph from "../cardParagraph/CardParagraph";
-import { StyledCardImage } from "../cardImage/styledCardImage";
 
 // Types
 import { ERouteType } from "../../../../routes/router";
+import CardImage from "../cardImage/CardImage";
 
 export type CardInfoBoxImageType = {
   imgSrc: string;
@@ -38,7 +38,7 @@ const CardInfoBox = ({ route, title, descriptions, image, isBGImage }: CardInfoB
   const url = typeof route === "string" ? route : `/${route}`;
   return (
     <StyledInfoCard_NavLink $bgImage={isBGImage ? image?.imgSrc : undefined} $display="block" to={url}>
-      {!isBGImage && image && <StyledCardImage src={image.imgSrc} alt={image.imgAlt} />}
+      {!isBGImage && image && <CardImage src={image.imgSrc} alt={image.imgAlt} />}
       <CardHeadline level={4}>{title}</CardHeadline>
       <CardParagraph paragraphs={descriptions} />
     </StyledInfoCard_NavLink>

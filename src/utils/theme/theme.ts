@@ -5,6 +5,7 @@ export const defaultTheme: DefaultTheme = {
     common: {
       gap: "5px",
       padding: "10px",
+      paddingResponsive: "clamp(5px, 1vw, 10px)",
       lineHeight: "2.5ch",
       letterSpacing: "0.05rem",
       borderRadius: "5px",
@@ -18,9 +19,6 @@ export const defaultTheme: DefaultTheme = {
       height_mobile: "64px",
       gap: "5px",
       marginBottom: "2rem",
-    },
-    button: {
-      padding: "clamp(5px, 1vw, 10px)",
     },
     footer: {
       height: "50px",

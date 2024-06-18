@@ -6,7 +6,7 @@ export const StyledProjectNavigation = styled.aside`
   width: max-content;
   margin-left: 10px;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: ${(props) => props.theme.sizes.common.paddingResponsive};
 
   border: 1px solid ${(props) => props.theme.colors.common.borderColor};
   background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};

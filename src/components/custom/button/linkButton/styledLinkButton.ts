@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
  */
 export const StyledLinkButton = styled(Link)`
   text-decoration: none;
-  padding: ${(props) => props.theme.sizes.button.padding};
+  padding: ${(props) => props.theme.sizes.common.paddingResponsive};
   border: 1px solid ${(props) => props.theme.colors.common.borderColor};
 
   background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};

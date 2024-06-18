@@ -3,6 +3,7 @@ import "styled-components";
 interface ICommonSizes {
   gap: string;
   padding: string;
+  paddingResponsive: string;
   lineHeight: string;
   letterSpacing: string;
   borderRadius: string;
@@ -17,10 +18,6 @@ interface INavBarSizes {
   height_mobile: string;
   gap: string;
   marginBottom: string;
-}
-
-interface IButtonSizes {
-  padding: string;
 }
 
 interface IFooterSizes {
@@ -73,7 +70,6 @@ declare module "styled-components" {
       common: ICommonSizes;
       navBar: INavBarSizes;
       footer: IFooterSizes;
-      button: IButtonSizes;
     };
     colors: {
       button: IButton;

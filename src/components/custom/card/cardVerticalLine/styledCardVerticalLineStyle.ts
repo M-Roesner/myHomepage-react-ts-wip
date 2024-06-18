@@ -5,7 +5,7 @@ import styled from "styled-components";
  */
 export const CardVerticalLineStyle = styled.div`
   border-left: solid 1px ${(props) => props.theme.colors.common.borderColor};
-  padding-left: 1vw;
+  padding-left: ${(props) => props.theme.sizes.common.paddingResponsive};
 `;
 
 /**

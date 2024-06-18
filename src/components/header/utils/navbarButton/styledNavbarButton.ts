@@ -24,7 +24,7 @@ export const styledNavbarButton = styled(styledNavbarButton_Default).attrs<{
   --min-padding: 10px;
   --max-padding: 20px;
 
-  white-space: nowrap;
+  white-space: nowrap; // "nowrap" - makes no line break
   width: min-content;
   height: 100%;
   padding: 10px clamp(var(--min-padding), 2vw, var(--max-padding));

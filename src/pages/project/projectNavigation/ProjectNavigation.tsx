@@ -30,7 +30,9 @@ const ProjectAsideNavigation = ({ ancorList }: ProjectAsideNavigationProps) => {
       <StyledProjectNavigationList>
         {ancorList.map((navItem, index) => (
           <StyledProjectNavigationListItem key={index}>
-            <StyledLinkButton to={`${currentPath}#${navItem.tagId}`}>{navItem.buttonText}</StyledLinkButton>
+            <StyledLinkButton to={`${currentPath}#${navItem.tagId}`} style={{ display: "block" }}>
+              {navItem.buttonText}
+            </StyledLinkButton>
           </StyledProjectNavigationListItem>
         ))}
       </StyledProjectNavigationList>

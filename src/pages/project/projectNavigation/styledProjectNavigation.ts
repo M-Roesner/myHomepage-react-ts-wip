@@ -17,12 +17,8 @@ export const StyledProjectNavigationList = styled.ul`
   flex-direction: column;
   flex-wrap: wrap;
   gap: 5px;
-
-  padding: 5px;
-  /* padding-left: 20px; */
+  margin: 5px;
 `;
 
 // Using 'listItemWrapper_Default' if I use a button inside the li element.
-export const StyledProjectNavigationListItem = styled(listItemWrapper_Default)`
-  padding-block: 10px;
-`;
+export const StyledProjectNavigationListItem = styled(listItemWrapper_Default)``;

@@ -20,7 +20,7 @@ const ProgressSection = () => {
     <SectionLayout headlineText={"Entwicklungs-Roadmap"}>
       <CardParagraph
         paragraphs={[
-          "Diese Übersicht zeigt den Prozentsatz der fertiggestellten Funktionen sowie eine Liste der bereits fertiggestellten, der in Arbeit befindlichen und der noch geplanten Funktionen.",
+          "Diese Übersicht zeigt den Prozentsatz der fertiggestellten Funktionen sowie eine Liste der bereits abgeschlossenen, in Arbeit befindlichen und geplanten Features.",
         ]}
       />
       <ProgressBar progressInPercent={progressLength}></ProgressBar>

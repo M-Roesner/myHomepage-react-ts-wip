@@ -4,11 +4,11 @@ import CardParagraph from "../../../../components/custom/card/cardParagraph/Card
 
 const SectionMyFutureCareer = () => {
   return (
-    <SectionLayout tagId="future" headlineText="Wie ich mich in der Zukunft entwickeln möchte.">
+    <SectionLayout tagId="future" headlineText="Meine zukünftige Entwicklung.">
       <CardParagraph
         paragraphs={[
-          "Mein Hauptfokus liegt mittelfristig auf der Weiterentwicklung im Bereich Frontend, den ich während meines Praktikums intensiv erleben durfte. Hier werde ich meine Anstrengungen verstärken, um mein Wissen und meine Fähigkeiten in der Frontend-Entwicklung weiter zu vertiefen.",
-          "Langfristig strebe ich an, meine Expertise auch im Backend zu vertiefen, um schließlich im Fullstack-Bereich tätig zu werden. Dieser Weg ermöglicht mir, umfassende Kenntnisse in der gesamten Webentwicklung zu erlangen und vielseitige Projekte erfolgreich umzusetzen.",
+          "Mittelfristig konzentriere ich mich darauf, meine Fähigkeiten im Bereich Frontend weiter auszubauen, den ich während meines Praktikums intensiv erleben durfte. Mein Ziel ist es, mein Wissen und meine Fähigkeiten in der Frontend-Entwicklung kontinuierlich zu vertiefen.",
+          "Langfristig plane ich, meine Expertise auch im Backend zu erweitern, um letztendlich als Fullstack-Entwickler tätig zu werden. Diese Entwicklung ermöglicht es mir, umfassende Kenntnisse in der gesamten Webentwicklung zu erlangen und vielseitige Projekte erfolgreich umzusetzen.",
         ]}
       />
     </SectionLayout>

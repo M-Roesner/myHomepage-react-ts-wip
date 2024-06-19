@@ -9,7 +9,8 @@ const HomePage = () => {
     <PageLayout headlineText="Willkommen auf meiner Seite!">
       <CardParagraph
         paragraphs={[
-          "Willkommen auf meiner Seite! Hier können Sie mehr über meine aktuellen Projekte erfahren und den Fortschritt verfolgen.",
+          "Möchtest du mehr über mich, meine Fähigkeiten und meine Projekte erfahren? Dann bist du hier genau richtig.",
+          "Hier findest du auch den aktuellen Fortschritt der Seite und erfährst, was noch geplant ist.",
         ]}
       />
       <ProgressSection />

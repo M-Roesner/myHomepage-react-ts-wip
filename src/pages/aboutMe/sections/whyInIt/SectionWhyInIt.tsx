@@ -12,9 +12,9 @@ const SectionWhyInIt = () => {
     <SectionLayout tagId="whyIt" headlineText="Warum ein Beruf in der Informatik?">
       <CardParagraph
         paragraphs={[
-          "Während meines letzten Jobs habe ich anfangs für meine Kollegen kleine automatisierte Tabellen in Excel erstellt, um die Arbeitsabläufe zu optimieren und Zeit zu sparen. Diese habe ich auch später zum Teil mit VBA (Visual Basic for Applications) verbessert.",
-          "Ebenso hatte ich für einen Sachbearbeiter ein komplexeres Pallettezettel-Programm mit Excel und VBA erstellt, welches eine Ein- und Ausgabe-Maske erhielt und die meisten Berechnungen von allein erledigte.",
-          "Mich mit VBA auseinander zu setzen, war eine neue Erfahrung für mich. Das mir viel Spaß gemacht hat, sodass ich mich für den neuen Weg als Anwendungsentwickler entschied.",
+          "Während meines letzten Jobs habe ich anfangs kleine automatisierte Tabellen in Excel für meine Kollegen und mich erstellt, um die Arbeitsabläufe zu optimieren und Zeit zu sparen. Später habe ich diese Lösungen teilweise mit VBA (Visual Basic for Applications) weiter verbessert.",
+          "Ein besonders herausforderndes Projekt war die Entwicklung eines komplexen Palettenzettel-Programms für einen Sachbearbeiter, das sowohl eine Ein- und Ausgabe-Maske enthielt als auch die meisten Berechnungen automatisch durchführte.",
+          "Die Auseinandersetzung mit VBA war für mich eine neue Erfahrung, die mir großen Spaß gemacht hat. Diese Erfahrungen haben mich dazu motiviert, den Weg als Anwendungsentwickler einzuschlagen.",
         ]}
       />
     </SectionLayout>

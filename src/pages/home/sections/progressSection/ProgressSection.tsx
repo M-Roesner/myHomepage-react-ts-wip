@@ -17,7 +17,7 @@ const ProgressSection = () => {
   const progressLength = Math.round((completedFeatures.length / progressData.length) * 100);
 
   return (
-    <SectionLayout headlineText={"Fortschritt"}>
+    <SectionLayout headlineText={"Entwicklungs-Roadmap"}>
       <CardParagraph
         paragraphs={[
           "Diese Übersicht zeigt den Prozentsatz der fertiggestellten Funktionen sowie eine Liste der bereits fertiggestellten, der in Arbeit befindlichen und der noch geplanten Funktionen.",

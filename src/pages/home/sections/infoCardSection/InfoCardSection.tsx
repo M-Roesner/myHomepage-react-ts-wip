@@ -18,7 +18,7 @@ const InfoCardSection = () => {
           route={ERouteType.ABOUT_ME}
           title={"Über mich"}
           descriptions={[
-            "Wollen Sie mehr über mich erfahren, wer ich bin, was meine Fähigkeiten sind und wie Sie mit mir in Kontakt treten können. Dann klicken Sie diese Box an!",
+            "Erfahren Sie mehr über mich, meine berufliche Laufbahn und meine Fähigkeiten in der Softwareentwicklung.",
           ]}
           image={{ imgSrc: aboutMeImage }}
           isBGImage
@@ -27,7 +27,7 @@ const InfoCardSection = () => {
           route={ERouteType.MY_PORTFOLIO}
           title={"Mein Portfolio"}
           descriptions={[
-            "Hier können Sie sehen, welche Projekte ich bereits umgesetzt habe und auch wie ich vorgegangen bin.",
+            "Entdecken Sie die Projekte, an denen ich gearbeitet habe, und erfahren Sie mehr über meine Vorgehensweise.",
           ]}
           image={{ imgSrc: projectImage }}
           isBGImage

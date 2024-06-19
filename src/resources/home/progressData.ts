@@ -14,8 +14,9 @@ export const progressData: IProgress[] = [
   { name: "Hinzufügen von Projektdetails mit Beschreibungen und Bildern", status: "complete" },
   { name: "Implementierung eines Vollbildmodus für Bilder", status: "complete" },
   { name: "Arbeiten am Responsive Design", status: "in-progress" },
-  { name: "Datenbankintegration", status: "not-started" },
+  { name: "Neugestaltung des Design.", status: "not-started" },
   { name: "Arbeiten an Grafiken und Animationen (GSAP)", status: "in-progress" },
+  { name: "Datenbankintegration", status: "not-started" },
   {
     name: "Implementierung von mehrsprachiger Unterstützung für Englisch und Deutsch (i18next)",
     status: "not-started",

@@ -12,7 +12,6 @@ export const mySampleSkills: GroupedSkills = {
         "JavaScript ist eine vielseitige Programmiersprache, die oft für die Webentwicklung genutzt wird.",
         "Sie war mein Einstieg in die Webentwicklung und ermöglichte mir, dynamische und interaktive Webseiten zu erstellen.",
       ],
-
       projectLinks: [
         { text: "Jump and Run Spiel", route: "/project/personal/2" },
         { text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" },
@@ -29,8 +28,8 @@ export const mySampleSkills: GroupedSkills = {
       level: 4,
       category: "Frontend",
       description: [
-        "React.js ist eine beliebte JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen.",
-        "Mit React.js konnte ich dynamische und interaktive Webanwendungen entwickeln, was meine Fähigkeiten in der modernen Webentwicklung stark erweitert hat.",
+        "React.js ist eine beliebte JavaScript-Bibliothek zur Erstellung von Benutzeroberflächen. Sie ermöglicht die Entwicklung dynamischer und interaktiver Webanwendungen, was meine Fähigkeiten in der modernen Webentwicklung erheblich erweitert hat.",
+        "Die Entscheidung, mit React.js zu arbeiten, wurde während meines Praktikums bei FutureNext getroffen. Dort war React.js die Haupttechnologie, die wir für die Entwicklung von Benutzeroberflächen einsetzten, insbesondere in Kombination mit TypeScript.",
       ],
       projectLinks: [
         { text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" },
@@ -69,6 +68,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Frontend",
       description: [
         "HTML (Hypertext Markup Language) ist die Standardauszeichnungssprache zur Strukturierung von Webseiten und Webanwendungen.",
+        "Dies in Verbindung mit CSS ist wohl immer der Einstieg in Webentwicklung, so auch meiner.",
       ],
       icon: "SiHtml5",
       projectLinks: [
@@ -87,7 +87,9 @@ export const mySampleSkills: GroupedSkills = {
       level: 4,
       category: "Frontend",
       description: [
-        "SCSS (Sassy CSS) ist eine Erweiterung von CSS, die Funktionen wie Variablen, Verschachtelungen und Mixins bietet.",
+        "SCSS ist eine Erweiterung von CSS, die Funktionen wie Variablen, Verschachtelungen und Mixins bietet.",
+        "Wie sagte einst mein Dozent zu uns, 'HTML ist das Skelett und CSS ist Batman', also die Gestaltung der HTML-Struktur, um es ansprechender zu machen.",
+        "Bei meinen ersten privaten Projekten war es nach anfänglicher Hürde doch einfacher mit SCSS zu arbeiten als gedacht, da es den Code entschlackt und die Entwicklung erleichtert.",
       ],
       projectLinks: [
         { text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" },
@@ -107,6 +109,8 @@ export const mySampleSkills: GroupedSkills = {
       category: "Frontend",
       description: [
         "Styled Components ist eine CSS-in-JS-Bibliothek, mit der CSS direkt in JavaScript-Dateien geschrieben werden kann.",
+        "Es war für mich eine andere Art und Weise, CSS einzusetzen. In Verbindung mit React.js war es eine gute Kombination.",
+        "Ich entschied mich, Styled Components für den Umbau meiner eigenen Homepage zu verwenden, um sie auf den neuesten Stand zu bringen.",
       ],
       projectLinks: [{ text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" }],
       icon: "SiStyledcomponents",
@@ -119,7 +123,11 @@ export const mySampleSkills: GroupedSkills = {
       priority: 1,
       level: 3,
       category: "Frontend",
-      description: ["React Router ist eine Bibliothek für die Navigation in React-Anwendungen."],
+      description: [
+        "React Router ist eine Bibliothek für die Navigation in React-Anwendungen.",
+        "Damit war ich in der Lage, komplexe Routen und Navigationsstrukturen in meinen Projekten umzusetzen, was die Benutzerfreundlichkeit erheblich verbessert hat.",
+        "Es bot sich an, React Router gleich für meine Homepage zu nutzen, um eine bessere Navigation zu ermöglichen.",
+      ],
       projectLinks: [{ text: "Homepage mit React.js und TypeScript", route: "/project/personal/1" }],
       icon: "SiReactrouter",
       addedDate: new Date("2024-04-02"),
@@ -132,13 +140,15 @@ export const mySampleSkills: GroupedSkills = {
       level: 3,
       category: "Frontend",
       description: [
-        "Redux Toolkit ist ein offizielles, von Redux maintainiertes Paket, das verschiedene Utility-Funktionen und abstrakte Schichten für die Redux-Logik bereitstellt.",
+        "Redux Toolkit ist ein offizielles Paket von Redux, das nützliche Funktionen und Werkzeuge für die State-Management-Logik bereitstellt.",
+        "Ich hatte meine ersten Berührungen damit während meines Praktikums und habe es in meinen Projekten verwendet. Dabei habe ich die Vorteile erkannt, von überall auf den State zugreifen zu können.",
       ],
       icon: "SiRedux",
       addedDate: new Date("2024-06-17"),
       updatedDate: new Date("2024-06-17"),
     },
   ],
+
   Backend: [
     {
       id: 1,
@@ -147,7 +157,8 @@ export const mySampleSkills: GroupedSkills = {
       level: 2,
       category: "Backend",
       description: [
-        "Java ist eine weit verbreitete Programmiersprache, die für ihre Portabilität und Robustheit bekannt ist.",
+        "Java ist eine robuste und vielseitige Programmiersprache, die sich durch ihre Plattformunabhängigkeit und Sicherheitsmerkmale auszeichnet. Sie wird weltweit für die Entwicklung von mobilen Apps, Unternehmenslösungen und großen Systemen eingesetzt.",
+        "Dort sammelte ich meine ersten Erfahrungen mit objektorientierter Programmierung und lernte die Grundlagen der Programmierung kennen.",
       ],
       projectLinks: [{ text: "Minesweeper", route: "/project/retraining/2" }],
       icon: "FaJava",
@@ -160,10 +171,15 @@ export const mySampleSkills: GroupedSkills = {
       priority: 1,
       level: 3,
       category: "Backend",
-      description: ["PHP ist eine serverseitige Skriptsprache, die häufig für die Webentwicklung verwendet wird."],
+      description: [
+        "PHP ist eine serverseitige Skriptsprache, die häufig für die Webentwicklung verwendet wird.",
+        "Mit PHP und objektorientierter Programmierung habe ich meine ersten Projekte erstellt, wie mein Haushaltsbuch und meine eigene Webseite.",
+        "Dies war eine großartige Gelegenheit, meine Fähigkeiten in der persönlichen Präsentation zu erweitern.",
+      ],
       projectLinks: [
         { text: "4 Gewinnt - SRH Edition", route: "/project/retraining/4" },
         { text: "Homepage mit PHP", route: "/project/retraining/3" },
+        { text: "Haushaltsbuch", route: "/project/retraining/1" },
       ],
       icon: "SiPhp",
       addedDate: new Date("2024-04-08"),
@@ -176,9 +192,11 @@ export const mySampleSkills: GroupedSkills = {
       level: 3,
       category: "Backend",
       description: [
-        "MySQL ist ein Open-Source-Relationales Datenbankmanagementsystem, das SQL (Structured Query Language) verwendet, um Daten in einer relationalen Datenbank zu verwalten und abzufragen.",
+        "MySQL ist ein Open-Source-Relationales Datenbankmanagementsystem, das SQL (Structured Query Language) verwendet, um Daten in einer Datenbank zu verwalten und abzufragen.",
+        "Meine ersten Erfahrungen mit einer relationalen Datenbank sammelte ich beim Erstellen eines Haushaltsbuchs, wo ich den Umgang mit Datenbanken im Backend und HTML/CSS im Frontend lernte.",
       ],
       icon: "SiMysql",
+      projectLinks: [{ text: "Haushaltsbuch", route: "/project/retraining/1" }],
       addedDate: new Date("2024-03-10"),
       updatedDate: new Date("2024-03-10"),
     },
@@ -189,7 +207,7 @@ export const mySampleSkills: GroupedSkills = {
       level: 1,
       category: "Backend",
       description: [
-        "SQLite ist eine C-Bibliothek, die eine kleine, schnelle, eigenständige, zuverlässige, voll ausgestattete SQL-Datenbank-Engine implementiert.",
+        "SQLite ist eine C-Bibliothek, die eine kompakte und schnelle SQL-Datenbank-Engine bietet. Sie ist bekannt für ihre Einfachheit und Zuverlässigkeit.",
       ],
       icon: "DiSqllite",
       addedDate: new Date("2024-01-28"),
@@ -218,7 +236,10 @@ export const mySampleSkills: GroupedSkills = {
       category: "Other",
       description: [
         "GitHub ist eine webbasierte Plattform zur Versionskontrolle und Zusammenarbeit an Softwareprojekten.",
+        "Es bietet mir eine sichere Möglichkeit, meinen Quellcode zu speichern und ermöglicht den Austausch mit anderen Entwicklern.",
+        "Während meiner persönlichen Projekte habe ich GitHub intensiv genutzt, um meine Projekte zu verwalten und meine Entwicklungsfähigkeiten zu verbessern.",
       ],
+      projectLinks: [{ text: "Mein GitHub Account", route: "https://github.com/M-Roesner" }],
       icon: "SiGithub",
       addedDate: new Date("2024-04-26"),
       updatedDate: new Date("2024-04-26"),
@@ -230,6 +251,8 @@ export const mySampleSkills: GroupedSkills = {
       category: "Other",
       description: [
         "Microsoft Word ist ein Textverarbeitungsprogramm, das zur Erstellung von Dokumenten verwendet wird.",
+        "Schon während meiner Schulzeit kam ich zwangsläufig mit Word in Berührung, was sich auch während meines Berufslebens fortgesetzt hat.",
+        "Ich habe damit viel gearbeitet und viele Fähigkeiten im Umgang mit Textverarbeitung und Dokumentenlayout entwickelt.",
       ],
       icon: "SiMicrosoftword",
       addedDate: new Date("2024-04-09"),
@@ -242,6 +265,9 @@ export const mySampleSkills: GroupedSkills = {
       category: "Other",
       description: [
         "Microsoft Excel ist ein Tabellenkalkulationsprogramm, das für Berechnungen, Datenanalyse und Visualisierung verwendet wird.",
+        "Excel ist mehr als nur eine Tabelle; es ermöglicht komplexe Berechnungen, Datenanalyse und die Automatisierung von Arbeitsabläufen.",
+        "Während meiner Zeit in der Buchbinderei habe ich Excel intensiv genutzt, um von einfachen Tabellen bis hin zu automatisierten Arbeitsblättern für Tageszettel, Palettenzettel und Lieferscheine zu arbeiten.",
+        "Dabei war es mir wichtig, nicht nur meine eigene Arbeit zu erleichtern, sondern auch meine Kollegen zu unterstützen und ihre täglichen Aufgaben effizienter zu gestalten.",
       ],
       icon: "SiMicrosoftexcel",
       addedDate: new Date("2024-04-27"),
@@ -254,6 +280,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Other",
       description: [
         "Figma ist ein webbasiertes Design- und Prototyping-Tool, das zur Erstellung von UI/UX-Designs verwendet wird.",
+        "Obwohl ich während meines Praktikums nicht intensiv mit Figma gearbeitet habe, habe ich dennoch die Vorteile dieser Plattform erkannt, insbesondere in der Zusammenarbeit mit Designern.",
       ],
       projectLinks: [{ text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" }],
       icon: "SiFigma",
@@ -267,9 +294,10 @@ export const mySampleSkills: GroupedSkills = {
       category: "Other",
       description: [
         "Azure ist eine umfassende Cloud-Computing-Plattform von Microsoft, die eine Vielzahl von Diensten zur Entwicklung, Bereitstellung und Verwaltung von Anwendungen und Diensten über das Internet bietet.",
+        "Während meines Praktikums konnte ich Azure intensiv kennenlernen und damit arbeiten. Es war mein erster professioneller Kontakt mit einer Cloud-Plattform, was mir half, die Nutzung von Cloud-Services zu erlernen sowie die Planung und Zusammenarbeit in Teams zu verbessern.",
       ],
+      projectLinks: [{ text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" }],
       icon: "SiAzuredevops",
-
       addedDate: new Date("2024-06-17"),
       updatedDate: new Date("2024-06-17"),
     },
@@ -280,7 +308,9 @@ export const mySampleSkills: GroupedSkills = {
       category: "Other",
       description: [
         "Canvas ist ein HTML5-Element, das zur dynamischen, programmatischen Generierung und Manipulation von Grafiken, Animationen und anderen visuellen Effekten verwendet wird.",
+        "Ich habe Canvas genutzt, um ein Jump and Run Spiel zu entwickeln. Dabei habe ich verschiedene Techniken angewendet, wie die Nutzung von Canvas-Funktionen zum Zeichnen von Bildern, die Implementierung von Sprite-Animationen sowie die Integration von Parallaxeffekten.",
       ],
+      projectLinks: [{ text: "Jump and Run Spiel", route: "/project/personal/2" }],
       addedDate: new Date("2024-06-17"),
       updatedDate: new Date("2024-06-17"),
     },

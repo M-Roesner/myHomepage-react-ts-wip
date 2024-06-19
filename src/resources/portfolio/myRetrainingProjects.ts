@@ -68,6 +68,14 @@ export const myRetrainingProjects: ProjectType[] = [
       "Umsetzung von Responsive Design für verschiedene Endgeräte.",
     ],
     technologies: [{ title: "PHP" }, { title: "HTML" }, { title: "CSS (SCSS)" }],
+    links: [
+      {
+        text: "GitHub",
+        route: "https://github.com/M-Roesner/eigeneHompageVersionPHP",
+        iconSrc: "/src/assets/fontawesome-free-svg/github.svg",
+        iconAltText: "externer Github Link",
+      },
+    ],
     addedDate: new Date("2022-12-01"),
     updatedDate: new Date("2022-12-01"),
   },

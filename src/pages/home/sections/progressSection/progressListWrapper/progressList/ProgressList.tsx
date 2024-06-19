@@ -22,7 +22,11 @@ const ProgressList = ({ list }: ListItemProps) => {
   );
   return (
     <StyledProgressList>
-      <CustomListLayout list={list} renderItem={renderProgressItem} />
+      <CustomListLayout
+        list={list}
+        numerusText={{ singular: "weiteres anzeigen", plural: "weitere anzeigen" }}
+        renderItem={renderProgressItem}
+      />
     </StyledProgressList>
   );
 };

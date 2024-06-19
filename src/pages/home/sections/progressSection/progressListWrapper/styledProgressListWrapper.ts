@@ -5,6 +5,10 @@ export const StyledProgressListWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: ${(props) => props.theme.sizes.common.gap};
 
+  :last-child {
+    height: min-content;
+  }
+
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }

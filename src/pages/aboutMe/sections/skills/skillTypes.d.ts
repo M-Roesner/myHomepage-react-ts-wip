@@ -10,7 +10,7 @@ export type SkillType = {
   priority: 1 | 2 | 3 | 4 | 5;
   level?: SkillLevelType;
   category: SkillCategoryType;
-  description: string;
+  description: string[];
   projectLinks?: LinkType[];
   personalKnowledgeLevel?: number;
   addedDate?: Date;

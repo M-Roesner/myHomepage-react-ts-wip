@@ -2,17 +2,16 @@ import { useParams } from "react-router-dom";
 
 // components
 import { StyledSkillDescription } from "./styledSkillDescription";
-import SkilledDescriptionText from "./skillDescriptionText/SkillDescriptionText";
 import SkillProjectLinks from "./SkillProjectLinks/SkillProjectLinks";
 import SkillDesciptionHeader from "./skillDescriptionHeader/SkillDesciptionHeader";
+import CardParagraph from "../../../../../components/custom/card/cardParagraph/CardParagraph";
 
 // Resources & Helpers
 import { getSingleSkill } from "./helper";
+import useScreenSize from "../../../../../utils/hooks/screenSize/useScreenSize";
 
 // Types
 import { SkillCategoryType } from "../skillTypes";
-import CardParagraph from "../../../../../components/custom/card/cardParagraph/CardParagraph";
-import useScreenSize from "../../../../../utils/hooks/screenSize/useScreenSize";
 
 /**
  * A component that returns a styled description of the skill.
@@ -32,7 +31,7 @@ const SkillDescription = () => {
       {skill ? (
         <>
           <SkillDesciptionHeader name={skill.name} icon={skill.icon} skillLevel={skill.level} />
-          <SkilledDescriptionText text={skill.description} />
+          <CardParagraph paragraphs={skill.description} />
           {skill.projectLinks !== undefined && <SkillProjectLinks links={skill.projectLinks} />}
         </>
       ) : (

@@ -1,6 +1,7 @@
 import { ProjectType } from "../../pages/myPortfolio/types/projectTypes";
+import { processJsonData } from "../../utils/pathUtils";
 
-export const myInternshipProjects: ProjectType[] = [
+export const myInternshipProjectsRawData: ProjectType[] = [
   {
     id: 2,
     category: "internship",
@@ -108,3 +109,5 @@ export const myInternshipProjects: ProjectType[] = [
     updatedDate: new Date("2023-09-21"),
   },
 ];
+
+export const myInternshipProjects: ProjectType[] = processJsonData(myInternshipProjectsRawData);

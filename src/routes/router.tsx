@@ -18,39 +18,44 @@ export enum ERouteType {
  * Use {@link ERouteType} for correct routing.
  * @enum {ERouteType}
  */
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <NotFoundPage />,
+      children: [
+        {
+          path: `/${ERouteType.HOME}`,
+          element: <HomePage />,
+        },
+        {
+          path: `/${ERouteType.ABOUT_ME}`,
+          element: <AboutMePage />,
+          children: [
+            {
+              path: `/${ERouteType.ABOUT_ME}/:skillCategory/:skillId`,
+              element: <AboutMePage />,
+            },
+          ],
+        },
+        {
+          path: `/${ERouteType.MY_PORTFOLIO}`,
+          element: <MyPortfolio />,
+        },
+        {
+          path: `/${ERouteType.PROJECT}/:portfolioCategory/:portfolioId`,
+          element: <Project />,
+        },
+        { path: "/", element: <Footer /> },
+        { path: `/${ERouteType.IMPRINT}`, element: <ImprintPage /> },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    errorElement: <NotFoundPage />,
-    children: [
-      {
-        path: `/${ERouteType.HOME}`,
-        element: <HomePage />,
-      },
-      {
-        path: `/${ERouteType.ABOUT_ME}`,
-        element: <AboutMePage />,
-        children: [
-          {
-            path: `/${ERouteType.ABOUT_ME}/:skillCategory/:skillId`,
-            element: <AboutMePage />,
-          },
-        ],
-      },
-      {
-        path: `/${ERouteType.MY_PORTFOLIO}`,
-        element: <MyPortfolio />,
-      },
-      {
-        path: `/${ERouteType.PROJECT}/:portfolioCategory/:portfolioId`,
-        element: <Project />,
-      },
-      { path: "/", element: <Footer /> },
-      { path: `/${ERouteType.IMPRINT}`, element: <ImprintPage /> },
-    ],
-  },
-]);
+    basename: "/test-react-app",
+  }
+);
 
 type RouteMeta = {
   [key in ERouteType]: {

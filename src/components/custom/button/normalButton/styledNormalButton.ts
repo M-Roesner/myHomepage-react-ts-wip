@@ -24,13 +24,13 @@ const buttonWrapper_Default = styled.button`
 export const StyledNormalButton = styled(buttonWrapper_Default)`
   padding: ${(props) => props.theme.sizes.common.paddingResponsive};
 
-  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+  border: 1px solid ${(props) => props.theme.colors.common.action.border};
 
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
-  color: ${(props) => props.theme.colors.common.textColorMain};
+  background-color: ${(props) => props.theme.colors.common.action.default};
+  color: ${(props) => props.theme.colors.common.text.primary};
   &:hover {
-    background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
-    color: ${(props) => props.theme.colors.common.textColorThird};
+    background-color: ${(props) => props.theme.colors.common.action.hover};
+    color: ${(props) => props.theme.colors.common.text.lightOnDark};
   }
 `;
 
@@ -45,8 +45,8 @@ export const StyledNormalButton_OnlyText = styled(buttonWrapper_Default)`
   margin-block: auto;
   height: min-content;
 
-  color: ${(props) => props.theme.colors.common.textColorMain};
+  color: ${(props) => props.theme.colors.common.action.active};
   &:hover {
-    color: ${(props) => props.theme.colors.common.textColorThird};
+    color: ${(props) => props.theme.colors.common.text.aczent};
   }
 `;

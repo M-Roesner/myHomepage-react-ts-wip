@@ -3,15 +3,17 @@ import styled, { css } from "styled-components";
 const svgDefault = styled.svg`
   cursor: pointer;
 
-  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+  border: 1px solid ${(props) => props.theme.colors.common.action.border};
   border-radius: 10px;
 
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent_Transparent};
+  transition: background-color 0.5s ease-in;
 
-  color: ${(props) => props.theme.colors.common.textColorMain};
+  background-color: ${(props) => props.theme.colors.common.action.transparent};
+
+  color: ${(props) => props.theme.colors.common.text.primary};
   &:hover {
-    background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
-    color: ${(props) => props.theme.colors.common.textColorThird};
+    background-color: ${(props) => props.theme.colors.common.action.hover};
+    color: ${(props) => props.theme.colors.common.text.lightOnDark};
   }
 `;
 
@@ -45,11 +47,10 @@ export const StyledSliderSvg = styled(svgDefault).attrs<{
   ${(props) =>
     props.$isEnd &&
     css`
-      background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight_Transparent};
+      background-color: ${(props) => props.theme.colors.common.action.activeTransparent};
       cursor: default;
-      transition: background-color 0.5s ease-in;
       &:hover {
-        background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight_Hover};
+        background-color: ${(props) => props.theme.colors.common.action.activeHover};
       }
     `}
 
@@ -61,7 +62,7 @@ export const StyledSliderSvg = styled(svgDefault).attrs<{
     `}
 
   line {
-    stroke: ${(props) => props.theme.colors.common.textColorMain};
+    stroke: ${(props) => props.theme.colors.common.text.primary};
     stroke-linecap: round;
     stroke-width: 5;
   }

@@ -12,18 +12,18 @@ export const StyledDot = styled.span`
   border-radius: 50%;
   display: inline-block;
 
-  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+  border: 1px solid ${(props) => props.theme.colors.common.action.border};
 
   transition: background-color 0.5s ease-in;
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
+  background-color: ${(props) => props.theme.colors.common.action.default};
   &:hover {
-    background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
+    background-color: ${(props) => props.theme.colors.common.action.hover};
   }
 
   &.active {
-    background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight};
+    background-color: ${(props) => props.theme.colors.common.action.active};
     &:hover {
-      background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight_Hover};
+      background-color: ${(props) => props.theme.colors.common.action.activeHover};
     }
   }
 `;

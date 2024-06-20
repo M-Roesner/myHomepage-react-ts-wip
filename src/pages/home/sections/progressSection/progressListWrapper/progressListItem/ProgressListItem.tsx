@@ -19,12 +19,12 @@ type ProgressListItemProps = {
  */
 const ProgressListItem = ({ status, text }: ProgressListItemProps) => {
   let icon: JSX.Element;
-  if (status === "complete") {
-    icon = <FaCheckCircle color="green" />;
+  if (status === "completed") {
+    icon = <FaCheckCircle color="#4e8a47" />;
   } else if (status === "in-progress") {
-    icon = <FaHourglassHalf color="orange" />;
+    icon = <FaHourglassHalf color="#cfce79" />;
   } else {
-    icon = <FaTimesCircle color="red" />;
+    icon = <FaTimesCircle color="#dd3e3e" />;
   }
 
   return (

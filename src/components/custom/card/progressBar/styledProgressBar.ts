@@ -4,7 +4,7 @@ export const StyledProgressBarWrapper = styled.div`
   position: relative;
   width: 100%;
   min-height: 50px;
-  border: 1px solid ${(props) => props.theme.colors.progressBar.backgroundColor};
+  border: 1px solid ${(props) => props.theme.colors.common.action.border};
   border-radius: 5px;
   margin-bottom: 10px;
 `;
@@ -18,7 +18,7 @@ export const StyledProgressFill = styled.div<StyledProgressFillProps>`
   top: 0;
   left: 0;
   height: 100%;
-  background-color: ${(props) => props.theme.colors.progressBar.backgroundColor};
+  background-color: ${(props) => props.theme.colors.common.action.default};
   border-radius: 5px;
 
   width: ${(props) => (props.$isVisible ? `${props.$progressInPercent}%` : "0%")};
@@ -30,5 +30,5 @@ export const StyledProgressText = styled.span`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: ${(props) => props.theme.colors.progressBar.color};
+  color: ${(props) => props.theme.colors.common.text.lightOnDark};
 `;

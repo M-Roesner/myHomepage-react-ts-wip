@@ -62,9 +62,9 @@ export const StyledListLayoutItem = styled(listItemWrapper_Default)`
   text-align: center;
   justify-content: center;
 
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
-  color: ${(props) => props.theme.colors.common.textColorMain};
-  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+  background-color: ${(props) => props.theme.colors.common.secondary.default};
+  color: ${(props) => props.theme.colors.common.text.primary};
+  border: 1px solid ${(props) => props.theme.colors.common.secondary.border};
 `;
 export const StyledListLayoutItemForButton = styled(listItemWrapper_Default)``;
 

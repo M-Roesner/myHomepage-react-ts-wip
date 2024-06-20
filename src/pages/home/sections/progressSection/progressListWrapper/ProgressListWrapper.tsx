@@ -17,7 +17,7 @@ type ProgressListWrapperProps = {
  */
 const ProgressListWrapper = ({ list }: ProgressListWrapperProps) => {
   // Separate completed, in-progress, and not-started progress items
-  const completedProgressList = list.filter((progress) => progress.status === "complete");
+  const completedProgressList = list.filter((progress) => progress.status === "completed");
   const inProgressOrNotStartedProgressList = list
     .filter((progress) => progress.status === "in-progress" || progress.status === "not-started")
     .sort((a) => (a.status === "in-progress" ? -1 : 1)); // Sort to prioritize "in-progress" items

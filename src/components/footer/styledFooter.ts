@@ -6,9 +6,11 @@ export const StyledFooter = styled.div`
   height: ${(props) => props.theme.sizes.footer.height};
   width: 100%;
 
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
-
   display: flex;
   justify-content: center;
-  align-items: center;
+`;
+
+export const StyledButtonWrapper = styled.div`
+  background-color: ${(props) => props.theme.colors.common.secondary.default};
+  border-radius: 10px 10px 0 0;
 `;

@@ -12,6 +12,30 @@ interface ICommonSizes {
   fontSizeMobile: string;
   fontSizeAsFootnote: string;
 }
+interface IColorCommonSecondary {
+  default: string;
+  transparent: string;
+  border: string;
+}
+
+interface IColorCommonAction {
+  default: string;
+  transparent: string;
+  hover: string;
+  border: string;
+  active: string;
+  activeTransparent: string;
+  activeHover: string;
+  activeBorder: string;
+}
+
+interface IColorCommonText {
+  primary: string;
+  secondary: string;
+  lightOnDark: string;
+  darkOnLight: string;
+  aczent: string;
+}
 
 interface INavBarSizes {
   height: string;
@@ -26,31 +50,10 @@ interface IFooterSizes {
 }
 
 interface IColorCommon {
-  backgroundColor: string;
-  backgroundColorAccent: string;
-  backgroundColorAccent_Transparent: string;
-  backgroundColorHighlight: string;
-  textColorMain: string;
-  textColorSecond: string;
-  textColorThird: string;
-  backgroundColor_Hover: string;
-  backgroundColorHighlight_Hover: string;
-  backgroundColorHighlight_Transparent: string;
-  borderColor: string;
-}
-
-interface IImageSliderFullScreen {
-  backgroundColor: string;
-}
-interface IColorNavBar {
-  backgroundColorNavigation: string;
-  backgroundColor_ActiveHover: string;
-}
-
-interface IButton {
-  backgroundColor: string;
-  backgroundColor_Hover: string;
-  backgroundColor_Active: string;
+  primary: string;
+  secondary: IColorCommonSecondary;
+  action: IColorCommonAction;
+  text: IColorCommonText;
 }
 
 interface IColorHeadline {
@@ -72,11 +75,8 @@ declare module "styled-components" {
       footer: IFooterSizes;
     };
     colors: {
-      button: IButton;
       common: IColorCommon;
-      ImageSliderFullScreen: IImageSliderFullScreen;
       headline: IColorHeadline;
-      navBar: IColorNavBar;
       progressBar: IColorProgressBar;
     };
   }

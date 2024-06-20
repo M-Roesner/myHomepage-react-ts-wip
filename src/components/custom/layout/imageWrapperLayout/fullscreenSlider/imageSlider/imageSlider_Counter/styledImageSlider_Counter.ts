@@ -7,5 +7,5 @@ export const StyledImageSlider_Counter = styled.p`
 
   padding-inline: 5px;
   font-weight: normal;
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent_Transparent};
+  background-color: ${(props) => props.theme.colors.common.secondary.transparent};
 `;

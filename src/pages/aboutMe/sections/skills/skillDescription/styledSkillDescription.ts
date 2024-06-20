@@ -7,7 +7,7 @@ export const StyledSkillDescription = styled.div<ISectionSkillWrapperStyle>`
   ${(props) =>
     props.$isMobile
       ? css`
-          border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+          border: 1px solid ${(props) => props.theme.colors.common.secondary.border};
         `
       : ""}
   padding: 5px;

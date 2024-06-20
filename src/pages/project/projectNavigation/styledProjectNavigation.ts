@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import { listItemWrapper_Default } from "../../../components/custom/layout/listLayout/styledListLayout";
 
 export const StyledProjectNavigation = styled.aside`
   float: right;
   width: max-content;
   margin-left: 10px;
   margin-bottom: 10px;
-  padding: ${(props) => props.theme.sizes.common.paddingResponsive};
 
-  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
+  border: 1px solid ${(props) => props.theme.colors.common.secondary.border};
+  background-color: ${(props) => props.theme.colors.common.secondary.default};
+  border-radius: 10px 0 0 10px;
+  text-align: center;
 `;
 
 export const StyledProjectNavigationList = styled.ul`
@@ -18,7 +18,10 @@ export const StyledProjectNavigationList = styled.ul`
   flex-wrap: wrap;
   gap: 5px;
   margin: 5px;
+  margin-right: 0;
 `;
 
-// Using 'listItemWrapper_Default' if I use a button inside the li element.
-export const StyledProjectNavigationListItem = styled(listItemWrapper_Default)``;
+export const StyledProjectNavigationListItem = styled.li`
+  text-decoration: none;
+  list-style: none;
+`;

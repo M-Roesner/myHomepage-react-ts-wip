@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 export const styledNavbarButton_Default = styled(NavLink)`
   text-decoration: none;
-  color: ${(props) => props.theme.colors.common.textColorMain};
+  color: ${(props) => props.theme.colors.common.text.primary};
   display: flex;
   align-items: center;
   text-align: center;
@@ -36,6 +36,15 @@ export const styledNavbarButton = styled(styledNavbarButton_Default).attrs<{
     z-index: 1;
   }
 
+  ${(props) =>
+    props.$reverse
+      ? css`
+          border-radius: 10px 10px 0 0;
+        `
+      : css`
+          border-radius: 0 0 10px 10px;
+        `};
+
   /* Moves the position of the background outside the visible area at the bottom or top edge, depending on the $reverse property. */
   &::after {
     content: "";
@@ -51,11 +60,14 @@ export const styledNavbarButton = styled(styledNavbarButton_Default).attrs<{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: ${(props) => props.theme.colors.common.backgroundColor};
+    background-color: ${(props) => props.theme.colors.common.action.active};
     transition: top 2s ease, bottom 2s ease; // Animates the background effect as the pseudo-element moves up or down
   }
 
   &.active {
+    :nth-child(1) {
+      font-weight: 600;
+    }
     /* Moves the position of the background into the visible area, depending on the $reverse property. */
     &::after {
       ${(props) =>
@@ -70,24 +82,24 @@ export const styledNavbarButton = styled(styledNavbarButton_Default).attrs<{
 
     /* Special hover background effect */
     &:hover {
-      background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
-
       /* Different background color to make the effect more visible */
       &::after {
-        background-color: ${(props) => props.theme.colors.navBar.backgroundColor_ActiveHover};
+        background-color: ${(props) => props.theme.colors.common.action.activeHover};
       }
     }
   }
+
   @media (max-width: 700px) {
     &.navbar {
       width: 100%;
       justify-content: center;
+      border-radius: 0;
     }
   }
 
   // Normal hover background effect
   &:hover {
-    background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
+    background-color: ${(props) => props.theme.colors.common.action.default};
   }
 `;
 

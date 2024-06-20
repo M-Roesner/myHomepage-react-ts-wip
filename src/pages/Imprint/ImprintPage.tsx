@@ -9,8 +9,8 @@ import CardParagraph from "../../components/custom/card/cardParagraph/CardParagr
 /**
  * Displays a Link button without any styles, only the color &:hover will be displayed.
  */
-const StyledLinkButton_OnlyText = styled(Link)`
-  /* text-decoration: none; */
+const ImprintButton = styled(Link)`
+  text-decoration: none;
   cursor: pointer;
   background: none;
   border: none;
@@ -19,9 +19,9 @@ const StyledLinkButton_OnlyText = styled(Link)`
   margin-block: auto;
   height: min-content;
 
-  color: ${(props) => props.theme.colors.button.backgroundColor};
+  color: ${(props) => props.theme.colors.common.action.active};
   &:hover {
-    color: ${(props) => props.theme.colors.button.backgroundColor_Hover};
+    color: ${(props) => props.theme.colors.common.text.aczent};
   }
 `;
 
@@ -39,39 +39,39 @@ const ImprintPage = () => {
 
       <SectionLayout headlineText={"Verwendete Icons und Lizenzen:"}>
         Icons von{" "}
-        <StyledLinkButton_OnlyText to="https://fontawesome.com/" target="_blank">
+        <ImprintButton to="https://fontawesome.com/" target="_blank">
           Font Awesome
-        </StyledLinkButton_OnlyText>
+        </ImprintButton>
         ,
         <br />
         lizenziert unter der{" "}
-        <StyledLinkButton_OnlyText to="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+        <ImprintButton to="https://creativecommons.org/licenses/by/4.0/" target="_blank">
           Creative Commons Attribution 4.0 International License
-        </StyledLinkButton_OnlyText>
+        </ImprintButton>
         <br />
         <br />
         Icons von{" "}
-        <StyledLinkButton_OnlyText to="https://simpleicons.org/" target="_blank">
+        <ImprintButton to="https://simpleicons.org/" target="_blank">
           Simple Icons
-        </StyledLinkButton_OnlyText>
+        </ImprintButton>
         ,
         <br />
         lizenziert unter der{" "}
-        <StyledLinkButton_OnlyText to="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">
+        <ImprintButton to="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">
           Creative Commons Zero v1.0 Universal License
-        </StyledLinkButton_OnlyText>
+        </ImprintButton>
         <br />
         <br />
         Icons von{" "}
-        <StyledLinkButton_OnlyText to="https://vorillaz.github.io/devicons/" target="_blank">
+        <ImprintButton to="https://vorillaz.github.io/devicons/" target="_blank">
           Devicons
-        </StyledLinkButton_OnlyText>
+        </ImprintButton>
         ,
         <br />
         lizenziert unter der{" "}
-        <StyledLinkButton_OnlyText to="https://opensource.org/license/MIT" target="_blank">
+        <ImprintButton to="https://opensource.org/license/MIT" target="_blank">
           MIT License
-        </StyledLinkButton_OnlyText>
+        </ImprintButton>
       </SectionLayout>
       <SectionLayout headlineText="Datenschutzerklärung:">
         <CardParagraph

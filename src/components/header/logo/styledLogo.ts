@@ -19,7 +19,7 @@ export const StyledLogoImg = styled.img`
 
 export const StyledParagraph = styled.p`
   width: max-content;
-  color: ${(props) => props.theme.colors.common.textColorMain};
+  color: ${(props) => props.theme.colors.common.text.primary};
 
   @media (max-width: 900px) {
     display: none;

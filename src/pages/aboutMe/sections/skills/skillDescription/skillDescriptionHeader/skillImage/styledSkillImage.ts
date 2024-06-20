@@ -6,6 +6,6 @@ export const StyledSkillImage = styled.div`
   span {
     font-size: 2em; /* Icon size */
     margin-right: 0.5em;
-    color: ${(props) => props.theme.colors.common.textColorMain}; /* Icon color */
+    color: ${(props) => props.theme.colors.common.text.primary}; /* Icon color */
   }
 `;

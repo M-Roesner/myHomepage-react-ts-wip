@@ -26,35 +26,34 @@ export const defaultTheme: DefaultTheme = {
     },
   },
   colors: {
-    button: {
-      // orange
-      backgroundColor: "rgb(184 97 15)",
-      backgroundColor_Hover: "#ff9100",
-      backgroundColor_Active: "rgb(184 97 15 / 70%)",
-    },
     common: {
-      backgroundColor: "#383838", // dark gray
-      backgroundColor_Hover: "#4c4c4c",
-      backgroundColorAccent: "rgb(61 61 61)",
-      backgroundColorAccent_Transparent: "rgb(61 61 61 / 70%)",
-      backgroundColorHighlight: "rgb(184 97 15)", // orange
-      backgroundColorHighlight_Hover: "#ff9100", // orange
-      backgroundColorHighlight_Transparent: "rgb(184 97 15 / 70%)", // orange
-      textColorMain: "#cecece",
-      textColorSecond: "#e7e7e7",
-      textColorThird: "rgb(184 97 15)",
-      borderColor: "#5c606d",
-    },
-    ImageSliderFullScreen: {
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
+      primary: "#26272c",
+      secondary: {
+        default: "rgb(61 61 61)",
+        transparent: "rgb(61 61 61 / 70%)",
+        border: "rgb(61 61 61)",
+      },
+      action: {
+        default: "rgb(39 73 103)",
+        transparent: "rgb(39 73 103 / 70%)",
+        hover: "#213a55",
+        border: "#213a55",
+        active: "rgb(95 130 162)",
+        activeTransparent: "rgb(95 130 162 / 70%)",
+        activeHover: "#213a55",
+        activeBorder: "#213a55",
+      },
+      text: {
+        primary: "#cecece",
+        secondary: "#707070",
+        lightOnDark: "#f2f2f2",
+        darkOnLight: "#26272c",
+        aczent: "#34abea",
+      },
     },
     headline: {
-      textColor_level1: "#5893c4", // blue
-      textColor_level2: "#91a187", // green
-    },
-    navBar: {
-      backgroundColor_ActiveHover: "#474747",
-      backgroundColorNavigation: "rgb(61 61 61)",
+      textColor_level1: "#cfce79", // yellow
+      textColor_level2: "#4e8a47", // green
     },
     progressBar: {
       backgroundColor: "#91a187",

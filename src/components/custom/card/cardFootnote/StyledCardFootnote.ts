@@ -13,6 +13,8 @@ export const StyledCardFootnote = styled.span<StyledCardFootnoteProps>`
   position: relative;
   padding-left: ${(props) => (props.symbol ? "2ch" : "0")};
 
+  color: ${(props) => props.theme.colors.common.text.secondary};
+
   &:before {
     content: "${(props) => props.symbol || ""}";
     position: absolute;

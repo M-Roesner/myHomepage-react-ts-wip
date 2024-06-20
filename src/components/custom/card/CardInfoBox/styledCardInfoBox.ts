@@ -18,8 +18,11 @@ export const StyledInfoCard_NavLink = styled(navLinkButtonWrapper_Default)<Style
   display: ${(props) => props.$display || "inline"};
   padding: ${(props) => props.theme.sizes.common.paddingResponsive};
   text-align: center;
-  border: solid 1px ${(props) => props.theme.colors.common.borderColor};
+  border: solid 1px ${(props) => props.theme.colors.common.action.border};
+  border-radius: 5px;
   z-index: 1;
+
+  background-color: ${(props) => props.theme.colors.common.secondary.default};
 
   :first-child {
     margin-top: 0;

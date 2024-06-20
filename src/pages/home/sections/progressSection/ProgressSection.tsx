@@ -13,7 +13,7 @@ import { progressData } from "../../../../resources/home/progressData";
  * @returns The rendered progress section component.
  */
 const ProgressSection = () => {
-  const completedFeatures = progressData.filter((feature) => feature.status === "complete");
+  const completedFeatures = progressData.filter((feature) => feature.status === "completed");
   const progressLength = Math.round((completedFeatures.length / progressData.length) * 100);
 
   return (

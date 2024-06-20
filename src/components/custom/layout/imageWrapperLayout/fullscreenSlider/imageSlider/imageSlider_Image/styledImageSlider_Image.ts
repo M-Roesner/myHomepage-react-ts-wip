@@ -36,5 +36,5 @@ export const StyledFullscreenSliderCaption = styled.figcaption.attrs<{
   font-size: inherit;
   line-height: normal;
 
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent_Transparent};
+  background-color: ${(props) => props.theme.colors.common.secondary.transparent};
 `;

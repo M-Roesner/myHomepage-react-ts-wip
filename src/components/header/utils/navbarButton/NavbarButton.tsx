@@ -6,7 +6,7 @@ import {
 
 type NavbarButtonProps = {
   to: string;
-  wrap?: boolean;
+  // wrap?: boolean;
   animationRevers?: boolean;
   id?: string;
   className?: string;
@@ -25,9 +25,11 @@ type NavbarButtonProps = {
  * @param {string} props.className - Optional: Identifies the navigation link with the specified class name.
  * @param {ReactNode} props.children - The content of the link.
  */
-const NavbarButton = ({ to, wrap, animationRevers = false, id, className, children }: NavbarButtonProps) => {
+const NavbarButton = ({ to, animationRevers = false, id, className, children }: NavbarButtonProps) => {
+  const wrap = false;
   {
     /* Span-tag is important for the style, it ensures that the text is always displayed. */
+    // wrap is currently not used
   }
   return (
     <>

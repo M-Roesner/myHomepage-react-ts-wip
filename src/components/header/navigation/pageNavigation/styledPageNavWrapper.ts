@@ -15,9 +15,11 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
   display: flex;
   flex-direction: row;
   gap: 5px;
-  background-color: ${(props) => props.theme.colors.common.backgroundColor};
+  background-color: ${(props) => props.theme.colors.common.primary};
+  transition: height 20s ease;
 
   @media (max-width: 700px) {
+    --extra-size: ${(props) => props.theme.sizes.common.paddingResponsive};
     position: absolute;
     top: ${(props) => props.theme.sizes.navBar.height_mobile};
     right: 0;
@@ -27,7 +29,7 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
     text-align: center;
 
     z-index: 10;
-    border: 1px solid ${(props) => props.theme.colors.common.borderColor};
+    border: 1px solid ${(props) => props.theme.colors.common.secondary.border};
     border-top: 0;
     height: max-content;
     min-width: 300px;
@@ -35,11 +37,13 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
 `;
 
 export const StyledNavListItem = styled.li`
-  background-color: ${(props) => props.theme.colors.navBar.backgroundColorNavigation};
+  background-color: ${(props) => props.theme.colors.common.secondary.default};
   @media (max-width: 700px) {
     width: inherit;
 
     display: flex;
     justify-content: center;
+    border-radius: 0;
   }
+  border-radius: 0 0 10px 10px;
 `;

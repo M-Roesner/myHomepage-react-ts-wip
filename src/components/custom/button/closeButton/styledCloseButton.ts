@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { StyledNormalButton_OnlyText } from "../normalButton/styledNormalButton";
 
-export const StyledCloseButton = styled(StyledNormalButton_OnlyText)`
+export const StyledCloseButton = styled.button`
   width: 30px;
   height: 30px;
   position: absolute;
@@ -10,13 +9,14 @@ export const StyledCloseButton = styled(StyledNormalButton_OnlyText)`
 
   transition: all 0.5s ease-in;
   border: none;
-  color: white;
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
 
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent_Transparent};
+  color: ${(props) => props.theme.colors.common.text.primary};
+  background-color: ${(props) => props.theme.colors.common.action.transparent};
   &:hover {
-    background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
+    color: ${(props) => props.theme.colors.common.text.lightOnDark};
+    background-color: ${(props) => props.theme.colors.common.action.hover};
   }
 `;

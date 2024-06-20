@@ -19,7 +19,6 @@ export type ProjectAsideNavigationProps = { ancorList: ProjectAsideNavigationBut
 const ProjectAsideNavigation = ({ ancorList }: ProjectAsideNavigationProps) => {
   const location = useLocation();
   const currentPath = location.pathname;
-
   return (
     <StyledProjectNavigation>
       <CardHeadline level={4}>

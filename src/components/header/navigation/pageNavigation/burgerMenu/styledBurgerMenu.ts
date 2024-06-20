@@ -13,6 +13,9 @@ export const StyledBurgerMenuSvg = styled.svg`
 
   display: none;
 
+  &:hover line {
+    stroke: ${(props) => props.theme.colors.common.action.active};
+  }
   @media (max-width: 700px) {
     display: block; // Display the burger menu icon on small screens
   }
@@ -25,7 +28,7 @@ export const StyledBurgerMenuSvg = styled.svg`
  */
 export const StyledBurgerMenuSvgItem = styled.line`
   fill: none;
-  stroke: ${(props) => props.theme.colors.common.textColorMain}; // Use the theme's border color for the stroke: ;
+  stroke: ${(props) => props.theme.colors.common.text.primary}; // Use the theme's border color for the stroke: ;
   stroke-miterlimit: 10;
   stroke-width: 4;
 `;

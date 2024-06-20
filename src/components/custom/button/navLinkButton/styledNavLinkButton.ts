@@ -23,18 +23,20 @@ export const navLinkButtonWrapper_Default = styled(NavLink)<NavLinkButtonWrapper
   display: ${(props) => props.$display || "inline"};
   text-decoration: none;
 
-  background-color: ${(props) => props.theme.colors.common.backgroundColorAccent};
-  color: ${(props) => props.theme.colors.common.textColorMain};
+  background-color: ${(props) => props.theme.colors.common.action.default};
+  color: ${(props) => props.theme.colors.common.text.primary};
   &:hover {
-    background-color: ${(props) => props.theme.colors.common.backgroundColor_Hover};
+    background-color: ${(props) => props.theme.colors.common.action.hover};
   }
   &.active {
-    background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight};
-    color: ${(props) => props.theme.colors.common.textColorSecond};
+    background-color: ${(props) => props.theme.colors.common.action.active};
+    color: ${(props) => props.theme.colors.common.text.darkOnLight};
+    font-weight: 600;
   }
   &.active:hover {
-    background-color: ${(props) => props.theme.colors.common.backgroundColorHighlight_Hover};
-    color: ${(props) => props.theme.colors.common.textColorSecond};
+    background-color: ${(props) => props.theme.colors.common.action.activeHover};
+    color: ${(props) => props.theme.colors.common.text.lightOnDark};
+    font-weight: inherit;
   }
 `;
 
@@ -65,8 +67,8 @@ export const StyledNavLinkButton = styled(navLinkButtonWrapper_FlexCenter)`
   width: 100%;
   gap: ${(props) => props.theme.sizes.common.gap};
   justify-content: center;
-  border: 1px solid ${(props) => props.theme.colors.common.borderColor};
-  color: ${(props) => props.theme.colors.common.textColorSecond};
+  border: 1px solid ${(props) => props.theme.colors.common.action.border};
+  color: ${(props) => props.theme.colors.common.text.primary};
 
   // Hight: Ensures that the button has the same height as the other child elements within a list.
   height: 100%;

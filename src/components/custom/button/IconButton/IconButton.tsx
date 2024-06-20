@@ -41,7 +41,7 @@ const IconButton = ({ url, icon, rotation, color, size, title }: IconButtonProps
         icon={icon}
         rotation={rotation}
         size={size}
-        style={{ color: color || theme.colors.common.textColorMain }}
+        style={{ color: color || theme.colors.common.text.primary }}
         title={title}
       />
     </StyledIconButton>

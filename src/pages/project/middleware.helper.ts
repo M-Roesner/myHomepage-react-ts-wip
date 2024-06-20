@@ -14,7 +14,7 @@ import { EProjectTagId } from "./projectEnums";
 import { ProjectAsideNavigationButtonProps } from "./projectNavigation/ProjectNavigation";
 
 // Sources
-import svgNewLabel from "/src/assets/iconscout-free/new.svg";
+import svgNewLabel from "/images/iconscout-free/new.svg";
 
 /**
  * Converts a list of ProjectLinkType to an array of ListItemType objects.

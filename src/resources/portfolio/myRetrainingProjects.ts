@@ -19,9 +19,9 @@ export const myRetrainingProjects: ProjectType[] = [
       {
         imgTitle: "4 Gewinnt",
         imgSrcs: {
-          preview: "/src/assets/projects/4wins/4gewinnt-600pxWide.png",
-          mobile: "/src/assets/projects/4wins/4gewinnt-600pxWide.png",
-          desktop: "/src/assets/projects/4wins/4gewinnt-600pxWide.png",
+          preview: "/images/projects/4wins/4gewinnt-600pxWide.png",
+          mobile: "/images/projects/4wins/4gewinnt-600pxWide.png",
+          desktop: "/images/projects/4wins/4gewinnt-600pxWide.png",
         },
         imgAlt: "4 Gewinnt",
         imgDescription: "4 Gewinnt",
@@ -40,7 +40,7 @@ export const myRetrainingProjects: ProjectType[] = [
       {
         text: "GitHub",
         route: "https://github.com/M-Roesner/four-wins",
-        iconSrc: "/src/assets/fontawesome-free-svg/github.svg",
+        iconSrc: "/images/fontawesome-free-svg/github.svg",
         iconAltText: "externer Github Link",
       },
     ],
@@ -72,7 +72,7 @@ export const myRetrainingProjects: ProjectType[] = [
       {
         text: "GitHub",
         route: "https://github.com/M-Roesner/eigeneHompageVersionPHP",
-        iconSrc: "/src/assets/fontawesome-free-svg/github.svg",
+        iconSrc: "/images/fontawesome-free-svg/github.svg",
         iconAltText: "externer Github Link",
       },
     ],
@@ -135,7 +135,7 @@ export const myRetrainingProjects: ProjectType[] = [
       {
         text: "Github: mein Code",
         route: "https://github.com/M-Roesner/Haushaltsbuch_2321",
-        iconSrc: "/src/assets/fontawesome-free-svg/github.svg",
+        iconSrc: "/images/fontawesome-free-svg/github.svg",
         iconAltText: "externer Github Link",
       },
     ],

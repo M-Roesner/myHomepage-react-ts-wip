@@ -4,8 +4,8 @@ import { StyledFlexbox } from "../../../../components/custom/grid/styledFlexbox"
 import CardInfoBox from "../../../../components/custom/card/CardInfoBox/CardInfoBox";
 
 // Resources
-import aboutMeImage from "/src/assets/home/aboutMe/aboutMe-PVA-Code.png";
-import projectImage from "/src/assets/home/project/finalGame-600pxWide.png";
+import aboutMeImage from "/images/home/aboutMe/aboutMe-PVA-Code.png";
+import projectImage from "/images/home/project/finalGame-600pxWide.png";
 
 // Types
 import { ERouteType } from "../../../../routes/router";

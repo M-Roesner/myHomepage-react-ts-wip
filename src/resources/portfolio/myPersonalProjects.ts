@@ -20,10 +20,10 @@ export const myPersonalProjects: ProjectType[] = [
       {
         imgTitle: "Image Slider",
         imgSrcs: {
-          preview: "/src/assets/projects/homepageV2/imageSlider/ImageSlider_B267xH200_quer.jpg",
-          mobile: "/src/assets/projects/homepageV2/imageSlider/ImageSlider_B434xH400_quer.jpg",
-          tablet: "/src/assets/projects/homepageV2/imageSlider/ImageSlider_B1067xH800_quer.jpg",
-          laptop: "/src/assets/projects/homepageV2/imageSlider/ImageSlider_B1600xH1200_quer.jpg",
+          preview: "/images/projects/homepageV2/imageSlider/ImageSlider_B267xH200_quer.jpg",
+          mobile: "/images/projects/homepageV2/imageSlider/ImageSlider_B434xH400_quer.jpg",
+          tablet: "/images/projects/homepageV2/imageSlider/ImageSlider_B1067xH800_quer.jpg",
+          laptop: "/images/projects/homepageV2/imageSlider/ImageSlider_B1600xH1200_quer.jpg",
         },
         imgAlt: "Image Slider",
         imgDescription: "Konzeptionszeichnung des Bildsliders für den Vollbildmodus.",
@@ -49,7 +49,7 @@ export const myPersonalProjects: ProjectType[] = [
       {
         text: "GitHub - Source Code Repository",
         route: "https://github.com/M-Roesner/myHomepage-react-ts-wip",
-        iconSrc: "/src/assets/fontawesome-free-svg/github.svg",
+        iconSrc: "/images/fontawesome-free-svg/github.svg",
         iconAltText: "Externer GitHub Link",
       },
     ],
@@ -74,9 +74,9 @@ export const myPersonalProjects: ProjectType[] = [
       {
         imgTitle: "Krähen schießen Spiel",
         imgSrcs: {
-          preview: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
-          mobile: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
-          desktop: "/src/assets/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
+          preview: "/images/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
+          mobile: "/images/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
+          desktop: "/images/projects/frankslaboratory_tutorial/CrowShooting-600pxWide.png",
         },
         imgAlt: "Krähen schießen Spiel",
         imgDescription:
@@ -86,9 +86,9 @@ export const myPersonalProjects: ProjectType[] = [
       {
         imgTitle: "Final Jump-and-Run Spiel",
         imgSrcs: {
-          preview: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
-          mobile: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
-          desktop: "/src/assets/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+          preview: "/images/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+          mobile: "/images/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
+          desktop: "/images/projects/frankslaboratory_tutorial/finalGame-600pxWide.png",
         },
         imgAlt: "Final Jump-and-Run Spiel",
         imgDescription:
@@ -117,13 +117,13 @@ export const myPersonalProjects: ProjectType[] = [
       {
         text: "Github: mein Code",
         route: "https://github.com/M-Roesner/frankslaboratory_JavaScript-Game-Development-Course-for-Beginners",
-        iconSrc: "/src/assets/fontawesome-free-svg/github.svg",
+        iconSrc: "/images/fontawesome-free-svg/github.svg",
         iconAltText: "externer Github Link",
       },
       {
         text: "YouTube Tutorial",
         route: "https://www.youtube.com/c/Frankslaboratory",
-        iconSrc: "/src/assets/fontawesome-free-svg/external-link.svg",
+        iconSrc: "/images/fontawesome-free-svg/external-link.svg",
         iconAltText: "externer link",
       },
     ],

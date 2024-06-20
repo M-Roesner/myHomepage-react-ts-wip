@@ -5,6 +5,13 @@ import InfoCardSection from "./sections/infoCardSection/InfoCardSection";
 import ProgressSection from "./sections/progressSection/ProgressSection";
 
 const HomePage = () => {
+  const length = () => {
+    const string =
+      "Erfahre mehr über meinen beruflichen Werdegang. Als Fachinformatiker mit Fokus auf Anwendungsentwicklung bringe ich Kenntnisse in React.js und TypeScript mit.";
+    return string.length;
+  };
+  console.log(length());
+
   return (
     <PageLayout headlineText="Willkommen auf meiner Seite!">
       <CardParagraph

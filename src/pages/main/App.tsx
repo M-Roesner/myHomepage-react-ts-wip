@@ -11,10 +11,12 @@ import { StyledApp } from "./styledApp.ts";
 // Helper functions
 import { ScrollToAnchor } from "../../routes/ScrollToAnchor.tsx";
 import { ScrollToTop } from "../../routes/ScrollToTop.tsx";
+import { MetaManager } from "../../routes/MetaManager.tsx";
 
 const App = () => {
   ScrollToAnchor(); // Handles scroll position to an anchor tag.
   ScrollToTop(); // Scrolls to the top of the page on route change, unless URL parameters are present.
+  MetaManager(); // Manages dynamic updates of meta tags in the head based on current route.
   return (
     <>
       <Header />

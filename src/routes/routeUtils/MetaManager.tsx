@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { ERouteType, routeMeta } from "./router";
+import { ERouteType, routeMeta } from "../router";
 
 /**
  * Component to manage dynamic updating of document title and meta description

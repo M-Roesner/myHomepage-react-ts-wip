@@ -9,9 +9,9 @@ import Header from "../../components/header/Header.tsx";
 import { StyledApp } from "./styledApp.ts";
 
 // Helper functions
-import { ScrollToAnchor } from "../../routes/ScrollToAnchor.tsx";
-import { ScrollToTop } from "../../routes/ScrollToTop.tsx";
-import { MetaManager } from "../../routes/MetaManager.tsx";
+import { ScrollToAnchor } from "../../routes/routeUtils/ScrollToAnchor.tsx";
+import { ScrollToTop } from "../../routes/routeUtils/ScrollToTop.tsx";
+import { MetaManager } from "../../routes/routeUtils/MetaManager.tsx";
 
 const App = () => {
   ScrollToAnchor(); // Handles scroll position to an anchor tag.

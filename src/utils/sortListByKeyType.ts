@@ -10,7 +10,7 @@
  * This function supports sorting by string, number, boolean, and Date types.
  * For other types, the order of the elements remains unchanged.
  */
-export const sortListByKeyType = <T>(list: T[], sortBy: keyof T, order: "acc" | "desc" = "desc"): T[] => {
+export const sortListByKeyType = <T>(list: T[], sortBy: keyof T, order: "asc" | "desc" = "desc"): T[] => {
   const descending = order === "desc";
 
   return list.sort((a, b) => {

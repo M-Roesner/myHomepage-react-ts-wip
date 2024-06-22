@@ -6,6 +6,7 @@ import SkillListWrapper from "./skillListWrapper/SkillListWrapper";
 import { CardVerticalLineStyleAsSpan } from "../../../../components/custom/card/cardVerticalLine/styledCardVerticalLineStyle";
 import SkillDescription from "./skillDescription/SkillDescription";
 import useScreenSize from "../../../../utils/hooks/screenSize/useScreenSize";
+import SkillListWrapperMobile from "./skillListWrapperMobile/SkillListWrapperMobile";
 
 /**
  * Renders a list of skills and their description.
@@ -19,9 +20,10 @@ const SectionSkillWrapper = () => {
         paragraphs={["Hier erhalten Sie einen Überblick über meine Fähigkeiten und die verwendeten Tools."]}
       />
       <SectionSkillWrapperStyle $fullSize={isMobile}>
-        <SkillListWrapper />
+        {isMobile && <SkillListWrapperMobile />}
+        {!isMobile && <SkillListWrapper />}
         {!isMobile && <CardVerticalLineStyleAsSpan />}
-        <SkillDescription />
+        {!isMobile && <SkillDescription />}
       </SectionSkillWrapperStyle>
     </SectionLayout>
   );

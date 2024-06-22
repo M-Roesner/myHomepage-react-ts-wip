@@ -4,30 +4,11 @@ import SkillList from "./skillList/SkillList";
 import { StyledCardFootnote } from "../../../../../components/custom/card/cardFootnote/StyledCardFootnote";
 
 // Resources, helpers and types
-import { mySampleSkills } from "../../../../../resources/samples/skills/mySampleSkills";
-import { sortListByKeyType } from "../../../../../utils/sortListByKeyType";
-import { SkillType } from "../skillTypes";
 import { ELanguage, formatDate } from "../../../../../utils/dateHelper";
 
-/**
- * Finds the last updated date among the list of skills.
- * If no updated date is found, returns a default date value ("1900-01-01").
- *
- * @param skillList The list of skills to search through.
- * @returns The last updated date found among the skills.
- */
-const findLastDateOfSkillList = (skillList: SkillType[]): Date => {
-  let lastUpdatedDate = new Date("1900-01-01"); // Default value when nothing was found
-
-  // Updates the date if the date is newer than the old date.
-  for (const skill of skillList) {
-    if (skill.updatedDate && skill.updatedDate > lastUpdatedDate) {
-      lastUpdatedDate = skill.updatedDate;
-    }
-  }
-
-  return lastUpdatedDate;
-};
+// Hooks
+import useSortedSkills from "./hooks/useSortedSkills";
+import useLastUpdateDate from "../hooks/useLastUpdateDate";
 
 /**
  * Component for displaying a list of skills grouped by categories.
@@ -37,29 +18,39 @@ const findLastDateOfSkillList = (skillList: SkillType[]): Date => {
  */
 export const SkillListWrapper = () => {
   // TODO: SkillList data receiving: This structure for receiving data will be changed with the database in future.
-  const frontendSkillList = sortListByKeyType(mySampleSkills["Frontend"], "priority", "acc");
-  const backendSkillList = sortListByKeyType(mySampleSkills["Backend"], "priority", "acc");
-  const designSkillList = sortListByKeyType(mySampleSkills["Design"], "priority", "acc");
-  const otherSkillList = sortListByKeyType(mySampleSkills["Other"], "priority", "acc");
 
-  const lastDateArray: Date[] = [];
-  lastDateArray.push(findLastDateOfSkillList(mySampleSkills["Frontend"]));
-  lastDateArray.push(findLastDateOfSkillList(mySampleSkills["Backend"]));
-  lastDateArray.push(findLastDateOfSkillList(mySampleSkills["Design"]));
-  lastDateArray.push(findLastDateOfSkillList(mySampleSkills["Other"]));
-  lastDateArray.sort((a, b) => a.getTime() - b.getTime());
+  // Alternative with useMemo:
+  // const frontendSkills = useSortedSkills("Frontend");
+  // const backendSkills = useSortedSkills("Backend");
+  // const designSkills = useSortedSkills("Design");
+  // const otherSkills = useSortedSkills("Backend");
 
-  const lastDate = formatDate(lastDateArray[lastDateArray.length - 1], ELanguage.GERMAN);
+  // const sortedSkills = useMemo(() => {
+  //   return [
+  //     { title: "Frontend", skills: frontendSkills },
+  //     { title: "Backend", skills: backendSkills },
+  //     { title: "Design", skills: designSkills },
+  //     { title: "Sonstiges", skills: otherSkills },
+  //   ];
+  // }, [frontendSkills, backendSkills, designSkills, otherSkills]);
+
+  // Alternative without useMemo:
+  const sortedSkills = [
+    { title: "Frontend", skills: useSortedSkills("Frontend") },
+    { title: "Backend", skills: useSortedSkills("Backend") },
+    { title: "Design", skills: useSortedSkills("Design") },
+    { title: "Sonstiges", skills: useSortedSkills("Other") },
+  ];
+
+  const lastDate = useLastUpdateDate();
+  const formattedLastDate = formatDate(lastDate, ELanguage.GERMAN);
 
   return (
     <StyledSkillListWrapper>
-      {frontendSkillList && frontendSkillList.length > 0 && (
-        <SkillList skillList={frontendSkillList} title={"Frontend"} />
+      {sortedSkills.map(
+        ({ title, skills }) => skills.length > 0 && <SkillList key={title} skillList={skills} title={title} />
       )}
-      {backendSkillList && backendSkillList.length > 0 && <SkillList skillList={backendSkillList} title={"Backend"} />}
-      {designSkillList && designSkillList.length > 0 && <SkillList skillList={designSkillList} title={"Design"} />}
-      {otherSkillList && otherSkillList.length > 0 && <SkillList skillList={otherSkillList} title={"Sonstige"} />}
-      <StyledCardFootnote>{`letztes update am: ${lastDate}`}</StyledCardFootnote>
+      <StyledCardFootnote>{`letztes update am: ${formattedLastDate}`}</StyledCardFootnote>
     </StyledSkillListWrapper>
   );
 };

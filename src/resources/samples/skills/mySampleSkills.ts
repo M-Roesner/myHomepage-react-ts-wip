@@ -3,25 +3,6 @@ import { GroupedSkills } from "../../../pages/aboutMe/sections/skills/skillTypes
 export const mySampleSkills: GroupedSkills = {
   Frontend: [
     {
-      id: 2,
-      name: "JavaScript",
-      priority: 1,
-      level: 4,
-      category: "Frontend",
-      description: [
-        "JavaScript ist eine vielseitige Programmiersprache, die oft für die Webentwicklung genutzt wird.",
-        "Sie war mein Einstieg in die Webentwicklung und ermöglichte mir, dynamische und interaktive Webseiten zu erstellen.",
-      ],
-      projectLinks: [
-        { text: "Jump and Run Spiel", route: "/project/personal/2" },
-        { text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" },
-        { text: "Haushaltsbuch", route: "/project/retraining/1" },
-      ],
-      icon: "SiJavascript",
-      addedDate: new Date("2024-04-27"),
-      updatedDate: new Date("2024-04-27"),
-    },
-    {
       id: 3,
       name: "React.js",
       priority: 1,
@@ -146,6 +127,25 @@ export const mySampleSkills: GroupedSkills = {
       icon: "SiRedux",
       addedDate: new Date("2024-06-17"),
       updatedDate: new Date("2024-06-17"),
+    },
+    {
+      id: 2,
+      name: "JavaScript",
+      priority: 1,
+      level: 4,
+      category: "Frontend",
+      description: [
+        "JavaScript ist eine vielseitige Programmiersprache, die oft für die Webentwicklung genutzt wird.",
+        "Sie war mein Einstieg in die Webentwicklung und ermöglichte mir, dynamische und interaktive Webseiten zu erstellen.",
+      ],
+      projectLinks: [
+        { text: "Jump and Run Spiel", route: "/project/personal/2" },
+        { text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" },
+        { text: "Haushaltsbuch", route: "/project/retraining/1" },
+      ],
+      icon: "SiJavascript",
+      addedDate: new Date("2024-04-27"),
+      updatedDate: new Date("2024-04-27"),
     },
   ],
 

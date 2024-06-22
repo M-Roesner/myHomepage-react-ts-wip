@@ -2,11 +2,11 @@
 import { CornerCircle, StyledRoundedOffsetButton } from "./styledRoundedOffsetButton";
 
 // Types
-import { OffsetButton_PrositionType } from "../roundedButtonType";
+import { OffsetButton_PositionType } from "../roundedButtonType";
 
 type RoundedOffsetButtonProps = {
   to: string;
-  offsetPosition: OffsetButton_PrositionType;
+  offsetPosition: OffsetButton_PositionType;
   onClick?: () => void;
   children: React.ReactNode;
 };

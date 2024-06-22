@@ -1,5 +1,9 @@
 // Components
-import { StyledSkillWrapper, StyledSkillsNavigation } from "./styledSkillsNavigation";
+import {
+  $extraStyle_OffsetButtonWrapper,
+  $exraStyle_ListLayout,
+  StyledSkillsNavigation,
+} from "./styledSkillsNavigation";
 import CardRoundedOffsetButtonWrapper from "../../../../../../components/custom/card/CardRoundedOffsetButtonWrapper/CardRoundedOffsetButtonWrapper";
 import ListLayout from "../../../../../../components/custom/layout/listLayout/ListLayout";
 
@@ -26,10 +30,16 @@ const SkillsNavigation = () => {
 
   return (
     <StyledSkillsNavigation>
-      <CardRoundedOffsetButtonWrapper buttonList={buttonList} direction={direction} />
-      <StyledSkillWrapper>
-        <ListLayout list={rederList} numerusText={{ singular: "weitere Fähigkeit", plural: "weitere Fähigkeiten" }} />
-      </StyledSkillWrapper>
+      <CardRoundedOffsetButtonWrapper
+        buttonList={buttonList}
+        direction={direction}
+        $extraStyleRuleSet_direction={$extraStyle_OffsetButtonWrapper}
+      />
+      <ListLayout
+        list={rederList}
+        numerusText={{ singular: "weitere Fähigkeit", plural: "weitere Fähigkeiten" }}
+        $extraStyleRuleSet={$exraStyle_ListLayout}
+      />
     </StyledSkillsNavigation>
   );
 };

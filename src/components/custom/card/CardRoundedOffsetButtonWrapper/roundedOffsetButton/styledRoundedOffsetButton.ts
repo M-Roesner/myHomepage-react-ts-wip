@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 // Types
-import { OffsetButton_PrositionType } from "../roundedButtonType";
+import { OffsetButton_PositionType } from "../roundedButtonType";
 
 const circleDefaults = css`
   --circle-size: 10px;
@@ -14,10 +14,10 @@ const circleDefaults = css`
 
   --main-color: ${(props) => props.theme.colors.common.secondary.default};
   --secondary-color: ${(props) => props.theme.colors.common.secondary.transparent};
-  --hover-color: ${(props) => props.theme.colors.common.action.active};
+  --hover-color: ${(props) => props.theme.colors.common.action.hover};
 `;
 
-export const StyledRoundedOffsetButton = styled(NavLink)<{ $offsetPosition?: OffsetButton_PrositionType }>`
+export const StyledRoundedOffsetButton = styled(NavLink)<{ $offsetPosition?: OffsetButton_PositionType }>`
   ${circleDefaults}
 
   display: block;
@@ -98,7 +98,7 @@ export const StyledRoundedOffsetButton = styled(NavLink)<{ $offsetPosition?: Off
 
 export const CornerCircle = styled.div<{
   $isAlignedStart?: boolean;
-  $offsetPosition: OffsetButton_PrositionType;
+  $offsetPosition: OffsetButton_PositionType;
 }>`
   ${circleDefaults}
   --circle-X-offset: calc((var(--circle-size) * -1) - var(--button-border-width));

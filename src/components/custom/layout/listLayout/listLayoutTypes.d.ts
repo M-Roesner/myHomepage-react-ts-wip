@@ -17,15 +17,3 @@ export type ListItemType = {
   iconSrc?: string;
   buttonUrl?: string | ListItemRouteType;
 };
-
-/**
- * - list: An array of ListItemType objects.
- * - numerusButtonText (optional): Displays the text if there are more entries than are shown in the list.
- * - isLinkButton (optional) - default: false - Renderes as a clickable button.
- * - maxVisableItems (optional) - default: 5 - Maximum number of elements that will be displayed with the first rendering.
- */
-export type ListLayoutProps = {
-  list: ListItemType[];
-  numerusText?: NumerusType;
-  maxVisibleItems?: number;
-};

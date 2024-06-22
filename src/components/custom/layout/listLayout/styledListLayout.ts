@@ -1,4 +1,4 @@
-import { css, styled } from "styled-components";
+import { RuleSet, css, styled } from "styled-components";
 
 const iconHeight = css`
   --iconHeight: 25px;
@@ -39,7 +39,19 @@ export const listItemWrapper_Default = styled.li`
   list-style: none;
 `;
 
-export const StyledListLayout = styled(unorderedListWrapper_Default)`
+/**
+ * A styled-component wrapper for unordered lists, allowing for additional custom styles to be applied.
+ *
+ * This component extends the default unordered list wrapper and adds additional styles
+ * through the `$extraStyle` prop. This allows for further customization of the list layout.
+ *
+ * @param {Object} props - The component props.
+ * @param {RuleSet<object>} [props.$extraStyle] - Optional additional styles to be applied to the list.
+ *
+ * @returns {JSX.Element} The styled list layout component.
+ */
+export const StyledListLayout = styled(unorderedListWrapper_Default)<{ $extraStyle?: RuleSet<object> }>`
+  ${(props) => props.$extraStyle};
   justify-content: flex-start;
   align-content: flex-start;
 `;

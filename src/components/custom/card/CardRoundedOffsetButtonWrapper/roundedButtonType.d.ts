@@ -3,6 +3,6 @@ export type RoundedButtonListType = {
   to: string;
 };
 
-export type OffsetButton_PrositionType = "left" | "right" | "top" | "bottom";
+export type OffsetButton_PositionType = "left" | "right" | "top" | "bottom";
 
 export type OffsetButtonWrapper_DirectionType = "row" | "column";

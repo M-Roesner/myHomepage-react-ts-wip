@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { OffsetButtonWrapper_DirectionType } from "../../../../../../components/custom/card/CardRoundedOffsetButtonWrapper/roundedButtonType";
 
 export const StyledSkillsNavigation = styled.div`
   display: flex;
@@ -8,7 +9,18 @@ export const StyledSkillsNavigation = styled.div`
   }
 `;
 
-export const StyledSkillWrapper = styled.div`
+export const $extraStyle_OffsetButtonWrapper = css<{ $direction: OffsetButtonWrapper_DirectionType }>`
+  ${(props) =>
+    props.$direction === "row"
+      ? css`
+          margin-inline: 5px;
+        `
+      : css`
+          margin-block: 5px;
+        `}
+`;
+
+export const $exraStyle_ListLayout = css`
   background-color: ${(props) => props.theme.colors.common.secondary.transparent};
   border: 1px solid ${(props) => props.theme.colors.common.secondary.default};
   border-radius: 5px;

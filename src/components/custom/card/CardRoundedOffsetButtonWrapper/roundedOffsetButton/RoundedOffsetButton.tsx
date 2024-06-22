@@ -2,26 +2,33 @@
 import { CornerCircle, StyledRoundedOffsetButton } from "./styledRoundedOffsetButton";
 
 // Types
-import { RoundedOffsetButtonProps } from "../roundedButtonType";
+import { OffsetButton_PrositionType } from "../roundedButtonType";
+
+type RoundedOffsetButtonProps = {
+  to: string;
+  offsetPosition: OffsetButton_PrositionType;
+  onClick?: () => void;
+  children: React.ReactNode;
+};
 
 /**
  * Button component with rounded corners and offset circle elements.
  *
  * @param {RoundedOffsetButtonProps} props - Props for the RoundedOffsetButton component.
  * @param {string} props.to - The target URL for navigation when the button is clicked.
- * @param {PrositionType} props.position - The position of the offset circles relative to the button.
+ * @param {OffsetPositionType} props.offsetPosition - The offset position of the circles relative to the button (e.g., "start", "end", "top", "bottom").
  * @param {() => void} [props.onClick] - Optional handler function for click event.
  * @param {React.ReactNode} props.children - Content to be displayed inside the button.
  * @returns {JSX.Element} RoundedOffsetButton component.
  */
-const RoundedOffsetButton = ({ to, position, onClick, children }: RoundedOffsetButtonProps): JSX.Element => {
+const RoundedOffsetButton = ({ to, offsetPosition, onClick, children }: RoundedOffsetButtonProps): JSX.Element => {
   return (
-    <StyledRoundedOffsetButton to={to} onClick={onClick} $position={position}>
+    <StyledRoundedOffsetButton to={to} onClick={onClick} $offsetPosition={offsetPosition}>
       {/* Left offset circle */}
-      <CornerCircle $isAlignedStart $position={position} />
+      <CornerCircle className="outerCircle" $isAlignedStart $offsetPosition={offsetPosition} />
       {children}
       {/* Right offset circle */}
-      <CornerCircle $position={position} />
+      <CornerCircle $offsetPosition={offsetPosition} />
     </StyledRoundedOffsetButton>
   );
 };

@@ -3,15 +3,6 @@ export type RoundedButtonListType = {
   to: string;
 };
 
-export type CardRoundedOffsetButtonWrapperProps = {
-  buttonList: RoundedButtonListType[];
-};
+export type OffsetButton_PrositionType = "left" | "right" | "top" | "bottom";
 
-export type PrositionType = "left" | "right" | "top" | "bottom";
-
-export type RoundedOffsetButtonProps = {
-  to: string;
-  position: PrositionType;
-  onClick?: () => void;
-  children: React.ReactNode;
-};
+export type OffsetButtonWrapper_DirectionType = "row" | "column";

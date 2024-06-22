@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 // Types
-import { PrositionType } from "../roundedButtonType";
+import { OffsetButton_PrositionType } from "../roundedButtonType";
 
 const circleDefaults = css`
   --circle-size: 10px;
@@ -11,9 +11,13 @@ const circleDefaults = css`
 
   --button-border-width: 2px;
   --offset-border-width: calc(var(--circle-size) / 2);
+
+  --main-color: ${(props) => props.theme.colors.common.secondary.default};
+  --secondary-color: ${(props) => props.theme.colors.common.secondary.transparent};
+  --hover-color: ${(props) => props.theme.colors.common.action.active};
 `;
 
-export const StyledRoundedOffsetButton = styled(NavLink)<{ $position?: PrositionType }>`
+export const StyledRoundedOffsetButton = styled(NavLink)<{ $offsetPosition?: OffsetButton_PrositionType }>`
   ${circleDefaults}
 
   display: block;
@@ -25,25 +29,25 @@ export const StyledRoundedOffsetButton = styled(NavLink)<{ $position?: Prosition
   border: var(--button-border-width) solid transparent;
   color: ${(props) => props.theme.colors.common.text.primary};
 
-  background-color: ${(props) => props.theme.colors.common.action.default};
+  background-color: var(--secondary-color);
   &:hover {
-    background-color: ${(props) => props.theme.colors.common.action.hover};
+    background-color: var(--hover-color);
   }
   &.active {
-    background-color: ${(props) => props.theme.colors.common.secondary.default};
+    background-color: var(--main-color);
     :first-child,
     :last-child {
       display: inline;
     }
   }
   &.active:hover {
-    background-color: ${(props) => props.theme.colors.common.action.activeHover};
+    background-color: var(--hover-color);
   }
 
   /* Adjust border radius and hide specific borders based on $position prop */
   border-radius: var(--circle-size);
   ${(props) => {
-    switch (props.$position) {
+    switch (props.$offsetPosition) {
       case "left":
         return css`
           border-left: none;
@@ -94,7 +98,7 @@ export const StyledRoundedOffsetButton = styled(NavLink)<{ $position?: Prosition
 
 export const CornerCircle = styled.div<{
   $isAlignedStart?: boolean;
-  $position: PrositionType;
+  $offsetPosition: OffsetButton_PrositionType;
 }>`
   ${circleDefaults}
   --circle-X-offset: calc((var(--circle-size) * -1) - var(--button-border-width));
@@ -117,7 +121,7 @@ export const CornerCircle = styled.div<{
 
   /* Position the corner circle based on $position prop */
   ${(props) => {
-    switch (props.$position) {
+    switch (props.$offsetPosition) {
       case "left":
         return css`
           ${props.$isAlignedStart
@@ -175,11 +179,11 @@ export const CornerCircle = styled.div<{
     width: var(--double-circle-size);
     height: var(--double-circle-size);
     border-radius: 50%;
-    border: var(--offset-border-width) solid ${(props) => props.theme.colors.common.secondary.default};
+    border: var(--offset-border-width) solid var(--main-color);
 
     /* Position the inner circle border based on $position prop */
     ${(props) => {
-      switch (props.$position) {
+      switch (props.$offsetPosition) {
         case "left":
           return css`
             ${props.$isAlignedStart

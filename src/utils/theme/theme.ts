@@ -30,7 +30,7 @@ export const defaultTheme: DefaultTheme = {
       primary: "#26272c",
       secondary: {
         default: "rgb(61 61 61)",
-        transparent: "rgb(61 61 61 / 70%)",
+        transparent: "rgb(61 61 61 / 30%)",
         border: "rgb(61 61 61)",
       },
       action: {

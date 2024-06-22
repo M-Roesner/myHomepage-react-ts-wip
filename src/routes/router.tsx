@@ -37,6 +37,10 @@ export const router = createBrowserRouter(
               path: `/${ERouteType.ABOUT_ME}/:skillCategory/:skillId`,
               element: <AboutMePage />,
             },
+            {
+              path: `/${ERouteType.ABOUT_ME}/:skillCategory`,
+              element: <AboutMePage />,
+            },
           ],
         },
         {

@@ -2,10 +2,10 @@ import { useState } from "react";
 
 // Components
 import { StyledImageWrapperLayout } from "./styledImageWrapperLayout";
-import { StyledImage } from "./styledImage";
+import ImageWrapper from "./imageWrapper/ImageWrapper";
 import FullscreenSlider from "./fullscreenSlider/FullscreenSlider";
 
-// Types
+// Type
 import { ImageType } from "./imageType";
 
 /**
@@ -26,14 +26,8 @@ const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
   return (
     <>
       <StyledImageWrapperLayout $maxColumns={images.length}>
-        {images.map((image) => (
-          <StyledImage
-            key={image.id}
-            src={image.srcMobile}
-            alt={image.alt}
-            title={image.title ? image.title : image.alt}
-            onClick={() => handleOpenFullscreen(image.id)}
-          />
+        {images.map((image, index) => (
+          <ImageWrapper key={index} image={image} onClick={() => handleOpenFullscreen(image.id)} />
         ))}
       </StyledImageWrapperLayout>
       {isFullscreen && imageId && (

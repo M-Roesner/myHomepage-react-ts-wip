@@ -47,7 +47,7 @@ export const mwProject_TechnologyToListItems = (list: ProjectTechnologyType[]): 
     return { text: item.title, iconSrc };
   });
 
-  return sortListByKeyType(newlist, "iconSrc", "acc");
+  return sortListByKeyType(newlist, "iconSrc", "asc");
 };
 
 /**

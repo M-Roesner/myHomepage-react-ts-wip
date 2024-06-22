@@ -31,6 +31,7 @@ export const defaultTheme: DefaultTheme = {
       secondary: {
         default: "rgb(61 61 61)",
         transparent: "rgb(61 61 61 / 30%)",
+        transparentStrong: "rgb(38 39 44 / 90%)",
         border: "rgb(61 61 61)",
       },
       action: {
@@ -54,6 +55,7 @@ export const defaultTheme: DefaultTheme = {
     headline: {
       textColor_level1: "#cfce79", // yellow
       textColor_level2: "#4e8a47", // green
+      textColor_level_other: "white", // white
     },
     progressBar: {
       backgroundColor: "#91a187",

@@ -23,6 +23,11 @@ export const unorderedListWrapper_Default = styled.ul`
   gap: 5px;
 
   padding: 5px;
+  width: 100%;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 /**
@@ -37,6 +42,9 @@ export const unorderedListWrapper_Default = styled.ul`
 export const listItemWrapper_Default = styled.li`
   text-decoration: none;
   list-style: none;
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 `;
 
 /**
@@ -67,7 +75,7 @@ export const StyledListLayoutItem = styled(listItemWrapper_Default)`
    - 2 * 10px for padding
    - 2 * 1px for border
 */
-  height: calc(var(--iconHeight) + 2 * ${(props) => props.theme.sizes.common.paddingResponsive} + 2 * 1px);
+  /* height: calc(var(--iconHeight) + 2 * ${(props) => props.theme.sizes.common.paddingResponsive} + 2 * 1px); */
 
   display: flex;
   align-items: center;

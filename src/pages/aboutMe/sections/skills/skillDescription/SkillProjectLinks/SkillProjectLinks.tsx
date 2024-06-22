@@ -18,7 +18,7 @@ type SkillProjectListProps = {
 const SkillProjectLinks = ({ links }: SkillProjectListProps) => {
   return (
     <>
-      <CardHeadline level={4}>Projekt links:</CardHeadline>
+      <CardHeadline level={4}>Links:</CardHeadline>
       <StyledSkillProjectList>
         {links.map((link, index) => (
           <StyledSkillProjectItem key={index}>

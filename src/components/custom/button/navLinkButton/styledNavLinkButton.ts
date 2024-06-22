@@ -27,6 +27,7 @@ export const navLinkButtonWrapper_Default = styled(NavLink)<NavLinkButtonWrapper
   color: ${(props) => props.theme.colors.common.text.primary};
   &:hover {
     background-color: ${(props) => props.theme.colors.common.action.hover};
+    font-weight: 600;
   }
   &.active {
     background-color: ${(props) => props.theme.colors.common.action.active};
@@ -37,6 +38,15 @@ export const navLinkButtonWrapper_Default = styled(NavLink)<NavLinkButtonWrapper
     background-color: ${(props) => props.theme.colors.common.action.activeHover};
     color: ${(props) => props.theme.colors.common.text.lightOnDark};
     font-weight: inherit;
+    font-weight: 600;
+  }
+  @media (pointer: coarse) {
+    &.active:hover,
+    &:hover {
+      background-color: ${(props) => props.theme.colors.common.action.active};
+      color: ${(props) => props.theme.colors.common.text.darkOnLight};
+      font-weight: 600;
+    }
   }
 `;
 

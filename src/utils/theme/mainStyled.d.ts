@@ -15,6 +15,7 @@ interface ICommonSizes {
 interface IColorCommonSecondary {
   default: string;
   transparent: string;
+  transparentStrong: string;
   border: string;
 }
 
@@ -59,6 +60,7 @@ interface IColorCommon {
 interface IColorHeadline {
   textColor_level1: string;
   textColor_level2: string;
+  textColor_level_other: string;
 }
 
 interface IColorProgressBar {

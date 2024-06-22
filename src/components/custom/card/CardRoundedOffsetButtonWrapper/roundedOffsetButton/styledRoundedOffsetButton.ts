@@ -32,9 +32,11 @@ export const StyledRoundedOffsetButton = styled(NavLink)<{ $offsetPosition?: Off
   background-color: var(--secondary-color);
   &:hover {
     background-color: var(--hover-color);
+    font-weight: 600;
   }
   &.active {
     background-color: var(--main-color);
+    font-weight: 600;
     :first-child,
     :last-child {
       display: inline;
@@ -42,6 +44,14 @@ export const StyledRoundedOffsetButton = styled(NavLink)<{ $offsetPosition?: Off
   }
   &.active:hover {
     background-color: var(--hover-color);
+    font-weight: 600;
+  }
+  @media (pointer: coarse) {
+    &.active:hover,
+    &:hover {
+      background-color: var(--main-color);
+      font-weight: 600;
+    }
   }
 
   /* Adjust border radius and hide specific borders based on $position prop */

@@ -21,7 +21,7 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
   @media (max-width: 700px) {
     --extra-size: ${(props) => props.theme.sizes.common.paddingResponsive};
     position: absolute;
-    top: ${(props) => props.theme.sizes.navBar.height_mobile};
+    top: calc(${(props) => props.theme.sizes.navBar.height_mobile} + 5px);
     right: 0;
 
     display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
@@ -32,15 +32,19 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
     border: 1px solid ${(props) => props.theme.colors.common.secondary.border};
     border-top: 0;
     height: max-content;
+
     min-width: 300px;
+  }
+  @media (max-width: 400px) {
+    width: 100vw;
+    right: -5px; // This is the margin-right of the header.
+    border: none;
   }
 `;
 
 export const StyledNavListItem = styled.li`
   background-color: ${(props) => props.theme.colors.common.secondary.default};
   @media (max-width: 700px) {
-    width: inherit;
-
     display: flex;
     justify-content: center;
     border-radius: 0;

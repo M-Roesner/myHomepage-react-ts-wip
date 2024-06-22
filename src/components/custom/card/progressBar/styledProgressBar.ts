@@ -29,6 +29,7 @@ export const StyledProgressText = styled.span`
   position: absolute;
   top: 50%;
   left: 50%;
+  white-space: nowrap;
   transform: translate(-50%, -50%);
   color: ${(props) => props.theme.colors.common.text.lightOnDark};
 `;

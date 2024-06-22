@@ -7,7 +7,7 @@ export const StyledProjectNavigation = styled.aside`
   margin-bottom: 10px;
 
   border: 1px solid ${(props) => props.theme.colors.common.secondary.border};
-  background-color: ${(props) => props.theme.colors.common.secondary.default};
+  background-color: ${(props) => props.theme.colors.common.secondary.transparent};
   border-radius: 10px 0 0 10px;
   text-align: center;
 `;

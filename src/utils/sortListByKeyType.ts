@@ -3,7 +3,7 @@
  *
  * @param {T[]} list - The list of objects to be sorted.
  * @param {keyof T} sortBy - The key by which the list should be sorted.
- * @param {"acc" | "desc"} [order="desc"] - Optional parameter to specify the sorting order. Use "desc" for descending order, "acc" for ascending order.
+ * @param {"asc" | "desc"} [order="desc"] - Optional parameter to specify the sorting order. Use "desc" for descending order, "asc" for ascending order.
  * @returns {T[]} - The sorted list.
  *
  * @remarks

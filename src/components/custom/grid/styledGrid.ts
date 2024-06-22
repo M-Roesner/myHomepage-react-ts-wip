@@ -17,7 +17,7 @@ export const StyledGrid = styled.div`
     grid-template-columns: 1fr 1fr;
   }
   @media (max-width: 600px) {
-    grid-template-columns: repeat(1, minmax(350px, 1fr));
+    grid-template-columns: 1fr;
   }
 
   // Variate mit display flex

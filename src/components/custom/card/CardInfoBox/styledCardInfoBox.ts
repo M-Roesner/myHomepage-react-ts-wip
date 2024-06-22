@@ -24,6 +24,8 @@ export const StyledInfoCard_NavLink = styled(navLinkButtonWrapper_Default)<Style
 
   background-color: ${(props) => props.theme.colors.common.secondary.default};
 
+  color: ${(props) => props.theme.colors.common.text.lightOnDark};
+
   :first-child {
     margin-top: 0;
   }
@@ -42,7 +44,7 @@ export const StyledInfoCard_NavLink = styled(navLinkButtonWrapper_Default)<Style
         background-size: cover;
         background-position: center;
         opacity: 0.2;
-        filter: blur(2px);
+        filter: blur(1px);
         z-index: 0;
       }
     `}

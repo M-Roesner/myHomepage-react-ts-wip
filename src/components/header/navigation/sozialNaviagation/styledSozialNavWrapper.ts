@@ -6,4 +6,6 @@ export const StyledSozialNavWrapper = styled.div`
   align-items: center;
   gap: ${(props) => props.theme.sizes.navBar.gap};
   padding: ${(props) => props.theme.sizes.common.paddingResponsive};
+  flex-wrap: wrap;
+  justify-content: flex-end;
 `;

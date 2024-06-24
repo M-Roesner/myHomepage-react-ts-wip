@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 
-interface ProjectNavigationProps {
+interface SideNavigationProps {
   $isOpen: boolean;
 }
 
-export const StyledProjectNavigation = styled.aside<ProjectNavigationProps>`
+export const StyledSideNavigation = styled.aside<SideNavigationProps>`
   position: relative;
   text-align: right;
   float: right;
@@ -34,9 +34,15 @@ export const StyledProjectNavigation = styled.aside<ProjectNavigationProps>`
             }
           `}
   }
+
+  z-index: ${(props) => props.theme.zIndex.navBar_Aside};
+  &:after {
+    content: "";
+    clear: both;
+  }
 `;
 
-export const StyledProjectNavigationList = styled.ul<ProjectNavigationProps>`
+export const StyledSideNavigationList = styled.ul<SideNavigationProps>`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -44,18 +50,15 @@ export const StyledProjectNavigationList = styled.ul<ProjectNavigationProps>`
   margin: 5px;
   @media (max-width: 500px) {
     ${(props) =>
-      props.$isOpen
-        ? css`
-            pointer-events
-          `
-        : css`
-            pointer-events: none;
-            margin-right: 0;
-          `}
+      !props.$isOpen &&
+      css`
+        pointer-events: none;
+        margin-right: 0;
+      `}
   }
 `;
 
-export const StyledProjectNavigationListItem = styled.li`
+export const StyledSideNavigationListItem = styled.li`
   text-decoration: none;
   list-style: none;
 `;

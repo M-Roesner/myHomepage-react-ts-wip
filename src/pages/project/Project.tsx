@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 
 // Components
 import PageLayout from "../../components/custom/layout/pageLayout/PageLayout";
-import ProjectAsideNavigation from "./projectNavigation/ProjectNavigation";
+import SideNavigation from "../../components/custom/navigation/sideNavigation/SideNavigation";
 import ProjectIntroduction from "./sections/projectIntroduction/ProjectIntroduction";
 import ParagraphList from "./utils/paragraphList/ParagraphList";
 import AdditionalInfo from "./sections/additionalInfo/AdditionalInfo";
@@ -58,7 +58,7 @@ const Project = (): React.ReactNode => {
 
   return (
     <PageLayout headlineText={content.title}>
-      {asideNavigation && <ProjectAsideNavigation ancorList={asideNavigation} />}
+      {asideNavigation && <SideNavigation ancorList={asideNavigation} />}
       <ProjectIntroduction texts={content.introduction} />
       <ParagraphList title="Warum:" tagId={EProjectTagId.WHY} list={content.why} />
       {content.additionalInfo && <AdditionalInfo list={content.additionalInfo} />}

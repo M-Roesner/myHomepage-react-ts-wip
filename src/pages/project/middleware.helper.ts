@@ -11,7 +11,7 @@ import {
   ProjectType,
 } from "../myPortfolio/types/projectTypes";
 import { EProjectTagId } from "./projectEnums";
-import { ProjectAsideNavigationButtonProps } from "./projectNavigation/ProjectNavigation";
+import { SideNavigationButtonType } from "../../components/custom/navigation/sideNavigation/SideNavigation";
 
 // Sources
 import svgNewLabel from "/images/iconscout-free/new.svg";
@@ -82,10 +82,10 @@ export const mwProject_ImageToImageType = (images: ProjectImageType[]): ImageTyp
  * Ensure that the tagId must match the id of the tag being viewed.
  *
  * @param {ProjectType[]} content - The project content
- * @returns {ProjectAsideNavigationButtonProps[]} - An array of ProjectAsideNavigationButtonProps objects.
+ * @returns {SideNavigationButtonType[]} - An array of ProjectAsideNavigationButtonProps objects.
  */
-export const mwProject_AsideNavigation = (content: ProjectType): ProjectAsideNavigationButtonProps[] | undefined => {
-  const listOfAsideNavigation: ProjectAsideNavigationButtonProps[] = [
+export const mwProject_AsideNavigation = (content: ProjectType): SideNavigationButtonType[] | undefined => {
+  const listOfAsideNavigation: SideNavigationButtonType[] = [
     { tagId: EProjectTagId.WHY, buttonText: "Warum" }, // "why" is always set
   ];
 

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-interface IStyledPrjectNavButton {
+interface IStyledSideNavigationButton {
   $textAlign: "center" | "left" | "right";
 }
-export const StyledProjectNavButton = styled(Link)<IStyledPrjectNavButton>`
+export const StyledSideNavigationButton = styled(Link)<IStyledSideNavigationButton>`
   text-decoration: none;
   display: block;
 

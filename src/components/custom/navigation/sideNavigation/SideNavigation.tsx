@@ -2,27 +2,23 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 // Components
-import {
-  StyledProjectNavigation,
-  StyledProjectNavigationList,
-  StyledProjectNavigationListItem,
-} from "./styledProjectNavigation";
+import { StyledSideNavigation, StyledSideNavigationList, StyledSideNavigationListItem } from "./styledSideNavigation";
 // import CardHeadline from "../../../components/custom/card/cardHeadline/CardHeadline";
 import ToggleButton from "./toggleButton/ToggleButton";
-import { StyledProjectNavButton } from "./projectNavButton/sytledProjectNavButton";
+import { StyledSideNavigationButton } from "./sideNavigationButton/sytledSideNavigationButton";
 
 // Types
-import { EProjectTagId } from "../projectEnums";
+import { EProjectTagId } from "../../../../pages/project/projectEnums";
 
 // Helpers
-import useScreenSize from "../../../utils/hooks/screenSize/useScreenSize";
+import useScreenSize from "../../../../utils/hooks/screenSize/useScreenSize";
 
-export type ProjectAsideNavigationButtonProps = {
+export type SideNavigationButtonType = {
   tagId: EProjectTagId | string;
   buttonText: string;
 };
 
-export type ProjectAsideNavigationProps = { ancorList: ProjectAsideNavigationButtonProps[] };
+type SideNavigationProps = { ancorList: SideNavigationButtonType[] };
 
 /**
  * Displays a navigation sidebar for a project with toggle functionality and navigation links.
@@ -30,13 +26,13 @@ export type ProjectAsideNavigationProps = { ancorList: ProjectAsideNavigationBut
  * @component
  * @example
  * // Example usage:
- * // <ProjectAsideNavigation anchorList={[{ tagId: 'example', buttonText: 'Example' }]} />
+ * // <SideNavigation anchorList={[{ tagId: 'example', buttonText: 'Example' }]} />
  *
  * @param {Object} props - The component props.
- * @param {ProjectAsideNavigationButtonProps[]} props.anchorList - List of navigation button props.
- * @returns {JSX.Element} The rendered ProjectAsideNavigation component.
+ * @param {SideNavigationButtonType[]} props.anchorList - List of navigation button props.
+ * @returns {JSX.Element} The rendered SideNavigation component.
  */
-const ProjectAsideNavigation = ({ ancorList }: ProjectAsideNavigationProps) => {
+const SideNavigation = ({ ancorList }: SideNavigationProps): JSX.Element => {
   const location = useLocation();
   const currentPath = location.pathname;
   const screenSize = useScreenSize();
@@ -64,19 +60,19 @@ const ProjectAsideNavigation = ({ ancorList }: ProjectAsideNavigationProps) => {
   }, [screenSize, isOpen]);
 
   return (
-    <StyledProjectNavigation onClick={toggleSidebar} $isOpen={isOpen}>
+    <StyledSideNavigation onClick={toggleSidebar} $isOpen={isOpen}>
       {showToggleButton && <ToggleButton isOpen={isOpen} />}
-      <StyledProjectNavigationList $isOpen={isOpen}>
+      <StyledSideNavigationList $isOpen={isOpen}>
         {ancorList.map((navItem, index) => (
-          <StyledProjectNavigationListItem key={index}>
-            <StyledProjectNavButton to={`${currentPath}#${navItem.tagId}`} $textAlign={textAlign}>
+          <StyledSideNavigationListItem key={index}>
+            <StyledSideNavigationButton to={`${currentPath}#${navItem.tagId}`} $textAlign={textAlign}>
               {navItem.buttonText}
-            </StyledProjectNavButton>
-          </StyledProjectNavigationListItem>
+            </StyledSideNavigationButton>
+          </StyledSideNavigationListItem>
         ))}
-      </StyledProjectNavigationList>
-    </StyledProjectNavigation>
+      </StyledSideNavigationList>
+    </StyledSideNavigation>
   );
 };
 
-export default ProjectAsideNavigation;
+export default SideNavigation;

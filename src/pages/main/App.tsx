@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
 // Components
-import Footer from "../../components/footer/footer.tsx";
+import Footer from "../../components/custom/navigation/footerNavigation/footer.tsx";
 import Header from "../../components/custom/navigation/mainNavigation/Header.tsx";
 
 // Style

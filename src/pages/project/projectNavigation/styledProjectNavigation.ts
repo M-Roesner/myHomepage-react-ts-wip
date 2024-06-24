@@ -16,7 +16,7 @@ export const StyledProjectNavigation = styled.aside<ProjectNavigationProps>`
   margin-bottom: ${(props) => props.theme.sizes.common.paddingResponsive};
 
   border-radius: 10px 0 0 10px;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out; // Note: Pay attention to this transition for animation and scroll behavior
 
   @media (max-width: 500px) {
     ${(props) =>

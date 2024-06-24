@@ -19,7 +19,7 @@ export const StyledProjectNavButton = styled(Link)<IStyledPrjectNavButton>`
   }
 
   text-align: ${(props) => props.$textAlign};
-  transition: text-align 5s ease-in-out; // Does currently not work.
+  /* transition: text-align 5s ease-in-out; // Does currently not work. */
 
   white-space: nowrap;
 `;

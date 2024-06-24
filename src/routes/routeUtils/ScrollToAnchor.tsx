@@ -32,7 +32,7 @@ export function ScrollToAnchor(): null {
       setTimeout(() => {
         document.getElementById(lastHash.current)?.scrollIntoView({ behavior: "smooth", block: "start" }); // Smooth scroll to the element
         lastHash.current = ""; // Reset the last hash
-      }, 100); // Delay in milliseconds
+      }, 300); // Delay in milliseconds ----- Note: Pay attention to this delay for animation and scroll behavior, e.g., for the sidebar animation
     }
   }, [location]); // Dependency array with location to re-run effect on URL change
 

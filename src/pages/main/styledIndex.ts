@@ -6,7 +6,11 @@ export const StyledIndex = styled.div`
   font-weight: 400;
   font-style: normal;
 
-  font-size: clamp(1rem, 2vw, ${(props) => props.theme.sizes.common.fontSizeMax});
+  font-size: clamp(
+    ${(props) => props.theme.sizes.common.fontSizeMin},
+    2vw,
+    ${(props) => props.theme.sizes.common.fontSizeMax}
+  );
 
   letter-spacing: ${(props) => props.theme.sizes.common.letterSpacing};
 `;

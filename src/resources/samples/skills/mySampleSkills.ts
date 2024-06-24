@@ -234,6 +234,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 7,
       name: "GitHub",
       priority: 1,
+      level: 3,
       category: "Other",
       description: [
         "GitHub ist eine webbasierte Plattform zur Versionskontrolle und Zusammenarbeit an Softwareprojekten.",
@@ -249,6 +250,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 9,
       name: "MS Word",
       priority: 4,
+      level: 5,
       category: "Other",
       description: [
         "Microsoft Word ist ein Textverarbeitungsprogramm, das zur Erstellung von Dokumenten verwendet wird.",
@@ -263,6 +265,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 10,
       name: "MS Excel",
       priority: 4,
+      level: 5,
       category: "Other",
       description: [
         "Microsoft Excel ist ein Tabellenkalkulationsprogramm, das für Berechnungen, Datenanalyse und Visualisierung verwendet wird.",
@@ -278,6 +281,7 @@ export const mySampleSkills: GroupedSkills = {
       id: 13,
       name: "Figma",
       priority: 3,
+      level: 1,
       category: "Other",
       description: [
         "Figma ist ein webbasiertes Design- und Prototyping-Tool, das zur Erstellung von UI/UX-Designs verwendet wird.",
@@ -291,6 +295,7 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 22,
       name: "Azure",
+      level: 3,
       priority: 2,
       category: "Other",
       description: [
@@ -305,6 +310,7 @@ export const mySampleSkills: GroupedSkills = {
     {
       id: 20,
       name: "Canvas",
+      level: 2,
       priority: 3,
       category: "Other",
       description: [

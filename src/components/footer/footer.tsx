@@ -1,6 +1,6 @@
 // Components
 import { StyledButtonWrapper, StyledFooter } from "./styledFooter";
-import NavbarButton from "../header/utils/navbarButton/NavbarButton";
+import NavbarButton from "../custom/navigation/mainNavigation/utils/navbarButton/NavbarButton";
 
 const Footer = () => {
   return (

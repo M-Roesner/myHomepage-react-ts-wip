@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 // Components
 import Footer from "../../components/footer/footer.tsx";
-import Header from "../../components/header/Header.tsx";
+import Header from "../../components/custom/navigation/mainNavigation/Header.tsx";
 
 // Style
 import { StyledApp } from "./styledApp.ts";

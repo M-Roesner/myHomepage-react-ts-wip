@@ -9,7 +9,7 @@ export const defaultTheme: DefaultTheme = {
       lineHeight: "2.5ch",
       letterSpacing: "0.05rem",
       borderRadius: "5px",
-      fontSizeMax: "1.5rem",
+      fontSizeMax: "1.3rem",
       fontSizeMin: "1rem",
       fontSizeMobile: "1rem",
       fontSizeAsFootnote: "0.8rem",

@@ -21,13 +21,8 @@ type ImageWrapperProps = {
  */
 const ImageWrapper = ({ image, onClick }: ImageWrapperProps): JSX.Element => {
   return (
-    <StyledImageWrapper>
-      <StyledImage
-        src={image.srcMobile}
-        alt={image.alt}
-        title={image.title ? image.title : image.alt}
-        onClick={onClick}
-      />
+    <StyledImageWrapper onClick={onClick}>
+      <StyledImage src={image.srcMobile} alt={image.alt} title={image.title ? image.title : image.alt} />
       <StyledHandClick>
         <FaRegHandPointer />
       </StyledHandClick>

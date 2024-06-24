@@ -5,7 +5,6 @@ export const StyledIndex = styled.div`
   color: ${(props) => props.theme.colors.common.text.primary};
   font-weight: 400;
   font-style: normal;
-  font-size: ${(props) => props.theme.sizes.common.fontSizeMax};
 
   font-size: clamp(1rem, 2vw, ${(props) => props.theme.sizes.common.fontSizeMax});
 

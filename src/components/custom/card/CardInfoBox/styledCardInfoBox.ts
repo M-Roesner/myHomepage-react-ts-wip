@@ -22,7 +22,7 @@ export const StyledInfoCard_NavLink = styled(navLinkButtonWrapper_Default)<Style
   border-radius: 5px;
   z-index: 1;
 
-  background-color: ${(props) => props.theme.colors.common.secondary.default};
+  background-color: ${(props) => props.theme.colors.common.secondary.transparent};
 
   color: ${(props) => props.theme.colors.common.text.lightOnDark};
 

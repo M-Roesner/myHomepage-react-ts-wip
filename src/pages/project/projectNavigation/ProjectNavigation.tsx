@@ -42,6 +42,7 @@ const ProjectAsideNavigation = ({ ancorList }: ProjectAsideNavigationProps) => {
   const screenSize = useScreenSize();
 
   const [isOpen, setIsOpen] = useState(false);
+  const [textAlign, setTextAlign] = useState<"center" | "left">("center");
 
   /**
    * Toggles the sidebar open or closed.
@@ -53,9 +54,14 @@ const ProjectAsideNavigation = ({ ancorList }: ProjectAsideNavigationProps) => {
   const [showToggleButton, setShowToggleButton] = useState(false);
 
   useEffect(() => {
-    // Determine whether to show the toggle button based on screen size
-    setShowToggleButton(screenSize.width < 500);
-  }, [screenSize]);
+    const isMobileScreen = screenSize.width < 500;
+
+    // Determine whether to show the toggle button
+    setShowToggleButton(isMobileScreen);
+
+    // Set text alignment based on screen size and isOpen state
+    setTextAlign(isMobileScreen ? (isOpen ? "center" : "left") : "center");
+  }, [screenSize, isOpen]);
 
   return (
     <StyledProjectNavigation onClick={toggleSidebar} $isOpen={isOpen}>
@@ -63,7 +69,7 @@ const ProjectAsideNavigation = ({ ancorList }: ProjectAsideNavigationProps) => {
       <StyledProjectNavigationList $isOpen={isOpen}>
         {ancorList.map((navItem, index) => (
           <StyledProjectNavigationListItem key={index}>
-            <StyledProjectNavButton to={`${currentPath}#${navItem.tagId}`} $textAlign={isOpen ? "center" : "left"}>
+            <StyledProjectNavButton to={`${currentPath}#${navItem.tagId}`} $textAlign={textAlign}>
               {navItem.buttonText}
             </StyledProjectNavButton>
           </StyledProjectNavigationListItem>

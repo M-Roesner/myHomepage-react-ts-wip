@@ -125,6 +125,7 @@ export const mySampleSkills: GroupedSkills = {
         "Ich hatte meine ersten Berührungen damit während meines Praktikums und habe es in meinen Projekten verwendet. Dabei habe ich die Vorteile erkannt, von überall auf den State zugreifen zu können.",
       ],
       icon: "SiRedux",
+      projectLinks: [{ text: "Erworbene Fähigkeiten beim Praktikum", route: "/project/internship/1" }],
       addedDate: new Date("2024-06-17"),
       updatedDate: new Date("2024-06-17"),
     },

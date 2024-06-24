@@ -28,6 +28,12 @@ export const myInternshipProjectsRawData: ProjectType[] = [
       "Erstellung von Dokumentationen, unter anderem unter Verwendung von Markdown.",
     ],
     technologies: [{ title: "React.js" }, { title: "TypeScript" }],
+    links: [
+      {
+        text: "Erworbene Fähigkeiten beim Praktikum",
+        route: "/project/internship/2",
+      },
+    ],
     addedDate: new Date("2024-01-16"),
     updatedDate: new Date("2024-01-16"),
   },

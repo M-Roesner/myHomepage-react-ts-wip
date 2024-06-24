@@ -68,6 +68,12 @@ interface IColorProgressBar {
   color: string;
 }
 
+interface IZindex {
+  imageFullscreen: number;
+  navBar_Main: number;
+  navBar_Aside: number;
+}
+
 declare module "styled-components" {
   export interface DefaultTheme {
     fontFamily: string;
@@ -81,5 +87,6 @@ declare module "styled-components" {
       headline: IColorHeadline;
       progressBar: IColorProgressBar;
     };
+    zIndex: IZindex;
   }
 }

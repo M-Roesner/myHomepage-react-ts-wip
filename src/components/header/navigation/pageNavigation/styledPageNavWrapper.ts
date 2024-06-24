@@ -28,7 +28,7 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
     flex-direction: column;
     text-align: center;
 
-    z-index: 10;
+    z-index: ${(props) => props.theme.zIndex.navBar_Main};
     border: 1px solid ${(props) => props.theme.colors.common.secondary.border};
     border-top: 0;
     height: max-content;

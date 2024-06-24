@@ -62,4 +62,9 @@ export const defaultTheme: DefaultTheme = {
       color: "#e7e7e7",
     },
   },
+  zIndex: {
+    imageFullscreen: 1000,
+    navBar_Main: 100,
+    navBar_Aside: 10,
+  },
 };

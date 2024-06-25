@@ -209,6 +209,7 @@ export const mySampleSkills: GroupedSkills = {
       category: "Backend",
       description: [
         "SQLite ist eine C-Bibliothek, die eine kompakte und schnelle SQL-Datenbank-Engine bietet. Sie ist bekannt für ihre Einfachheit und Zuverlässigkeit.",
+        "Ich habe grundlegende Kenntnisse in SQLite, die es mir ermöglichen, einfache Datenbankoperationen durchzuführen.",
       ],
       icon: "DiSqllite",
       addedDate: new Date("2024-01-28"),
@@ -222,9 +223,37 @@ export const mySampleSkills: GroupedSkills = {
       category: "Backend",
       description: [
         "Express.js ist ein Webanwendungs-Framework für Node.js, das zur Erstellung von Webanwendungen und APIs verwendet wird.",
+        "Ich habe grundlegende Kenntnisse in Express.js, die es mir ermöglichen, einfache Server und API-Endpunkte zu erstellen.",
       ],
       addedDate: new Date("2024-04-11"),
       updatedDate: new Date("2024-04-11"),
+    },
+    {
+      id: 23,
+      name: "AJAX",
+      priority: 5,
+      level: 1,
+      category: "Backend",
+      description: [
+        "AJAX (Asynchronous JavaScript and XML) ist eine Technik zur Erstellung von schnelleren und dynamischeren Webanwendungen, indem es ermöglicht, Daten im Hintergrund zu laden und anzuzeigen, ohne die gesamte Seite neu zu laden.",
+        "Ich habe grundlegende Kenntnisse in AJAX, die es mir ermöglichen, dynamische und interaktive Webanwendungen zu entwickeln.",
+      ],
+      addedDate: new Date("2024-01-28"),
+      updatedDate: new Date("2024-01-28"),
+    },
+    {
+      id: 24,
+      name: "PDO",
+      priority: 2,
+      level: 3,
+      category: "Backend",
+      description: [
+        "PDO (PHP Data Objects) ist eine Datenbank-Abstraktionsschicht für PHP, die eine einheitliche Schnittstelle für den Zugriff auf verschiedene Datenbanken bietet.",
+        "Mit PDO habe ich mein Haushaltsbuch umgesetzt, bei dem ich sichere und effiziente Datenbankinteraktionen realisiert habe. Besonders hervorzuheben sind die Verwendung von Prepared Statements, die nicht nur die Sicherheit durch SQL-Injection-Prävention erhöhen, sondern auch die Performance bei wiederholten Abfragen verbessern.",
+      ],
+      projectLinks: [{ text: "Haushaltsbuch", route: "/project/retraining/1" }],
+      addedDate: new Date("2022-07-01"),
+      updatedDate: new Date("2022-07-01"),
     },
   ],
 

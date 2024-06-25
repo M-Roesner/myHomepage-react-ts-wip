@@ -1,4 +1,4 @@
-import { FaReact, FaJava } from "react-icons/fa";
+import { FaReact, FaJava, FaDatabase } from "react-icons/fa";
 import {
   SiJavascript,
   SiTypescript,
@@ -14,6 +14,7 @@ import {
   SiFigma,
   SiRedux,
   SiAzuredevops,
+  SiExpress,
 } from "react-icons/si";
 import { DiSqllite } from "react-icons/di";
 
@@ -26,6 +27,7 @@ import { DiSqllite } from "react-icons/di";
 const iconMapping: { [key: string]: React.ElementType } = {
   FaReact,
   FaJava,
+  FaDatabase,
   SiJavascript,
   SiTypescript,
   SiHtml5,
@@ -40,6 +42,7 @@ const iconMapping: { [key: string]: React.ElementType } = {
   SiFigma,
   SiAzuredevops,
   SiRedux,
+  SiExpress,
   DiSqllite,
   // Add more icons here as needed
 };

@@ -12,9 +12,8 @@ export type SkillType = {
   category: SkillCategoryType;
   description: string[];
   projectLinks?: LinkType[];
-  personalKnowledgeLevel?: number;
-  addedDate?: Date;
-  updatedDate?: Date;
+  addedDate: Date;
+  updatedDate: Date;
   icon?: string;
 };
 

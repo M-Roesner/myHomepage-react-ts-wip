@@ -1,3 +1,5 @@
+USE `Homepage`;
+
 -- Kategorien einfügen
 INSERT INTO CategorySkill (category_name)
 VALUES ('Frontend'),

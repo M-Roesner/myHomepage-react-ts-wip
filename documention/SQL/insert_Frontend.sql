@@ -1,5 +1,7 @@
 -- SQL für Skills der Kategorie "Frontend"
 
+USE `Homepage`;
+
 -- React.js
 INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, icon, added_date, updated_date)
 VALUES ('React.js', 1, 4, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Frontend'), 'FaReact', '2024-04-22', '2024-04-22');

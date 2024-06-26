@@ -1,5 +1,6 @@
 -- Datenbank erstellen
-CREATE DATABASE  Homepage;
+CREATE DATABASE IF NOT EXISTS `Homepage` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `Homepage`;
 
 -- Kategorien-Tabelle für Skills erstellen mit Eindeutigkeitsconstraint
 CREATE TABLE CategorySkill (

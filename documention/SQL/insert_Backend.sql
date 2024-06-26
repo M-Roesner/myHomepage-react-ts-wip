@@ -1,5 +1,7 @@
 -- SQL für Skills der Kategorie "Backend"
 
+USE `Homepage`;
+
 -- Java
 INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, icon, added_date, updated_date)
 VALUES ('Java', 3, 2, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Backend'), 'FaJava', '2024-04-10', '2024-04-10');

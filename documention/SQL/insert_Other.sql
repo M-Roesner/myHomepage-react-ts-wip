@@ -1,5 +1,7 @@
 -- SQL für Skills der Kategorie "Other"
 
+USE `Homepage`;
+
 -- GitHub
 INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, icon, added_date, updated_date)
 VALUES ('GitHub', 1, 3, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Other'), 'SiGithub', '2024-04-26', '2024-04-26');

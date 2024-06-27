@@ -4,6 +4,7 @@ export const ImageSlider_ImageWrapper = styled.figure.attrs<{
   $isMobile?: boolean; // Wird aktuell nicht verwendet!
 }>(() => ({}))`
   // TODO: Size: Größe des Bildes anpassen, wenn es unterschiedlich breite Bilder in der Liste gibt!
+  // Hoch- und Querformat
   width: 100%;
 
   position: relative;

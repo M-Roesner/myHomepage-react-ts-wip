@@ -20,11 +20,11 @@ React, TypeScript, React-Router, Styled-Component
 
 3.  Design - styled compontents
 
-    - [] Card layout:
+    - [x] Card layout:
       - [x] Vertical line on the left side
       - [x] Headline h1 - h6
       - [x] preview card for a single project
-    - [] Button layout:
+    - [x] Button layout:
       - [x] Navigation
         - [x] special Navigation animation
       - [x] Sozial Icon
@@ -34,28 +34,31 @@ React, TypeScript, React-Router, Styled-Component
 
 4.  [] Content
 
-    - [] Home page content
-      - [] short description
-      - [] List of implemented and not yet implemented features.
+    - [x] Home page content
+      - [x] short description
+      - [x] List of implemented and not yet implemented features.
       - [x] Cards to navigate to the “About me” and “Portfolio” pages
-    - [] About me page
-      - [] Introduction
+    - [x] About me page
+
+      - [x] Aside navigation with links to the contained headlines.
+      - [x] Introduction
         - [x] Styles
-        - [] content
-      - [] My future career
+        - [x] content
+      - [x] My future career
         - [x] Styles
         - [x] content
       - [x] Why in the world of the IT
         - [x] Styles
         - [x] content
-      - [] Skills
+      - [x] Skills
         - [x] Skill list (style different categories)
         - [x] Skill description (style)
-          - [] Icon (fontawesome? - There aren't all icons available.)
+          - [x] Icon (fontawesome? - There aren't all icons available.)
           - [x] name
           - [x] description
-          - [] project links
-    - [] Project page
+          - [x] project links
+
+    - [x] Project page
       - [x] general design
         - [x] Aside navigation with links to the contained headlines.
         - [x] Title
@@ -68,24 +71,18 @@ React, TypeScript, React-Router, Styled-Component
         - [x] Links
         - [x] category
         - [x] What I've learned
-    - [] Imprint page
+    - [x] Imprint page
 
 5.  Additional Features
 
     - [x] Responsive design
     - [x] Add font
-    - [] Add final color Theme (60|30|10) primary color | secondary color | interactive elements
+    - [x] Add final color Theme (60|30|10) primary color | secondary color | interactive elements
 
 ## Final steps for publication:
 
-- Add all personal information.
-- Add all project details.
-- Customizing skills links to the projects on the about page.
-- Add home page content.
-- Add new color Theme (60|30|10).
 - Clean up code.
 - Add / Adjust documentation if it is necessary.
-- Inform how to get my new page online.
 
 ### Better design
 
@@ -95,6 +92,45 @@ React, TypeScript, React-Router, Styled-Component
 
 ## Todos:
 
+- [] Additional content: image concepts, text, Links, etc.
+- [] Additional graphics with animations
 - [] Multilingual support for English and German (i18next).
 - [] Dark / Light mode
 - [] Fetch data with Express.js from a MySQL database
+
+# Checklist for publishing the website from the php version to the react version.
+
+1.  **Branch für die Datenbankintegration erstellen:**
+
+    - Erstelle einen neuen Branch, z.B. `feature/database-integration`, um dort die Datenbankintegration durchzuführen. Arbeite nur in diesem Branch, um keine Konflikte mit dem Hauptzweig (main branch) zu verursachen.
+
+2.  **Entfernen der Base Route aus dem Main Branch:**
+
+    - Entferne die Base Route aus `vite.config.js` und aus der Konfiguration von `createBrowserRouter` im Main Branch. Dies stellt sicher, dass deine React-Anwendung im Stammverzeichnis läuft und nicht im `/test-react-app` Verzeichnis.
+
+3.  **.htaccess Datei nicht ändern:**
+
+    - Richte deine `.htaccess` Datei so ein, dass sie weiterhin den `/test-react-app` Verzeichnis abdeckt, damit deine Testumgebung dort erreichbar bleibt, während deine Produktionsumgebung nun im Stammverzeichnis liegt.
+
+4.  **Deployment auf Produktionsumgebung:**
+
+    - Erstelle einen Build von deinem Main Branch und lade diesen auf deinen Server hoch. Stelle sicher, dass du alle Dateien außer der `.htaccess` Datei aus dem `/test-react-app` Verzeichnis entfernst.
+
+5.  **Datenbank einrichten und testen:**
+
+    - Implementiere und teste die Datenbankintegration in deinem `feature/database-integration` Branch. Stelle sicher, dass alle CRUD-Operationen ordnungsgemäß funktionieren.
+
+6.  **Separates Build für Testumgebung:**
+
+    - Erstelle einen separaten Build von deinem `feature/database-integration` Branch. Verwende die Base Route /test-react-app, damit du die Datenbankintegration in der Testumgebung testen kannst.
+
+7.  **Merge in den Main Branch:**
+    - Wenn alles erfolgreich getestet wurde, führe den Merge von `feature/database-integration` in den Main Branch durch.
+    - Entferne die Base Route `/test-react-app` aus `vite.config.js` und createBrowserRouter, da die Anwendung nun im Stammverzeichnis läuft.
+    - Erstelle einen finalen Build und lade ihn auf deinen Server hoch.
+
+## Zusätzliche Überlegungen:
+
+- **Backup**: Erstelle vor jedem größeren Deployment ein Backup deiner aktuellen Produktionsumgebung und der Datenbank.
+- **Testing**: Führe umfassende Tests durch, um sicherzustellen, dass alle Änderungen wie erwartet funktionieren, bevor du sie in die Live-Umgebung übernimmst.
+- **Versionskontrolle**: Verwende die Versionskontrolle effektiv, um Änderungen nachvollziehbar zu dokumentieren und Konflikte zu vermeiden.

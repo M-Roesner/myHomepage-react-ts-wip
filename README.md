@@ -25,15 +25,35 @@ This project is currently a work in progress. Changes and updates will be made r
   - [Guide: Theme with styled-components-and-typescript | medium.com](https://medium.com/rbi-tech/theme-with-styled-components-and-typescript-209244ec15a3)
   - !!! ['emotion' an alternative to 'styled components'](https://emotion.sh/docs/typescript)
 
-- [Icons: fontawesome](https://fontawesome.com/)
+- Icons:
 
-  - [Install guide](https://docs.fontawesome.com/web/use-with/react/)
-  - [Icon search](https://fontawesome.com/search)
-  - [Use icons with react](https://docs.fontawesome.com/web/use-with/react/add-icons)
+  - [fontawesome](https://fontawesome.com/)
+
+    - [Install guide](https://docs.fontawesome.com/web/use-with/react/)
+    - [Icon search](https://fontawesome.com/search)
+    - [Use icons with react](https://docs.fontawesome.com/web/use-with/react/add-icons)
+
+  - [react-icons](https://react-icons.github.io/react-icons/)
+
+- [gsap](https://gsap.com)
 
 ### Possible packages for usage:
 
 - [React Select: for select Input control](https://react-select.com/home)
+
+- Database implentation:
+
+  - MySQL
+  - Express
+  - Ajax
+
+  - links: [Fetching Data in React](https://www.youtube.com/watch?v=00lxm_doFYw)
+
+- Translation:
+
+  - [i18next](https://www.i18next.com/)
+
+  - links: [React i18next](https://www.youtube.com/watch?v=U4_P_l3L_EA)
 
 ### documentations
 

@@ -42,7 +42,7 @@ console.log(skills);
 SET @ID = 1;
 
 -- Header:
-SELECT s.icon as icon, s.skill_name as name, s.skill_level
+SELECT s.icon as icon, s.skill_name as name, s.skill_level as level
     FROM skills as s
     WHERE s.skill_id = @ID;
 
@@ -51,6 +51,27 @@ SELECT d.description
     FROM descriptions AS d
     WHERE d.skill_id = @ID
     ORDER BY d.description_order ASC;
+
+/**
+Da die Reihenfolge einzigartig sein soll, müssen bestehende Einträge so verschoben werden, dass keine doppelten Werte entstehen, insbesondere wenn die Spalte description_order als UNIQUE definiert ist.
+
+Beispiel:
+
+SET @skill_id = (SELECT skill_id FROM Skills WHERE skill_name = 'GitHub'); -- Erhalte die ID des Skills
+SET @new_order = 2; -- Position, an der der Eintrag eingefügt werden soll
+
+-- Verschieben der bestehenden Einträge
+UPDATE Descriptions
+SET description_order = description_order + 1
+WHERE skill_id = @skill_id AND description_order >= @new_order
+ORDER BY description_order ASC; -- Die Reihenfolge muss aufsteigend sortiert werden, um die Verschiebung korrekt durchzuführen
+
+-- Einfügen der neuen Beschreibung
+INSERT INTO Descriptions (skill_id, description, description_order)
+VALUES (@skill_id, 'Neue Beschreibung zwischen bestehenden Einträgen', @new_order);
+*/
+
+
 
 -- Links:
 -- ..., wenn ich noch Inhalte aus skills brauche:

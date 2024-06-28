@@ -7,7 +7,6 @@ const defaultHeaderStyles = css`
   margin-block: 1ch; */
 `;
 
-// TODO: header styles ... content, color ...
 export const styledCardHeadline1 = styled.h1`
   ${defaultHeaderStyles};
   color: ${(props) => props.theme.colors.headline.textColor_level1};

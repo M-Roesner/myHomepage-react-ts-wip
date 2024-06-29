@@ -7,6 +7,7 @@ export type ProjectTechnologyType = {
   isNew?: boolean;
 };
 
+// TODO: TOO much pictures! preview = mobile. I think 3 pictures are enough!
 export type imgSrcType = {
   preview?: string;
   mobile: string;

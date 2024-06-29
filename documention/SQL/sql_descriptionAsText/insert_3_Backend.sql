@@ -7,9 +7,9 @@ INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, descri
 VALUES ('Java', 3, 2, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Backend'),'["Java ist eine robuste und vielseitige Programmiersprache, die sich durch ihre Plattformunabhängigkeit und Sicherheitsmerkmale auszeichnet. Sie wird weltweit für die Entwicklung von mobilen Apps, Unternehmenslösungen und großen Systemen eingesetzt.","Dort sammelte ich meine ersten Erfahrungen mit objektorientierter Programmierung und lernte die Grundlagen der Programmierung kennen."]','FaJava', '2024-04-10', '2024-04-10'
 );
 
-INSERT INTO SkillProjectLinks (skill_id, project_link_id)
+INSERT INTO Skills_Links (skill_id, link_id)
 VALUES 
-((SELECT skill_id FROM Skills WHERE skill_name = 'Java'), (SELECT project_link_id FROM ProjectLinks WHERE project_name = 'Minesweeper'));
+((SELECT skill_id FROM Skills WHERE skill_name = 'Java'), (SELECT link_id FROM Links WHERE button_name = 'Minesweeper'));
 
 
 -- PHP
@@ -17,11 +17,11 @@ INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, descri
 VALUES ('PHP', 1, 3, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Backend'),'["PHP ist eine serverseitige Skriptsprache, die häufig für die Webentwicklung verwendet wird.","Mit PHP und objektorientierter Programmierung habe ich meine ersten Projekte erstellt, wie mein Haushaltsbuch und meine eigene Webseite.","Dies war eine großartige Gelegenheit, meine Fähigkeiten in der persönlichen Präsentation zu erweitern."]','SiPhp', '2024-04-08', '2024-04-08'
 );
 
-INSERT INTO SkillProjectLinks (skill_id, project_link_id)
+INSERT INTO Skills_Links (skill_id, link_id)
 VALUES 
-((SELECT skill_id FROM Skills WHERE skill_name = 'PHP'), (SELECT project_link_id FROM ProjectLinks WHERE project_name = '4 Gewinnt - SRH Edition')),
-((SELECT skill_id FROM Skills WHERE skill_name = 'PHP'), (SELECT project_link_id FROM ProjectLinks WHERE project_name = 'Homepage mit PHP')),
-((SELECT skill_id FROM Skills WHERE skill_name = 'PHP'), (SELECT project_link_id FROM ProjectLinks WHERE project_name = 'Haushaltsbuch'));
+((SELECT skill_id FROM Skills WHERE skill_name = 'PHP'), (SELECT link_id FROM Links WHERE button_name = '4 Gewinnt - SRH Edition')),
+((SELECT skill_id FROM Skills WHERE skill_name = 'PHP'), (SELECT link_id FROM Links WHERE button_name = 'Homepage mit PHP')),
+((SELECT skill_id FROM Skills WHERE skill_name = 'PHP'), (SELECT link_id FROM Links WHERE button_name = 'Haushaltsbuch'));
 
 
 -- MySQL
@@ -29,9 +29,9 @@ INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, descri
 VALUES ('MySQL', 3, 3, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Backend'),'["MySQL ist ein Open-Source-Relationales Datenbankmanagementsystem, das SQL (Structured Query Language) verwendet, um Daten in einer Datenbank zu verwalten und abzufragen.","Meine ersten Erfahrungen mit einer relationalen Datenbank sammelte ich beim Erstellen eines Haushaltsbuchs, wo ich den Umgang mit Datenbanken im Backend und HTML/CSS im Frontend lernte."]','SiMysql', '2024-03-10', '2024-03-10'
 );
 
-INSERT INTO SkillProjectLinks (skill_id, project_link_id)
+INSERT INTO Skills_Links (skill_id, link_id)
 VALUES 
-((SELECT skill_id FROM Skills WHERE skill_name = 'MySQL'), (SELECT project_link_id FROM ProjectLinks WHERE project_name = 'Haushaltsbuch'));
+((SELECT skill_id FROM Skills WHERE skill_name = 'MySQL'), (SELECT link_id FROM Links WHERE button_name = 'Haushaltsbuch'));
 
 
 -- SQLite
@@ -57,7 +57,7 @@ INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, descri
 VALUES ('PDO', 2, 3, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Backend'),'["PDO (PHP Data Objects) ist eine Datenbank-Abstraktionsschicht für PHP, die eine einheitliche Schnittstelle für den Zugriff auf verschiedene Datenbanken bietet.","Mit PDO habe ich mein Haushaltsbuch umgesetzt, bei dem ich sichere und effiziente Datenbankinteraktionen realisiert habe. Besonders hervorzuheben sind die Verwendung von Prepared Statements, die nicht nur die Sicherheit durch SQL-Injection-Prävention erhöhen, sondern auch die Performance bei wiederholten Abfragen verbessern."]','FaDatabase', '2022-07-01', '2022-07-01'
 );
 
-INSERT INTO SkillProjectLinks (skill_id, project_link_id)
+INSERT INTO Skills_Links (skill_id, link_id)
 VALUES 
-((SELECT skill_id FROM Skills WHERE skill_name = 'PDO'), (SELECT project_link_id FROM ProjectLinks WHERE project_name = 'Haushaltsbuch'));
+((SELECT skill_id FROM Skills WHERE skill_name = 'PDO'), (SELECT link_id FROM Links WHERE button_name = 'Haushaltsbuch'));
 

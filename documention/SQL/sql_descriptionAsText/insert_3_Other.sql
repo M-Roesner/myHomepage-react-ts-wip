@@ -7,9 +7,9 @@ INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, descri
 VALUES ('GitHub', 1, 3, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Other'),'["GitHub ist eine webbasierte Plattform zur Versionskontrolle und Zusammenarbeit an Softwareprojekten.","Es bietet mir eine sichere Möglichkeit, meinen Quellcode zu speichern und ermöglicht den Austausch mit anderen Entwicklern.","Während meiner persönlichen Projekte habe ich GitHub intensiv genutzt, um meine Projekte zu verwalten und meine Entwicklungsfähigkeiten zu verbessern."]','SiGithub', '2024-04-26', '2024-04-26'
 );
 
-INSERT INTO SkillProjectLinks (skill_id, project_link_id)
+INSERT INTO Skills_Links (skill_id, link_id)
 VALUES 
-((SELECT skill_id FROM Skills WHERE skill_name = 'GitHub'), (SELECT project_link_id FROM ProjectLinks WHERE project_name = 'Mein GitHub Account'));
+((SELECT skill_id FROM Skills WHERE skill_name = 'GitHub'), (SELECT link_id FROM Links WHERE button_name = 'Mein GitHub Account'));
 
 
 -- MS Word
@@ -29,9 +29,9 @@ INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, descri
 VALUES ('Figma', 3, 1, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Other'),'["Figma ist ein webbasiertes Design- und Prototyping-Tool, das zur Erstellung von UI/UX-Designs verwendet wird.","Obwohl ich während meines Praktikums nicht intensiv mit Figma gearbeitet habe, habe ich dennoch die Vorteile dieser Plattform erkannt, insbesondere in der Zusammenarbeit mit Designern."]','SiFigma', '2024-04-01', '2024-04-01'
 );
 
-INSERT INTO SkillProjectLinks (skill_id, project_link_id)
+INSERT INTO Skills_Links (skill_id, link_id)
 VALUES 
-((SELECT skill_id FROM Skills WHERE skill_name = 'Figma'), (SELECT project_link_id FROM ProjectLinks WHERE project_name = 'Erworbene Fähigkeiten beim Praktikum'));
+((SELECT skill_id FROM Skills WHERE skill_name = 'Figma'), (SELECT link_id FROM Links WHERE button_name = 'Erworbene Fähigkeiten beim Praktikum'));
 
 
 -- Azure
@@ -39,9 +39,9 @@ INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, descri
 VALUES ('Azure', 2, 3, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Other'),'["Azure ist eine umfassende Cloud-Computing-Plattform von Microsoft, die eine Vielzahl von Diensten zur Entwicklung, Bereitstellung und Verwaltung von Anwendungen und Diensten über das Internet bietet.","Während meines Praktikums konnte ich Azure intensiv kennenlernen und damit arbeiten. Es war mein erster professioneller Kontakt mit einer Cloud-Plattform, was mir half, die Nutzung von Cloud-Services zu erlernen sowie die Planung und Zusammenarbeit in Teams zu verbessern."]','SiAzuredevops', '2024-06-17', '2024-06-17'
 );
 
-INSERT INTO SkillProjectLinks (skill_id, project_link_id)
+INSERT INTO Skills_Links (skill_id, link_id)
 VALUES 
-((SELECT skill_id FROM Skills WHERE skill_name = 'Azure'), (SELECT project_link_id FROM ProjectLinks WHERE project_name = 'Erworbene Fähigkeiten beim Praktikum'));
+((SELECT skill_id FROM Skills WHERE skill_name = 'Azure'), (SELECT link_id FROM Links WHERE button_name = 'Erworbene Fähigkeiten beim Praktikum'));
 
 
 -- Canvas
@@ -49,6 +49,6 @@ INSERT INTO Skills (skill_name, priority, skill_level, category_skill_id, descri
 VALUES ('Canvas', 3, 2, (SELECT category_skill_id FROM CategorySkill WHERE category_name = 'Other'),'["Canvas ist ein HTML5-Element, das zur dynamischen, programmatischen Generierung und Manipulation von Grafiken, Animationen und anderen visuellen Effekten verwendet wird.","Ich habe Canvas genutzt, um ein Jump and Run Spiel zu entwickeln. Dabei habe ich verschiedene Techniken angewendet, wie die Nutzung von Canvas-Funktionen zum Zeichnen von Bildern, die Implementierung von Sprite-Animationen sowie die Integration von Parallaxeffekten."]','SiHtml5', '2024-06-17', '2024-06-17'
 );
 
-INSERT INTO SkillProjectLinks (skill_id, project_link_id)
+INSERT INTO Skills_Links (skill_id, link_id)
 VALUES 
-((SELECT skill_id FROM Skills WHERE skill_name = 'Canvas'), (SELECT project_link_id FROM ProjectLinks WHERE project_name = 'Jump and Run Spiel'));
+((SELECT skill_id FROM Skills WHERE skill_name = 'Canvas'), (SELECT link_id FROM Links WHERE button_name = 'Jump and Run Spiel'));

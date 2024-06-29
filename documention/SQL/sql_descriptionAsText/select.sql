@@ -53,17 +53,17 @@ SELECT s.description
 
 -- Links:
 -- ..., wenn ich noch Inhalte aus Skills brauche:
-SELECT pl.project_name as text, pl.project_url as url, pl.project_link_id as link_id
+SELECT l.button_name as text, l.url, l.project_id
 FROM Skills as s
-JOIN SkillProjectLinks as spl ON s.skill_id = spl.skill_id
-JOIN ProjectLinks as pl ON spl.project_link_id = pl.project_link_id
+JOIN Skills_Links as sl ON s.skill_id = sl.skill_id
+JOIN Links as l ON sl.link_id = l.link_id
 WHERE s.skill_id = @ID;
 
 -- ..., wenn ich _keine_ Inhalte aus Skills brauche:
-SELECT pl.project_name as text, pl.project_url as url, pl.project_link_id as link_id
-FROM SkillProjectLinks AS spl
-JOIN ProjectLinks AS pl ON spl.project_link_id = pl.project_link_id
-WHERE spl.skill_id = @ID;
+SELECT l.button_name as text, l.url, l.project_id
+FROM Skills_Links AS sl
+JOIN Links AS l ON sl.link_id = l.link_id
+WHERE sl.skill_id = @ID;
 
 
 /**
@@ -87,11 +87,11 @@ async function getSkillDetails(skillId: number) {
     );
 
     // Abfrage für Links
-    const projectLinks = await db.query(
-        `SELECT pl.project_name as text, pl.project_url as url, pl.project_link_id as link_id
-         FROM SkillProjectLinks AS spl
-         JOIN ProjectLinks AS pl ON spl.project_link_id = pl.project_link_id
-         WHERE spl.skill_id = ?;`,
+    const Links = await db.query(
+        `SELECT l.button_name as text, l.url, l.link_id as link_id
+         FROM Skills_Links AS sl
+         JOIN Links AS l ON sl.link_id = l.link_id
+         WHERE sl.skill_id = ?;`,
         [skillId]
     );
 
@@ -99,10 +99,10 @@ async function getSkillDetails(skillId: number) {
     const skill = {
         ...skillDetails,
         descriptions: descriptions.map(row => row.description),
-        projectLinks: projectLinks.map(row => ({
-            text: row.project_name,
-            url: row.project_url,
-            link_id: row.project_link_id
+        Links: Links.map(row => ({
+            text: row.button_name,
+            url: row.url,
+            link_id: row.link_id
         }))
     };
 

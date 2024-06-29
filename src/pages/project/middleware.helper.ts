@@ -104,8 +104,8 @@ export const mwProject_AsideNavigation = (content: ProjectType): SideNavigationB
     listOfAsideNavigation.push({ tagId: EProjectTagId.IMAGES, buttonText: "Bilder" });
 
   // Check if "skills" is set in the content
-  if (content.skills && content.skills.length > 0)
-    listOfAsideNavigation.push({ tagId: EProjectTagId.SKILLS, buttonText: "Fähigkeiten" });
+  if (content.knowledge && content.knowledge.length > 0)
+    listOfAsideNavigation.push({ tagId: EProjectTagId.KNOWLEDGE, buttonText: "Fähigkeiten" });
 
   // Check if "technologies" is set in the content
   if (content.technologies && content.technologies.length > 0)

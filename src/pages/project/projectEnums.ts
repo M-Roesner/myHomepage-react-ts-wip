@@ -1,6 +1,6 @@
 export enum EProjectTagId {
   WHY = "why",
-  SKILLS = "skills",
+  KNOWLEDGE = "knowledge",
   TECHNOLOGIES = "technologies",
   LINKS = "links",
   IMAGES = "images",

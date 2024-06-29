@@ -45,7 +45,7 @@ export type ProjectType = {
   introduction: string[];
   why: string[];
   additionalInfo?: ContentSectionType[];
-  skills?: string[];
+  knowledge?: string[];
   technologies?: ProjectTechnologyType[];
   images?: ProjectImageType[];
   links?: ProjectLinkType[];

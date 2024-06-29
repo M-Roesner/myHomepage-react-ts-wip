@@ -19,7 +19,7 @@ export const myInternshipProjectsRawData: ProjectType[] = [
       "Es gab vermehrt Kundenanfragen, vorhandene Dokumente als Grundlage für ein Design zu nutzen, da dies bisher nur mit dem Designer selbst möglich war. Daher haben wir uns für die Entwicklung dieses Prototyps entschieden.",
       "Das Ziel war es, ein Tool zu erstellen, das Word-Dokumente in ein JSON-Format für den Designer Polotno konvertiert. Dabei werden Texte, Bilder, Formatierungen und Positionierungen extrahiert und aufbereitet.",
     ],
-    skills: [
+    knowledge: [
       "Umgang mit XML (docx) und JSON-Formaten, Extraktion und Aufbereitung der relevanten Daten.",
       "Analysieren und Extrahieren von Daten aus einem docx-Format, um Bilder, Texte und Formatierungen zu erhalten.",
       "Vertiefung der TypeScript-Kenntnisse.",
@@ -87,7 +87,7 @@ export const myInternshipProjectsRawData: ProjectType[] = [
         asidebarText: "Arbeitsmethoden",
       },
     ],
-    skills: [
+    knowledge: [
       "Erlernen neuer Sprachen und Frameworks/Libraries wie TypeScript und React.js.",
       "Erstellen von Bugreports und Testen von Web-Anwendungen.",
       "Arbeiten in agilen Teams mit Scrum.",

@@ -29,7 +29,7 @@ const myRetrainingProjectsRawData: ProjectType[] = [
         isMainPreview: true,
       },
     ],
-    skills: [
+    knowledge: [
       "Umgang mit Objektorientierung in PHP.",
       "Beherrschung von PHP-Grundlagen wie Funktionen, Arrays, Schleifen und If-Klauseln.",
       "Zusammenarbeit im Team durch klare Aufgabenverteilung.",
@@ -63,7 +63,7 @@ const myRetrainingProjectsRawData: ProjectType[] = [
       "Die Entwicklung dieser Homepage war für mich ein wichtiger Schritt, um mich selbst und meine Ziele in der IT-Branche zu präsentieren.",
       "Durch die Gestaltung und Entwicklung dieser Seite konnte ich meine Kenntnisse in den Bereichen PHP, HTML und SCSS vertiefen und praktische Erfahrungen sammeln.",
     ],
-    skills: [
+    knowledge: [
       "Vertiefte Kenntnisse in der Webentwicklung mit PHP.",
       "Erweiterte Fähigkeiten in HTML und SCSS.",
       "Umsetzung von Responsive Design für verschiedene Endgeräte.",
@@ -93,7 +93,7 @@ const myRetrainingProjectsRawData: ProjectType[] = [
       "Die Entwicklung von Minesweeper bot eine praktische Möglichkeit, die Funktionsweise von Arrays in mehreren Dimensionen zu verstehen und zu üben.",
       "Durch den Aufbau eines Spielmenüs konnte ich wichtige Benutzerinteraktionen umsetzen und die Strukturierung von Benutzeroberflächen kennenlernen.",
     ],
-    skills: [
+    knowledge: [
       "Verständnis und Anwendung von Arrays in mehreren Dimensionen.",
       "Aufbau eines Spielmenüs.",
       "Speichern von Parametern.",
@@ -117,7 +117,7 @@ const myRetrainingProjectsRawData: ProjectType[] = [
       "Die Entwicklung eines Haushaltsbuchs bot eine praktische Möglichkeit, meine Fähigkeiten in der Anwendung von Datenbanken und der Programmierung zu vertiefen.",
       "Durch das DO-IT-Projekt konnte ich selbstständig neue Technologien erkunden und herausfinden, wie sie in einem realen Projekt eingesetzt werden können.",
     ],
-    skills: [
+    knowledge: [
       "Entwicklung einer Datenbankanbindung mit PHP OOP.",
       "Arbeit mit relationalen Datenbanken (MySQL) und PDO-Schnittstelle.",
       "Gestaltung der Benutzeroberfläche mit HTML und CSS (SCSS).",

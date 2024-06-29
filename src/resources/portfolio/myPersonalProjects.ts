@@ -31,7 +31,7 @@ const myPersonalProjectsRawData: ProjectType[] = [
         isMainPreview: true,
       },
     ],
-    skills: [
+    knowledge: [
       "Strukturaufbau mit React-Router-Dom",
       "Erstellen von Styles mit dem Styled Components Framework in Kombination mit React.js",
       "Umgang mit SVG-Grafiken, unter anderem in Verbindung mit GSAP",
@@ -96,7 +96,7 @@ const myPersonalProjectsRawData: ProjectType[] = [
           "In diesem Spiel steuert man einen kleinen Hund, der Gegnern ausweichen muss. Mit bestimmten Fähigkeiten kann man Gegner besiegen und Punkte sammeln.",
       },
     ],
-    skills: [
+    knowledge: [
       "Umgang mit Objektorientierung in JavaScript",
       "Nutzung von Canvas-Funktionen zum Zeichnen von Bildern",
       "Techniken für Sprite-Animationen",

@@ -63,8 +63,8 @@ const Project = (): React.ReactNode => {
       <ParagraphList title="Warum:" tagId={EProjectTagId.WHY} list={content.why} />
       {content.additionalInfo && <AdditionalInfo list={content.additionalInfo} />}
       {images && <ProjectImages title={"Bilder:"} tagId={EProjectTagId.IMAGES} images={images} />}
-      {content.skills && (
-        <SimpleList title="Erlernte Fähigkeiten:" tagId={EProjectTagId.SKILLS} list={content.skills} />
+      {content.knowledge && (
+        <SimpleList title="Erworbere Kenntnisse:" tagId={EProjectTagId.KNOWLEDGE} list={content.knowledge} />
       )}
       {technologies && (
         <ProjectList

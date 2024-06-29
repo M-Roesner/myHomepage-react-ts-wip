@@ -32,6 +32,7 @@ export const StyledSideNavigation = styled.aside<SideNavigationProps>`
             &:hover {
               background-color: ${(props) => props.theme.colors.common.action.hover};
             }
+            white-space: nowrap;
           `}
   }
 
@@ -61,4 +62,5 @@ export const StyledSideNavigationList = styled.ul<SideNavigationProps>`
 export const StyledSideNavigationListItem = styled.li`
   text-decoration: none;
   list-style: none;
+  width: 100%;
 `;

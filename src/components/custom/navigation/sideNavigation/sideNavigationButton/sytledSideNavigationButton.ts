@@ -20,6 +20,4 @@ export const StyledSideNavigationButton = styled(Link)<IStyledSideNavigationButt
 
   text-align: ${(props) => props.$textAlign};
   /* transition: text-align 5s ease-in-out; // Does currently not work. */
-
-  white-space: nowrap;
 `;

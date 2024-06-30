@@ -1,5 +1,6 @@
-// Components
 import { createBrowserRouter } from "react-router-dom";
+
+// Components
 import { App, NotFoundPage, HomePage, AboutMePage, MyPortfolio, Project, ImprintPage, Footer } from "./index.ts";
 
 /**
@@ -57,7 +58,8 @@ export const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/test-react-app",
+    // basename: "/test-react-app", // Used with a specific folder
+    basename: "/", // Used for normal domain and dev.domain
   }
 );
 

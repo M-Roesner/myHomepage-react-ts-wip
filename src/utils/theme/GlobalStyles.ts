@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { getFullPath } from "../pathUtils";
+import { getFullPath } from "../pathUtils/pathUtils";
 
 /**
  * Global styles to import IBM Plex Mono font family and set the font on the body element.

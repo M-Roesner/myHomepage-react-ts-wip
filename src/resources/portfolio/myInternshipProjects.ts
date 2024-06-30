@@ -1,5 +1,5 @@
 import { ProjectType } from "../../pages/myPortfolio/types/projectTypes";
-import { processJsonData } from "../../utils/pathUtils";
+import { processJsonData } from "../../utils/pathUtils/pathUtils";
 
 export const myInternshipProjectsRawData: ProjectType[] = [
   {

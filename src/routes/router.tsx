@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // Components
-import { App, NotFoundPage, HomePage, AboutMePage, MyPortfolio, Project, ImprintPage, Footer } from "./index.ts";
+import { App, ErrorPage_InclProps, HomePage, AboutMePage, MyPortfolio, Project, ImprintPage, Footer } from "./index.ts";
 
 /**
  * Enum representing different route types in the application, to navigate correctly.
@@ -24,7 +24,7 @@ export const router = createBrowserRouter(
     {
       path: "/",
       element: <App />,
-      errorElement: <NotFoundPage />,
+      errorElement: <ErrorPage_InclProps />,
       children: [
         {
           path: `/${ERouteType.HOME}`,

@@ -59,3 +59,4 @@ This project is currently a work in progress. Changes and updates will be made r
 
 - [File naming](documention/fileNaming.md)
 - [Config theme styled component](documention/configThemeStyledComponent.md)
+- [Config usage of base path](documention/configUsage-BasePath.md)

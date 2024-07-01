@@ -4,6 +4,7 @@ import { useState } from "react";
 import { StyledImageWrapperLayout } from "./styledImageWrapperLayout";
 import ImageWrapper from "./imageWrapper/ImageWrapper";
 import FullscreenSlider from "./fullscreenSlider/FullscreenSlider";
+import CustomListLayout from "../customListLayout/CustomListLayout";
 
 // Type
 import { ImageType } from "./imageType";
@@ -23,12 +24,19 @@ const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
   };
   const handleCloseFullscreen = () => setIsFullscreen(false);
 
+  const renderProgressItem = (image: ImageType, index: number) => (
+    <ImageWrapper key={index} image={image} onClick={() => handleOpenFullscreen(image.id)} />
+  );
+
   return (
     <>
       <StyledImageWrapperLayout $maxColumns={images.length}>
-        {images.map((image, index) => (
-          <ImageWrapper key={index} image={image} onClick={() => handleOpenFullscreen(image.id)} />
-        ))}
+        <CustomListLayout
+          list={images}
+          numerusText={{ singular: "weiteres Bild anzeigen", plural: "weitere Bilder anzeigen" }}
+          renderItem={renderProgressItem}
+          maxVisibleItems={3}
+        />
       </StyledImageWrapperLayout>
       {isFullscreen && imageId && (
         <FullscreenSlider initialImageId={imageId} onClose={handleCloseFullscreen} imageList={images} />

@@ -7,28 +7,83 @@ const myPersonalProjectsRawData: ProjectType[] = [
     category: "personal",
     title: "Homepage mit React.js und TypeScript",
     cardIntroduction: [
-      "Entwicklung meiner persönlichen Homepage zur Erweiterung meiner erworbenen Fähigkeiten während des Praktikums und mehr.",
+      "Entwicklung meiner persönlichen Homepage zur Erweiterung meiner Fähigkeiten während des Praktikums.",
     ],
     introduction: [
-      "Dieses Projekt besteht aus der Entwicklung einer persönlichen Homepage mit React.js und TypeScript.",
-      "Die Hauptziele waren die Erweiterung meiner während des Praktikums erworbenen Fähigkeiten und die Umsetzung moderner Webtechnologien.",
+      "Dieses Projekt umfasst die Entwicklung einer persönlichen Homepage mit React.js und TypeScript.",
+      "Die Hauptziele sind die Erweiterung meiner während des Praktikums erworbenen Fähigkeiten und die Umsetzung moderner Webtechnologien.",
     ],
     why: [
-      "Dieses Projekt ermöglichte es mir, meine während des Praktikums gelernten Fähigkeiten weiter auszubauen.",
+      "Dieses Projekt bietet die Möglichkeit, die im Praktikum gelernten Fähigkeiten weiter auszubauen.",
       "Durch die Arbeit mit React.js und TypeScript konnte ich tiefere Kenntnisse in modernen Webentwicklungstechnologien gewinnen.",
     ],
     images: [
       {
         imgTitle: "Image Slider",
         imgSrcs: {
-          preview: "/images/projects/homepageV2/imageSlider/ImageSlider_B267xH200_quer.jpg",
-          mobile: "/images/projects/homepageV2/imageSlider/ImageSlider_B434xH400_quer.jpg",
-          tablet: "/images/projects/homepageV2/imageSlider/ImageSlider_B1067xH800_quer.jpg",
-          laptop: "/images/projects/homepageV2/imageSlider/ImageSlider_B1600xH1200_quer.jpg",
+          preview: "/images/projects/homepageV2/image_slider/image_slider_B320x200.jpg",
+          mobile: "/images/projects/homepageV2/image_slider/image_slider_B640x400.jpg",
+          tablet: "/images/projects/homepageV2/image_slider/image_slider_B1280x800.jpg",
+          laptop: "/images/projects/homepageV2/image_slider/image_slider_B1920x1200.jpg",
         },
         imgAlt: "Image Slider",
-        imgDescription: "Konzeptionszeichnung des Bildsliders für den Vollbildmodus.",
+        imgDescription: "Konzeptzeichnung des Bildsliders für den Vollbildmodus.",
         isMainPreview: true,
+      },
+      {
+        imgTitle: "Navigation",
+        imgSrcs: {
+          preview: "/images/projects/homepageV2/navigation_header/navigation_header_B320x200.jpg",
+          mobile: "/images/projects/homepageV2/navigation_header/navigation_header_B640x400.jpg",
+          tablet: "/images/projects/homepageV2/navigation_header/navigation_header_B1280x800.jpg",
+          laptop: "/images/projects/homepageV2/navigation_header/navigation_header_B1920x1200.jpg",
+        },
+        imgAlt: "Navigation",
+        imgDescription: "Konzeptzeichnung der Navigation für Desktop und Mobile.",
+      },
+      {
+        imgTitle: "Fortschrittsanzeige der implementierten Features",
+        imgSrcs: {
+          preview: "/images/projects/homepageV2/implemented_features/implemented_features_B320x200.jpg",
+          mobile: "/images/projects/homepageV2/implemented_features/implemented_features_B640x400.jpg",
+          tablet: "/images/projects/homepageV2/implemented_features/implemented_features_B1280x800.jpg",
+          laptop: "/images/projects/homepageV2/implemented_features/implemented_features_B1920x1200.jpg",
+        },
+        imgAlt: "Fortschrittsanzeige der implementierten Features",
+        imgDescription: "Konzeptzeichnung der Fortschrittsanzeige für alle implementierten Features.",
+      },
+      {
+        imgTitle: "Fähigkeiten auf der 'Über mich' Seite",
+        imgSrcs: {
+          preview: "/images/projects/homepageV2/skill_concept/skill_concept_B320x200.jpg",
+          mobile: "/images/projects/homepageV2/skill_concept/skill_concept_B640x400.jpg",
+          tablet: "/images/projects/homepageV2/skill_concept/skill_concept_B1280x800.jpg",
+          laptop: "/images/projects/homepageV2/skill_concept/skill_concept_B1920x1200.jpg",
+        },
+        imgAlt: "Fähigkeiten auf der 'Über mich' Seite",
+        imgDescription: "Konzeptzeichnung meiner Fähigkeiten auf der 'Über mich' Seite.",
+      },
+      {
+        imgTitle: "Fähigkeiten auf der 'Über mich'-Seite (Tablet-Version)",
+        imgSrcs: {
+          preview: "/images/projects/homepageV2/skill_navigation_tablet/skill_navigation_tablet_B320x200.jpg",
+          mobile: "/images/projects/homepageV2/skill_navigation_tablet/skill_navigation_tablet_B640x400.jpg",
+          tablet: "/images/projects/homepageV2/skill_navigation_tablet/skill_navigation_tablet_B1280x800.jpg",
+          laptop: "/images/projects/homepageV2/skill_navigation_tablet/skill_navigation_tablet_B1920x1200.jpg",
+        },
+        imgAlt: "Fähigkeiten auf der 'Über mich' Seite",
+        imgDescription: "Konzeptzeichnung meiner Fähigkeiten auf der 'Über mich' Seite (Tablet-Version).",
+      },
+      {
+        imgTitle: "Fähigkeiten auf der 'Über mich' Seite (Mobile-Version)",
+        imgSrcs: {
+          preview: "/images/projects/homepageV2/skill_navigation_mobile/skill_navigation_mobile_B320x200.jpg",
+          mobile: "/images/projects/homepageV2/skill_navigation_mobile/skill_navigation_mobile_B640x400.jpg",
+          tablet: "/images/projects/homepageV2/skill_navigation_mobile/skill_navigation_mobile_B1280x800.jpg",
+          laptop: "/images/projects/homepageV2/skill_navigation_mobile/skill_navigation_mobile_B1920x1200.jpg",
+        },
+        imgAlt: "Fähigkeiten auf der 'Über mich' Seite",
+        imgDescription: "Konzeptzeichnung meiner Fähigkeiten auf der 'Über mich' Seite (Mobile-Version).",
       },
       {
         imgTitle: "ERM Struktur",
@@ -39,7 +94,7 @@ const myPersonalProjectsRawData: ProjectType[] = [
           laptop: "/images/projects/homepageV2/erm-db-structure/erm-db-structure.svg",
         },
         imgAlt: "ERM Struktur",
-        imgDescription: "Dies ist meine ERM Struktur für meine Datenbank.",
+        imgDescription: "Dies ist meine ERM-Struktur für die Datenbank.",
       },
     ],
     knowledge: [

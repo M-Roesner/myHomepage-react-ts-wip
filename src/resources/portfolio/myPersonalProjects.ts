@@ -30,6 +30,17 @@ const myPersonalProjectsRawData: ProjectType[] = [
         imgDescription: "Konzeptionszeichnung des Bildsliders für den Vollbildmodus.",
         isMainPreview: true,
       },
+      {
+        imgTitle: "ERM Struktur",
+        imgSrcs: {
+          preview: "/images/projects/homepageV2/erm-db-structure/erm-db-structure.svg",
+          mobile: "/images/projects/homepageV2/erm-db-structure/erm-db-structure.svg",
+          tablet: "/images/projects/homepageV2/erm-db-structure/erm-db-structure.svg",
+          laptop: "/images/projects/homepageV2/erm-db-structure/erm-db-structure.svg",
+        },
+        imgAlt: "ERM Struktur",
+        imgDescription: "Dies ist meine ERM Struktur für meine Datenbank.",
+      },
     ],
     knowledge: [
       "Strukturaufbau mit React-Router für das Routing einer Single Page Application",

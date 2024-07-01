@@ -19,11 +19,12 @@ import ShowItems from "./showItems/ShowItems";
  * const CustomList = ({ list }: CustomListProps): JSX.Element => {
  *   // This function renders each individual item in the list.
  *   const renderCustomItem = (item: CustomItemType, index: number) => (
- *     // The 'index' is used as the key for the rendered item.
- *     // 'item' represents the current item being iterated over in the list.
+ *     // The 'index' is used as the key from internal mapping if you want to use it,
+ *     // or use a unique id like 'item.id' from the item object instead, so you can remove ', index: number'.
+ *     // The 'item' represents the current item being iterated over in the list.
  *     // Add any additional props to the CustomItem as needed.
  *     <CustomItem
- *       key={index}
+ *       key={item.id} // Use 'item.id' if available, otherwise use the 'index' key={index}
  *       customProp={item.anyKey} // Use any key from the item object
  *       onClick={() => handleItemClick(item.onClick)} // Example of adding an onClick handler
  *     />
@@ -48,6 +49,7 @@ import ShowItems from "./showItems/ShowItems";
  * // - `renderCustomItem` is the function that specifies how each item should be rendered.
  * // - The `ShowItems` component maps over the list and renders each item using the `renderCustomItem` function.
  * // - The `index` parameter is used to give each item a unique key, which is important for rendering lists in React.
+ * // - Alternatively, a unique key from the item object, such as `item.id`, can be used as the key instead of the index.
  * // - Additional props like `onClick` and any key from `item` can be added to `CustomItem` to customize its behavior and appearance.
  */
 const CustomListLayout = <T,>({

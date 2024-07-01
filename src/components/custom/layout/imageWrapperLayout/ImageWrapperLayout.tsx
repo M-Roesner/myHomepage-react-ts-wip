@@ -24,8 +24,8 @@ const ImageWrapperLayout = ({ images }: { images: ImageType[] }) => {
   };
   const handleCloseFullscreen = () => setIsFullscreen(false);
 
-  const renderProgressItem = (image: ImageType, index: number) => (
-    <ImageWrapper key={index} image={image} onClick={() => handleOpenFullscreen(image.id)} />
+  const renderProgressItem = (image: ImageType) => (
+    <ImageWrapper key={image.id} image={image} onClick={() => handleOpenFullscreen(image.id)} />
   );
 
   return (

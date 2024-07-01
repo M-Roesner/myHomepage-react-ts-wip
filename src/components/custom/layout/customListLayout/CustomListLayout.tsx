@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // Component and its type
 import NumerusTextButton, { NumerusType } from "./NumerusTextButton/NumerusTextButton";
-import ShowItems from "./ShowItems/ShowItems";
+import ShowItems from "./showItems/ShowItems";
 
 /**
  * Displays a list of items without any styles, initially showing a maximum number of items, with a button to show the rest.
@@ -21,7 +21,12 @@ import ShowItems from "./ShowItems/ShowItems";
  *   const renderCustomItem = (item: CustomItemType, index: number) => (
  *     // The 'index' is used as the key for the rendered item.
  *     // 'item' represents the current item being iterated over in the list.
- *     <CustomItem key={index} data={item} />
+ *     // Add any additional props to the CustomItem as needed.
+ *     <CustomItem
+ *       key={index}
+ *       customProp={item.anyKey} // Use any key from the item object
+ *       onClick={() => handleItemClick(item.onClick)} // Example of adding an onClick handler
+ *     />
  *   );
  *
  *   if (!list) return <></>;
@@ -43,6 +48,7 @@ import ShowItems from "./ShowItems/ShowItems";
  * // - `renderCustomItem` is the function that specifies how each item should be rendered.
  * // - The `ShowItems` component maps over the list and renders each item using the `renderCustomItem` function.
  * // - The `index` parameter is used to give each item a unique key, which is important for rendering lists in React.
+ * // - Additional props like `onClick` and any key from `item` can be added to `CustomItem` to customize its behavior and appearance.
  */
 const CustomListLayout = <T,>({
   list,

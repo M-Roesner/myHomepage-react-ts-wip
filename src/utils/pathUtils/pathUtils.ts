@@ -38,21 +38,26 @@ export function getFullPath(relativePath: string | undefined): string {
  */
 export function processJsonData(projects: ProjectType[]): ProjectType[] {
   // Map over each project in the projects array and update its images and links.
-  return projects.map((project) => ({
-    ...project,
-    // Update images array by mapping over each image and updating imgSrcs paths.
-    images: project.images?.map((image) => ({
-      ...image,
-      imgSrcs: {
-        preview: getFullPath(image.imgSrcs.preview),
-        mobile: getFullPath(image.imgSrcs.mobile),
-        desktop: getFullPath(image.imgSrcs.desktop),
-      },
-    })),
-    // Update links array by mapping over each link and updating iconSrc path if present.
-    links: project.links?.map((link) => ({
-      ...link,
-      iconSrc: link.iconSrc ? getFullPath(link.iconSrc) : undefined,
-    })),
-  }));
+  return projects.map(
+    (project) =>
+      ({
+        ...project,
+        // Update images array by mapping over each image and updating imgSrcs paths.
+        images: project.images?.map((image) => ({
+          ...image,
+          imgSrcs: {
+            preview: getFullPath(image.imgSrcs.preview),
+            mobile: getFullPath(image.imgSrcs.mobile),
+            tablet: getFullPath(image.imgSrcs.tablet),
+            laptop: getFullPath(image.imgSrcs.laptop),
+            desktop: getFullPath(image.imgSrcs.desktop),
+          },
+        })),
+        // Update links array by mapping over each link and updating iconSrc path if present.
+        links: project.links?.map((link) => ({
+          ...link,
+          iconSrc: link.iconSrc ? getFullPath(link.iconSrc) : undefined,
+        })),
+      } as ProjectType) // 'as ProjectType' is set to get the typings from the project.
+  );
 }

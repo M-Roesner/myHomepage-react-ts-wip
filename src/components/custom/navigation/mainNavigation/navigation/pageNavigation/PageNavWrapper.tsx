@@ -1,8 +1,7 @@
 import { useRef, useState } from "react";
 
 // Custom components
-import BurgerMenu from "./burgerMenu/BurgerMenu";
-import CloseTimerBar from "./closeTimerBar/CloseTimerBar";
+import BurgerMenuWrapper from "./burgerMenu/BurgerMenuWrapper";
 import NavListItem from "./PageNavItem/PageNavItem";
 
 // Styled-Component
@@ -31,7 +30,7 @@ const PageNavWrapper = () => {
   /**
    * Toggles the menu open/close state.
    */
-  const handleMenuClick = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   /**
    * Sets the hovered state to true when the mouse enters the menu.
@@ -45,9 +44,15 @@ const PageNavWrapper = () => {
 
   return (
     <StyledPageNavWrapper ref={refMenu} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <BurgerMenu isOpen={isOpen} onClick={handleMenuClick} />
+      <BurgerMenuWrapper
+        isOpen={isOpen}
+        isHover={isHovered}
+        onClick={toggleMenu}
+        onTimeout={handleTimeout}
+        autoCloseDuration={3000}
+      />
       <StyledNavUnorderedList $isOpen={isOpen}>
-        <CloseTimerBar duration={3000} isOpen={isOpen && !isHovered} onTimeout={handleTimeout} />
+        {/* <CloseCountdownBar duration={3000} isOpen={isOpen && !isHovered} onTimeout={handleTimeout} /> */}
         <NavListItem to="/aboutMe" onClick={handleNavItemClick}>
           Über mich
         </NavListItem>

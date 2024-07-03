@@ -47,7 +47,7 @@ const PageNavWrapper = () => {
     <StyledPageNavWrapper ref={refMenu} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <BurgerMenu isOpen={isOpen} onClick={handleMenuClick} />
       <StyledNavUnorderedList $isOpen={isOpen}>
-        <CloseTimerBar duration={5000} isOpen={isOpen && !isHovered} onTimeout={handleTimeout} />
+        <CloseTimerBar duration={3000} isOpen={isOpen && !isHovered} onTimeout={handleTimeout} />
         <NavListItem to="/aboutMe" onClick={handleNavItemClick}>
           Über mich
         </NavListItem>

@@ -29,16 +29,10 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
     text-align: center;
 
     z-index: ${(props) => props.theme.zIndex.navBar_Main};
-    border: 1px solid ${(props) => props.theme.colors.common.secondary.border};
-    border-top: 0;
     height: max-content;
 
-    min-width: 300px;
-  }
-  @media (max-width: 400px) {
     width: 100vw;
     right: -5px; // This is the margin-right of the header.
-    border: none;
   }
 `;
 

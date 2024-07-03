@@ -10,6 +10,7 @@ type NavbarButtonProps = {
   animationRevers?: boolean;
   id?: string;
   className?: string;
+  onClick?: () => void;
   children: React.ReactNode;
 };
 
@@ -23,10 +24,13 @@ type NavbarButtonProps = {
  * @param {boolean} [props.animationRevers=false] - Optional: Specifies whether the animation should be reversed.
  * @param {string} props.id - Optional: Identifies the navigation link with the specified id.
  * @param {string} props.className - Optional: Identifies the navigation link with the specified class name.
+ * @param {() => void} [props.onClick] - Optional: The click event handler.
  * @param {ReactNode} props.children - The content of the link.
  */
-const NavbarButton = ({ to, animationRevers = false, id, className, children }: NavbarButtonProps) => {
+const NavbarButton = ({ to, animationRevers = false, id, className, onClick, children }: NavbarButtonProps) => {
+  // XXX: WRAP - Is it still necessary? It was used if the navigation text has a space.
   const wrap = false;
+
   {
     /* Span-tag is important for the style, it ensures that the text is always displayed. */
     // wrap is currently not used
@@ -34,11 +38,11 @@ const NavbarButton = ({ to, animationRevers = false, id, className, children }: 
   return (
     <>
       {wrap ? (
-        <StyledNavbarButtonWrap to={to} $reverse={animationRevers} id={id} className={className}>
+        <StyledNavbarButtonWrap onClick={onClick} to={to} $reverse={animationRevers} id={id} className={className}>
           <span>{children}</span>
         </StyledNavbarButtonWrap>
       ) : (
-        <StyledNavbarButton to={to} $reverse={animationRevers} id={id} className={className}>
+        <StyledNavbarButton onClick={onClick} to={to} $reverse={animationRevers} id={id} className={className}>
           <span>{children}</span>
         </StyledNavbarButton>
       )}

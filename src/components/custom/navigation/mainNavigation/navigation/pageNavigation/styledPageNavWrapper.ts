@@ -21,7 +21,8 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
   @media (max-width: 700px) {
     --extra-size: ${(props) => props.theme.sizes.common.paddingResponsive};
     position: absolute;
-    top: calc(${(props) => props.theme.sizes.navBar.height_mobile} + 5px);
+    top: 100%;
+    padding-top: 5px;
     right: 0;
 
     display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};

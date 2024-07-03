@@ -19,7 +19,6 @@ export const StyledNavUnorderedList = styled.ul<StyledNavUnorderedListProps>`
   transition: height 20s ease;
 
   @media (max-width: 700px) {
-    --extra-size: ${(props) => props.theme.sizes.common.paddingResponsive};
     position: absolute;
     top: 100%;
     padding-top: 5px;

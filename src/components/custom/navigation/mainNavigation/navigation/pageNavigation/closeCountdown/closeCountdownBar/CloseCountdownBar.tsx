@@ -1,11 +1,11 @@
 // Components
-import { StyledCloseTimerBar, StyledCloseTimerBarContainer } from "./styledCloseTimerBar";
+import { StyledCloseCountdownBar, StyledCloseCountdownBarContainer } from "./styledCloseCountdownBar";
 
 // Hooks
-import { useRuntimer } from "./hooks/useCloseTimer";
+import { useCloseTimer } from "../hooks/useCloseTimer";
 
 // Types
-export type CloseTimerBarProps = {
+type CloseCountdownBarProps = {
   duration: number;
   isOpen: boolean;
   onTimeout: () => void;
@@ -23,14 +23,14 @@ export type CloseTimerBarProps = {
  * @example
  * <CloseTimerBar duration={5000} isOpen={true} onTimeout={() => {}} />
  */
-const CloseTimerBar = ({ duration, isOpen, onTimeout }: CloseTimerBarProps): JSX.Element => {
-  const isRunning = useRuntimer({ duration, isOpen, onTimeout });
+const CloseCountdownBar = ({ duration, isOpen, onTimeout }: CloseCountdownBarProps): JSX.Element => {
+  const isRunning = useCloseTimer({ duration, isOpen, onTimeout });
 
   return (
-    <StyledCloseTimerBarContainer>
-      {isOpen && isRunning ? <StyledCloseTimerBar $animationDuration={duration} /> : null}
-    </StyledCloseTimerBarContainer>
+    <StyledCloseCountdownBarContainer>
+      {isOpen && isRunning ? <StyledCloseCountdownBar $animationDuration={duration} /> : null}
+    </StyledCloseCountdownBarContainer>
   );
 };
 
-export default CloseTimerBar;
+export default CloseCountdownBar;

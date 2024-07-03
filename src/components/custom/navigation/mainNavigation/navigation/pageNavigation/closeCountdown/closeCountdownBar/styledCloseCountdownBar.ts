@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-export const StyledCloseTimerBarContainer = styled.div`
+export const StyledCloseCountdownBarContainer = styled.div`
   height: 4px;
 `;
 
@@ -13,11 +13,11 @@ const progressAnimation = keyframes`
   }
 `;
 
-interface IStyledCloseTimerBar {
+interface IStyledCloseCountdownBar {
   $animationDuration: number;
 }
 
-export const StyledCloseTimerBar = styled.div<IStyledCloseTimerBar>`
+export const StyledCloseCountdownBar = styled.div<IStyledCloseCountdownBar>`
   height: 100%;
   background-color: ${(props) => props.theme.colors.common.action.default};
   animation: ${progressAnimation} linear forwards;

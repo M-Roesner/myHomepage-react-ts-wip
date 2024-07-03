@@ -8,6 +8,8 @@ import styled from "styled-components";
  */
 export const StyledCardParagraph = styled.p`
   padding-bottom: clamp(1ch, 1vw, 2ch);
+  word-wrap: break-word;
+  /* hyphens: auto; */
 
   &:first-child {
     padding-top: 0;

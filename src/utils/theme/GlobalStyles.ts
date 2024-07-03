@@ -61,6 +61,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     overflow-y: scroll; /* Ensure scrollbar is always visible */
     font-family: "IBM" ,monospace;
+    overflow-x: hidden;
   }
 `;
 

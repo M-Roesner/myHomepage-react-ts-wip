@@ -1,11 +1,11 @@
-import { keyframes, styled } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const animateCircle = (circumference: number) => keyframes`
   from {
     stroke-dashoffset: 0;
   }
   to {
-    stroke-dashoffset: ${circumference};
+    stroke-dashoffset: ${-circumference};
   }
 `;
 

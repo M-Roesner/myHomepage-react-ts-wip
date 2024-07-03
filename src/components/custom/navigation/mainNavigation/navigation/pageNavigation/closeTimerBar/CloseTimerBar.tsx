@@ -1,7 +1,11 @@
-import { useEffect, useState } from "react";
+// Components
 import { StyledCloseTimerBar, StyledCloseTimerBarContainer } from "./styledCloseTimerBar";
 
-type CloseTimerBarProps = {
+// Hooks
+import { useRuntimer } from "./hooks/useCloseTimer";
+
+// Types
+export type CloseTimerBarProps = {
   duration: number;
   isOpen: boolean;
   onTimeout: () => void;
@@ -20,26 +24,7 @@ type CloseTimerBarProps = {
  * <CloseTimerBar duration={5000} isOpen={true} onTimeout={() => {}} />
  */
 const CloseTimerBar = ({ duration, isOpen, onTimeout }: CloseTimerBarProps): JSX.Element => {
-  const [isRunning, setIsRunning] = useState(false);
-
-  useEffect(() => {
-    let timeoutId: NodeJS.Timeout | null = null;
-
-    if (isOpen) {
-      setIsRunning(true);
-      timeoutId = setTimeout(() => {
-        onTimeout();
-        setIsRunning(false);
-      }, duration);
-    } else {
-      setIsRunning(false);
-      if (timeoutId) clearTimeout(timeoutId);
-    }
-
-    return () => {
-      if (timeoutId) clearTimeout(timeoutId);
-    };
-  }, [isOpen, duration, onTimeout]);
+  const isRunning = useRuntimer({ duration, isOpen, onTimeout });
 
   return (
     <StyledCloseTimerBarContainer>

@@ -15,6 +15,7 @@ import {
   SiRedux,
   SiAzuredevops,
   SiExpress,
+  SiAngular,
 } from "react-icons/si";
 import { DiSqllite } from "react-icons/di";
 
@@ -43,6 +44,7 @@ const iconMapping: { [key: string]: React.ElementType } = {
   SiAzuredevops,
   SiRedux,
   SiExpress,
+  SiAngular,
   DiSqllite,
   // Add more icons here as needed
 };

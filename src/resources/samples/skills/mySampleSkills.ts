@@ -148,6 +148,24 @@ export const mySampleSkills: GroupedSkills = {
       addedDate: new Date("2024-04-27"),
       updatedDate: new Date("2024-04-27"),
     },
+    {
+      id: 25,
+      name: "Angular",
+      priority: 3,
+      level: 2,
+      category: "Frontend",
+      description: [
+        "Angular ist ein populäres JavaScript-Framework zur Erstellung von Webanwendungen. Es wird häufig für die Entwicklung von komplexen und dynamischen Anwendungen verwendet.",
+        "Aktuell mache ich einen Udemy-Kurs, um mich mit der neuen Syntax und den besten Praktiken von Angular vertraut zu machen. Dies hilft mir, mein Wissen zu vertiefen und mich genauso sicher in Angular zu fühlen wie in React, mit dem ich bereits mehrere Projekte umgesetzt habe.",
+      ],
+      projectLinks: [
+        { text: "Mein GitHub Account", route: "https://github.com/M-Roesner" },
+        { text: "React.js", route: "/aboutMe/Frontend/3" },
+      ],
+      icon: "SiAngular",
+      addedDate: new Date("2024-07-12"),
+      updatedDate: new Date("2024-07-12"),
+    },
   ],
 
   Backend: [

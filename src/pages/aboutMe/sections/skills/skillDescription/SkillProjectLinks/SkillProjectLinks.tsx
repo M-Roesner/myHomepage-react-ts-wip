@@ -1,10 +1,10 @@
 // components
 import { StyledSkillProjectItem, StyledSkillProjectList } from "./styledSkillProjectLinks";
-import { StyledNavLinkButton } from "../../../../../../components/custom/button/navLinkButton/styledNavLinkButton";
+import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
+import NavLinkButton from "../../../../../../components/custom/button/navLinkButton/NavLinkButton";
 
 // Types
 import { LinkType } from "../../skillTypes";
-import CardHeadline from "../../../../../../components/custom/card/cardHeadline/CardHeadline";
 
 type SkillProjectListProps = {
   links: LinkType[];
@@ -22,7 +22,7 @@ const SkillProjectLinks = ({ links }: SkillProjectListProps) => {
       <StyledSkillProjectList>
         {links.map((link, index) => (
           <StyledSkillProjectItem key={index}>
-            <StyledNavLinkButton to={link.route}>{link.text}</StyledNavLinkButton>
+            <NavLinkButton to={link.route}>{link.text}</NavLinkButton>
           </StyledSkillProjectItem>
         ))}
       </StyledSkillProjectList>
